@@ -1,5 +1,14 @@
 @extends('layout')
 
+<div class="container">
+  <div class="block">
+    <p class="content"><i>Quote/pricing will follow within 24 hours</i></p>
+  </div>
+  <div class="block">
+    <button class="button is-primary is-outlined">Submit</button>
+  </div>
+  <div class="columns">
+
 <table class="table">
   <thead>
     <tr>

@@ -1,9 +1,8 @@
 @extends('layout')
 
 <div class="container">
-	<div class="block">
-		<h1 class="title">Submission</h1>
-		<h2 class="subtitle">-- Enter your info below --</h2>
+	<div class="block ">
+		<h1 class="title ">Submission List</h1>
 	</div>
 	<div class="block">
 		<p class="content"><i>Quote/pricing will follow within 24 hours</i></p>
@@ -16,172 +15,200 @@
 	<div class="column is-half is-offset-one-quarter">
 		<div class="block">
 			<p class="subtitle">Agent info</p>
-			<form>
+			<form action="/subs/create" method="POST">
+				{{ csrf_field() }}
 				<div class="field">
-					<label class="label">
-						Agent's Name
+					<label class="label" for="agent_name">
+						Agent Name
 					</label>
-					<input type="text" class="input" placeholder="Your name here">
+					<input type="text" class="input" placeholder="Your name here" id="agent_name">
 				</div>
-			</form>
-			<form>
+
 				<div class="field">
-					<label class="label">
+					<label class="label" for="agency_name">
 						Agency name
 					</label>
-					<input type="text" class="input" placeholder="Your name here">
+					<input type="text" class="input" placeholder="Your name here" id="agency_name">
 				</div>
-			</form>
-			<form>
+
 				<div class="field">
-					<label class="label">
+					<label class="label" for="agent_email_address">
+						Agent email address
+					</label>
+					<input type="email" class="input" placeholder="Your name here" id="agent_email_address">
+				</div>
+
+				<div class="field">
+					<label class="label" for="agent_phone_number">
+						Agent phone number
+					</label>
+					<input type="email" class="input" placeholder="Your name here" id="agent_phone_number">
+				</div>
+
+				<div class="field">
+					<label class="label" for="type_of_coverage">
 						Type of Coverage
 					</label>
-					<input type="text" class="input" placeholder="Your name here">
+					<input type="text" class="input" placeholder="Your name here" id="type_of_coverage">
 				</div>
-			</form>
-			<form>
+
 				<div class="field">
-					<label class="label">
+					<label class="label" for="lob">
 						LOB
 					</label>
-					<input type="text" class="input" placeholder="Your name here">
+					<input type="text" class="input" placeholder="Your name here" id="lob">
 				</div>
-			</form>
-			<form>
+
 				<div class="field">
-					<label class="label">
+					<label class="label" for="effective_date">
 						Effective date
 					</label>
-					<input type="date" class="input" placeholder="Your name here">
+					<input type="date" class="input" placeholder="Your name here" id="effective_date">
 				</div>
-			</form>
-			<form>
+
 				<p class="subtitle">Insured info</p>
 				<hr>
 				<div class="field">
-					<label class="label">
+					<label class="label" for="named_insured">
 						Named Insured
 					</label>
-					<input type="text" class="input" placeholder="Your name here">
+					<input type="text" class="input" placeholder="Your name here" id="named_insured">
 				</div>
-			</form>
-			<form>
+
 				<div class="field">
-					<label class="label">
+					<label class="label" for="mailing_address">
 						Mailing address
 					</label>
-					<input type="text" class="input" placeholder="Your name here">
+					<input type="text" class="input" placeholder="Your name here" id="mailing_address">
 				</div>
-			</form>
-			<form>
+
 				<div class="field">
-					<label class="label">
-						Location Address
+					<label class="label" for="street_name_and_number">
+						Street name/number
 					</label>
-					<input type="text" class="input" placeholder="Your name here">
+					<input type="text" class="input" placeholder="Your name here" id="street_name_and_number">
 				</div>
-			</form>
-			<form>
+
 				<div class="field">
-					<label class="label">
+					<label class="label" for="city">
+						City
+					</label>
+					<input type="text" class="input" placeholder="Your name here" id="city">
+				</div>
+
+				<div class="field">
+					<label class="label" for="county">
+						County
+					</label>
+					<input type="text" class="input" placeholder="Your name here" id="county">
+				</div>
+
+				<div class="field">
+					<label class="label" for="state">
+						State
+					</label>
+					<input type="text" class="input" placeholder="Your name here" id="state">
+				</div>
+
+				<div class="field">
+					<label class="label" for="phone_number">
 						Phone number
 					</label>
-					<input type="text" class="input" placeholder="Your name here">
+					<input type="text" class="input" placeholder="Your name here" id="phone_number">
 				</div>
-			</form>
-			<form>
+
 				<div class="field">
-					<label class="label">
-						Email
+					<label class="label" for="email_address">
+						Email Address
 					</label>
-					<input type="text" class="input" placeholder="Your name here">
+					<input type="text" class="input" placeholder="Your name here" id="email_address">
 				</div>
-			</form>
-			<form>
+
 				<div class="field">
-					<label class="label">
+					<label class="label" for="cov_a">
 						Coverage A
 					</label>
-					<input type="text" class="input" placeholder="Your name here">
+					<input type="text" class="input" placeholder="Your name here" id="cov_a">
 				</div>
-			</form>
-			<form>
+
 				<div class="field">
-					<label class="label">
+					<label class="label" for="other_structures">
 						Other Structures
 					</label>
-					<input type="text" class="input" placeholder="Your name here">
+					<input type="text" class="input" placeholder="Your name here" id="other_structures">
 				</div>
-			</form>
-			<form>
+
 				<div class="field">
-					<label class="label">
+					<label class="label" for="loss_of_use">
 						Loss Of Use
 					</label>
-					<input type="text" class="input" placeholder="Your name here">
+					<input type="text" class="input" placeholder="Your name here" id="loss_of_use">
 				</div>
-			</form>
-			<form>
+
 				<div class="field">
-					<label class="label">
+					<label class="label" for="med_pay">
 						Med Pay
 					</label>
-					<input type="text" class="input" placeholder="Your name here">
+					<input type="text" class="input" placeholder="Your name here" id="med_pay">
 				</div>
-			</form>
-			<form>
+
 				<div class="field">
-					<label class="label">
+					<label class="label" for="aop_ded">
 						AOP Deductible
 					</label>
-					<input type="text" class="input" placeholder="Your name here">
+					<input type="text" class="input" placeholder="Your name here" id="aop_ded">
 				</div>
-			</form>
+
 			<hr>
-			<form>
+
 				<div class="field">
-					<label class="label">
+					<label class="label" for="construction_type">
 						Construction type
 					</label>
-					<input type="text" class="input" placeholder="Your name here">
+					<input type="text" class="input" placeholder="Your name here" id="construction_type">
 				</div>
-			</form>
-			<form>
+
 				<div class="field">
-					<label class="label">
+					<label class="label" for="protection_class">
 						Protection class
 					</label>
-					<input type="text" class="input" placeholder="Your name here">
+					<input type="text" class="input" placeholder="Your name here" id="protection_class">
 				</div>
-			</form>
-			<form>
+
 				<div class="field">
-					<label class="label">
+					<label class="label" for="new_purchase">
 						New purchase
 					</label>
-					<input type="text" class="input" placeholder="Your name here">
+					<input type="text" class="input" placeholder="Your name here" id="new_purchase">
 				</div>
-			</form>
-			<form>
+
 				<div class="field">
-					<label class="label">
+					<label class="label" for="prior_carrier">
 						Prior carrier
 					</label>
-					<input type="text" class="input" placeholder="Your name here">
+					<input type="text" class="input" placeholder="Your name here" id="prior_carrier">
 				</div>
-			</form>
-			<form>
+
 				<div class="field">
-					<label class="label">
+					<label class="label" for="prior_carrier_name">
 						Prior carrier's name
 					</label>
-					<input type="text" class="input" placeholder="Your name here">
+					<input type="text" class="input" placeholder="Your name here" id="prior_carrier_name">
 				</div>
-			</form>
+
+				<div class="field">
+					<label class="label" for="prior_carrier_effective_date">
+						Prior carrier eff date
+					</label>
+					<input type="date" class="input" placeholder="Your name here" id="prior_carrier_effective_date">
+				</div>
+				<div class="block">
+					<button class="button is-primary is-outlined">Submit</button>
+				</div>
+			
 		</div>
 
-			<div class="field">
+		<!--	<div class="field">
 				<label class="label">
 					Dropdown
 				</label>
@@ -193,7 +220,7 @@
 					</select>
 					</span>
 				</p>
-			</div>
+			</div> 
 
 
 		<div class="block">
@@ -208,7 +235,7 @@
 					</div>
 				</div>
 			</div>
-
+ -->
 				<div class="block">
 					<div class="notification">
 						<div class="delete"></div>
@@ -223,6 +250,7 @@
 				      Submit
 				    </a>
 				  </p>
+	  </form>			
 				  <p class="control">
 				    <a class="button is-light">
 				      Cancel

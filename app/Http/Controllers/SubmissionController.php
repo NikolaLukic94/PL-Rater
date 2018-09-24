@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Validator;
 use App\Submission;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Session;
 
 class SubmissionController extends Controller
 {
@@ -13,10 +14,66 @@ class SubmissionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+  public function __construct()
+    
     {
-        return view('/subs/index');
+        $this->middleware('auth')->except(['create', 'store']);
     }
+
+    public function index(Request $request) {
+
+        if($request->isMethod('post')){
+            $search_lob =    $request->search_lob;
+            $search_agency_name =     $request->search_agency_name;
+            $search_type_of_coverage =         $request->search_type_of_coverage;
+            $search_effective_date =  $request->search_effective_date;
+            $search_state =      $request->search_state;
+
+            $submission = DB::table('submission')
+                        ->when($search_lob, function ($query) use ($search_lob) {
+                            return $query->where('lob', 'like', '%' . $search_lob . '%');
+                        })
+                        ->when($search_agency_name, function ($query) use ($search_agency_name) {
+                            return $query->where('agency_name', 'like', '%' . $search_agency_name . '%');
+                        })
+                        ->when($search_type_of_coverage, function ($query) use ($search_type_of_coverage) {
+                            return $query->where('type_of_coverage', $search_type_of_coverage);
+                        })
+                        ->when($search_effective_date, function ($query) use ($search_effective_date) {
+                            return $query->where('effective_date', $search_effective_date);
+                        })
+                        ->when($search_state, function ($query) use ($search_state) {
+                           return $query->where('state', $search_state);
+                        })
+                        ->orderBy('named_insured', 'asc')
+                        ->orderBy('state', 'asc')
+                        ->get();
+
+                        /*
+
+                  Session::flash('inputs', [
+                           'search_lob' => $search_lob,
+                            'search_agency_name' => $search_agency_name,
+                            'search_type_of_coverage' => $search_type_of_coverage,
+                            'search_effective_date' => $search_effective_date,
+                            'search_state' => $search_state
+                            ]);
+                    }else{
+                         Session::forget('inputs');
+*/
+
+            $submission = Submission::orderBy('named_insured', 'asc')
+                            ->orderBy('state', 'asc')
+                            ->get();
+                        }
+            return view('/subs/index', [
+                'submission' => $submission
+            ]);
+
+
+    } 
+
 
     /**
      * Show the form for creating a new resource.
@@ -36,65 +93,56 @@ class SubmissionController extends Controller
      */
     public function store(Request $request)
     {
-        $submission = new Submission;
+            $submission = new Submission;
 
-        Submission::create([
+            $validator = Validator::make($submission->toArray(), $submission->rules);
+            
+            if ($validator->fails()) {
+            
+            return redirect()->back()->with('message', $validator->errors()
+                                                                 ->first())
+                                     ->with('status', 'danger');
+            }
 
-            //add validation here
-            $request->validate([
-            'title' => 'required|unique:posts|max:255',
-            'author.name' => 'required',
-            'author.description' => 'required',
+            Submission::create([
 
-            'agent_name' => 'required',
-            'agency_name' => 'required',
-            'type_of_coverage' => 'required',
-            'lob' => 'required',
-            'named_insured' => 'required',
-            'mailing_address' => 'nullable',
-            'location_address' =>  'required',
-            'phone_number' => 'required',
-            'email_address' => 'required',
-            'cov_a' => 'required', 
-            'other_structures' => 'required', 
-            'loss_of_use' => 'required',                                  
-            'med_pay' => 'required',   
-            'aop_ded' => 'required',   
-            'construction_type' => 'required',    
-            'protection_class' => 'required', 
-            'new_purchase' => 'required', 
-            'prior_carrier' => 'required',  
-            'prior_carrier_name' => 'required',    
-            'prior_carrier_effective_date' => 'required'  
-            ]);
-
-            https://laravel.com/docs/5.7/validation
 
             'agent_name' => request('agent_name'),
             'agency_name' => request('agency_name'),
+            'agent_email_address' => request('agent_email_address'),
+            'agent_phone_number' => request('agent_phone_number'),
             'type_of_coverage' => request('type_of_coverage'),
             'lob' => request('lob'),
-            'named_insured' => request('named_insured'),
+            'effective_date' => request('effective_date'),
+            'named_insured' =>  request('named_insured'),
             'mailing_address' => request('mailing_address'),
-            'location_address' =>  request('location_address'),
+
+            'street_name_and_number' => request('street_name_and_number'),
+            'city' => request('city'),
+            'county' => request('county'),
+            'state'=>request('state'),
+             
             'phone_number' => request('phone_number'),
             'email_address' => request('email_address'),
-            'cov_a' => request('cov_a'), 
-            'other_structures' => request('other_structures'), 
-            'loss_of_use' => request('loss_of_use'),                                  
-            'med_pay' => request('med_pay'),   
-            'aop_ded' => request('aop_ded'),   
-            'construction_type' => request('construction_type'),    
-            'protection_class' => request('protection_class'), 
-            'new_purchase' => request('new_purchase'), 
-            'prior_carrier' => request('prior_carrier'),  
-            'prior_carrier_name' => request('prior_carrier_name'),    
-            'prior_carrier_effective_date' => request('prior_carrier_effective_date')                    
-        ]);
+            'cov_a' => request('cov_a'),    
+            'other_structures' => request('other_structures'),
+            'loss_of_use' => request('loss_of_use'),
+            'med_pay' => request('agent_phone_number'),
+            'aop_ded' => request('aop_ded'),
+            'construction_type' => request('construction_type'),
+            'protection_class' => request('protection_class'),
+            'new_purchase' => request('new_purchase'),    
+            'prior_carrier' => request('prior_carrier'),
+            'prior_carrier_name' => request('prior_carrier_name'),
+            'prior_carrier_effective_date' => request('prior_carrier_effective_date')
+                      ]);                                                                                                                                          
+        //    https://laravel.com/docs/5.7/validation
 
-        $candidate->save();
 
-        return view('/candidates/index');
+
+            $submission->save();
+
+            return view('/subs/success');
     }
 
     /**
