@@ -6,6 +6,7 @@ use Validator;
 use App\Submission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use App\Mail\SubmissionSubmitted;
 
 class SubmissionController extends Controller
 {
@@ -14,13 +15,13 @@ class SubmissionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
+/*
   public function __construct()
     
     {
         $this->middleware('auth')->except(['create', 'store']);
     }
-
+*/
     public function index(Request $request) {
 
         if($request->isMethod('post')){
@@ -67,9 +68,11 @@ class SubmissionController extends Controller
                             ->orderBy('state', 'asc')
                             ->get();
                         }
-            return view('/subs/index', [
+            return view('/subs/index'/*, [
                 'submission' => $submission
-            ]);
+            ]
+*/
+        );
 
 
     } 
@@ -94,18 +97,16 @@ class SubmissionController extends Controller
     public function store(Request $request)
     {
             $submission = new Submission;
-
-            $validator = Validator::make($submission->toArray(), $submission->rules);
-            
-            if ($validator->fails()) {
-            
-            return redirect()->back()->with('message', $validator->errors()
-                                                                 ->first())
-                                     ->with('status', 'danger');
-            }
-
+/*
+            $validator = Validator::make($request->all(), $submission->rules);
+                    if ($validator->fails()) {
+                        return redirect()->back()
+                                         ->with('message', $validator->errors()
+                                                                     ->first())
+                                         ->with('status', 'danger');
+                    }
+*/
             Submission::create([
-
 
             'agent_name' => request('agent_name'),
             'agency_name' => request('agency_name'),
@@ -135,14 +136,11 @@ class SubmissionController extends Controller
             'prior_carrier' => request('prior_carrier'),
             'prior_carrier_name' => request('prior_carrier_name'),
             'prior_carrier_effective_date' => request('prior_carrier_effective_date')
-                      ]);                                                                                                                                          
-        //    https://laravel.com/docs/5.7/validation
-
-
+                      ]);                                                                                    
 
             $submission->save();
 
-            return view('/subs/success');
+            return view('/');
     }
 
     /**
@@ -164,7 +162,9 @@ class SubmissionController extends Controller
      */
     public function edit(Submission $submission)
     {
-        //
+        $submission = Submission::findOrFail($id);
+
+        return view('/subs/edit', compact('submission'));
     }
 
     /**
@@ -176,7 +176,36 @@ class SubmissionController extends Controller
      */
     public function update(Request $request, Submission $submission)
     {
-        //
+        $submission = Submission::findOrFail($id);
+
+        $submission->agent_name =    $request->agent_name;
+        $submission->agency_name =     $request->agency_name;   
+        $submission->agent_email_address =  $request->agent_email_address;
+        $submission->type_of_coverage =      $request->type_of_coverage;
+        $submission->lob =      $request->lob;
+        $submission->effective_date =      $request->effective_date;
+        $submission->named_insured =      $request->named_insured;
+        $submission->mailing_address =      $request->mailing_address;
+        $submission->street_name_and_number =      $request->street_name_and_number; 
+        $submission->city =      $request->city;       
+        $submission->county =      $request->county;       
+        $submission->state =      $request->state;       
+        $submission->phone_number =      $request->phone_number;  
+        $submission->cov_a =      $request->cov_a; 
+        $submission->other_structures =      $request->other_structures;  
+        $submission->loss_of_use =      $request->loss_of_use;   
+        $submission->med_pay =      $request->med_pay; 
+        $submission->aop_ded =      $request->aop_ded; 
+        $submission->construction_type =      $request->construction_type; 
+        $submission->protection_class =      $request->protection_class; 
+        $submission->new_purchase =      $request->new_purchase; 
+        $submission->prior_carrier =      $request->prior_carrier; 
+        $submission->prior_carrier_name =      $request->prior_carrier_name; 
+        $submission->prior_carrier_effective_date =      $request->prior_carrier_effective_date; 
+
+        $submission->save();        
+
+        return view('subs/change/success');
     }
 
     /**

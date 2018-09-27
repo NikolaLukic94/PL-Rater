@@ -2,7 +2,32 @@
 
 <div class="container">
   <div class="block">
-    <p class="content"><i>Quote/pricing will follow within 24 hours</i></p>
+    <form class="search-form search-form-basic" action="/subs/index" method="post">
+      {{ csrf_field() }}
+      <div class="columns ">
+        <div class="column">
+          <label for="search_email">LOB:</label>
+          <input type="text" name="search_lob" id="search_lob" class="form-control" @if(isset(Session::get('inputs')['search_lob'])) value="{{ Session::get('inputs')['search_lob'] }}" @endif>
+        </div> 
+        <div class="column">
+          <label for="search_agency_name">Agency:</label>
+          <input type="text" name="search_agency_name" id="search_agency_name" class="form-control" @if(isset(Session::get('inputs')['search_agency_name'])) value="{{ Session::get('inputs')['search_agency_name'] }}" @endif>
+        </div> 
+        <div class="column">
+          <label for="search_type_of_coverage">Type of Coverage:</label>
+          <input type="text" name="search_type_of_coverage" id="search_type_of_coverage" class="form-control" @if(isset(Session::get('inputs')['search_type_of_coverage'])) value="{{ Session::get('inputs')['search_type_of_coverage'] }}" @endif>
+        </div>    
+        <div class="column">
+          <label for="search_location">Effective date:</label>
+          <input type="date" name="search_effective_date" id="search_effective_date" class="form-control" 
+           @if(isset(Session::get('inputs')['search_effective_date'])) value="{{ Session::get('inputs')['search_effective_date'] }}" @endif>
+        </div>
+        <div class="column">
+          <label for="search_state">State:</label>
+          <input type="text" name="search_state" id="search_state" class="form-control" @if(isset(Session::get('inputs')['search_state'])) value="{{ Session::get('inputs')['search_state'] }}" @endif>
+        </div> 
+      </div>
+    </form>
   </div>
   <div class="block">
     <button class="button is-primary is-outlined">Submit</button>
