@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use Validator;
-use App\Submission;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\Mail\SubmissionSubmitted;
+use Illuminate\Support\Facades\DB;
+use App\Mail;
+use App\Mail\ContactAgentEmail;
 
 class SubmissionController extends Controller
 {
@@ -31,7 +34,7 @@ class SubmissionController extends Controller
             $search_effective_date =  $request->search_effective_date;
             $search_state =      $request->search_state;
 
-            $submission = DB::table('submission')
+            $submission = DB::table('submissions')
                         ->when($search_lob, function ($query) use ($search_lob) {
                             return $query->where('lob', 'like', '%' . $search_lob . '%');
                         })
@@ -68,12 +71,13 @@ class SubmissionController extends Controller
                             ->orderBy('state', 'asc')
                             ->get();
                         }
-            return view('/subs/index'/*, [
+                        /*
+            return view('/subs/index', [
                 'submission' => $submission
             ]
-*/
-        );
 
+        );
+*/
 
     } 
 
@@ -218,4 +222,36 @@ class SubmissionController extends Controller
     {
         //
     }
+
+    public function prepemail()
+    {
+
+        $submission = DB::table('submissions')->get();
+
+        return view('/functionalities/create_email',compact('submission'));
+    }
+    
+    public function sendemail(Request $request) {
+
+        $content = array('');
+
+        $subject_line = $request->input('subject_line');
+        $body = $request->input('body');
+        $to = $request->input('to');
+  
+        $content = [
+            'title'=> $request->subject_line, 
+            'body'=> $request->body,
+            'to'=>$request->to
+            ];
+
+        \Mail::send('emails.subs.cetest', ['content' => $content], function ($message) use ($content,$to) {
+            $message->from('support@quotedept.com', 'Your Submission');
+            $message->to($to)->subject('Welcome to laravel');
+        });
+
+
+    }
+
+
 }

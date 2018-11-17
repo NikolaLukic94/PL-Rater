@@ -25,6 +25,9 @@ Route::get('/subs/edit/{id}', 'SubmissionController@edit');
 Route::post('/subs/edit/{id}', 'SubmissionController@update');
 Route::delete('/subs/delete/{id}', 'SubmissionController@destroy');
 
+Route::get('/prepemail','SubmissionController@prepemail');
+Route::post('/prepemail','SubmissionController@sendemail');
+
 Route::get('/rate/index','RateController@index');
 Route::get('/rate/define','RateController@create');
 Route::post('/subs/define','RateController@store');
