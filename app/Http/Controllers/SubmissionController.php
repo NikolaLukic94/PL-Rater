@@ -255,3 +255,13 @@ class SubmissionController extends Controller
 
 
 }
+
+
+/*
+
+            $something = DB::table('hr_users')
+                        ->join('users', 'users.hr_user_id', '=', 'users.id')
+                        ->select('hr_users.name', 'users.id', 'hr_users.id')
+                        ->get();
+
+                        */
