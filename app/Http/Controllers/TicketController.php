@@ -8,6 +8,13 @@ use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Input;
 
+//use ConsoleTVs\Charts\Facades\Charts;
+use App\Charts\TicketWhereTypeHardware;
+use App\Charts\SampleChart;
+use App\TType;
+use App\User;
+use Charts;
+
 class TicketController extends Controller
 {
 
@@ -34,10 +41,12 @@ class TicketController extends Controller
 
             $ticket = DB::table('tickets')
 			            ->leftJoin('ticket_categories', 'tickets.id', '=', 'ticket_categories.id')
-			            ->leftJoin('ticket_types', 'tickets.id', '=', 'ticket_types.type_id')
+			            ->leftJoin('ticket_types', 'tickets.id', '=', 'ticket_types.id')
+			            ->leftJoin('ticket_priorities', 'tickets.id', '=', 'ticket_priorities.id')
 			            ->select('ticket_categories.name as category',
 			            		 'ticket_types.name as type',
-			            		 'tickets.name as name')
+			            		 'ticket_priorities.name as Priority'
+			            		 )
                         ->when($search_ticket_name, function ($query) use ($search_ticket_name) {
                             return $query->where('name', 'like', '%' . $search_ticket_name . '%');
                         })
@@ -69,14 +78,34 @@ class TicketController extends Controller
             $ticket = DB::table('tickets')
 			            ->leftJoin('ticket_categories', 'tickets.id', '=', 'ticket_categories.id')
 			            ->leftJoin('ticket_types', 'tickets.id', '=', 'ticket_types.id')
+			            ->leftJoin('ticket_priorities', 'tickets.id', '=', 'ticket_priorities.id')			            
 			            ->select('ticket_categories.name as category',
 			            		 'ticket_types.name as type',
-			            		 'tickets.name as name')->get();
+			            		 'tickets.name as name',
+			            		 'ticket_priorities.name as Priority')->get();
+///////////////////////////////////////////////////////////////////////
+	/*		$chartjs = new TicketWhereTypeHardware;
+			$chartjs->labels(['One', 'Two', 'Three', 'Four']);
+			$chartjs->dataset('My dataset', 'line', [1, 2, 3, 4]);
+			$chartjs->dataset('My dataset 2', 'line', [4, 3, 2, 1]);
+*//////////////////////////////////////////////////////////
+			$data = DB::table('users')->groupBy('age')
+			    ->get()
+			    ->map(function ($item) {
+			        // Return the number of persons with that age
+			        return count([$item]);
+			    });
 
+				$chartjs = new SampleChart;
+				$chartjs->labels($data->keys());
+				$chartjs->dataset('My dataset', 'line', $data->values());
+
+          
 						return view('/tickets', [
 				            'ticket' => $ticket,
+				            'chartjs' => $chartjs
 				        ]);
 
-
-}}
+ 
+					}}
 }

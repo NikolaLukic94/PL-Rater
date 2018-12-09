@@ -1,3 +1,6 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
+@extends('layout')
+
 <div class="container">
 <div class="row">
 	<div class="col-lg-12 col-md-12">
@@ -18,8 +21,8 @@
 				</div>  
 				<!-- ticket priority high or low -->
             
-				<input type="radio" name="high" value="urgent"/>
-				<input type="radio" name="low" value="not urgent"/>
+				<input type="radio" name="high" value="urgent"/>&nbsp;
+				<input type="radio" name="low" value="not urgent"/>&nbsp;
 <!--
 				<div class="col-md-4 form-group">
 					<label for="search_from_date">From:</label>
@@ -44,21 +47,30 @@
 		<h1>Candidates</h1>
 			<thead>
 				<tr>
-					<th>Round #</th>
-					<th>First Name</th>
-					<th class="align-left">Date applied</th>	
-					<th class="align-left">Office location</th>
-					<th class="align-left">Last name</th>
-					<th class="align-left">Action</th>	
-					<th class="align-left"></th>		
+					<th class="align-left">Name</th>	
+					<th class="align-left">Category</th>
+					<th class="align-left">Title</th>
+					<th class="align-left">Priority</th>
 				</tr>
 			</thead>
-	
-
-
-
-
-
+@if($ticket)
+					@foreach($ticket as $t)
+						<tr>
+							<td>
+								{{ $t->name }}
+							</td>
+							<td>
+								{{ $t->category }}
+							</td>
+							<td>
+								{{ $t->type }}
+							</td>
+							<td>
+								{{ $t->Priority }}
+							</td>							
+						</tr>
+@endforeach
+@endif
 	    <div class="row">
         <div class="col-md-6">
             <form action="/test" method="POST">
@@ -80,5 +92,6 @@
                 </select>
                 </div>
 		        </div> 
+		<!--		{!! $chartjs->container() !!}  {!! $chartjs->script() !!} -->
 		    </div>
 		</div>   
