@@ -31,3 +31,7 @@ Route::post('/prepemail','SubmissionController@sendemail');
 Route::get('/rate/index','RateController@index');
 Route::get('/rate/define','RateController@create');
 Route::post('/subs/define','RateController@store');
+
+Route::get('/pdf','SubmissionController@toPdf');
+
+Route::any('/tickets','TicketController@index');

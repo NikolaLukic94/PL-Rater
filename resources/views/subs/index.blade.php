@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.app')
 <!--
 <div class="container">
   <div class="block">
@@ -65,6 +65,7 @@
 
 
 <div class="row">
+  <div class="container">
   <div class="col-lg-12 col-md-12">
     <form class="search-form search-form-basic" action="/subs/index" method="post">
     {{ csrf_field() }}
@@ -139,11 +140,15 @@
       <th><abbr title="">State</abbr></th>
       <th><abbr title="">Agency</abbr></th>
       <th><abbr title="">Agent</abbr></th>
+      <th><abbr title="">Action</abbr></th>
     </tr>
   </thead>
 @if($submission)
   @foreach($submission as $sub)
   <tr>
+              <td>
+                
+              </td>
               <td>
                 {{ $sub->named_insured }}
               </td>
@@ -170,9 +175,18 @@
 
               <td>
                 {{ $sub->agent_name }}
-              </td>                          
+              </td>       
+              <td>
+                <button>Index</button>
+                <button>Create new file</button>
+                <button>Delete</button>
+              </td>                   
     </tr>
     @endforeach
-@else
+    @else
     <p>There are no pending subs!</p>
 @endif
+                <button>Pdf</button>
+</div>
+
+

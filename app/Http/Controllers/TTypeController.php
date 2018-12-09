@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Carrier;
+use App\TType;
 use Illuminate\Http\Request;
 
-class CarrierController extends Controller
+class TTypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class CarrierController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Carrier  $carrier
+     * @param  \App\TType  $tType
      * @return \Illuminate\Http\Response
      */
-    public function show(Carrier $carrier)
+    public function show(TType $tType)
     {
         //
     }
@@ -52,10 +52,10 @@ class CarrierController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Carrier  $carrier
+     * @param  \App\TType  $tType
      * @return \Illuminate\Http\Response
      */
-    public function edit(Carrier $carrier)
+    public function edit(TType $tType)
     {
         //
     }
@@ -64,10 +64,10 @@ class CarrierController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Carrier  $carrier
+     * @param  \App\TType  $tType
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Carrier $carrier)
+    public function update(Request $request, TType $tType)
     {
         //
     }
@@ -75,17 +75,11 @@ class CarrierController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Carrier  $carrier
+     * @param  \App\TType  $tType
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Carrier $carrier)
+    public function destroy(TType $tType)
     {
         //
     }
-
-
-    if(new DateTime() > new DateTime($var)){
-    $t = new DateTime(); 
-
-}
 }

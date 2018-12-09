@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Validator;
-
+use Dompdf\Dompdf;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\Mail\SubmissionSubmitted;
@@ -26,7 +26,7 @@ class SubmissionController extends Controller
     }
 */
     public function index(Request $request) {
-
+/*
         if($request->isMethod('post')){
             $search_lob =    $request->search_lob;
             $search_agency_name =     $request->search_agency_name;
@@ -34,7 +34,7 @@ class SubmissionController extends Controller
             $search_effective_date =  $request->search_effective_date;
             $search_state =      $request->search_state;
 
-            $submission = DB::table('submissions')
+            $submissions = DB::table('submissions')
                         ->when($search_lob, function ($query) use ($search_lob) {
                             return $query->where('lob', 'like', '%' . $search_lob . '%');
                         })
@@ -54,7 +54,7 @@ class SubmissionController extends Controller
                         ->orderBy('state', 'asc')
                         ->get();
 
-                        /*
+                     
 
                   Session::flash('inputs', [
                            'search_lob' => $search_lob,
@@ -65,19 +65,23 @@ class SubmissionController extends Controller
                             ]);
                     }else{
                          Session::forget('inputs');
-*/
 
-            $submission = Submission::orderBy('named_insured', 'asc')
+
+            $submissions = Submission::orderBy('named_insured', 'asc')
                             ->orderBy('state', 'asc')
                             ->get();
                         }
-                        /*
-            return view('/subs/index', [
-                'submission' => $submission
-            ]
 
-        );
-*/
+
+            return view('/subs/index', [
+                'submissions' => $submissions
+            ]);*/
+    $submission = DB::table('submissions')->orderBy('state', 'asc')
+                                          ->get();
+
+    return view('/subs/index', [
+            'submission' => $submission
+        ]);
 
     } 
 
@@ -253,6 +257,13 @@ class SubmissionController extends Controller
 
     }
 
+    public function toPdf(Request $request) {
+
+      $dompdf = new Dompdf();
+      $dompdf->loadHtml('/subs/index');
+      $dompdf->stream();
+
+    }
 
 }
 

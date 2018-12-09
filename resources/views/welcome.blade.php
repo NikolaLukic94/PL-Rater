@@ -1,3 +1,5 @@
+@extends('layout')
+
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -9,7 +11,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <!-- Styles -->
         <style>
             html, body {
@@ -61,6 +64,7 @@
 
             .m-b-md {
                 margin-bottom: 30px;
+                
             }
         </style>
     </head>
@@ -70,6 +74,8 @@
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
+                        <a href="">Submissions</a>
+                        <a href="Quotes">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
@@ -77,11 +83,41 @@
                 </div>
             @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
 
+<div class="container">
+  <div class="row">
+    <div class="col-2">
+    <aside class="main_sidebar">
+        <ul>
+            <li><i class="fa fa-arrows"></i><a href="#">Accounts</a></li>
+            <hr>    
+            <li><i class="fa fa-battery-2"></i><a href="/subs/index">Submissions</a></li>
+                    <ul>    
+                        <li><a href="/subs/create">New</a>
+                        <li>Renewal</li>
+                        <li><a href="/subs/index">List</a></li>
+                    </ul>
+            <hr>    
+            <li class="active"><i class="fa fa-bell"></i><a href="#">Emails</a></li>
+            <hr>    
+            <li><i class="fa fa-bicycle"></i><a href="#">Follow ups</a></li>
+            <hr>    
+            <li><i class="fa fa-circle"></i><a href="#">circle</a></li>
+            <hr>    
+            <li><i class="fa fa-crosshairs"></i><a href="#">crosshairs</a></li>
+            <hr>    
+            <li><i class="fa fa-deaf"></i><a href="#">Candidates</a></li>
+            <hr>    
+            <li><i class="fa fa-desktop"></i><a href="#">desktop</a></li>
+            <hr>    
+            <li><i class="fa fa-dot-circle-o"></i><a href="#">dot</a></li>
+            <hr>    
+            <li><i class="fa fa-folder"></i><a href="#">folder</a></li>
+        </ul>
+    </aside>
+    </div>
+    <div class="jumbotron">
+    <div class="col-12">
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
@@ -90,7 +126,12 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
-            </div>
-        </div>
+    </div>
+</div>
+  </div>
+</div>
     </body>
 </html>
+
+
+
