@@ -1,4 +1,3 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
 @extends('layout')
 
 <div class="container">
@@ -8,8 +7,8 @@
 		{{ csrf_field() }}
 			<div class="form-row">				
 				<div class="col-md-4 form-group">
-					<label for="ticket_name">Ticket name:</label>
-					<input type="text" name="ticket_name" id="ticket_name" class="form-control" @if(isset(Session::get('inputs')['ticket_name'])) value="{{ Session::get('inputs')['ticket_name'] }}" @endif>
+					<label for="ticket_group">Ticket group:</label>
+					<input type="text" name="ticket_group" id="ticket_group" class="form-control" @if(isset(Session::get('inputs')['ticket_name'])) value="{{ Session::get('inputs')['ticket_group'] }}" @endif>
 				</div> 
 				<div class="col-md-4 form-group">
 					<label for="ticket_category">Ticket category:</label>
@@ -23,18 +22,18 @@
             
 				<input type="radio" name="high" value="urgent"/>&nbsp;
 				<input type="radio" name="low" value="not urgent"/>&nbsp;
-<!--
+
 				<div class="col-md-4 form-group">
 					<label for="search_from_date">From:</label>
 					<input type="date" name="search_from_date" id="search_from_date" class="form-control" 
 					 @if(isset(Session::get('inputs')['search_from_date'])) value="{{ Session::get('inputs')['search_from_date'] }}" @endif>
-				</div> 
+				</div>  <br>
 				<div class="col-md-4 form-group">
 					<label for="search_to_date">To:</label>
 					<input type="date" name="search_to_date" id="search_to_date" class="form-control" 
 					 @if(isset(Session::get('inputs')['search_to_date'])) value="{{ Session::get('inputs')['search_to_date'] }}" @endif>
 				</div> 	
-			</div>      -->
+			</div>     
 			<div class="form-row">
 				<div class="col-md-12 col-lg-12">
 					<button type="submit" class="btn btn-custom"><i class="fa fa-search" aria-hidden="true"></i>Search</button>
@@ -44,20 +43,20 @@
 		</form>
 	</div>
 		<table class="table data-table">
-		<h1>Candidates</h1>
+			<h1>Candidates</h1>
 			<thead>
 				<tr>
-					<th class="align-left">Name</th>	
 					<th class="align-left">Category</th>
 					<th class="align-left">Title</th>
 					<th class="align-left">Priority</th>
+					<th class="align-left">Sent on</th>					
 				</tr>
 			</thead>
-@if($ticket)
+				@if($ticket)
 					@foreach($ticket as $t)
 						<tr>
 							<td>
-								{{ $t->name }}
+								{{ $t->ticket_name }}
 							</td>
 							<td>
 								{{ $t->category }}
@@ -67,12 +66,15 @@
 							</td>
 							<td>
 								{{ $t->Priority }}
-							</td>							
+							</td>	
+							<td>
+								{{ $t->date }}
+							</td>														
 						</tr>
-@endforeach
-@endif
+					@endforeach
+				@endif
 	    <div class="row">
-        <div class="col-md-6">
+        	<div class="col-md-6">
             <form action="/test" method="POST">
                 {{ csrf_field()  }}
                <br>
@@ -83,15 +85,15 @@
                     @if($ticket)
                         @foreach($ticket as $some)
                             <option value="">
-                                {{ $some->name  }} 
                                 {{ $some->category }}   
-								{{ $some->type }}                                                               
+								{{ $some->type }}  
+								{{ $some->group }}                                                            
                             </option>
                         @endforeach
                     @endif
                 </select>
                 </div>
-		        </div> 
-		<!--		{!! $chartjs->container() !!}  {!! $chartjs->script() !!} -->
+		    </div> 
+			<!--	{!! $chartjs->container() !!}  {!! $chartjs->script() !!} -->
 		    </div>
 		</div>   

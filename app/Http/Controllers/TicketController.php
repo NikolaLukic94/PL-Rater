@@ -20,10 +20,21 @@ class TicketController extends Controller
 
     public function index(Request $request) {
 
+        // calculating ticket values
+        $max_ticket = DB::table('tickets')->max('id');
+        $max_ticket = DB::table('tickets')->sum('id');        
+        // end
+
+
+        // search functionality
             $search_high_priority = null;
             $search_low_priority = null;
 
+
+
+
         if($request->isMethod('post')){
+
 
         	if ($request->has('high')) {
     			$search_high_priority = Input::get('high');
@@ -33,39 +44,51 @@ class TicketController extends Controller
         			$search_low_priority = Input::get('low');
 			}
 
-            $search_ticket_name =    $request->ticket_name;
+            $search_ticket_group = $request->search_ticket_group;
+            $search_ticket_employee = $request->search_ticket_employee;     
+            $search_ticket_status = $request->search_ticket_status;             
             $search_ticket_category =     $request->ticket_category;
             $search_ticket_type =         $request->ticket_type;
             $search_from_date =      $request->search_from_date;
             $search_to_date =      $request->search_to_date;
 
             $ticket = DB::table('tickets')
-			            ->leftJoin('ticket_categories', 'tickets.id', '=', 'ticket_categories.id')
-			            ->leftJoin('ticket_types', 'tickets.id', '=', 'ticket_types.id')
-			            ->leftJoin('ticket_priorities', 'tickets.id', '=', 'ticket_priorities.id')
+            ->leftJoin('ticket_group', 'tickets.group_id', '=', 'ticket_groupes.id')   
+            ->leftJoin('employee', 'tickets.employee_id', '=', 'users.id')                      
+            ->leftJoin('ticket_categories', 'tickets.category_id', '=', 'ticket_categories.id')
+            ->leftJoin('ticket_types', 'tickets.type_id', '=', 'ticket_types.id')
+            ->leftJoin('ticket_statuses', 'tickets.status_id', '=', 'ticket_statuses.id')            
+            ->leftJoin('ticket_priorities', 'tickets.priorities_id', '=', 'ticket_priorities.id')
 			            ->select('ticket_categories.name as category',
 			            		 'ticket_types.name as type',
 			            		 'ticket_priorities.name as Priority'
 			            		 )
-                        ->when($search_ticket_name, function ($query) use ($search_ticket_name) {
-                            return $query->where('name', 'like', '%' . $search_ticket_name . '%');
-                        })
+                        ->when($search_ticket_group, function ($query) use ($search_ticket_group) {
+                            return $query->where('ticket_group_id', 'like', '%' . $search_ticket_group . '%');
+                        })    
+                        ->when($search_ticket_employee, function ($query) use ($search_ticket_employee) {
+                            return $query->where('employee_id', 'like', '%' . $search_ticket_employee . '%');
+                        })                                              
                         ->when($search_ticket_category, function ($query) use ($search_ticket_category) {
-                            return $query->where('ticket_category', 'like', '%' . $search_ticket_category . '%');
+                            return $query->where('ticket_category_id', 'like', '%' . $search_ticket_category . '%');
                         })
+                        ->when($search_ticket_status, function ($query) use ($search_ticket_status) {
+                            return $query->where('ticket_status_id', 'like', '%' . $search_ticket_status . '%');
+                        })                          
+                        ->when($search_from_date, $search_to_date function ($query) use ($search_from_date,$search_to_date) {
+                           return $query->where('created_at','>=',date('Y-m-d H:i:s', srtotime($search_from_date))
+                                        ->where('created_at','<=',date('Y-m-d H:i:s', srtotime($search_to_date));
+                        })                        
                         ->when($search_ticket_type, function ($query) use ($search_ticket_type) {
-                            return $query->where('ticket_type', $search_ticket_type);
-                        }) /*
-                        ->when($search_from_date, function ($query) use ($search_from_date,$search_to_date,) {
-                           return $query->whereBetween('created_at', array($search_from_date, $search_to_date)); 
-                        })*/
+                            return $query->where('ticket_type_id', $search_ticket_type);
+                        })
                         ->orderBy('name', 'asc')
                         ->get();                     
 
                         Session::flash('inputs', [
                             'search_high_priority' => $search_high_priority,
                             'search_low_priority' => $search_low_priority,
-                            'search_ticket_name' => $search_ticket_name,
+                            'search_ticket_group' => $search_ticket_group,
                             'search_ticket_category' => $search_ticket_category,
                             'search_ticket_type' => $search_ticket_type,
                             'search_from_date' => $search_from_date,
@@ -76,34 +99,20 @@ class TicketController extends Controller
                          Session::forget('inputs');
 
             $ticket = DB::table('tickets')
-			            ->leftJoin('ticket_categories', 'tickets.id', '=', 'ticket_categories.id')
-			            ->leftJoin('ticket_types', 'tickets.id', '=', 'ticket_types.id')
-			            ->leftJoin('ticket_priorities', 'tickets.id', '=', 'ticket_priorities.id')			            
-			            ->select('ticket_categories.name as category',
-			            		 'ticket_types.name as type',
-			            		 'tickets.name as name',
-			            		 'ticket_priorities.name as Priority')->get();
-///////////////////////////////////////////////////////////////////////
-	/*		$chartjs = new TicketWhereTypeHardware;
-			$chartjs->labels(['One', 'Two', 'Three', 'Four']);
-			$chartjs->dataset('My dataset', 'line', [1, 2, 3, 4]);
-			$chartjs->dataset('My dataset 2', 'line', [4, 3, 2, 1]);
-*//////////////////////////////////////////////////////////
-			$data = DB::table('users')->groupBy('age')
-			    ->get()
-			    ->map(function ($item) {
-			        // Return the number of persons with that age
-			        return count([$item]);
-			    });
-
-				$chartjs = new SampleChart;
-				$chartjs->labels($data->keys());
-				$chartjs->dataset('My dataset', 'line', $data->values());
-
+                ->leftJoin('ticket_categories', 'tickets.category_id', '=', 'ticket_categories.id')
+                ->leftJoin('ticket_types', 'tickets.type_id', '=', 'ticket_types.id')
+                ->leftJoin('ticket_priorities', 'tickets.priorities_id', '=', 'ticket_priorities.id')
+                            ->select('ticket_categories.name as category',
+                                     'ticket_types.name as type',
+                                     'ticket_priorities.name as Priority',
+                                     'tickets.name as name'
+                                     'tickets.created_at as date'
+                                     );
           
 						return view('/tickets', [
 				            'ticket' => $ticket,
-				            'chartjs' => $chartjs
+				            'chartjs' => $chartjs,
+                            'max_ticket' => $max_ticket
 				        ]);
 
  
