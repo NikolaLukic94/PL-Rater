@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Rate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class RateController extends Controller
 {
@@ -14,9 +15,12 @@ class RateController extends Controller
      */
     public function index()
     {
+
+        $rate = DB::table('rates')->get();
+
         return view('/rate/index',[
             'rate' => $rate
-        ])
+        ]);
     }
 
     /**
@@ -54,7 +58,7 @@ class RateController extends Controller
             'prior_carrier' => request('prior_carrier'),
             'prior_carrier_name' => request('prior_carrier_name'),
             'prior_carrier_effective_date' => request('prior_carrier_effective_date')
-        ])
+        ]);
     }
 
     /**
