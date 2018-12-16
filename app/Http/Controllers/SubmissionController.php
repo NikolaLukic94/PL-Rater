@@ -7,7 +7,7 @@ use Dompdf\Dompdf;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\Mail\SubmissionSubmitted;
-
+use Illuminate\Support\Facades\DB;
 use App\Mail;
 use App\Mail\ContactAgentEmail;
 

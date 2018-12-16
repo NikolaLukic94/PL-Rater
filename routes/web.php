@@ -35,3 +35,4 @@ Route::post('/subs/define','RateController@store');
 Route::get('/pdf','SubmissionController@toPdf');
 
 Route::any('/tickets','TicketController@index');
+

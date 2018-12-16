@@ -16,7 +16,7 @@
 									</td>
 								</tr>
 							@endforeach
-								<p>You currently don have any!</p>
+								<p>You currently don have any defined yet!</p>
 						@endif	
                 </div>
                 <button type="button" class="btn btn-outline-secondary">Add new</button>
