@@ -10,6 +10,8 @@ use App\Mail\SubmissionSubmitted;
 use Illuminate\Support\Facades\DB;
 use App\Mail;
 use App\Mail\ContactAgentEmail;
+use Carbon\Carbon;
+use App\User;
 
 class SubmissionController extends Controller
 {
@@ -26,6 +28,7 @@ class SubmissionController extends Controller
     }
 */
     public function index(Request $request) {
+
 /*
         if($request->isMethod('post')){
             $search_lob =    $request->search_lob;
@@ -91,6 +94,16 @@ class SubmissionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function search()
+    {
+        return view('subs/search');
+    }
+     
+    public function indexAndSearch()
+    {
+        return view('/subs/indexAndSearch');
+    }
+
     public function create()
     {
         return view('subs/create');
@@ -105,15 +118,7 @@ class SubmissionController extends Controller
     public function store(Request $request)
     {
             $submission = new Submission;
-/*
-            $validator = Validator::make($request->all(), $submission->rules);
-                    if ($validator->fails()) {
-                        return redirect()->back()
-                                         ->with('message', $validator->errors()
-                                                                     ->first())
-                                         ->with('status', 'danger');
-                    }
-*/
+
             Submission::create([
 
             'agent_name' => request('agent_name'),
@@ -159,8 +164,17 @@ class SubmissionController extends Controller
      */
     public function show(Submission $submission)
     {
-        //
+
+    $submission = DB::table('submissions')->get();
+
+        return view('/subs/list', [
+            'submission' => $submission
+        ]);
+    
     }
+    
+
+
 
     /**
      * Show the form for editing the specified resource.

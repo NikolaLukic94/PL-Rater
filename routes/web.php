@@ -18,21 +18,43 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/subs/index','SubmissionController@index');
-Route::get('/subs/create','SubmissionController@create');
-Route::post('/subs/create','SubmissionController@store');
-Route::get('/subs/edit/{id}', 'SubmissionController@edit');
-Route::post('/subs/edit/{id}', 'SubmissionController@update');
-Route::delete('/subs/delete/{id}', 'SubmissionController@destroy');
+
+
+Route::group(['prefix' => 'subs'], function () {
+	Route::get('/index','SubmissionController@index');
+	Route::get('/search','SubmissionController@search');
+	Route::get('/create','SubmissionController@create');
+	Route::get('/IndexAndSearch','SubmissionController@IndexAndSearch');
+	Route::post('/create','SubmissionController@store');
+	Route::post('/show/{id}','SubmissionController@show');
+	Route::get('/edit/{id}', 'SubmissionController@edit');
+	Route::post('/edit/{id}', 'SubmissionController@update');
+	Route::delete('/delete/{id}', 'SubmissionController@destroy');
+	Route::post('/define','RateController@store');	
+	Route::post('/define','RateController@store');
+});
+
+Route::group(['prefix' => 'file'], function () {
+	Route::get('/index','FileController@index');
+	Route::get('/create','FileController@create');
+});
+
+
+
+Route::group(['prefix' => 'rate'], function () {
+	Route::get('/index','RateController@index');
+	Route::get('/define','RateController@create');
+});
+
 
 Route::get('/prepemail','SubmissionController@prepemail');
 Route::post('/prepemail','SubmissionController@sendemail');
 
-Route::get('/rate/index','RateController@index');
-Route::get('/rate/define','RateController@create');
-Route::post('/subs/define','RateController@store');
+
+
 
 Route::get('/pdf','SubmissionController@toPdf');
 
 Route::any('/tickets','TicketController@index');
 
+Route::get('/users/index','UsersController@index');

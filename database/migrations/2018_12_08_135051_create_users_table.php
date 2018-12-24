@@ -22,6 +22,10 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+//tests
+
+            $table->unsignedInteger('carrier_id')->nullable();
+            $table->foreign('carrier_id')->references('id')->on('carriers');            
         });
     }
 

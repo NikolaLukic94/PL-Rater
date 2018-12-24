@@ -17,8 +17,30 @@ use Charts;
 
 class TicketController extends Controller
 {
-
     public function index(Request $request) {
+
+/*
+$ticket = Ticket::find(1);
+$myDate = '1995-07-02';
+$years = \Carbon::parse($myDate)->age;
+dd($years);
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // calculating ticket values
         $max_ticket = DB::table('tickets')->max('id');
@@ -30,11 +52,7 @@ class TicketController extends Controller
             $search_high_priority = null;
             $search_low_priority = null;
 
-
-
-
         if($request->isMethod('post')){
-
 
         	if ($request->has('high')) {
     			$search_high_priority = Input::get('high');
@@ -52,7 +70,7 @@ class TicketController extends Controller
             $search_from_date =      $request->search_from_date;
             $search_to_date =      $request->search_to_date;
 
-            $ticket = DB::table('tickets')
+            $ticket = DB::table('tickets')/*
             ->leftJoin('ticket_group', 'tickets.group_id', '=', 'ticket_groupes.id')   
             ->leftJoin('employee', 'tickets.employee_id', '=', 'users.id')                      
             ->leftJoin('ticket_categories', 'tickets.category_id', '=', 'ticket_categories.id')
@@ -74,14 +92,14 @@ class TicketController extends Controller
                         })
                         ->when($search_ticket_status, function ($query) use ($search_ticket_status) {
                             return $query->where('ticket_status_id', 'like', '%' . $search_ticket_status . '%');
-                        })                          
+                        })*/                          
                         ->when($search_from_date, $search_to_date function ($query) use ($search_from_date,$search_to_date) {
                            return $query->where('created_at','>=',date('Y-m-d H:i:s', srtotime($search_from_date))
-                                        ->where('created_at','<=',date('Y-m-d H:i:s', srtotime($search_to_date));
+                                        ->where('created_at','<=',date('Y-m-d H:i:s', srtotime($search_to_date))
                         })                        
-                        ->when($search_ticket_type, function ($query) use ($search_ticket_type) {
+                    /*    ->when($search_ticket_type, function ($query) use ($search_ticket_type) {
                             return $query->where('ticket_type_id', $search_ticket_type);
-                        })
+                        })*/
                         ->orderBy('name', 'asc')
                         ->get();                     
 
@@ -109,11 +127,11 @@ class TicketController extends Controller
                                      'tickets.created_at as date'
                                      );
           
-						return view('/tickets', [
-				            'ticket' => $ticket,
-				            'chartjs' => $chartjs,
-                            'max_ticket' => $max_ticket
-				        ]);
+			return view('/tickets', [
+				'ticket' => $ticket,
+				'chartjs' => $chartjs,
+                'max_ticket' => $max_ticket
+			]);
 
  
 					}}
