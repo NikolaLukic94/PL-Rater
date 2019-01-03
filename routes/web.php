@@ -39,6 +39,10 @@ Route::group(['prefix' => 'file'], function () {
 	Route::get('/create','FileController@create');
 });
 
+Route::group(['prefix' => 'users'], function () {
+	Route::get('/','UserController@index');
+
+});
 
 
 Route::group(['prefix' => 'rate'], function () {

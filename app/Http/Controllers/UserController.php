@@ -8,48 +8,74 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 
 
-
-
-class UsersController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-/*
-        $count = [];
+    public function groupByCarrier($users) {
 
+        $users = DB::table('users')
+            ->leftJoin('carriers', 'users.carrier_id', '=', 'carriers.id')  
+            ->select('carriers.name as carrier_name',
+                     'users.name as user_name',
+                     'user.email as user_email'
+                     )
+            ->get();
 
-        $users = DB::table('users')->get();
-        foreach($users as $user) {
-            $ageTimestamp = $user->created_at;
-            $age = Carbon::parse($ageTimestamp)->age;
-            dd($age);
-            $nowInYears = Carbon::parse($now)->age;
+        $carrier_grouping_category = DB::table('carriers')->get();
 
-            $result = $now - $age;
-            $count = array_push($result);
-            dd($count);
-
-        }
-        */
-
-        //or push to array all result of created+at coulm
-
-        return view('users/list',[
-            $userToTwentyfive = DB::table('users')->where()
-
-        ]);
+        
     }
 
+   
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
+
+    /* COUNTING USERS AND GROUPING THEM */
+
+    public function index() {
+
+    $users = DB::table('users')->get();
+    $users = $this->groupAndCountBasedOnAge($users);
+    dd($users);
+    $usersUnderTwentyFive = $users['underTwenty']['count'];
+
+
+    return view('/users/list', [
+        'users' => $users
+    ]);
+}
+
+public function groupAndCountBasedOnAge($users)
+{
+    list($under, $equalOrAbove) = collect($users)->partition(function ($user) {
+        return Carbon::now()
+                ->diffInYears(Carbon::createFromFormat('Y-m-d', $user->bith_date)) < 25;
+    });
+
+    return [
+        'underTwenty'  => [
+            'users' => $under->all(),
+            'count' => $under->count()
+        ],
+
+        'equalOrAboveTwenty' => [
+            'users' => $equalOrAbove->all(),
+            'count' => $equalOrAbove->count()
+        ]
+    ];
+    
+
+} 
+
+
+
     public function create()
     {
         //

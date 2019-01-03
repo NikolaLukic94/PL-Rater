@@ -26,22 +26,6 @@ $years = \Carbon::parse($myDate)->age;
 dd($years);
 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         // calculating ticket values
         $max_ticket = DB::table('tickets')->max('id');
         $max_ticket = DB::table('tickets')->sum('id');        
