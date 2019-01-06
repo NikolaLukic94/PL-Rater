@@ -1,5 +1,5 @@
 @extends('layout')
-
+@section('content')
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -87,7 +87,9 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4">
-    <aside class="main_sidebar">
+      <div class="card">
+        <div class="card-header">Where do you wanna go?:</div>
+        <div class="card-body">
         <ul>
             <li><i class="fa fa-arrows"></i><a href="#">Accounts</a></li>
             <hr>    
@@ -114,20 +116,9 @@
             <hr>    
             <li><i class="fa fa-folder"></i><a href="#">folder</a></li>
         </ul>
-    </aside>
+</div></div>
     </div>
-    <div class="jumbotron">
-    <div class="col-12">
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-    </div>
-</div>
+
   </div>
 </div>
     </body>

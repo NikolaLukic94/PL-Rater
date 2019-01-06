@@ -15,7 +15,7 @@ class Controller extends BaseController
 
     public function __construct() 
     {
-    				$credit = array(
+    	$credit = array(
 		  "1" => "0.7",
 		  "2" => "0.8",
 		  "3" => "0.85",	

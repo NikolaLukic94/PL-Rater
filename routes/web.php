@@ -19,7 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
 Route::group(['prefix' => 'subs'], function () {
 	Route::get('/index','SubmissionController@indexSubEmail');
 	Route::get('/search','SubmissionController@searchSubEmail');
@@ -44,12 +43,10 @@ Route::group(['prefix' => 'users'], function () {
 
 });
 
-
 Route::group(['prefix' => 'rate'], function () {
 	Route::get('/index','RateController@index');
 	Route::get('/define','RateController@create');
 });
-
 
 Route::get('/prepemail','SubmissionController@prepemail');
 Route::post('/prepemail','SubmissionController@sendemail');
@@ -73,6 +70,11 @@ Route::group(['prefix' => 'reminder'], function () {
 	Route::get('/','UserController@index');
 	Route::get('/delete','UserController@index');
 });
+
+Route::group(['prefix' => 'stats'], function () {
+	Route::get('/subs','StatsController@index');
+});
+
 
 Route::get('/pdf','SubmissionController@toPdf');
 

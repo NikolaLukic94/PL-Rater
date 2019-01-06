@@ -86,8 +86,6 @@
                       <th><abbr title="">Agency</abbr></th>
                       <th><abbr title="">Agent</abbr></th>
                       <th><abbr title="">Action</abbr></th>
-                      <th><abbr title="">Action</abbr></th>                  
-                      <th><abbr title="">Action</abbr></th>
                     </tr>
                   </thead>
                     @if($submission)
@@ -121,14 +119,8 @@
                               {{ $sub->agent_name }}
                             </td>
                             <td>
-                              <a class="btn btn-primary" href="/subs/search" role="button">Search</a> &nbsp;         
-                            </td>               
-                            <td>
-                              <button type="button" class="btn btn-success">New file</button>                
-                            </td> 
-                            <td>             
-                              <button type="button" class="btn btn-success">Delete</button> 
-                            </td>                                              
+                              <a class="btn btn-primary" href="/subs/search" role="button">Open</a> &nbsp;         
+                            </td>                              
                           </tr>
                             @endif
                           @endforeach
