@@ -21,14 +21,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::group(['prefix' => 'subs'], function () {
-	Route::get('/index','SubmissionController@index');
-	Route::get('/search','SubmissionController@search');
-	Route::get('/create','SubmissionController@create');
+	Route::get('/index','SubmissionController@indexSubEmail');
+	Route::get('/search','SubmissionController@searchSubEmail');
+	Route::get('/create','SubmissionController@createSubEmail');
 	Route::get('/IndexAndSearch','SubmissionController@IndexAndSearch');
-	Route::post('/create','SubmissionController@store');
-	Route::post('/show/{id}','SubmissionController@show');
-	Route::get('/edit/{id}', 'SubmissionController@edit');
-	Route::post('/edit/{id}', 'SubmissionController@update');
+	Route::post('/create','SubmissionController@storeSubEmail');
+	Route::post('/show/{id}','SubmissionController@showSubEmail');
+	Route::get('/edit/{id}', 'SubmissionController@editSubEmail');
+	Route::post('/edit/{id}', 'SubmissionController@updateSubEmail');
 	Route::delete('/delete/{id}', 'SubmissionController@destroy');
 	Route::post('/define','RateController@store');	
 	Route::post('/define','RateController@store');
@@ -54,8 +54,25 @@ Route::group(['prefix' => 'rate'], function () {
 Route::get('/prepemail','SubmissionController@prepemail');
 Route::post('/prepemail','SubmissionController@sendemail');
 
+Route::group(['prefix' => 'folder'], function () {
+	Route::get('/','UserController@index');
+	Route::get('/upload','UserController@index');
+	Route::get('/list','UserController@index');
+	Route::get('/','UserController@index');
+	Route::get('/','UserController@index');
+	Route::get('/','UserController@index');
+	Route::get('/','UserController@index');
+	Route::get('/','UserController@index');
+	Route::get('/delete','UserController@index');
+});
 
-
+Route::group(['prefix' => 'reminder'], function () {
+	Route::get('/','ReminderController@index');
+	Route::get('/list','ReminderController@index');
+	Route::get('/','UserController@index');
+	Route::get('/','UserController@index');
+	Route::get('/delete','UserController@index');
+});
 
 Route::get('/pdf','SubmissionController@toPdf');
 

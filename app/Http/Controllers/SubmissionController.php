@@ -12,6 +12,7 @@ use App\Mail;
 use App\Mail\ContactAgentEmail;
 use Carbon\Carbon;
 use App\User;
+use App\Submission;
 
 class SubmissionController extends Controller
 {
@@ -27,7 +28,7 @@ class SubmissionController extends Controller
         $this->middleware('auth')->except(['create', 'store']);
     }
 */
-    public function index(Request $request) {
+    public function indexSubEmail(Request $request) {
 
 /*
         if($request->isMethod('post')){
@@ -94,9 +95,13 @@ class SubmissionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function search()
+    public function searchSubEmail()
     {
-        return view('subs/search');
+
+      $submission = DB::table('submissions')->orderBy('state', 'asc')
+                                          ->get();
+
+        return view('subs/search',compact('submission'));
     }
      
     public function indexAndSearch()
@@ -104,7 +109,7 @@ class SubmissionController extends Controller
         return view('/subs/indexAndSearch');
     }
 
-    public function create()
+    public function createSubEmail()
     {
         return view('subs/create');
     }
@@ -115,9 +120,8 @@ class SubmissionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function storeSubEmail(Request $request)
     {
-            $submission = new Submission;
 
             Submission::create([
 
@@ -148,12 +152,13 @@ class SubmissionController extends Controller
             'new_purchase' => request('new_purchase'),    
             'prior_carrier' => request('prior_carrier'),
             'prior_carrier_name' => request('prior_carrier_name'),
-            'prior_carrier_effective_date' => request('prior_carrier_effective_date')
+            'prior_carrier_effective_date' => request('prior_carrier_effective_date'),
+            'status' => 'not_logged'
                       ]);                                                                                    
 
-            $submission->save();
+            
 
-            return view('/');
+            return view('/subs/success');
     }
 
     /**
@@ -162,7 +167,7 @@ class SubmissionController extends Controller
      * @param  \App\Submission  $submission
      * @return \Illuminate\Http\Response
      */
-    public function show(Submission $submission)
+    public function showSubEmail(Submission $submission)
     {
 
     $submission = DB::table('submissions')->get();
@@ -182,7 +187,7 @@ class SubmissionController extends Controller
      * @param  \App\Submission  $submission
      * @return \Illuminate\Http\Response
      */
-    public function edit(Submission $submission)
+    public function editSubEmail(Submission $submission)
     {
         $submission = Submission::findOrFail($id);
 
@@ -196,7 +201,7 @@ class SubmissionController extends Controller
      * @param  \App\Submission  $submission
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Submission $submission)
+    public function updateSubEmail(Request $request, Submission $submission)
     {
         $submission = Submission::findOrFail($id);
 
@@ -236,11 +241,16 @@ class SubmissionController extends Controller
      * @param  \App\Submission  $submission
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Submission $submission)
-    {
-        //
-    }
 
+    public function destroy($id) {
+
+        $submission = Submission::find($id);
+
+        $submission->delete();
+
+        return redirect('/subs/index');
+        
+    }
     public function prepemail()
     {
 
@@ -281,12 +291,3 @@ class SubmissionController extends Controller
 
 }
 
-
-/*
-
-            $something = DB::table('hr_users')
-                        ->join('users', 'users.hr_user_id', '=', 'users.id')
-                        ->select('hr_users.name', 'users.id', 'hr_users.id')
-                        ->get();
-
-                        */

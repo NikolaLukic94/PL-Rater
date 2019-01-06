@@ -43,6 +43,7 @@ class UserController extends Controller
 
     $users = DB::table('users')->get();
     $users = $this->groupAndCountBasedOnAge($users);
+    $users = $this->setDepartment($users);
     dd($users);
     $usersUnderTwentyFive = $users['underTwenty']['count'];
 
@@ -136,4 +137,67 @@ public function groupAndCountBasedOnAge($users)
     {
         //
     }
+
+/*
+    public function test(Users $users)
+    {
+        $subtypesArray = [];
+
+        $assetType = null;
+
+        $assetSubType = DB::table('assets')
+            ->leftJoin('asset_subtypes'), function ($join) {
+                $join->on('asset_subtype_items.asset_subtype_id','=','asset_subtypes.id')
+            ->leftJoin('asset_types'), function ($join) {
+                $join->on('asset_subtypes.asset_subtype_id','=','asset_types.id')
+            }
+            }->select('asset_subype.id as asset_subtype_id',
+                      'asset_subtypes.name as asset_subtype',
+                      'asset_types.id as asset_type_id,
+                      'asset_types.name as asset_type'
+                        )
+            ->where('asset_id','=','$asset->id')                        
+    }    
+            foreach($asset_subtypes as $as) {
+                $asset_type_id = $as->asset_type_id;
+                $asset_type = $as->asset_type;
+
+                $subtypesArray[$as->asset_subtype_id] = $as->asset_subtype;
+
+            }
+            $asset->subtypes = $subtypesArray;
+            $asset->type_id = $asset_type_id;
+            $asset->type = $asset_type;
 }
+$assets = $this->test($assets);
+
+
+*/
+    public function setDepartment($users)
+    {
+        $departmentArray = [];
+
+        $users = DB::table('users')
+        ->leftJoin('assignments','assignments.user_id','=','users.id')
+        ->leftJoin('departments','assignments.department_id','=','department.id')
+            ->select('assignments.id as assignments',
+                     'assignments.name as assignment_name',
+                     'departments.id as dept_id',
+                     'departments.name as depts',
+                     'users.id as user_id',
+                     'users.name as user_name'
+                    )
+            ->where('user_id','=',$users->id)
+            ->get();
+
+        foreach($users as $user) {
+                $assignments = $user->assignments;
+                $dept_id = $user->dept_id;
+
+                $departmentArray[$user->assignments] = $as->assignment_name;
+
+            }
+            $users->subtypes = $departmentArray;
+            $users->dept_id = $dept_id;
+        }
+    }

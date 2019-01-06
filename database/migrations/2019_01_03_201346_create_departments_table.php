@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AlterTableUsersRenameAgeCol extends Migration
+class CreateDepartmentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class AlterTableUsersRenameAgeCol extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('age');
-        });          
+        Schema::create('departments', function (Blueprint $table) {
+            $table->increments('id');
+            $table->timestamps();
+            $table->string('name');
+        });
     }
 
     /**
@@ -25,6 +27,6 @@ class AlterTableUsersRenameAgeCol extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('departments');
     }
 }

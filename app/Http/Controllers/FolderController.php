@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\File;
-use App\Submission;
 use Illuminate\Http\Request;
 
-class FileController extends Controller
+class FolderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +13,9 @@ class FileController extends Controller
      */
     public function index()
     {
-
-        return view('/file/index');
+        return view('/folder',
+            'folder' => $folder
+        ]);
     }
 
     /**
@@ -26,10 +25,7 @@ class FileController extends Controller
      */
     public function create()
     {
-
-        $submission = Submission::findOrFail($id); 
-               
-        return view('file/create',compact('file','candidates'));
+        return view('file/create');
     }
 
     /**
@@ -105,4 +101,3 @@ class FileController extends Controller
     {
         //
     }
-}

@@ -31,50 +31,52 @@
               </thead>
                 @if($submission)
                   @foreach($submission as $sub)
-              <tr>
-              <td>
-              </td>
+                     @if($sub->status != 'not_logged')
+                      <tr>
+                        <td>
+                        </td>
 
-              <td>
-                {{ $sub->named_insured }}
-              </td>
+                        <td>
+                          {{ $sub->named_insured }}
+                        </td>
 
-              <td>
-                {{ $sub->type_of_coverage }}
-              </td>
+                        <td>
+                          {{ $sub->type_of_coverage }}
+                        </td>
 
-              <td>
-                {{ $sub->lob }}
-              </td>
+                        <td>
+                          {{ $sub->lob }}
+                        </td>
 
-              <td>
-                {{ $sub->effective_date }}
-              </td>
+                        <td>
+                          {{ $sub->effective_date }}
+                        </td>
 
-              <td>
-                {{ $sub->state }}
-              </td>
+                        <td>
+                          {{ $sub->state }}
+                        </td>
 
-              <td>
-                {{ $sub->agency_name }}
-              </td>
+                        <td>
+                          {{ $sub->agency_name }}
+                        </td>
 
-              <td>
-                {{ $sub->agent_name }}
-              </td>
+                        <td>
+                          {{ $sub->agent_name }}
+                        </td>
 
-              <td>
-                <a class="btn btn-primary" href="/subs/search" role="button">Search</a> &nbsp;         
-              </td>               
-              <td>
-                <button type="button" class="btn btn-success">Log</button>                
-              </td> 
-              <td>             
-                <button type="button" class="btn btn-success">Delete</button> 
-              </td>                                              
-            </tr>
+                        <td>
+                          <a class="btn btn-primary" href="/subs/search" role="button">Search</a> &nbsp;         
+                        </td>               
+                        <td>
+                          <button type="button" class="btn btn-success">Log</button>                
+                        </td> 
+                        <td>             
+                          <button type="button" class="btn btn-success">Delete</button> 
+                        </td>                                              
+                    </tr>
+                    @endif
                   @endforeach
-                  @else
+                @else
                     <p>There are no new emails!</p>
                 @endif
               </div>

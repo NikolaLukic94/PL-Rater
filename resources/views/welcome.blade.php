@@ -86,7 +86,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-2">
+    <div class="col-md-4">
     <aside class="main_sidebar">
         <ul>
             <li><i class="fa fa-arrows"></i><a href="#">Accounts</a></li>

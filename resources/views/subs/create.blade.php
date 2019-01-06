@@ -29,7 +29,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="agency_name" type="text" class="input" placeholder="Your name here" id="agency_name">
+							<input name="agency_name" type="text" class="input" placeholder="Agency name" id="agency_name">
 						</div>
 					</div>
 				</div>
@@ -41,7 +41,7 @@
 							</label>
 						</div>
 							<div class="col">	
-								<input name="agent_email_address" type="email" class="input" placeholder="Your name here" id="agent_email_address">
+								<input name="agent_email_address" type="email" class="input" placeholder="Your email address here" id="agent_email_address">
 							</div>	
 					</div>
 				</div>	
@@ -53,7 +53,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="agent_phone_number" type="text" class="input" placeholder="Your name here" id="agent_phone_number">
+							<input name="agent_phone_number" type="text" class="input" placeholder="Your phone number here" id="agent_phone_number">
 						</div>
 					</div>
 				</div>		
@@ -65,7 +65,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="type_of_coverage" type="text" class="input" placeholder="Your name here" id="type_of_coverage">
+							<input name="type_of_coverage" type="text" class="input"  id="type_of_coverage">
 						</div>
 					</div>
 				</div>	
@@ -77,7 +77,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="lob" type="text" class="input" placeholder="Your name here" id="lob">
+							<input name="lob" type="text" class="input" id="lob">
 						</div>
 					</div>
 				</div>	
@@ -163,7 +163,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="state" type="text" class="input" placeholder="Your name here" id="state">
+							<input name="state" type="text" class="input"  id="state">
 						</div>
 					</div>
 				</div>
@@ -223,7 +223,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="loss_of_use" type="text" class="input" placeholder="Your name here" id="loss_of_use">
+							<input name="loss_of_use" type="text" class="input" id="loss_of_use">
 						</div>
 					</div>
 				</div>
@@ -235,7 +235,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="med_pay" type="text" class="input" placeholder="Your name here" id="med_pay">
+							<input name="med_pay" type="text" class="input" id="med_pay">
 						</div>
 					</div>
 				</div>
@@ -247,7 +247,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="aop_ded" type="text" class="input" placeholder="Your name here" id="aop_ded">
+							<input name="aop_ded" type="text" class="input" id="aop_ded">
 						</div>
 					</div>
 				</div>
@@ -260,7 +260,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="construction_type" type="text" class="input" placeholder="Your name here" id="construction_type">
+							<input name="construction_type" type="text" class="input" id="construction_type">
 						</div>
 					</div>
 				</div>
@@ -272,7 +272,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="protection_class" type="text" class="input" placeholder="Your name here" id="protection_class">
+							<input name="protection_class" type="text" class="input" id="protection_class">
 						</div>
 					</div>
 				</div>
@@ -284,7 +284,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="new_purchase" type="text" class="input" placeholder="Your name here" id="new_purchase">
+							<input name="new_purchase" type="text" class="input" id="new_purchase">
 						</div>
 					</div>
 				</div>

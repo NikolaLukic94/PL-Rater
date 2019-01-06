@@ -21,14 +21,18 @@ class CreateSubmissionsTable extends Migration
             $table->string('agent_email_address', 50);
             $table->string('agent_phone_number', 50);
                 //coverage info
+            $table->string('ssn', 50)->nullable();             
+            $table->string('entity_type', 50)->nullable();            
             $table->string('type_of_coverage', 50)->nullable();
             $table->string('lob', 50);
             $table->date('effective_date');
             $table->string('named_insured', 50);  
+            $table->string('additional_ni', 50)->nullable();            
             $table->string('mailing_address', 50)->nullable();                                  
             $table->string('street_name_and_number', 50);  
             $table->string('city', 50);   
-            $table->string('county', 50);   
+            $table->string('county', 50); 
+            $table->string('zip', 50);               
              $table->string('state', 50);                            
             $table->string('phone_number', 50);
             $table->string('email_address', 50);                              
@@ -45,6 +49,8 @@ class CreateSubmissionsTable extends Migration
             $table->string('prior_carrier_name', 50)->nullable();
             $table->date('prior_carrier_effective_date', 50)->nullable();
 
+            $table->string('status');
+            
             $table->timestamps();
         });
     }
