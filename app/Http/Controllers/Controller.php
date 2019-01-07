@@ -27,7 +27,7 @@ class Controller extends BaseController
 		  "9" => "1.15"		  		  		  		  		  		  	  
 		);
 
-		$lob = array('1' => 'HO-3',
+		$lob = array('1'=> 'HO-3',
 					'2' => 'DP-1',
 					'3' => 'DP-3'
 	    );

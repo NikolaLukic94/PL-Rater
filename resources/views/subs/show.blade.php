@@ -14,11 +14,11 @@
 					<div class="row">
 						<div class="col">
 							<label class="label" for="agent_name">
-								<p>{{  $submission->agent_name }}</p>
+								<p>Agent's name</p>
 							</label>
 						</div>
 						<div class="col">
-							<input name="agent_name" type="text" class="input" placeholder="Your name here" id="agent_name">
+							<input name="agent_name" value="{{$submission->agent_name}}" type="text" class="input" id="agent_name">
 						</div>
 				</div>
 				</div>
@@ -26,11 +26,11 @@
 					<div class="row">
 						<div class="col">
 							<label class="label" for="agency_name">
-								<p>{{  $submission->agency_name }}</p>
+								<p>Agency name</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="agency_name" type="text" class="input" placeholder="Agency name" id="agency_name">
+							<input name="agency_name" value="{{$submission->agency_name}}" type="text" class="input" id="agency_name">
 						</div>
 					</div>
 				</div>
@@ -38,23 +38,22 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="agent_email_address">
-								<p>{{  $submission->agent_email_address }}</p>
+								<p>Agent's email address</p>
 							</label>
 						</div>
 							<div class="col">	
-								<input name="agent_email_address" type="email" class="input" placeholder="Your email address here" id="agent_email_address">
+								<input name="agent_email_address" value="{{$submission->agent_email_address}}"  type="email" class="input" id="agent_email_address">
 							</div>	
 					</div>
 				</div>	
 				<div class="field">
 					<div class="row">
 						<div class="col">					
-							<label class="label" for="agent_phone_number">
-								<p>{{  $submission->agent_phone_number }}</p>
-							</label>
+							<label class="label" for="agent_phone_number"></label>
+							<p>Agent's phone number</p>
 						</div>
 						<div class="col">							
-							<input name="agent_phone_number" type="text" class="input" placeholder="Your phone number here" id="agent_phone_number">
+							<input name="agent_phone_number" value="{{$submission->agent_phone_number}}" type="text" class="input"  id="agent_phone_number">
 						</div>
 					</div>
 				</div>		
@@ -62,11 +61,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="type_of_coverage">
-									<p>{{  $submission->type_of_coverage }}</p>
+							<p>Type of coverage</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="type_of_coverage" type="text" class="input"  id="type_of_coverage">
+							<input name="type_of_coverage" value="{{$submission->type_of_coverage}}" type="text" class="input"  id="type_of_coverage">
 						</div>
 					</div>
 				</div>	
@@ -74,11 +73,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="type_of_coverage">
-									<p>{{  $submission->type_of_coverage }}</p>
+							<p>Type of coverage</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="lob" type="text" class="input" id="lob">
+							<input name="lob" type="text" value="{{$submission->type_of_coverage}}" class="input" id="lob">
 						</div>
 					</div>
 				</div>	
@@ -86,11 +85,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="effective_date">
-									<p>{{  $submission->effective_date }}</p>
+							<p>Effective date</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="effective_date" type="date" class="input" placeholder="Your name here" id="effective_date">
+							<input name="effective_date" value="{{$submission->effective_date}}" type="date" class="input" id="effective_date">
 						</div>
 					</div>
 				</div>	
@@ -100,11 +99,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="named_insured">
-									<p>{{  $submission->named_insured }}</p>
+							<p>Named Insured</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="named_insured" type="text" class="input" placeholder="Your name here" id="named_insured">
+							<input name="named_insured" value="{{$submission->named_insured}}" type="text" class="input" id="named_insured">
 						</div>
 					</div>
 				</div>	
@@ -112,11 +111,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="mailing_address">
-									<p>{{  $submission->mailing_address }}</p>s
+							<p>Mailing address</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="mailing_address" type="text" class="input" placeholder="Your name here" id="mailing_address">
+							<input name="mailing_address" value="{{$submission->mailing_address}}" type="text" class="input" id="mailing_address">
 						</div>
 					</div>
 				</div>
@@ -124,11 +123,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="street_name_and_number">
-									<p>{{  $submission->street_name_and_number }}</p>
+							<p>Street name and number</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="street_name_and_number" type="text" class="input" placeholder="Your name here" id="street_name_and_number">
+							<input name="street_name_and_number" value="{{$submission->street_name_and_number}}" type="text" class="input" id="street_name_and_number">
 						</div>
 					</div>
 				</div>
@@ -136,11 +135,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="city">
-									<p>{{  $submission->city }}</p>
+							<p>City</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="city" type="text" class="input" placeholder="Your name here" id="city">
+							<input name="city" type="text" value="{{$submission->city}}" class="input" id="city">
 						</div>
 					</div>
 				</div>
@@ -148,11 +147,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="county">
-									<p>{{  $submission->county }}</p>
+							<p>County</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="county" type="text" class="input" placeholder="Your name here" id="county">
+							<input name="county" type="text" value="{{$submission->county}}" class="input" id="county">
 						</div>
 					</div>
 				</div>
@@ -160,11 +159,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="state">
-									<p>{{  $submission->state }}</p>
+							<p>State</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="state" type="text" class="input"  id="state">
+							<input name="state" type="text" value="{{$submission->state}}" class="input"  id="state">
 						</div>
 					</div>
 				</div>
@@ -172,11 +171,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="phone_number">
-									<p>{{  $submission->phone_number }}</p>
+							<p>Named Insured's phone #</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="phone_number" type="text" class="input" placeholder="Your name here" id="phone_number">
+							<input name="phone_number" type="text" value="{{$submission->phone_number}}" class="input" id="phone_number">
 						</div>
 					</div>
 				</div>
@@ -184,11 +183,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="email_address">
-									<p>{{  $submission->email_address }}</p>
+							<p>Email address</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="email_address" type="text" class="input" placeholder="Your name here" id="email_address">
+							<input name="email_address" value="{{$submission->email_address}}" type="text" class="input" id="email_address">
 						</div>
 					</div>
 				</div>
@@ -196,11 +195,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="cov_a">
-									<p>{{  $submission->cov_a }}</p>
+							<p>Coverage A</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="cov_a" type="text" class="input" placeholder="Your name here" id="cov_a">
+							<input name="cov_a" type="text" value="{{$submission->cov_a}}" class="input" id="cov_a">
 						</div>
 					</div>
 				</div>
@@ -208,11 +207,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="other_structures">
-									<p>{{  $submission->other_structures }}</p>s
+							<p>Other Structures</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="other_structures" type="text" class="input" placeholder="Your name here" id="other_structures">
+							<input name="other_structures" value="{{$submission->other_structures}}" type="text" class="input" id="other_structures">
 						</div>
 					</div>
 				</div>
@@ -220,11 +219,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="loss_of_use">
-									<p>{{  $submission->loss_of_use }}</p>
+							<p>Loss of Use</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="loss_of_use" type="text" class="input" id="loss_of_use">
+							<input name="loss_of_use" type="text" value="{{$submission->loss_of_use}}" class="input" id="loss_of_use">
 						</div>
 					</div>
 				</div>
@@ -232,11 +231,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="med_pay">
-									<p>{{  $submission->med_pay }}</p>
+							<p>Med Pay</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="med_pay" type="text" class="input" id="med_pay">
+							<input name="med_pay" type="text" value="{{$submission->med_pay}}" class="input" id="med_pay">
 						</div>
 					</div>
 				</div>
@@ -244,11 +243,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="aop_ded">
-									<p>{{  $submission->aop_ded }}</p>
+							<p>AOP Deductible</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="aop_ded" type="text" class="input" id="aop_ded">
+							<input name="aop_ded" type="text" value="{{$submission->aop_ded}}" class="input" id="aop_ded">
 						</div>
 					</div>
 				</div>
@@ -257,11 +256,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="construction_type">
-									<p>{{  $submission->construction_type }}</p>
+							<p>Construction type</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="construction_type" type="text" class="input" id="construction_type">
+							<input name="construction_type" value="{{$submission->construction_type}}" type="text" class="input" id="construction_type">
 						</div>
 					</div>
 				</div>
@@ -269,11 +268,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="protection_class">
-									<p>{{  $submission->protection_class }}</p>
+							<p>PC</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="protection_class" type="text" class="input" id="protection_class">
+							<input name="protection_class" value="{{$submission->protection_class}}" type="text" class="input" id="protection_class">
 						</div>
 					</div>
 				</div>
@@ -281,11 +280,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="new_purchase">
-									<p>{{  $submission->new_purchase }}</p>
+							<p>New purchase?</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="new_purchase" type="text" class="input" id="new_purchase">
+							<input name="new_purchase" value="{{$submission->new_purchase}}" type="text" class="input" id="new_purchase">
 						</div>
 					</div>
 				</div>
@@ -293,11 +292,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="prior_carrier">
-									<p>{{  $submission->prior_carrier }}</p>
+							<p>Prior carrier?</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="prior_carrier" type="text" class="input" placeholder="Your name here" id="prior_carrier">
+							<input name="prior_carrier" value="{{$submission->prior_carrier}}" type="text" class="input" id="prior_carrier">
 						</div>
 					</div>
 				</div>
@@ -305,11 +304,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="prior_carrier_name">
-									<p>{{  $submission->prior_carrier_name }}</p>
+							<p>Prior carrier - name</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="prior_carrier_name" type="text" class="input" placeholder="Your name here" id="prior_carrier_name">
+							<input name="prior_carrier_name" value="{{$submission->prior_carrier_name}}" type="text" class="input" id="prior_carrier_name">
 						</div>
 					</div>
 				</div>
@@ -317,11 +316,11 @@
 					<div class="row">
 						<div class="col">					
 							<label class="label" for="prior_carrier_effective_date">
-								<p>{{  $submission->prior_carrier_effective_date }}</p>e
+							<p>Eff. date of prev. policy</p>
 							</label>
 						</div>
 						<div class="col">							
-							<input name="prior_carrier_effective_date" type="date" class="input" placeholder="Your name here" id="prior_carrier_effective_date">
+							<input name="prior_carrier_effective_date" value="{{$submission->prior_carrier_effective_date}}" type="date" class="input" id="prior_carrier_effective_date">
 						</div>
 					</div>
 				</div>

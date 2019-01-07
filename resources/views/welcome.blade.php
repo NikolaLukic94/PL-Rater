@@ -82,8 +82,6 @@
                     @endauth
                 </div>
             @endif
-
-
 <div class="container">
   <div class="row">
     <div class="col-md-4">
@@ -97,7 +95,7 @@
                     <ul>    
                         <li><a href="/subs/create">New</a>
                         <li>Renewal</li>
-                        <li><a href="/subs/index">List</a></li>
+                        <li><a href="/subs/index">Emails</a></li>
                     </ul>
             <hr>    
             <li class="active"><i class="fa fa-bell"></i><a href="#">Emails</a></li>

@@ -23,14 +23,14 @@ Route::group(['prefix' => 'subs'], function () {
 	Route::get('/index','SubmissionController@indexSubEmail');
 	Route::get('/search','SubmissionController@searchSubEmail');
 	Route::get('/create','SubmissionController@createSubEmail');
-	Route::get('/IndexAndSearch','SubmissionController@IndexAndSearch');
+	Route::get('/IndexAndSearch','SubmissionController@IndexAndSearch');//maybe not needed?
 	Route::post('/create','SubmissionController@storeSubEmail');
-	Route::post('/show/{id}','SubmissionController@showSubEmail');
+	Route::get('/show/{id}','SubmissionController@showSubEmail');
 	Route::get('/edit/{id}', 'SubmissionController@editSubEmail');
 	Route::post('/edit/{id}', 'SubmissionController@updateSubEmail');
 	Route::delete('/delete/{id}', 'SubmissionController@destroy');
+	Route::get('/define','RateController@store');	
 	Route::post('/define','RateController@store');	
-	Route::post('/define','RateController@store');
 });
 
 Route::group(['prefix' => 'file'], function () {

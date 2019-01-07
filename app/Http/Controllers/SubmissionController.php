@@ -167,12 +167,11 @@ class SubmissionController extends Controller
      * @param  \App\Submission  $submission
      * @return \Illuminate\Http\Response
      */
-    public function showSubEmail(Submission $submission)
+    public function showSubEmail($id)
     {
+        $submission = Submission::findOrFail($id);
 
-    $submission = DB::table('submissions')->get();
-
-        return view('/subs/list', [
+        return view('/subs/show', [
             'submission' => $submission
         ]);
     

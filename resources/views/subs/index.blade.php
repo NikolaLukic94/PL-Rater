@@ -1,3 +1,5 @@
+
+
 @extends('layouts.app')
 
 @section('content')
@@ -61,7 +63,7 @@
                           <a class="btn btn-primary" href="/subs/search" role="button">Search</a> &nbsp;         
                         </td>   
                         <td>
-                          <button type="button" class="btn btn-success">Open</button>                
+                          <button type="button" href="/subs/show/{{$sub->id}}" class="btn btn-success">Open</button>                
                         </td>                                     
                         <td>
                           <button type="button" class="btn btn-success">Log</button>                
@@ -83,3 +85,5 @@
     </div>
   </div>
 </div>
+
+@endsection
