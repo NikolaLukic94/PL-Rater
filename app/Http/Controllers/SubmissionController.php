@@ -13,6 +13,7 @@ use App\Mail\ContactAgentEmail;
 use Carbon\Carbon;
 use App\User;
 use App\Submission;
+use Illuminate\Support\Facades\Input;
 
 class SubmissionController extends Controller
 {
@@ -28,64 +29,21 @@ class SubmissionController extends Controller
         $this->middleware('auth')->except(['create', 'store']);
     }
 */
+    public function index() {
+
+      $submission = DB::table('submissions')->orderBy('state', 'asc')
+                                            ->get();
+      return view('/subs/index');
+    }
+
+
     public function indexSubEmail(Request $request) {
 
-/*
-        if($request->isMethod('post')){
-            $search_lob =    $request->search_lob;
-            $search_agency_name =     $request->search_agency_name;
-            $search_type_of_coverage =         $request->search_type_of_coverage;
-            $search_effective_date =  $request->search_effective_date;
-            $search_state =      $request->search_state;
-
-            $submissions = DB::table('submissions')
-                        ->when($search_lob, function ($query) use ($search_lob) {
-                            return $query->where('lob', 'like', '%' . $search_lob . '%');
-                        })
-                        ->when($search_agency_name, function ($query) use ($search_agency_name) {
-                            return $query->where('agency_name', 'like', '%' . $search_agency_name . '%');
-                        })
-                        ->when($search_type_of_coverage, function ($query) use ($search_type_of_coverage) {
-                            return $query->where('type_of_coverage', $search_type_of_coverage);
-                        })
-                        ->when($search_effective_date, function ($query) use ($search_effective_date) {
-                            return $query->where('effective_date', $search_effective_date);
-                        })
-                        ->when($search_state, function ($query) use ($search_state) {
-                           return $query->where('state', $search_state);
-                        })
-                        ->orderBy('named_insured', 'asc')
-                        ->orderBy('state', 'asc')
-                        ->get();
-
-                     
-
-                  Session::flash('inputs', [
-                           'search_lob' => $search_lob,
-                            'search_agency_name' => $search_agency_name,
-                            'search_type_of_coverage' => $search_type_of_coverage,
-                            'search_effective_date' => $search_effective_date,
-                            'search_state' => $search_state
-                            ]);
-                    }else{
-                         Session::forget('inputs');
-
-
-            $submissions = Submission::orderBy('named_insured', 'asc')
-                            ->orderBy('state', 'asc')
-                            ->get();
-                        }
-
-
-            return view('/subs/index', [
-                'submissions' => $submissions
-            ]);*/
-    $submission = DB::table('submissions')->orderBy('state', 'asc')
-                                          ->get();
-
-    return view('/subs/index', [
-            'submission' => $submission
-        ]);
+      $submission = DB::table('submissions')->orderBy('state', 'asc')
+                                            ->get();
+      return view('/subs/index', [
+              'submission' => $submission
+          ]);
 
     } 
 
@@ -97,20 +55,75 @@ class SubmissionController extends Controller
      */
     public function searchSubEmail()
     {
-
-      $submission = DB::table('submissions')->orderBy('state', 'asc')
-                                          ->get();
-
         return view('subs/search',compact('submission'));
     }
      
-    public function indexAndSearch()
+    public function searchResultWithSearchMask(Request $request)
     {
+            $search_named_insured =    $request->search_named_insured;
+            $search_type_of_coverage =     $request->search_type_of_coverage;
+            $search_lob =         $request->search_lob;
+            $search_effective_date =  $request->search_effective_date;
+            $search_agency_name =      $request->search_agency_name;
+            $search_agent_name =      $request->search_agent_name;
+            $search_state =     Input::get('options');
+            $search_from_date =      $request->search_from_date;
+            $search_to_date =      $request->search_to_date;
+
+            $submissions = DB::table('submissions')
+                        ->when($search_named_insured, function ($query) use ($search_named_insured) {
+                            return $query->where('named_insured', 'like', '%' . $search_named_insured . '%');
+                        })
+                        ->when($search_type_of_coverage, function ($query) use ($search_type_of_coverage) {
+                            return $query->where('type_of_coverage', 'like', '%' . $search_type_of_coverage . '%');
+                        })
+                        ->when($search_lob, function ($query) use ($search_lob) {
+                            return $query->where('lob', $search_lob);
+                        })
+                        ->when($search_effective_date, function ($query) use ($search_effective_date) {
+                            return $query->where('effective_date', $search_effective_date);
+                        })
+                        ->when($search_agency_name, function ($query) use ($search_agency_name) {
+                           return $query->where('agency_name', $search_agency_name);
+                        })
+                        ->when($search_agent_name, function ($query) use ($search_agent_name) {
+                           return $query->where('agent_name', $search_agent_name);
+                        })
+                        ->when($search_state, function ($query) use ($search_state) {
+                           return $query->where('state', $search_state);
+                        })                           
+                        ->when($search_from_date, function ($query) use ($search_from_date) {
+                           return $query->where('created_at', $search_from_date);
+                        })
+                        ->when($search_to_date, function ($query) use ($search_to_date) {
+                           return $query->where('created_at', $search_to_date);
+                        })
+                        ->orderBy('named_insured', 'asc')
+                        ->orderBy('state', 'asc')
+                        ->get();                     
+
+                        Session::flash('inputs', [
+                            'search_named_insured' => $search_named_insured,
+                            'search_type_of_coverage' => $search_type_of_coverage,
+                            'search_lob' => $search_lob,
+                            'search_effective_date' => $search_effective_date,
+                            'search_agency_name' => $search_agency_name,
+                            'search_agent_name' => $search_agent_name,
+                            'search_state' => $search_state,
+                            'search_from_date' => $search_from_date,                           
+                            'search_to_date' => $search_to_date,
+                            ]);
+                  
+        return view('subs/search_with_results',[
+          'submissions' => $submissions]);
+    }
+
+    public function indexAndSearch()  {
+
         return view('/subs/indexAndSearch');
     }
 
-    public function createSubEmail()
-    {
+    public function createSubEmail()  {
         return view('subs/create');
     }
 
@@ -120,8 +133,7 @@ class SubmissionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function storeSubEmail(Request $request)
-    {
+    public function storeSubEmail(Request $request)  {
 
             Submission::create([
 
@@ -155,9 +167,6 @@ class SubmissionController extends Controller
             'prior_carrier_effective_date' => request('prior_carrier_effective_date'),
             'status' => 'not_logged'
                       ]);                                                                                    
-
-            
-
             return view('/subs/success');
     }
 
@@ -186,8 +195,8 @@ class SubmissionController extends Controller
      * @param  \App\Submission  $submission
      * @return \Illuminate\Http\Response
      */
-    public function editSubEmail(Submission $submission)
-    {
+    public function editSubEmail(Submission $submission)  {
+
         $submission = Submission::findOrFail($id);
 
         return view('/subs/edit', compact('submission'));
@@ -200,8 +209,8 @@ class SubmissionController extends Controller
      * @param  \App\Submission  $submission
      * @return \Illuminate\Http\Response
      */
-    public function updateSubEmail(Request $request, Submission $submission)
-    {
+    public function updateSubEmail(Request $request, Submission $submission)  {
+
         $submission = Submission::findOrFail($id);
 
         $submission->agent_name =    $request->agent_name;
@@ -250,8 +259,7 @@ class SubmissionController extends Controller
         return redirect('/subs/index');
         
     }
-    public function prepemail()
-    {
+    public function prepemail()  {
 
         $submission = DB::table('submissions')->get();
 
@@ -276,8 +284,6 @@ class SubmissionController extends Controller
             $message->from('support@quotedept.com', 'Your Submission');
             $message->to($to)->subject('Welcome to laravel');
         });
-
-
     }
 
     public function toPdf(Request $request) {

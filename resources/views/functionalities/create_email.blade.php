@@ -1,14 +1,13 @@
-@extends('layout')
+@include('layout')
 
 <div class="container">
-
     <div class="row">
         <div class="col-md-6">
             <form action="/prepemail" method="POST">
                 {{ csrf_field()  }}
                <br>
                   <div class="form-group">
-                    <label for="user_id">To (candidate):</label>
+                    <label for="user_id">To (agent that sent some of the subs):</label>
                     <select name="to" id="to" class="select2 form-control padd_only_min">
                     <option value="">-- Select --</option>
                     @if($submission)
@@ -20,7 +19,6 @@
                     @endif
                 </select>
                 </div>
-
                 <!-- 
                 <div class="form-group">
                     <label for="to">to</label>
@@ -39,7 +37,6 @@
                     {{Form::label('body', 'Text')}}
                     {{Form::textarea('body', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Your email here...'])}}
                 </div>
-
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>

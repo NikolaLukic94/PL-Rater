@@ -4,7 +4,7 @@
 <div class="row">
   <div class="container">
   <div class="col-lg-12 col-md-12">
-    <form class="search-form search-form-basic" action="/subs/search/results" method="post">
+    <form class="search-form search-form-basic" action="/subs/index" method="post">
     {{ csrf_field() }}
       <div class="form-row">        
         <div class="col-md-4 form-group">
@@ -55,11 +55,85 @@
       </div>
       <div class="form-row">
         <div class="col-md-12 col-lg-12">
-          <button type="submit" href="/subs/search/results" class="btn btn-custom"><i class="fa fa-search" aria-hidden="true"></i>Search</button>
+          <button type="submit" class="btn btn-custom"><i class="fa fa-search" aria-hidden="true"></i>Search</button>
           <a href="/users" class="btn btn-custom"><i class="fa fa-times-circle" aria-hidden="true"></i>Clear</a>
         </div>
       </div>
     </form>
   </div>
   <br>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header"><b>Submissions (existing in system):</b></div>
+          <div class="card-body">
+            <form action="/rate/create" method="POST">
+              {{ csrf_field() }}
+                <table class="table">     
+                  <thead>
+                    <tr>
+                      <th>
+                        <label class="checkbox">
+                          <input type="checkbox">
+                        </label>
+                      </th> 
+                      <th><abbr title="Named_insured">Named Insured</abbr></th>
+                      <th>Type of coverage</th>
+                      <th><abbr title="">lob</abbr></th>
+                      <th><abbr title="">Effective date</abbr></th>
+                      <th><abbr title="">State</abbr></th>
+                      <th><abbr title="">Agency</abbr></th>
+                      <th><abbr title="">Agent</abbr></th>
+                      <th><abbr title="">Action</abbr></th>
+                    </tr>
+                  </thead>
+                    @if($submissions)
+                      @foreach($submissions as $sub)
+                        @if($sub->status != 'not_logged')
+                          <tr>
+                            <td>
+                              <label class="checkbox">
+                                <input type="checkbox">
+                              </label>
+                            </td>
+                            <td>
+                              {{ $sub->named_insured }}
+                            </td>
+                            <td>
+                              {{ $sub->type_of_coverage }}
+                            </td>
+                            <td>
+                              {{ $sub->lob }}
+                            </td>
+                            <td>
+                              {{ $sub->effective_date }}
+                            </td>
+                            <td>
+                              {{ $sub->state }}
+                            </td>
+                            <td>
+                              {{ $sub->agency_name }}
+                            </td>
+                            <td>
+                              {{ $sub->agent_name }}
+                            </td>
+                            <td>
+                              <a class="btn btn-primary" href="/subs/search" role="button">Open</a> &nbsp;         
+                            </td>                              
+                          </tr>
+                            @endif
+                          @endforeach
+                        @else
+                      <p>There are no new emails!</p>
+                    @endif
+                  </div>
+                </div>
+          </form> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 @endsection

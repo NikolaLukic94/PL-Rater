@@ -6,9 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
+        <title>PLR</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -82,43 +80,43 @@
                     @endauth
                 </div>
             @endif
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-header">Where do you wanna go?:</div>
-        <div class="card-body">
-        <ul>
-            <li><i class="fa fa-arrows"></i><a href="#">Accounts</a></li>
-            <hr>    
-            <li><i class="fa fa-battery-2"></i><a href="/subs/index">Submissions</a></li>
-                    <ul>    
-                        <li><a href="/subs/create">New</a>
-                        <li>Renewal</li>
-                        <li><a href="/subs/index">Emails</a></li>
-                    </ul>
-            <hr>    
-            <li class="active"><i class="fa fa-bell"></i><a href="#">Emails</a></li>
-            <hr>    
-            <li><i class="fa fa-bicycle"></i><a href="#">Follow ups</a></li>
-            <hr>    
-            <li><i class="fa fa-circle"></i><a href="#">circle</a></li>
-            <hr>    
-            <li><i class="fa fa-crosshairs"></i><a href="#">crosshairs</a></li>
-            <hr>    
-            <li><i class="fa fa-deaf"></i><a href="#">Candidates</a></li>
-            <hr>    
-            <li><i class="fa fa-desktop"></i><a href="#">desktop</a></li>
-            <hr>    
-            <li><i class="fa fa-dot-circle-o"></i><a href="#">dot</a></li>
-            <hr>    
-            <li><i class="fa fa-folder"></i><a href="#">folder</a></li>
-        </ul>
-</div></div>
-    </div>
-
-  </div>
-</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">Where do you wanna go?:</div>
+                            <div class="card-body">
+                                <ul>
+                                    <li><i class="fa fa-arrows"></i><a href="#">Accounts</a></li>
+                                    <hr>    
+                                    <li><i class="fa fa-battery-2"></i><a href="/subs/index">Submissions</a></li>
+                                            <ul>    
+                                                <li><a href="/subs/create">New</a>
+                                                <li><a href="/subs/search">Subs</a></li>
+                                                <li><a href="/subs/index">Emails</a></li>
+                                            </ul>
+                                    <hr>    
+                                    <li class="active"><i class="fa fa-bell"></i><a href="/prepemail">Emails</a></li>
+                                    <hr>    
+                                    <li><i class="fa fa-bicycle"></i><a href="#">Follow ups</a></li>
+                                    <hr>    
+                                    <li><i class="fa fa-circle"></i><a href="#">circle</a></li>
+                                    <hr>    
+                                    <li><i class="fa fa-crosshairs"></i><a href="#">crosshairs</a></li>
+                                    <hr>    
+                                    <li><i class="fa fa-deaf"></i><a href="#">Candidates</a></li>
+                                    <hr>    
+                                    <li><i class="fa fa-desktop"></i><a href="#">desktop</a></li>
+                                    <hr>    
+                                    <li><i class="fa fa-dot-circle-o"></i><a href="#">dot</a></li>
+                                    <hr>    
+                                    <li><i class="fa fa-folder"></i><a href="#">folder</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </body>
 </html>
 

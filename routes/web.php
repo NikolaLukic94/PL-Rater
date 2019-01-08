@@ -31,6 +31,7 @@ Route::group(['prefix' => 'subs'], function () {
 	Route::delete('/delete/{id}', 'SubmissionController@destroy');
 	Route::get('/define','RateController@store');	
 	Route::post('/define','RateController@store');	
+	Route::post('/search/results','SubmissionController@searchResultWithSearchMask');
 });
 
 Route::group(['prefix' => 'file'], function () {
