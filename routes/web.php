@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WelcomeController@index');
 
 Auth::routes();
 
@@ -21,7 +19,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'subs'], function () {
 	Route::get('/index','SubmissionController@indexSubEmail');
-	Route::get('/search','SubmissionController@searchSubEmail');
 	Route::get('/create','SubmissionController@createSubEmail');
 	Route::get('/IndexAndSearch','SubmissionController@IndexAndSearch');//maybe not needed?
 	Route::post('/create','SubmissionController@storeSubEmail');
@@ -31,7 +28,10 @@ Route::group(['prefix' => 'subs'], function () {
 	Route::delete('/delete/{id}', 'SubmissionController@destroy');
 	Route::get('/define','RateController@store');	
 	Route::post('/define','RateController@store');	
+	Route::get('/search','SubmissionController@searchSubEmail');	
 	Route::post('/search/results','SubmissionController@searchResultWithSearchMask');
+	Route::get('/eff','SubmissionController@getSubsWithEffDateWithinCurrentMonth');
+
 });
 
 Route::group(['prefix' => 'file'], function () {

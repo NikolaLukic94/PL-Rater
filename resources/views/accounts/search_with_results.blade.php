@@ -20,11 +20,6 @@
           <input type="text" name="search_lob" id="search_lob" class="form-control input-sm" placeholder="" @if(isset(Session::get('inputs')['search_lob'])) value="{{ Session::get('inputs')['search_lob'] }}" @endif>
         </div>  
         <div class="col-md-4 form-group">
-          <label for="search_effective_date">Effective_date:</label>
-          <input type="date" name="search_effective_date" id="search_effective_date" class="form-control input-sm" 
-           @if(isset(Session::get('inputs')['search_effective_date'])) value="{{ Session::get('inputs')['search_effective_date'] }}" @endif>
-        </div> 
-        <div class="col-md-4 form-group">
           <label for="search_agency_name">Agency:</label>
           <input type="text" name="search_agency_name" id="search_agency_name" class="form-control input-sm" 
            @if(isset(Session::get('inputs')['search_agency_name'])) value="{{ Session::get('inputs')['search_agency_name'] }}" @endif>
@@ -43,14 +38,14 @@
           <option  value="MS">MS</option>
         </select>
         <div class="col-md-4 form-group">
-          <label for="search_from_date">From:</label>
-          <input type="date" name="search_from_date" id="search_from_date" class="form-control input-sm" 
-           @if(isset(Session::get('inputs')['search_from_date'])) value="{{ Session::get('inputs')['search_from_date'] }}" @endif>
+          <label for="search_eff_from_date">From:</label>
+          <input type="date" name="search_eff_from_date" id="search_eff_from_date" class="form-control input-sm" 
+           @if(isset(Session::get('inputs')['search_eff_from_date'])) value="{{ Session::get('inputs')['search_eff_from_date'] }}" @endif>
         </div> 
         <div class="col-md-4 form-group">
-          <label for="search_to_date">To:</label>
-          <input type="date" name="search_to_date" id="search_to_date" class="form-control input-sm" 
-           @if(isset(Session::get('inputs')['search_to_date'])) value="{{ Session::get('inputs')['search_to_date'] }}" @endif>
+          <label for="search_eff_to_date">To:</label>
+          <input type="date" name="search_eff_to_date" id="search_eff_to_date" class="form-control input-sm" 
+           @if(isset(Session::get('inputs')['search_eff_to_date'])) value="{{ Session::get('inputs')['search_eff_to_date'] }}" @endif>
         </div>  
       </div>
       <div class="form-row">
@@ -66,7 +61,7 @@
   <div class="row justify-content-center">
     <div class="col-md-12">
       <div class="card">
-        <div class="card-header"><b>Submissions (existing in system):</b></div>
+        <div class="card-header"><b>Bound/Policy issued:</b></div>
           <div class="card-body">
             <form action="/rate/create" method="POST">
               {{ csrf_field() }}
@@ -91,7 +86,7 @@
                   </thead>
                     @if($submissions)
                       @foreach($submissions as $sub)
-                        @if($sub->status != 'not_logged')
+                        @if($sub->status == 'bound' || $sub->status == 'policy_issued'  )
                           <tr>
                             <td>
                               <label class="checkbox">
@@ -128,8 +123,6 @@
                           </tr>
                             @endif
                           @endforeach
-                        @else
-                      <p>There are no new emails!</p>
                     @endif
                   </div>
                 </div>

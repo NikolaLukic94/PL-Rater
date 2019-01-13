@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -28,5 +28,5 @@ class HomeController extends Controller
        /* $submissions = DB::table('submissions')->where('status','not_logged')->count()->get();
         */
         return view('home');
-    }
+    } 
 }

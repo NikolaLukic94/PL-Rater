@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -77,7 +79,11 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="lob" type="text" class="input" id="lob">
+							<select name="type_of_coverage" class="col-md-4 form-group">
+							  <option value="">HO3</option>
+							  <option  value="">DP3</option>
+							  <option  value="">DP1</option>							  
+							</select>
 						</div>
 					</div>
 				</div>	
@@ -163,7 +169,13 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="state" type="text" class="input"  id="state">
+							<div class="col">							
+								<select name="state" class="col-md-4 form-group">
+								  <option value="">LA</option>
+								  <option  value="">CA</option>
+								  <option  value="">FL</option>							  
+								</select>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -235,7 +247,13 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="med_pay" type="text" class="input" id="med_pay">
+							<div class="col">							
+								<select name="med_pay" class="col-md-4 form-group">
+								  <option value="1000">1,000</option>
+								  <option  value="2500">2,500</option>
+								  <option  value="500">5,000</option>							  
+								</select>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -247,7 +265,14 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="aop_ded" type="text" class="input" id="aop_ded">
+							<div class="col">							
+								<select name="aop" class="col-md-4 form-group">
+								  <option value="1">1%</option>
+								  <option  value="2">2%</option>
+								  <option  value="3">3%</option>
+								  <option  value="5">5%</option>
+								</select>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -260,7 +285,12 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="construction_type" type="text" class="input" id="construction_type">
+								<select name="construction_type" class="col-md-4 form-group">
+								  <option value="1">Frame</option>
+								  <option  value="2">JM</option>
+								  <option  value="3">MNC</option>
+								  <option  value="5">MV</option>
+								</select>
 						</div>
 					</div>
 				</div>
@@ -284,7 +314,10 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="new_purchase" type="text" class="input" id="new_purchase">
+							<select name="new_purchase" class="col-md-4 form-group">
+							  <option value="1">Yes</option>
+							  <option  value="2">No</option>
+							</select>
 						</div>
 					</div>
 				</div>
@@ -296,7 +329,10 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="prior_carrier" type="text" class="input" placeholder="Your name here" id="prior_carrier">
+							<select name="prior_carrier" class="col-md-4 form-group">
+							  <option value="1">Yes</option>
+							  <option  value="2">No</option>
+							</select>
 						</div>
 					</div>
 				</div>

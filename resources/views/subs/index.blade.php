@@ -1,5 +1,3 @@
-
-
 @extends('layouts.app')
 
 @section('content')
@@ -9,8 +7,7 @@
       <div class="card">
         <div class="card-header">Email queue (not logged in system):</div>
           <div class="card-body">
-            <form action="/rate/create" method="POST">
-              {{ csrf_field() }}
+            <form action="" method="">
             <table class="table">     
               <thead>
                 <tr>
@@ -63,13 +60,19 @@
                           <a class="btn btn-primary" href="/subs/search" role="button">Search</a> &nbsp;         
                         </td>   
                         <td>
-                          <button type="button" href="/subs/show/{{$sub->id}}" class="btn btn-success">Open</button>                
+                          <form action="/subs/show/{{ $sub->id }}" method="GET">
+                               <button type="submit" href="/subs/show/{{$sub->id}}" class="btn btn-success">Open</button>
+                          </form>                            
                         </td>                                     
                         <td>
                           <button type="button" class="btn btn-success">Log</button>                
                         </td> 
-                        <td>             
-                          <button type="button" class="btn btn-success">Delete</button> 
+                        <td>   
+                            <form action="/subs/delete/{{ $sub->id }}" method="POST">
+                              {{ csrf_field() }}
+                              {{ method_field('DELETE') }} 
+                                <button type="submit" class="btn btn-primary">Delete</button>
+                            </form>                                  
                         </td>                                              
                     </tr>
                     @endif
@@ -85,5 +88,14 @@
     </div>
   </div>
 </div>
-
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header">Effective date in next 7 days:</div>
+          <div class="card-body">
+            Total of {{$subsEffWithinNextWeek}}
+          </div>
+        </div>
+      </div>  
+    </div>  
+    <hr>
 @endsection

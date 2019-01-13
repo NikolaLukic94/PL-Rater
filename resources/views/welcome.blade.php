@@ -1,5 +1,6 @@
 @extends('layout')
 @section('content')
+
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -87,36 +88,53 @@
                         <div class="card-header">Where do you wanna go?:</div>
                             <div class="card-body">
                                 <ul>
-                                    <li><i class="fa fa-arrows"></i><a href="#">Accounts</a></li>
+                                    <li><i class="fa fa-arrows"></i><a href="#">&nbsp;Accounts</a></li>
                                     <hr>    
-                                    <li><i class="fa fa-battery-2"></i><a href="/subs/index">Submissions</a></li>
+                                    <li><i class="fa fa-battery-2"></i><a href="/subs/index">&nbsp;Submissions</a></li>
                                             <ul>    
                                                 <li><a href="/subs/create">New</a>
                                                 <li><a href="/subs/search">Subs</a></li>
-                                                <li><a href="/subs/index">Emails</a></li>
+                                                <li><a href="/subs/index">Emails ({{$submission}} new)</a></li>
                                             </ul>
                                     <hr>    
-                                    <li class="active"><i class="fa fa-bell"></i><a href="/prepemail">Emails</a></li>
+                                    <li class="active"><i class="fa fa-bell"></i><a href="/prepemail">&nbsp;Emails</a></li>
                                     <hr>    
-                                    <li><i class="fa fa-bicycle"></i><a href="#">Follow ups</a></li>
+                                    <li><i class="fa fa-bicycle"></i><a href="#">&nbsp;Follow ups</a></li>
                                     <hr>    
-                                    <li><i class="fa fa-circle"></i><a href="#">circle</a></li>
+                                    <li><i class="fa fa-circle"></i><a href="#">&nbsp;circle</a></li>
                                     <hr>    
-                                    <li><i class="fa fa-crosshairs"></i><a href="#">crosshairs</a></li>
+                                    <li><i class="fa fa-crosshairs"></i><a href="#">&nbsp;crosshairs</a></li>
                                     <hr>    
-                                    <li><i class="fa fa-deaf"></i><a href="#">Candidates</a></li>
+                                    <li><i class="fa fa-deaf"></i><a href="#">&nbsp;Candidates</a></li>
                                     <hr>    
-                                    <li><i class="fa fa-desktop"></i><a href="#">desktop</a></li>
+                                    <li><i class="fa fa-desktop"></i><a href="#">&nbsp;desktop</a></li>
                                     <hr>    
-                                    <li><i class="fa fa-dot-circle-o"></i><a href="#">dot</a></li>
+                                    <li><i class="fa fa-dot-circle-o"></i><a href="#">&nbsp;dot</a></li>
                                     <hr>    
-                                    <li><i class="fa fa-folder"></i><a href="#">folder</a></li>
+                                    <li><i class="fa fa-folder"></i><a href="#">&nbsp;folder</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-header"></div>
+                            <div class="card-body">
+                                BG:{{$bgTime}}<hr>
+                                US:{{$usTime}}<hr>
+                                CA:{{$montrealTime}} 
+                            </div>  
+                        </div>
+                    </div>        
+                </div>    
+            </div>
+        </div>
+            
     </body>
 </html>
 

@@ -8,7 +8,7 @@
             <div class="card">
                 <div class="card-header text-center">Please submit all info:</div>
                 <div class="card-body">
-				<form action="/subs/create" method="POST">
+				<form action="/subs/" method="POST">
 				{{ csrf_field() }}
 				<div class="field">
 					<div class="row">

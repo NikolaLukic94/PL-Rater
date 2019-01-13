@@ -29,24 +29,41 @@ class SubmissionController extends Controller
         $this->middleware('auth')->except(['create', 'store']);
     }
 */
-    public function index() {
-
-      $submission = DB::table('submissions')->orderBy('state', 'asc')
-                                            ->get();
-      return view('/subs/index');
-    }
-
-
     public function indexSubEmail(Request $request) {
 
       $submission = DB::table('submissions')->orderBy('state', 'asc')
                                             ->get();
+
+      /* CALCULATING DATE 7 DAYS FROM TODAY */
+      $date = new \DateTime(date("Y-m-d"));
+      $date->modify('+7 day');
+      $dateInSevenDays = $date->format('Y-m-d');
+      /* END */
+
+      /* GET SUBMISSIONS WITH EFF DATE NO LATER THAN 7 DAYS FROM TODAY */
+      $subsEffWithinNextWeek = DB::table('submissions')
+                                    ->where('effective_date','<',$dateInSevenDays )
+                                    ->count();                                
+      /* END */
+
       return view('/subs/index', [
-              'submission' => $submission
+              'submission' => $submission,
+              'subsEffWithinNextWeek' => $subsEffWithinNextWeek
           ]);
 
     } 
 
+    public function getSubsWithEffDateWithinCurrentMonth() {
+
+
+      $dt =  Carbon::now();
+      $timezone = new DateTimeZone('America/New_York');
+      
+      $submission = DB::table('submissions')
+              ->where($dt->isSameMonth(new \DateTime('effective_date',$timezone)))
+              ->orderBy('state', 'asc')
+              ->get();             
+    }
 
     /**
      * Show the form for creating a new resource.
