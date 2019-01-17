@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class SubmissionSubmitted extends Mailable
+class SubmissionEmailSend extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -29,6 +29,6 @@ class SubmissionSubmitted extends Mailable
     public function build()
     {
         return $this->from('subdept@inscompany.com')
-                    ->markdown('emails.subs.submitted');
+                    ->markdown('emails.submissions.sent');
     }
 }

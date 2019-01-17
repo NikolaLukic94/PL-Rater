@@ -109,7 +109,7 @@
                                     <hr>    
                                     <li><i class="fa fa-desktop"></i><a href="#">&nbsp;desktop</a></li>
                                     <hr>    
-                                    <li><i class="fa fa-dot-circle-o"></i><a href="#">&nbsp;dot</a></li>
+                                    <li><i class="fa fa-dot-circle-o"></i><a href="/stats/subs">&nbsp;Statistics</a></li>
                                     <hr>    
                                     <li><i class="fa fa-folder"></i><a href="#">&nbsp;folder</a></li>
                                 </ul>

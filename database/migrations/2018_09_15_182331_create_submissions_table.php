@@ -50,7 +50,8 @@ class CreateSubmissionsTable extends Migration
             $table->date('prior_carrier_effective_date', 50)->nullable();
 
             $table->string('status');
-            
+            $table->integer('submission_number');                
+
             $table->timestamps();
         });
     }

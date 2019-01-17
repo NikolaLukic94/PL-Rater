@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreSubmissionEmail extends FormRequest
+class UwCreateSubmissionEmail extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class StoreSubmissionEmail extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return false;// true?
     }
 
     /**
@@ -24,7 +24,6 @@ class StoreSubmissionEmail extends FormRequest
     public function rules()
     {
         return [
-        'agency_name' => 'required|max:100',
         'agency_name' => 'required|max:100',
         'agent_email_address' => 'required|email|max:50',
         'agent_phone_number' => 'required',
