@@ -15,23 +15,32 @@ class CreateRatesTable extends Migration
     {
         Schema::create('rates', function (Blueprint $table) {
             $table->increments('id');
-
-            $table->string('lob', 50);  
-            $table->string('county', 50);   
-            $table->string('state', 50);                            
-            $table->string('cov_a', 50);
-            $table->string('other_structures', 50);            
-            $table->string('loss_of_use', 50);
-            $table->string('med_pay', 50);                        
-            $table->string('aop_ded', 50);
-            $table->string('construction_type', 50);
-            $table->string('protection_class', 50);
-            $table->string('new_purchase', 50)->default(0);            
-            $table->string('prior_carrier', 50)->nullable();
-            $table->string('prior_carrier_name', 50)->nullable();
-            $table->date('prior_carrier_effective_date', 50)->nullable();
-
-
+            $table->integer('lob');                           
+            $table->integer('cov_a');
+            $table->integer('other_structures');            
+            $table->integer('loss_of_use');
+            $table->integer('med_pay_1k');    
+            $table->integer('med_pay_2_5k');  
+            $table->integer('med_pay_5k');  
+            $table->integer('aop_ded_1');
+            $table->integer('aop_ded_2');
+            $table->integer('aop_ded_3');
+            $table->integer('aop_ded_4');             
+            $table->integer('aop_ded_5');
+            $table->integer('frame');
+            $table->integer('jm');
+            $table->integer('bv');
+            $table->integer('masonry');            
+            $table->integer('protection_class_1');
+            $table->integer('protection_class_2');
+            $table->integer('protection_class_3');
+            $table->integer('protection_class_4');
+            $table->integer('protection_class_5');                                                
+            $table->integer('new_purchase');            
+            $table->integer('prior_carrier');
+            $table->integer('prior_carrier_name');
+            $table->integer('zero_two_losses');
+            $table->integer('more_than_two_losses');
             $table->timestamps();
         });
     }

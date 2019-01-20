@@ -24,12 +24,12 @@ class FileController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
 
         $submission = Submission::findOrFail($id); 
                
-        return view('file/create',compact('file','candidates'));
+        return view('file/create', compact('file','candidates','submission'));
     }
 
     /**
@@ -42,20 +42,21 @@ class FileController extends Controller
     {
             $file = new File;
 
-            Submission::create([
+            File::create([
 
             'named_insured' =>  request('named_insured'),
             'additional_named_insured' =>  request('additional_named_insured'),
             'type_of_entity' =>  request('type_of_entity'),
             'ssn' => request('ssn'),
-            'mailing_address' => request('mailing_address'),
-            'street_name_and_number' => request('street_name_and_number'),
-            'city' => request('city'),
-            'county' => request('county'),
-            'state'=>request('state'),
-
+            'mailing_address_street_name_and_number' => request('mailing_address_street_name_and_number'),
+            'mailing_address_city' => request('mailing_address_city'),
+            'mailing_address_county' => request('mailing_address_county'),
+            'mailing_address_state'=>request('mailing_address_state'),
+            'location_address_street_name_and_number' => request('location_address_street_name_and_number'),
+            'location_address_city' => request('location_address_city'),
+            'location_address_county' => request('location_address_county'),
+            'location_address_state'=>request('location_address_state'),
                       ]);                                                                                    
-
             $file->save();
 
             return view('/');
@@ -104,5 +105,14 @@ class FileController extends Controller
     public function destroy(File $file)
     {
         //
+    }
+
+    public function searchView() {
+        return view('/file/search');
+    }
+
+
+    public function searchResultWithSearchMask() {
+        return view('/file/search_with_results');
     }
 }

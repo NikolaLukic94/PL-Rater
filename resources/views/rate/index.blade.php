@@ -6,7 +6,6 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Your rates:</div>
-
                 <div class="card-body">
                     	@if($rate)
 							@foreach($rate as $r)
@@ -19,7 +18,7 @@
 								<p>You currently don have any defined yet!</p>
 						@endif	
                 </div>
-                <button type="button" class="btn btn-outline-secondary">Add new</button>
+                <button type="submit" href="/rate/define" class="btn btn-outline-secondary">Add new</button>
             </div>
         </div>
     </div>

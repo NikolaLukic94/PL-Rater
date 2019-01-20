@@ -23,10 +23,10 @@
                   <th><abbr title="">State</abbr></th>
                   <th><abbr title="">Agency</abbr></th>
                   <th><abbr title="">Agent</abbr></th>
-                  <th><abbr title="">Action</abbr></th>
-                  <th><abbr title="">Action</abbr></th>                    
-                  <th><abbr title="">Action</abbr></th>                  
-                  <th><abbr title="">Action</abbr></th>
+                  <th><abbr title="">Options</abbr></th>
+                  <th><abbr title=""></abbr></th>                    
+                  <th><abbr title=""></abbr></th>                  
+                  <th><abbr title=""></abbr></th>
                 </tr>
               </thead>
                 @if($submission)
@@ -60,12 +60,11 @@
                           <a class="btn btn-primary" href="/subs/search" role="button">Search</a> &nbsp;         
                         </td>   
                         <td>
-                          <form action="/subs/show/{{ $sub->id }}" method="GET">
-                               <button type="submit" href="/subs/show/{{$sub->id}}" class="btn btn-success">Open</button>
+                            <a class="btn btn-primary" href="/subs/show/{{$sub->id}}" role="button">Open</a> &nbsp;
                           </form>                            
                         </td>                                     
                         <td>
-                          <button type="button" class="btn btn-success">Log</button>                
+                            <a class="btn btn-primary" href="/file/create/{{$sub->id}}" role="button">Log</a> &nbsp;           
                         </td> 
                         <td>   
                             <form action="/subs/delete/{{ $sub->id }}" method="POST">

@@ -16,17 +16,7 @@ class RateController extends Controller
     public function index()
     {
 
-        $rate = DB::table('rates')->get();
-
-        return view('/rate/index',[
-            'rate' => $rate
-        ]);
-    }
-
-    public function index()
-    {
-
-        /*
+/*
 
         if($submission->lob == "HO-3"){
             $lobRate == 1;
@@ -99,6 +89,12 @@ class RateController extends Controller
         }
                             
         */
+
+        $rate = DB::table('rates')->get();
+
+        return view('/rate/index',[
+            'rate' => $rate
+        ]);
     }
 
     /**

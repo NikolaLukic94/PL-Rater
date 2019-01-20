@@ -85,10 +85,10 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
-                        <div class="card-header">Where do you wanna go?:</div>
+                        <div class="card-header">Where do you wanna go?</div>
                             <div class="card-body">
                                 <ul>
-                                    <li><i class="fa fa-arrows"></i><a href="#">&nbsp;Accounts</a></li>
+                                    <li><i class="fa fa-arrows"></i><a href="/file/search">&nbsp;Accounts</a></li>
                                     <hr>    
                                     <li><i class="fa fa-battery-2"></i><a href="/subs/index">&nbsp;Submissions</a></li>
                                             <ul>    
@@ -119,10 +119,10 @@
                 </div>
             </div>
 
-        <div class="container">
-            <div class="row">
+        <div class="container ">
+            <div class="row ">
                 <div class="col-md-3">
-                    <div class="card">
+                    <div class="card float-right">
                         <div class="card-header"></div>
                             <div class="card-body">
                                 BG:{{$bgTime}}<hr>
@@ -136,7 +136,16 @@
         </div>
             
     </body>
+
+
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+    <a href="">Developed by Nikola</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
 </html>
-
-
-

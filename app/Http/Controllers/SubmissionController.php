@@ -9,11 +9,13 @@ use Illuminate\Support\Facades\Session;
 use App\Mail\SubmissionSubmitted;
 use Illuminate\Support\Facades\DB;
 use App\Mail;
+use App\Mail\SubmissionEmailSent; 
 use App\Mail\ContactAgentEmail;
 use Carbon\Carbon;
 use App\User;
 use App\Submission;
 use Illuminate\Support\Facades\Input;
+use App\Http\Requests\AgentSendSubmissionEmail;
 
 class SubmissionController extends Controller
 {
@@ -54,7 +56,6 @@ class SubmissionController extends Controller
     } 
 
     public function getSubsWithEffDateWithinCurrentMonth() {
-
 
       $dt =  Carbon::now();
       $timezone = new DateTimeZone('America/New_York');
@@ -150,7 +151,7 @@ class SubmissionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function storeSubEmail(Request $request)  {
+    public function storeSubEmail(AgentSendSubmissionEmail $request)  {
 
         Submission::create([
 
@@ -182,10 +183,10 @@ class SubmissionController extends Controller
         'prior_carrier' => request('prior_carrier'),
         'prior_carrier_name' => request('prior_carrier_name'),
         'prior_carrier_effective_date' => request('prior_carrier_effective_date'),
-        'status' => 'not_logged'
-        //'submission_number' => rand()
+        'status' => 'not_logged',
+        'submission_number' => rand(10,555555)
                   ]);                                                                                    
-        Mail::to($request->agent_email_address)->send(new SubmissionEmailSent);
+        \Mail::to($request->agent_email_address)->send(new SubmissionEmailSent);
 
         return view('/subs/success');
     }

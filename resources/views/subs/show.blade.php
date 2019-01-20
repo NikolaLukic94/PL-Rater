@@ -339,7 +339,7 @@
 				<div class="field is-grouped is-grouped-centered">
 				  <p class="control">
 				 
-                <button type="button" class="btn btn-outline-secondary">Add new</button>
+                <button type="button" class="btn btn-outline-secondary">Edit</button>
 				  
 				  </p>
 				  @include('errors')

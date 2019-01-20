@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 
-
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -19,7 +18,7 @@
 							</label>
 						</div>
 						<div class="col">
-							<input name="agent_name" type="text" class="input" placeholder="Your name here" id="agent_name" required>
+							<input name="agent_name" type="text" class="input" id="agent_name" required>
 						</div>
 				</div>
 				</div>
@@ -31,7 +30,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="agency_name" type="text" class="input" placeholder="Agency name" id="agency_name" required>
+							<input name="agency_name" type="text" class="input" id="agency_name" required>
 						</div>
 					</div>
 				</div>
@@ -43,7 +42,7 @@
 							</label>
 						</div>
 							<div class="col">	
-								<input name="agent_email_address" type="email" class="input" placeholder="Your email address here" id="agent_email_address" required>
+								<input name="agent_email_address" type="email" class="input" id="agent_email_address" required>
 							</div>	
 					</div>
 				</div>	
@@ -55,7 +54,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="agent_phone_number" type="text" class="input" placeholder="Your phone number here" id="agent_phone_number" required>
+							<input name="agent_phone_number" type="text" class="input" id="agent_phone_number" required>
 						</div>
 					</div>
 				</div>		
@@ -96,7 +95,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="effective_date" type="date" class="input" placeholder="Your name here" id="effective_date">
+							<input name="effective_date" type="date" class="input" id="effective_date">
 						</div>
 					</div>
 				</div>	
@@ -110,7 +109,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="named_insured" type="text" class="input" placeholder="Your name here" id="named_insured">
+							<input name="named_insured" type="text" class="input" id="named_insured">
 						</div>
 					</div>
 				</div>	
@@ -122,7 +121,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="mailing_address" type="text" class="input" placeholder="Your name here" id="mailing_address">
+							<input name="mailing_address" type="text" class="input" id="mailing_address">
 						</div>
 					</div>
 				</div>
@@ -134,7 +133,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="street_name_and_number" type="text" class="input" placeholder="Your name here" id="street_name_and_number" required>
+							<input name="street_name_and_number" type="text" class="input" id="street_name_and_number" required>
 						</div>
 					</div>
 				</div>
@@ -146,7 +145,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="city" type="text" class="input" placeholder="Your name here" id="city" required>
+							<input name="city" type="text" class="input" id="city" required>
 						</div>
 					</div>
 				</div>
@@ -158,7 +157,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="county" type="text" class="input" placeholder="Your name here" id="county">
+							<input name="county" type="text" class="input" id="county">
 						</div>
 					</div>
 				</div>
@@ -189,7 +188,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="phone_number" type="text" class="input" placeholder="Your name here" id="phone_number">
+							<input name="phone_number" type="text" class="input" id="phone_number">
 						</div>
 					</div>
 				</div>
@@ -201,7 +200,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="email_address" type="text" class="input" placeholder="Your name here" id="email_address">
+							<input name="email_address" type="text" class="input" id="email_address">
 						</div>
 					</div>
 				</div>
@@ -213,7 +212,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="cov_a" type="text" class="input" placeholder="Your name here" id="cov_a" required>
+							<input name="cov_a" type="text" class="input" id="cov_a" required>
 						</div>
 					</div>
 				</div>
@@ -225,7 +224,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="other_structures" type="text" class="input" placeholder="Your name here" id="other_structures">
+							<input name="other_structures" type="text" class="input"bid="other_structures">
 						</div>
 					</div>
 				</div>
@@ -351,7 +350,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="prior_carrier_name" type="text" class="input" placeholder="Your name here" id="prior_carrier_name">
+							<input name="prior_carrier_name" type="text" class="input" id="prior_carrier_name">
 						</div>
 					</div>
 				</div>
@@ -363,7 +362,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="prior_carrier_effective_date" type="date" class="input" placeholder="Your name here" id="prior_carrier_effective_date">
+							<input name="prior_carrier_effective_date" type="date" class="input" id="prior_carrier_effective_date">
 						</div>
 					</div>
 				</div>

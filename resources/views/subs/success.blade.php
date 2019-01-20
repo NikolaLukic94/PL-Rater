@@ -2,17 +2,19 @@
 
 @section('content')
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-12">
-      <div class="card">
-        <div class="card-header">Auto reply:</div>
-          <div class="card-body">
-          	Your submission is sent successfully! 
-          	Reply will follow within 24 hours.
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header text-center"></div>
+                <div class="card-body">
+                  <h3>Your submission is sent successfully!</h3> 
+                  <br>
+                  <p>Reply will follow within 24 hours.</p>
+                  <br>
+                  <p>Confirmation email with your submission number will be sent to your email.</p> 
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
-
+@endsection

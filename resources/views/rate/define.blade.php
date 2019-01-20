@@ -7,43 +7,23 @@
             <div class="card">
                 <div class="card-header">Your rates:</div>
                 <div class="card-body">
-		<form action="/rate/create" method="POST">
+		<form action="/rate/define" method="POST">
 				{{ csrf_field() }}
-				<head>LOB</head>
 				<hr>
 				<div class="field">
 					<div class="row">
-						<div class="col">
-							<label class="label" for="lob">
-							 HO3
+						<div class="col">					
+							<label class="label" for="type_of_coverage">
+								LOB
 							</label>
 						</div>
 						<div class="col">							
-							<input name="lob" type="text" class="input" placeholder="Your name here" id="lob">
-						</div>
-					</div>
-				</div>
-				<div class="field">
-					<div class="row">
-						<div class="col">
-							<label class="label" for="lob">
-							 DP1
-							</label>
-						</div>
-						<div class="col">							
-							<input name="lob" type="text" class="input" placeholder="Your name here" id="lob">
-						</div>
-					</div>
-				</div>
-				<div class="field">
-					<div class="row">
-						<div class="col">
-							<label class="label" for="lob">
-							 DP3
-							</label>
-						</div>
-						<div class="col">							
-							<input name="lob" type="text" class="input" placeholder="Your name here" id="lob">
+							<select name="lob" class="col-md-4 form-group">
+							  <option  value=""></option>								
+							  <option  value="HO3">HO3</option>
+							  <option  value="DP3">DP3</option>
+							  <option  value="DP1">DP1</option>							  
+							</select>
 						</div>
 					</div>
 				</div>
@@ -56,7 +36,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="cov_a" type="text" class="input" placeholder="Your name here" id="cov_a">
+							<input name="cov_a" type="text" class="input" id="cov_a">
 						</div>
 					</div>
 				</div>
@@ -68,7 +48,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="other_structures" type="text" class="input" placeholder="Your name here" id="other_structures">
+							<input name="other_structures" type="text" class="input" id="other_structures">
 						</div>
 					</div>
 				</div>
@@ -80,7 +60,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="loss_of_use" type="text" class="input" placeholder="Your name here" id="loss_of_use">
+							<input name="loss_of_use" type="text" class="input" id="loss_of_use">
 						</div>
 					</div>
 				</div>
@@ -93,7 +73,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="med_pay" type="text" class="input" placeholder="Your name here" id="med_pay">
+							<input name="med_pay" type="text" class="input" id="med_pay">
 						</div>
 					</div>
 				</div>
@@ -105,7 +85,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="med_pay" type="text" class="input" placeholder="Your name here" id="med_pay">
+							<input name="med_pay" type="text" class="input" id="med_pay">
 						</div>
 					</div>
 				</div>
@@ -117,7 +97,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="med_pay" type="text" class="input" placeholder="Your name here" id="med_pay">
+							<input name="med_pay" type="text" class="input" id="med_pay">
 						</div>
 					</div>
 				</div>
@@ -130,7 +110,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="aop_ded" type="text" class="input" placeholder="Your name here" id="aop_ded">
+							<input name="aop_ded" type="text" class="input" id="aop_ded">
 						</div>
 					</div>
 				</div>
@@ -142,7 +122,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="aop_ded" type="text" class="input" placeholder="Your name here" id="aop_ded">
+							<input name="aop_ded" type="text" class="input" id="aop_ded">
 						</div>
 					</div>
 				</div>
@@ -154,7 +134,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="aop_ded" type="text" class="input" placeholder="Your name here" id="aop_ded">
+							<input name="aop_ded" type="text" class="input" id="aop_ded">
 						</div>
 					</div>
 				</div>
@@ -166,7 +146,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="aop_ded" type="text" class="input" placeholder="Your name here" id="aop_ded">
+							<input name="aop_ded" type="text" class="input" id="aop_ded">
 						</div>
 					</div>
 				</div>
@@ -178,11 +158,11 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="aop_ded" type="text" class="input" placeholder="Your name here" id="aop_ded">
+							<input name="aop_ded" type="text" class="input" id="aop_ded">
 						</div>
 					</div>
 				</div>			
-			<hr>
+				<hr>
 				<h>Construction type</h>
 				<div class="field">
 					<div class="row">
@@ -192,7 +172,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="construction_type" type="text" class="input" placeholder="Your name here" id="construction_type">
+							<input name="construction_type" type="text" class="input" id="construction_type">
 						</div>
 					</div>
 				</div>	
@@ -204,7 +184,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="construction_type" type="text" class="input" placeholder="Your name here" id="construction_type">
+							<input name="construction_type" type="text" class="input" id="construction_type">
 						</div>
 					</div>
 				</div>	
@@ -216,7 +196,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="construction_type" type="text" class="input" placeholder="Your name here" id="construction_type">
+							<input name="construction_type" type="text" class="input" id="construction_type">
 						</div>
 					</div>
 				</div>	
@@ -228,7 +208,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="construction_type" type="text" class="input" placeholder="Your name here" id="construction_type">
+							<input name="construction_type" type="text" class="input" id="construction_type">
 						</div>
 					</div>
 				</div>
@@ -242,7 +222,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="protection_class" type="text" class="input" placeholder="Your name here" id="protection_class">
+							<input name="protection_class" type="text" class="input" id="protection_class">
 						</div>
 					</div>
 				</div>
@@ -254,7 +234,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="protection_class" type="text" class="input" placeholder="Your name here" id="protection_class">
+							<input name="protection_class" type="text" class="input" id="protection_class">
 						</div>
 					</div>
 				</div>
@@ -266,7 +246,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="protection_class" type="text" class="input" placeholder="Your name here" id="protection_class">
+							<input name="protection_class" type="text" class="input" id="protection_class">
 						</div>
 					</div>
 				</div>
@@ -278,7 +258,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="protection_class" type="text" class="input" placeholder="Your name here" id="protection_class">
+							<input name="protection_class" type="text" class="input" id="protection_class">
 						</div>
 					</div>
 				</div>
@@ -290,7 +270,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="protection_class" type="text" class="input" placeholder="Your name here" id="protection_class">
+							<input name="protection_class" type="text" class="input" id="protection_class">
 						</div>
 					</div>
 				</div>			
@@ -304,7 +284,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="new_purchase" type="text" class="input" placeholder="Your name here" id="new_purchase">
+							<input name="new_purchase" type="text" class="input" id="new_purchase">
 						</div>
 					</div>
 				</div>	
@@ -316,7 +296,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="prior_carrier" type="text" class="input" placeholder="Your name here" id="prior_carrier">
+							<input name="prior_carrier" type="text" class="input" id="prior_carrier">
 						</div>
 					</div>
 				</div>
@@ -328,7 +308,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="prior_carrier" type="text" class="input" placeholder="Your name here" id="prior_carrier">
+							<input name="prior_carrier" type="text" class="input" id="prior_carrier">
 						</div>
 					</div>
 				</div>
@@ -340,7 +320,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="prior_carrier" type="text" class="input" placeholder="Your name here" id="prior_carrier">
+							<input name="prior_carrier" type="text" class="input" id="prior_carrier">
 						</div>
 					</div>
 				</div>
@@ -352,17 +332,16 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="prior_carrier_name" type="text" class="input" placeholder="Your name here" id="prior_carrier_name">
+							<input name="prior_carrier_name" type="text" class="input" id="prior_carrier_name">
 						</div>
 					</div>
 				</div>
-		</form>	
-                </div>
+				<hr>
 				<div class="block">
-					<button class="button is-primary is-outlined">Submit</button>
+					<button type="submit" href="/rate/define" class="btn btn-outline-secondary">Add new</button>
 				</div>
+		</form>	
             </div>
-        </div>
     </div>
 </div>
 @endsection

@@ -1,5 +1,4 @@
 @component('mail::message')
-# Introduction
 
 Your submission have been successfully submitted! 
 Quote will follow within next 48 hours.
@@ -13,5 +12,5 @@ Button Text
 @endcomponent
 
 Thanks,<br>
-{{ config('app.name') }}
+Support Team @ PLQR
 @endcomponent
