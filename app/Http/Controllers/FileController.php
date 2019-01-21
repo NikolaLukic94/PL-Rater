@@ -59,7 +59,7 @@ class FileController extends Controller
                       ]);                                                                                    
             $file->save();
 
-            return view('/');
+            return view('/file/search');
     }
 
     /**
@@ -68,9 +68,13 @@ class FileController extends Controller
      * @param  \App\File  $file
      * @return \Illuminate\Http\Response
      */
-    public function show(File $file)
+    public function show($id)
     {
-        //
+        $file = File::findOrFail($id);
+
+        return view('/file/index',[
+            'file' => $file
+        ]);
     }
 
     /**

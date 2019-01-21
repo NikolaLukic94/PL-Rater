@@ -159,7 +159,6 @@ class SubmissionController extends Controller
         'agency_name' => request('agency_name'),
         'agent_email_address' => request('agent_email_address'),
         'agent_phone_number' => request('agent_phone_number'),
-        'type_of_coverage' => request('type_of_coverage'),
         'lob' => request('lob'),
         'effective_date' => request('effective_date'),
         'named_insured' =>  request('named_insured'),

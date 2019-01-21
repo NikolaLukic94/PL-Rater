@@ -35,11 +35,12 @@ Route::group(['prefix' => 'subs'], function () {
 });
 
 Route::group(['prefix' => 'file'], function () {
-	Route::get('/index','FileController@index');
+	Route::get('/index/','FileController@index');
 	Route::get('/create/{id}','FileController@create');
 	Route::post('/create','FileController@store');	
 	Route::get('/search','FileController@searchView');
 	Route::any('/file/search/results', 'FileController@searchResultWithSearchMask');
+	Route::get('/index/{id}','FileController@show');	
 });
 
 Route::group(['prefix' => 'users'], function () {

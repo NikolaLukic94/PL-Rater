@@ -179,4 +179,11 @@ class RateController extends Controller
     {
         //
     }
+
+    public function rate($id)
+    {
+        return view('/rate/prepare');
+    }
+
+
 }

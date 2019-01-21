@@ -16,10 +16,10 @@
                     <input type="checkbox">
                   </label>
                   </th> 
-                  <th><abbr title="Named_insured">Named Insured</abbr></th>
-                  <th>Type of coverage</th>
+                  <th><abbr title="Named_insured">Named Insured</abbr></th>s
                   <th><abbr title="">lob</abbr></th>
                   <th><abbr title="">Effective date</abbr></th>
+                  <th><abbr title="">Aging date</abbr></th>                  
                   <th><abbr title="">State</abbr></th>
                   <th><abbr title="">Agency</abbr></th>
                   <th><abbr title="">Agent</abbr></th>
@@ -39,14 +39,14 @@
                           {{ $sub->named_insured }}
                         </td>
                         <td>
-                          {{ $sub->type_of_coverage }}
-                        </td>
-                        <td>
                           {{ $sub->lob }}
                         </td>
                         <td>
                           {{ $sub->effective_date }}
                         </td>
+                        <td>
+                          <p>1</p>
+                        </td>                        
                         <td>
                           {{ $sub->state }}
                         </td>

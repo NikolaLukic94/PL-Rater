@@ -29,7 +29,6 @@ class AgentSendSubmissionEmail extends FormRequest
         'agent_email_address' => 'required|email|max:50',
         'agent_phone_number' => 'required',
             //insured's info
-        'type_of_coverage' => 'required',
         'lob' => 'required',
         'named_insured' => 'max:100',
         'street_name_and_number' => 'required',

@@ -61,18 +61,6 @@
 				<div class="field">
 					<div class="row">
 						<div class="col">					
-					<label class="label" for="type_of_coverage">
-						Type of Coverage
-					</label>
-						</div>
-						<div class="col">							
-							<input name="type_of_coverage" type="text" class="input"  id="type_of_coverage">
-						</div>
-					</div>
-				</div>	
-				<div class="field">
-					<div class="row">
-						<div class="col">					
 							<label class="label" for="type_of_coverage">
 								LOB
 							</label>
@@ -366,6 +354,7 @@
 						</div>
 					</div>
 				</div>
+				<hr>
 				<div class="block">
 					<button class="button is-primary is-outlined">Submit</button>
 				</div>
@@ -381,11 +370,7 @@
 					<div class="columns">
 					 <div class="column is-half is-offset-one-quarter">
 				<div class="field is-grouped is-grouped-centered">
-				  <p class="control">
-				 
-                <button type="button" class="btn btn-outline-secondary">Add new</button>
-				  
-				  </p>
+
 				  @include('errors')
 	  </form>			
                 </div>

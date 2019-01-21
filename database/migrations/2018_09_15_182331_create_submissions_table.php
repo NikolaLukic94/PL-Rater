@@ -23,7 +23,6 @@ class CreateSubmissionsTable extends Migration
                 //coverage info
             $table->string('ssn', 50)->nullable();             
             $table->string('entity_type', 50)->nullable();            
-            $table->string('type_of_coverage', 50)->nullable();
             $table->string('lob', 50);
             $table->date('effective_date');
             $table->string('named_insured', 50);  
