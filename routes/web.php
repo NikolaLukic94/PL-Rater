@@ -88,3 +88,7 @@ Route::get('/pdf','SubmissionController@toPdf');
 Route::any('/tickets','TicketController@index');
 
 Route::get('/users/index','UsersController@index');
+
+
+Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
+Route::get('login/{provider}/callback','Auth\LoginController@handleProviderCallback');
