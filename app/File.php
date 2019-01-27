@@ -42,6 +42,7 @@ class File extends Model
                                 'location_address_county',
                                 'location_address_zip',
                                 'location_address_state',
-		             			'status',
-        		    			'submission_number' ];       
+		             	'status',
+        		        'submission_number',
+                                'submission_id' ];       
 }

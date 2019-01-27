@@ -15,6 +15,7 @@ class CreateRatesTable extends Migration
     {
         Schema::create('rates', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('general_rate') //this will be different per lob
             $table->integer('lob');                           
             $table->integer('cov_a');
             $table->integer('other_structures');            

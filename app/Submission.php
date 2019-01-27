@@ -31,6 +31,8 @@ class Submission extends Model
                                 'prior_carrier_name',
                                 'prior_carrier_effective_date',
                                 'agent_email_address',
-                                'agent_phone_number'];
+                                'agent_phone_number'
+                              
+                        ];
 
 }

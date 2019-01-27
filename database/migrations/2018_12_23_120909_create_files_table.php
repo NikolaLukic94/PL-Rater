@@ -30,7 +30,6 @@ class CreateFilesTable extends Migration
             $table->date('expiration_date');            
             $table->string('named_insured', 50);  
             $table->string('additional_ni', 50)->nullable();                                            
-
             $table->string('mailing_address_street_name_and_number', 50);  
             $table->string('mailing_address_city', 50);   
             $table->string('mailing_address_county', 50); 
@@ -59,7 +58,6 @@ class CreateFilesTable extends Migration
             $table->integer('submission_number');      
 
             $table->unsignedInteger('submission_id');
-
             $table->foreign('submission_id')->references('id')->on('submissions');
 
         });
