@@ -23,6 +23,7 @@ class RaterController extends Controller
     	]);
     }
         /* ENTER RW COEFICIENTS IN DB */
+        /* SHOW LIMITS AND COEFICIENTS THAT WILL BE APPLIED WITH LIMITS GIVEN */
     public function previewRateCoeficientsAndCalculate($id) {
 
         $lob = null;
@@ -37,6 +38,7 @@ class RaterController extends Controller
         $email_address = null;
         $prior_carrier = null;
         $prior_carrier_name = null;
+
         // file we are currently rating
         $file = File::findOrFail($id); 
         // finding rates that should be applied, since different rates will apply to different lob
@@ -44,91 +46,84 @@ class RaterController extends Controller
         // getting coeficients that will be used for rating
         $rater = new Rater;
 
+                if($file->med_pay == '1000') {
+                    $med_pay_rate = $rate->med_pay_1k;
+                }  elseif  ($file->med_pay == '2500' ) { 
+                    $med_pay_rate = $rate->med_pay_2_5k; 
+                }   elseif ($file->med_pay == '5000') {
+                        $med_pay_rate = $rate->med_pay_5k; }
+
+                if($file->aop_ded == '1') { 
+                    $aop_ded_rate = $rate->aop_ded_1; }    
+                    elseif  ($file->aop_ded == '2') { 
+                         $aop_ded_rate = $rate->aop_ded_2; }
+                    elseif  ($file->aop_ded == '3') { 
+                         $aop_ded_rate = $rate->aop_ded_3; }
+                    elseif  ($file->aop_ded == '4') { 
+                         $aop_ded_rate = $rate->aop_ded_4; }
+                    elseif  ($file->aop_ded == '5') { 
+                         $aop_ded_rate = $rate->aop_ded_5; }
+
+                if($file->construction_type == 'frame') { 
+                    $construction_type_rate == $rate->frame; }    
+                    elseif  ($file->construction_type == 'jm') { 
+                        $construction_type_rate = $rate->jm; }
+                    elseif  ($file->construction_type == 'bv') { 
+                        $construction_type_rate = $rate->bv; }
+                    elseif  ($file->construction_type == 'masonry') { 
+                        $construction_type_rate = $rate->masonry; }
+
+                if($file->protection_class == '1') { 
+                    $protection_class_rate == $rate->protection_class_1; }    
+                    elseif  ($file->protection_class == '2') { 
+                        $protection_class_rate = $rate->protection_class_2; }
+                    elseif  ($file->protection_class == '3') { 
+                        $protection_class_rate = $rate->protection_class_3; }
+                    elseif  ($file->protection_class == '4') { 
+                        $protection_class_rate = $rate->protection_class_4; }
+                    elseif  ($file->protection_class == '5') { 
+                        $protection_class_rate = $rate->protection_class_5; }
+
+                if($file->new_purchase == '1') { 
+                    $new_purchase_rate == $rate->new_purchase; }                     
+
+                if($file->prior_carrier == '1') { 
+                    $prior_carrier_rate == $rate->prior_carrier; }
+
+                if($file->prior_carrier_name == '1') { 
+                    $prior_carrier_name_rate == $rate->prior_carrier_name; }
+
+                if($file->zero_two_losses == '1') { 
+                    $zero_two_losses_rate == $rate->zero_two_losses; }
+
+                if($file->more_than_two_losses == '1') { 
+                    $more_than_two_losses_rate == $rate->more_than_two_losses; }
+
         Rater::create([           
 
                 'general_rate' => $rate->general_rate,
                 'cov_a' => $rate->cov_a,
                 'other_structures' => $rate->other_structures,
                 'loss_of_use' => $rate->loss_of_use,
-
-                if($file->med_pay == '1000') {
-                    'med_pay' => $rate->med_pay_1k;
-                }  
-                elseif  ($file->med_pay == '2500'{ 
-                    'med_pay' => $rate->med_pay_2_5k;
-                elseif ($file->med_pay == '5000') {
-                    'med_pay' => $rate->med_pay_5k; }
-
-                if($file->aop_ded == '1') { 
-                    'aop_ded' == $rate->aop_ded_1; }    
-                elseif  ($file->aop_ded == '2') { 
-                    'aop_ded' => $rate->aop_ded_2; }
-                elseif  ($file->aop_ded == '3') { 
-                    'aop_ded' => $rate->aop_ded_3; }
-                elseif  ($file->aop_ded == '4') { 
-                    'aop_ded' => $rate->aop_ded_4; }
-                elseif  ($file->aop_ded == '5') { 
-                    'aop_ded' => $rate->aop_ded_5; }
-
-                if($file->construction_type == 'frame') { 
-                    'construction_type' == $rate->frame; }    
-                elseif  ($file->construction_type == 'jm') { 
-                    'construction_type' => $rate->jm; }
-                elseif  ($file->construction_type == 'bv') { 
-                    'construction_type' => $rate->bv; }
-                elseif  ($file->construction_type == 'masonry') { 
-                    'construction_type' => $rate->masonry; }
-
-                if($file->protection_class == '1') { 
-                    'protection_class' == $rate->protection_class_1; }    
-                elseif  ($file->protection_class == '2') { 
-                    'protection_class' => $rate->protection_class_2; }
-                elseif  ($file->protection_class == '3') { 
-                    'protection_class' => $rate->protection_class_3; }
-                elseif  ($file->protection_class == '4') { 
-                    'protection_class' => $rate->protection_class_4; }
-                elseif  ($file->protection_class == '5') { 
-                    'protection_class' => $rate->protection_class_5; }
-
-                if($file->new_purchase == '1') { 
-                    'new_purchase' == $rate->new_purchase; }                     
-
-                if($file->prior_carrier == '1') { 
-                    'prior_carrier' == $rate->prior_carrier; }
-
-                if($file->prior_carrier_name == '1') { 
-                    'prior_carrier_name' == $rate->prior_carrier_name; }
-
-                if($file->zero_two_losses == '1') { 
-                    'zero_two_losses' == $rate->zero_two_losses; }
-
-                if($file->more_than_two_losses == '1') { 
-                    'more_than_two_losses' == $rate->more_than_two_losses; }
-
+                'med_pay' => $med_pay_rate,
+                'aop_ded' => $aop_ded_rate,
+                'construction_type' => $construction_type_rate,
+                'new_purchase' => $new_purchase_rate,
+                'prior_carrier' => $prior_carrier_rate,
+                'prior_carrier_name' => $prior_carrier_name_rate,
+                'zero_two_losses' => $zero_two_losses,
+                'more_than_two_losses' => $more_than_two_losses,
+                'protection_class' => $protection_class_rate,
                 'inspection_fee' => $request->inspection_fee,
                 'brokerage_fee' => $request->brokerage_fee,
                 'agency_fee' => $request->agency_fee,
-
+                'file_id' => $file->id
 
                       ]);          
-                }
 
         return view('/rater/rw',[
             'file' => $file
         ]);
-    }
-
-
-    /* SHOW LIMITS AND COEFICIENTS THAT WILL BE APPLIED WITH LIMITS GIVEN */
-    public function previewRateCoeficientsAndCalculate($id) {
-
-        $file = File::findOrFail($id); 
-
-        $rateApplied = DB::table('rates')->where('lob',$file->lob)->get();
-
-    	return view('/rater/prepare',[
-    		'file' => $file
-    	]);
     }
 
     /* CREATE RATING WORKESHEET, SAVE IT TO PDF, SEND PDF TO AGENT AND ATTACH IN FILE/ATTACHMENTS  */
