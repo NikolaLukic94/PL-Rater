@@ -34,7 +34,7 @@
           <input type="text" name="search_agent_name" id="search_agent_name" class="form-control input-sm" 
            @if(isset(Session::get('inputs')['search_agent_name'])) value="{{ Session::get('inputs')['search_agent_name'] }}" @endif>
         </div>                 
-        <select name="options" class="col-md-4 form-group">
+        <select name="location_address_state" class="col-md-4 form-group">
          <option value="">--- State ---</option>
           <option  value="LA">LA</option>
           <option  value="FL">FL</option>
@@ -112,7 +112,7 @@
                               {{ $sub->effective_date }}
                             </td>
                             <td>
-                              {{ $sub->state }}
+                              {{ $sub->location_address_state }}
                             </td>
                             <td>
                               {{ $sub->agency_name }}

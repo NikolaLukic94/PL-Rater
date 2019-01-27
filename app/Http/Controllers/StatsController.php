@@ -66,24 +66,6 @@ class StatsController extends Controller
         }
         /* end */
         /* COUNTING # OF SUBS PER TYPE OF COVERAGE */
-        $allCoverges = [];
-        $nullAgency = [];
-
-        foreach($subs as $sub) {
-            array_push($allCoverges, $sub->type_of_coverage);
-        }
-        $countPerTypeOfCoverage = [];
-
-        foreach($allCoverges as $key => $value) {
-            if(empty($countPerTypeOfCoverage[$value])) {
-                $countPerTypeOfCoverage[$value] = 1;
-            }
-            else {
-                $countPerTypeOfCoverage[$value] ++; 
-            }
-        }
-        /* end */
-        /* COUNTING # OF SUBS PER TYPE OF COVERAGE */
         $allConstructionTypes = [];
         $nullAgency = [];
 
@@ -123,7 +105,6 @@ class StatsController extends Controller
 	            'countPerAgency' => $countPerAgency,
                 'countPerLob' => $countPerLob,
                 'countPerState' => $countPerState,
-                'countPerTypeOfCoverage' => $countPerTypeOfCoverage,
                 'countPerConstructionType' => $countPerConstructionType,
                 'countPerProtectionClasses' => $countPerProtectionClasses
 	        ]);    		

@@ -46,25 +46,6 @@
     <div class="row justify-content-center">
       <div class="col-md-4">
         <div class="card">
-          <div class="card-header text-center">Subs per Type Of Coverage:</div>
-            <div class="card-body">
-              @foreach($countPerTypeOfCoverage as $key => $value) 
-                <div class="container">
-                  <div class="row">
-                    <div class="col">
-                        {{$key}}
-                    </div>
-                    <div class="col">
-                        {{$value}}
-                    </div>                    
-                  </div>
-                </div>
-                @endforeach
-            </div>
-          </div>
-        </div>
-      <div class="col-md-4">
-        <div class="card">
           <div class="card-header text-center">Subs per State:</div>        
             <div class="card-body">
               @foreach($countPerState as $key => $value) 

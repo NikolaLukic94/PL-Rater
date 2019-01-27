@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-12">
@@ -48,7 +49,7 @@
                           <p>1</p>
                         </td>                        
                         <td>
-                          {{ $sub->state }}
+                          {{ $sub->location_address_state }}
                         </td>
                         <td>
                           {{ $sub->agency_name }}
@@ -57,20 +58,21 @@
                           {{ $sub->agent_name }}
                         </td>
                         <td>
-                          <a class="btn btn-primary" href="/subs/search" role="button">Search</a> &nbsp;         
+                          <a class="btn btn-primary" href="/subs/search" role="button"><i class="fas fa-search-plus"></i></a> &nbsp;        
+ 
                         </td>   
                         <td>
                             <a class="btn btn-primary" href="/subs/show/{{$sub->id}}" role="button">Open</a> &nbsp;
                           </form>                            
                         </td>                                     
                         <td>
-                            <a class="btn btn-primary" href="/file/create/{{$sub->id}}" role="button">Log</a> &nbsp;           
+                            <a class="btn btn-primary" href="/file/create/{{$sub->id}}" role="button">Log</a> 
                         </td> 
                         <td>   
                             <form action="/subs/delete/{{ $sub->id }}" method="POST">
                               {{ csrf_field() }}
                               {{ method_field('DELETE') }} 
-                                <button type="submit" class="btn btn-primary">Delete</button>
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-trash"></i></button>
                             </form>                                  
                         </td>                                              
                     </tr>

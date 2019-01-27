@@ -13,8 +13,8 @@
           <input type="text"  name="search_named_insured" id="search_named_insured" class="form-control input-sm" @if(isset(Session::get('inputs')['search_named_insured'])) value="{{ Session::get('inputs')['search_named_insured'] }}" @endif>
         </div> 
         <div class="col-md-4 form-group">
-          <label for="search_type_of_coverage">Type of Coverage:</label>
-          <input type="text" name="search_type_of_coverage" id="search_type_of_coverage" class="form-control input-sm" @if(isset(Session::get('inputs')['search_type_of_coverage'])) value="{{ Session::get('inputs')['search_type_of_coverage'] }}" @endif>
+          <label for="search_addl_ni_dba">Additional NI/DBA:</label>
+          <input type="text" name="search_addl_ni_dba" id="search_addl_ni_dba" class="form-control input-sm" @if(isset(Session::get('inputs')['search_addl_ni_dba'])) value="{{ Session::get('inputs')['search_addl_ni_dba'] }}" @endif>
         </div> 
         <div class="col-md-4 form-group">
           <label for="search_lob">LOB:</label>
@@ -61,7 +61,12 @@
                   <option  value="bound">Bound</option>
                   <option  value="policy_issued">Policy issued</option>          
                   <option  value="Closed">Closed</option>
-                </select>      
+        </select>   
+        <div class="col-md-4 form-group">
+          <label for="search_submission_number">Submission number:</label>
+          <input type="date" name="search_submission_number" id="search_submission_number" class="form-control input-sm" 
+           @if(isset(Session::get('inputs')['search_submission_number'])) value="{{ Session::get('inputs')['search_submission_number'] }}" @endif>
+        </div>            
       <div class="form-row">
         <div class="col-md-12 col-lg-12">
           <button type="submit" href="/file/search/results" class="btn btn-custom"><i class="fa fa-search" aria-hidden="true"></i>Search</button>

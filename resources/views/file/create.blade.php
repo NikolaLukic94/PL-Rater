@@ -6,21 +6,14 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">Dashboard</div>
-
                 <div class="card-body">   
-            <form action="/file/create" method="POST">
-                {{ csrf_field() }}      
-                <div class="field">
-                    <div class="row">
-                        <div class="col">
-                            <label class="label" for="agent_name">
-                                Agent Name
-                            </label>
-                        </div>
-                        <div class="col">
-                            <input name="agent_name" type="text" class="input" id="agent_name" required>
-                        </div>
-                </div>  
+            <form action="/file/create/{{$submission->id}}" method="POST">
+                {{ csrf_field() }}
+                    <p>Effective date:</p> 
+                    <input type="text" value="{{$submission->effective_date}}" name="effective_date" required><br>
+                    <p>Expiration_date:</p>
+                    <input type="text" value="{{$submission->expiration_date}}" name="expiration_date"><br>
+                    <hr>   
                     <p>Named Insured:</p> 
                     <input type="text" value="{{$submission->named_insured}}" name="named_insured" required><br>
                     <p>Additional Named Insured/DBA:</p>
@@ -29,7 +22,6 @@
                     <input type="text" value="{{$submission->entity_type}}" name="entity_type" required><br>
                     <p>SSN:</p>
                     <input type="text" value="{{$submission->ssn}}" name="ssn"><br>
-
                     <hr>
                     <!-- Mailing address -->
                     <p>Street name/number:</p>
@@ -37,11 +29,16 @@
                     <p>City:</p>
                     <input type="text" value="{{$submission->city}}" name="mailing_address_city" required><br>
                     <p>ZIP code:</p>
-                    <input type="text" value="{{$submission->zip}}" name="mailing_address_county" required><br>
+                    <input type="text" value="{{$submission->zip}}" name="mailing_address_zip" required><br>
                     <p>County:</p>
                     <input type="text" value="{{$submission->county}}" name="mailing_address_county" required><br>
                     <p>State:</p>
-                    <input type="text" name="mailing_address_state" required><br>
+                    <select name="mailing_address_state" class="col-md-4 form-group">
+                      <option  value="{{$submission->mailing_address_state}}"></option>       
+                      <option  value="LA">LA</option>
+                      <option  value="CA">CA</option>
+                      <option  value="FL">FL</option>                             
+                    </select>                       
                     <hr>
                     <!-- Location address -->
                     <p>Street name/number:</p>
@@ -52,12 +49,17 @@
                     <input type="text" value="{{$submission->zip}}" name="location_address_zip" required><br>
                     <p>County:</p>
                     <input type="text" value="{{$submission->county}}" name="location_address_county" required><br>
-                    <p>County:</p>
-                    <input type="text" name="location_address_state" required><br>          
+                    <p>State:</p>
+                    <select name="location_address_state" class="col-md-4 form-group">
+                      <option  value="{{$submission->location_address_state}}"></option>       
+                      <option  value="LA">LA</option>
+                      <option  value="CA">CA</option>
+                      <option  value="FL">FL</option>                             
+                    </select>         
                     <br>
                     <button type="button" href="/file/create" class="btn btn-default">Log</button> &nbsp;
                     <button type="button" class="btn btn-primary">Edit</button>
-                    <button class="button is-primary is-outlined">Submit</button>
+                    <button class="button is-primary is-outlined" href="/file/create/{{$submission->id}}">Submit</button>
                 </form>
                     <!--- this should be separate tabs in column next to this one 
                     <p>Info</p>

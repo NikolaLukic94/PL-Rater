@@ -25,14 +25,19 @@ class CreateSubmissionsTable extends Migration
             $table->string('entity_type', 50)->nullable();            
             $table->string('lob', 50);
             $table->date('effective_date');
+            $table->date('expiration_date');              
             $table->string('named_insured', 50);  
             $table->string('additional_ni', 50)->nullable();            
-            $table->string('mailing_address', 50)->nullable();                                  
-            $table->string('street_name_and_number', 50);  
-            $table->string('city', 50);   
-            $table->string('county', 50); 
-            $table->string('zip', 50);               
-             $table->string('state', 50);                            
+            $table->string('mailing_address_street_name_and_number', 50);  
+            $table->string('mailing_address_city', 50);   
+            $table->string('mailing_address_county', 50); 
+            $table->string('mailing_address_zip', 50);               
+            $table->string('mailing_address_state', 50);    
+            $table->string('location_address_street_name_and_number', 50);  
+            $table->string('location_address_city', 50);   
+            $table->string('location_address_county', 50); 
+            $table->string('location_address_zip', 50);               
+            $table->string('location_address_state', 50);                            
             $table->string('phone_number', 50);
             $table->string('email_address', 50);                              
                 //building info

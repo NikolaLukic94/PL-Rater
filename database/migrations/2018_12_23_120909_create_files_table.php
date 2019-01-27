@@ -16,20 +16,21 @@ class CreateFilesTable extends Migration
         Schema::create('files', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-                //agent info
+                //agent info/*
             $table->string('agent_name', 50);
             $table->string('agency_name', 50);
             $table->string('agent_email_address', 50);
-            $table->string('agent_phone_number', 50);
+            $table->string('agent_phone_number', 50); 
                 //coverage info
             $table->string('ssn', 50)->nullable();             
             $table->string('entity_type', 50)->nullable();            
-            $table->string('type_of_coverage', 50)->nullable();
+
             $table->string('lob', 50);
             $table->date('effective_date');
             $table->date('expiration_date');            
             $table->string('named_insured', 50);  
             $table->string('additional_ni', 50)->nullable();                                            
+
             $table->string('mailing_address_street_name_and_number', 50);  
             $table->string('mailing_address_city', 50);   
             $table->string('mailing_address_county', 50); 
@@ -39,9 +40,9 @@ class CreateFilesTable extends Migration
             $table->string('location_address_city', 50);   
             $table->string('location_address_county', 50); 
             $table->string('location_address_zip', 50);               
-            $table->string('location_address_state', 50);                                        
+            $table->string('location_address_state', 50);                                          
             $table->string('phone_number', 50);
-            $table->string('email_address', 50);                              
+            $table->string('email_address', 50);                          
                 //building info
             $table->string('cov_a', 50);
             $table->string('other_structures', 50);            
@@ -53,9 +54,14 @@ class CreateFilesTable extends Migration
             $table->string('new_purchase', 50)->default(0);            
             $table->string('prior_carrier', 50)->nullable();
             $table->string('prior_carrier_name', 50)->nullable();
-            $table->date('prior_carrier_effective_date', 50)->nullable();
+            $table->date('prior_carrier_effective_date', 50)->nullable(); 
             $table->string('status');
-            $table->integer('submission_number');                
+            $table->integer('submission_number');      
+
+            $table->unsignedInteger('submission_id');
+
+            $table->foreign('submission_id')->references('id')->on('submissions');
+
         });
     }
 

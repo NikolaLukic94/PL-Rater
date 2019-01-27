@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.app')
 @section('content')
 
 <!doctype html>
@@ -64,6 +64,7 @@
             .m-b-md {
                 margin-bottom: 30px;
                 
+                
             }
         </style>
     </head>
@@ -85,7 +86,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
-                        <div class="card-header">Where do you wanna go?</div>
+                        <div class="card-header"><b>Where do you wanna go?</b></div>
                             <div class="card-body">
                                 <ul>
                                     <li><i class="fa fa-arrows"></i><a href="/file/search">&nbsp;Accounts</a></li>
@@ -118,7 +119,6 @@
                     </div>
                 </div>
             </div>
-
         <div class="container ">
             <div class="row ">
                 <div class="col-md-3">
@@ -134,18 +134,13 @@
                 </div>    
             </div>
         </div>
-            
     </body>
-
-
 <footer class="page-footer font-small blue">
-
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2018 Copyright:
     <a href="">Developed by Nikola</a>
   </div>
   <!-- Copyright -->
-
 </footer>
 
 </html>

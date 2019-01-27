@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header text-center">Please submit all info:</div>
+                <div class="card-header text-center">Please verify current info:</div>
                 <div class="card-body">
 				<form action="/subs/create" method="POST">
 				{{ csrf_field() }}
@@ -20,7 +20,7 @@
 						<div class="col">
 							<input name="agent_name" type="text" class="input" id="agent_name" required>
 						</div>
-				</div>
+					</div>
 				</div>
 				<div class="field">
 					<div class="row">
@@ -88,7 +88,6 @@
 					</div>
 				</div>	
 				<p class="subtitle">Insured info</p>
-				<hr>
 				<div class="field">
 					<div class="row">
 						<div class="col">					
@@ -101,18 +100,75 @@
 						</div>
 					</div>
 				</div>	
+				<hr>
 				<div class="field">
 					<div class="row">
 						<div class="col">					
-					<label class="label" for="mailing_address">
-						Mailing address
+					<label class="label" for="mailing_address_street_name_and_number">
+						Mailing address Street name/number
 					</label>
 						</div>
 						<div class="col">							
-							<input name="mailing_address" type="text" class="input" id="mailing_address">
+							<input name="mailing_address_street_name_and_number" type="text" class="input" id="mailing_address_street_name_and_number" required>
 						</div>
 					</div>
 				</div>
+				<div class="field">
+					<div class="row">
+						<div class="col">					
+					<label class="label" for="mailing_address_city">
+						City
+					</label>
+						</div>
+						<div class="col">							
+							<input name="mailing_address_city" type="text" class="input" id="mailing_address_city" required>
+						</div>
+					</div>
+				</div>
+				<div class="field">
+					<div class="row">
+						<div class="col">					
+					<label class="label" for="mailing_address_county">
+						mailing_address_county
+					</label>
+						</div>
+						<div class="col">							
+							<input name="mailing_address_county" type="text" class="input" id="mailing_address_county">
+						</div>
+					</div>
+				</div>
+				<div class="field">
+					<div class="row">
+						<div class="col">					
+					<label class="label" for="mailing_address_zip">
+						Zip Code
+					</label>
+						</div>
+						<div class="col">							
+							<input name="mailing_address_zip" type="text" class="input" id="mailing_address_zip">
+						</div>
+					</div>
+				</div>				
+				<div class="field">
+					<div class="row">
+						<div class="col">					
+					<label class="label" for="mailing_address_state">
+						State
+					</label>
+						</div>
+						<div class="col">							
+							<div class="col">							
+								<select name="mailing_address_state" class="col-md-4 form-group">
+							  	  <option  value="">Select State</option>		
+								  <option value="LA">LA</option>
+								  <option  value="CA">CA</option>
+								  <option  value="FL">FL</option>							  
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>
 				<div class="field">
 					<div class="row">
 						<div class="col">					
@@ -149,6 +205,18 @@
 						</div>
 					</div>
 				</div>
+				<div class="field">
+					<div class="row">
+						<div class="col">					
+					<label class="label" for="location_address_zip">
+						Zip Code
+					</label>
+						</div>
+						<div class="col">							
+							<input name="location_address_zip" type="text" class="input" id="location_address_zip">
+						</div>
+					</div>
+				</div>					
 				<div class="field">
 					<div class="row">
 						<div class="col">					

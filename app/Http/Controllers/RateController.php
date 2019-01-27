@@ -6,6 +6,9 @@ use App\Rate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+
+/* USED FOR DEFINING, EDITING AND DELETING RATE COEFICIENTS  */
+
 class RateController extends Controller
 {
     /**

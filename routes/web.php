@@ -37,10 +37,11 @@ Route::group(['prefix' => 'subs'], function () {
 Route::group(['prefix' => 'file'], function () {
 	Route::get('/index/','FileController@index');
 	Route::get('/create/{id}','FileController@create');
-	Route::post('/create','FileController@store');	
+	Route::post('/create/{id}','FileController@store');	
 	Route::get('/search','FileController@searchView');
-	Route::any('/file/search/results', 'FileController@searchResultWithSearchMask');
+	Route::any('/search/results', 'FileController@searchResultWithSearchMask');
 	Route::get('/index/{id}','FileController@show');	
+	Route::post('/update/rating-characteristics/{id}','FileController@updateRatingCharacteristicsOnly');
 });
 
 Route::group(['prefix' => 'users'], function () {
@@ -52,6 +53,12 @@ Route::group(['prefix' => 'rate'], function () {
 	Route::get('/index','RateController@index');
 	Route::get('/define','RateController@create');
 	Route::post('/define','RateController@store');
+
+});
+
+Route::group(['prefix' => 'rater'], function () {
+	Route::get('/prepare/{id}','RaterController@prepareRw');
+	Route::get('/rate/{id}','RaterController@generateRw');
 
 });
 

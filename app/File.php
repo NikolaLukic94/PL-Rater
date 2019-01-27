@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class File extends Model
 {
-    //
         protected $fillable = [ 'agent_name',
                                 'agency_name',
                                 'lob',

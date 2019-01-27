@@ -1,4 +1,4 @@
-@include('layout')
+@extends('layouts.app')
 
 <div class="container">
     <div class="row">

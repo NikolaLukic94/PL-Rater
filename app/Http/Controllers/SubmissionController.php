@@ -33,7 +33,7 @@ class SubmissionController extends Controller
 */
     public function indexSubEmail(Request $request) {
 
-      $submission = DB::table('submissions')->orderBy('state', 'asc')
+      $submission = DB::table('submissions')->orderBy('location_address_state', 'asc')
                                             ->get();
 
       /* CALCULATING DATE 7 DAYS FROM TODAY */
@@ -162,13 +162,16 @@ class SubmissionController extends Controller
         'lob' => request('lob'),
         'effective_date' => request('effective_date'),
         'named_insured' =>  request('named_insured'),
-        'mailing_address' => request('mailing_address'),
-
-        'street_name_and_number' => request('street_name_and_number'),
-        'city' => request('city'),
-        'county' => request('county'),
-        'state'=>request('state'),
-         
+        'mailing_address_street_name_and_number' => request('mailing_address_street_name_and_number'),
+        'mailing_address_city' => request('mailing_address_city'),
+        'mailing_address_county' => request('mailing_address_county'),
+        'mailing_address_zip'=>request('mailing_address_zip'),
+        'mailing_address_state'=>request('mailing_address_state'),
+        'location_address_street_name_and_number' => request('location_address_street_name_and_number'),
+        'location_address_city' => request('mailing_address_city'),
+        'location_address_county' => request('location_address_county'),
+        'location_address_zip'=>request('location_address_zip'),
+        'location_address_state'=>request('location_address_state'),
         'phone_number' => request('phone_number'),
         'email_address' => request('email_address'),
         'cov_a' => request('cov_a'),    
@@ -184,7 +187,8 @@ class SubmissionController extends Controller
         'prior_carrier_effective_date' => request('prior_carrier_effective_date'),
         'status' => 'not_logged',
         'submission_number' => rand(10,555555)
-                  ]);                                                                                    
+                  ]);   
+                                                                                                   
         \Mail::to($request->agent_email_address)->send(new SubmissionEmailSent);
 
         return view('/subs/success');

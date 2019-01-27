@@ -12,8 +12,8 @@
           <input type="text"  name="search_named_insured" id="search_named_insured" class="form-control input-sm" @if(isset(Session::get('inputs')['search_named_insured'])) value="{{ Session::get('inputs')['search_named_insured'] }}" @endif>
         </div> 
         <div class="col-md-4 form-group">
-          <label for="search_type_of_coverage">Type of Coverage:</label>
-          <input type="text" name="search_type_of_coverage" id="search_type_of_coverage" class="form-control input-sm" @if(isset(Session::get('inputs')['search_type_of_coverage'])) value="{{ Session::get('inputs')['search_type_of_coverage'] }}" @endif>
+          <label for="test">Test:</label>
+          <input type="text" name="test" id="test" class="form-control input-sm" @if(isset(Session::get('inputs')['test'])) value="{{ Session::get('inputs')['test'] }}" @endif>
         </div> 
         <div class="col-md-4 form-group">
           <label for="search_lob">LOB:</label>

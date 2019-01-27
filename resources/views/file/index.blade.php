@@ -15,7 +15,6 @@
                     <input type="text" value="{{$file->entity_type}}" name="entity_type" required><br>
                     <p>SSN:</p>
                     <input type="text" value="{{$file->ssn}}" name="ssn"><br>
-
                     <hr>
                     <!-- Mailing address -->
                     <p>Street name/number:</p>
@@ -47,6 +46,7 @@
                 </div>
             </div>
         <div class="col-md-7">
+             <div class="card">
                 <div class="card-header">--  {{$file->named_insured}}  --</div>
                     <div class="card-body">
                         <div class="col-md-6">
@@ -70,6 +70,7 @@
                         </div>    
                         </div>
                     </div>            
+                </div>    
             <div class="card">
                 <div class="card-header"></div>
                     <div class="card-body">
@@ -77,7 +78,7 @@
                         <hr>
                         <p>Documents</p>
                         <hr>
-                        <p>Rate</p>
+                        <p><a href="/rater/prepare/{{$file->id}}">Rate</a></p>
                         <hr>
                         <p>Submission</p>
                         <hr>
