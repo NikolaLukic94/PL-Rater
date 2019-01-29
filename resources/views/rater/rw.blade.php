@@ -192,7 +192,7 @@
            <div class="column is-half is-offset-one-quarter">
             <div class="field is-grouped is-grouped-centered">
               <p class="control">
-                <button type="button" href="/rater/update/rating-characteristics/{{$file->id}}" class="btn btn-outline-secondary">Save to PDF</button>
+                <button type="button" class="btn btn-outline-secondary">Save to PDF</button>
                 <button type="button" class="btn btn-outline-secondary">Save to PDF and send to agent</button>
               </p>
               @include('errors')

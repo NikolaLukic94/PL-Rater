@@ -58,7 +58,7 @@ Route::group(['prefix' => 'rate'], function () {
 
 Route::group(['prefix' => 'rater'], function () {
 	Route::get('/prepare/{id}','RaterController@prepareRw');
-	Route::get('/rate/{id}','RaterController@generateRw');
+	Route::get('/rate/{id}','RaterController@previewRateCoeficientsAndCalculate');
 
 });
 

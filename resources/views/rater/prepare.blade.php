@@ -148,7 +148,7 @@
                   </div>
                 </div>
               </div>
-                @endif    
+                    
               <div class="block">
                 <div class="notification">
                   <hr>
@@ -196,10 +196,13 @@
             <div class="field is-grouped is-grouped-centered">
               <p class="control">
                 <button type="button" href="/rater/update/rating-characteristics/{{$file->id}}" class="btn btn-outline-secondary">Update</button>
-                <button type="button" class="btn btn-outline-secondary">Preview</button>
+                <button type="button" href="/rater/rate/{{$file->id}}" class="btn btn-outline-secondary">Preview</button>
+                <a class="btn btn-primary" href="/rater/rate/{{$file->id}}" role="button">Open</a>
               </p>
+                @endif 
               @include('errors')
-              </form>     
+              </form>  
+
                       </div>
                   </div>
               </div>

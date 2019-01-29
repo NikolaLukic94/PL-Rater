@@ -18,5 +18,6 @@ class Rater extends Model
                                 'prior_carrier',
                                 'prior_carrier_name',
                                 'location_address_state',
+                                'file_id'
         		    		]; 
 }

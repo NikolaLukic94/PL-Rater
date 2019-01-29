@@ -12,7 +12,7 @@ class Rate extends Model
                                 'loss_of_use',
                                 'med_pay_1k',
                                 'med_pay_2_5k',
-                                'med_pay_5k'
+                                'med_pay_5k',
                                 'aop_ded_1',
 								'aop_ded_2',
 								'aop_ded_3',
