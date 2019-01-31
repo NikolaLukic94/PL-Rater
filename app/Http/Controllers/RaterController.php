@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\File;
 use App\Rate;
 use App\Rater;
+use App\Premium;
 
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\DB;
@@ -26,7 +27,7 @@ class RaterController extends Controller
     }
         /* ENTER RW COEFICIENTS IN DB */
         /* SHOW LIMITS AND COEFICIENTS THAT WILL BE APPLIED WITH LIMITS GIVEN */
-    public function previewRateCoeficientsAndCalculate($id) {
+    public function getRateCoeficientsAndPreview($id) {
 
         // file we are currently rating
         $file = DB::table('files')->where('id',$id)->get(); //File::findOrFail($id); 
@@ -47,7 +48,7 @@ class RaterController extends Controller
         $email_address = null;
         $prior_carrier_rate = null;
         $prior_carrier_name_rate = null;
-     //   $zero_two_losses_rate = null;
+        //   $zero_two_losses_rate = null;
         $file_id = $file[0]->id;
 
                 if($file[0]->med_pay == '1000') {
@@ -103,7 +104,7 @@ class RaterController extends Controller
          //       if($file[0]->more_than_two_losses == '1') { 
          //           $more_than_two_losses_rate == $rate[0]->more_than_two_losses; }
 
-        Rater::create([           
+        $rater = Rater::create([           
                 'file_id' => $file_id,
                 'general_rate' => $rate[0]->general_rate,
                 'cov_a' => $rate[0]->cov_a,
@@ -122,26 +123,51 @@ class RaterController extends Controller
                 'brokerage_fee' => $request->brokerage_fee,
                 'agency_fee' => $request->agency_fee, */
 
+                      ]);                      
 
-                      ]);          
-
-        return view('/rater/rw',[
-            'file' => $file
+        return view('/rater/rw_preview',[
+            'file' => $file,
+            'rater' => $rater
         ]);
     }
 
     /* CREATE RATING WORKESHEET, SAVE IT TO PDF, SEND PDF TO AGENT AND ATTACH IN FILE/ATTACHMENTS  */
-    public function generateRw($id) {
+    public function generateRw($file_id, $rater_id) {
 
-        $file = File::findOrFail($id); 
+        $file = DB::table('files')->where('id',$file_id)->get();
 
-    	return view('/rater/rw');
+        $rater = Rater::findOrFail($rater_id); 
+
+        $cov_limits = $file[0]->cov_a + $file[0]->other_structures + $file[0]->loss_of_use;
+        $cov_limits_rate = ($rater->cov_a + $rater->other_structures + $rater->loss_of_use) / 3;
+
+        $other_rater = ($rater->aop_ded + 
+                       $rater->protection_class +
+                       $rater->new_purchase +
+                       $rater->prior_carrier +
+                       $rater->prior_carrier_name) / 5;
+
+        $calc = ($cov_limits/$cov_limits_rate)*$other_rater;
+
+        $tax = $calc * 0.04;
+        $empa = $calc * 0.02;
+
+        $premium = Premium::create([
+            'grand_premium' => $calc,
+            'surplus_lines_tax_fee' => $tax,
+            'file_id' => $file[0]->id,
+            'empa' => $empa
+         ]);
+
+        $file->status = 'rated';
+
+    	return view('/rater/rw',[
+            'file' => $file,
+            'rater' => $rater,
+            'premium' => $premium
+        ]);
     }
 
-    public function update() {
-
-
-    }
 
 
 }
