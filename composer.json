@@ -15,6 +15,7 @@
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.2.0",
         "phpoffice/phpword": "^0.16.0",
+        "santigarcor/laratrust": "5.1.*",
         "unisharp/laravel-ckeditor": "^4.7"
     },
     "require-dev": {

@@ -242,9 +242,9 @@ class RaterController extends Controller
         ); 
         // Saving the document as OOXML file...
         $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
-        $objWriter->save(storage_path('helloWorld.docx'));
+        $objWriter->save(storage_path('Rw.docx'));
 
-        return response()->download(storage_path('helloWorld.docx'));
+        return response()->download(storage_path('rw.docx'));
 
     }
 

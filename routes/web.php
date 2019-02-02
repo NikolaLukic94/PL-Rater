@@ -98,3 +98,8 @@ Route::get('/users/index','UsersController@index');
 
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{provider}/callback','Auth\LoginController@handleProviderCallback');
+
+Route::group(['prefix' => 'manage'], function () {
+	Route::get('/dashboard','ManageController@dashboard');
+
+});
