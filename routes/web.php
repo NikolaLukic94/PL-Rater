@@ -46,20 +46,19 @@ Route::group(['prefix' => 'file'], function () {
 
 Route::group(['prefix' => 'users'], function () {
 	Route::get('/','UserController@index');
-
 });
 
 Route::group(['prefix' => 'rate'], function () {
 	Route::get('/index','RateController@index');
 	Route::get('/define','RateController@create');
 	Route::post('/define','RateController@store');
-
 });
 
 Route::group(['prefix' => 'rater'], function () {
 	Route::get('/prepare/{id}','RaterController@prepareRw');
 	Route::get('/rate/{id}','RaterController@getRateCoeficientsAndPreview');
 	Route::get('/rate/rw/{file_id}/{rater_id}','RaterController@generateRw');
+	Route::get('/rate/rw/{file_id}/{rater_id}/word','RaterController@rwToWord');
 });
 
 Route::get('/prepemail','SubmissionController@prepemail');

@@ -6,7 +6,7 @@
     <div class="col-md-8">
       @if(isset($file))
         <div class="card">
-          <div class="card-header text-center">Please submit all info:</div>
+          <div class="card-header text-center">Info:</div>
             <div class="card-body">
               <form action="/file/rate/prepare/rw" method="POST">
               {{ csrf_field() }} 
@@ -18,9 +18,9 @@
                     </label>
                   </div>
                   <div class="col-5">             
-                      <select name="lob" class="col-md-4 form-group">
-                        <option  value="{{$file[0]->lob}}">{{$file[0]->lob}}</option>                    
-                      </select>
+                    <label class="label" for="type_of_coverage">
+                      {{$file[0]->lob}}
+                    </label>
                   </div>
                   <div class="col-2">             
                     <label class="label" for="type_of_coverage">
@@ -37,7 +37,9 @@
                     </label>
                   </div>
                   <div class="col-5">             
-                    <input name="cov_a" type="text" value="{{$file[0]->cov_a}}" class="input" id="cov_a">
+                    <label class="label" for="cov_a">
+                      {{$file[0]->cov_a}}
+                    </label>
                   </div>
                   <div class="col-2">             
                     <label class="label" for="type_of_coverage">
@@ -51,10 +53,12 @@
                   <div class="col">         
                     <label class="label" for="other_structures">
                     <p>Other Structures</p>
-                    </label>
+                    </label>{
                   </div>
                   <div class="col">             
-                    <input name="other_structures" value="{{$file[0]->other_structures}}" type="text" class="input" id="other_structures">
+                    <label class="label" for="other_structures">
+                      {{$file[0]->other_structures}}
+                    </label>
                   </div>
                   <div class="col-2">             
                     <label class="label" for="type_of_coverage">
@@ -71,7 +75,9 @@
                     </label>
                   </div>
                   <div class="col">             
-                    <input name="loss_of_use" type="text" value="{{$file[0]->loss_of_use}}" class="input" id="loss_of_use">
+                    <label class="label" for="type_of_coverage">
+                      {{$file[0]->loss_of_use}}
+                    </label>
                   </div>
                   <div class="col-2">             
                     <label class="label" for="type_of_coverage">
@@ -277,6 +283,7 @@
                       </div>
                     </div> 
               </div>
+              <br><hr><br>
           <div class="columns">
            <div class="column is-half is-offset-one-quarter">
             <div class="field is-grouped is-grouped-centered">

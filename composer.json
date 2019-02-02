@@ -14,6 +14,7 @@
         "laravel/socialite": "^4.0",
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.2.0",
+        "phpoffice/phpword": "^0.16.0",
         "unisharp/laravel-ckeditor": "^4.7"
     },
     "require-dev": {

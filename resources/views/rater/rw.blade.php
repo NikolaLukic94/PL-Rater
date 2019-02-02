@@ -10,59 +10,63 @@
             <div class="card-body">
               <form action="/file/rate/prepare/rw" method="POST">
                 {{ csrf_field() }} 
-                <div class="field">
-                  <div class="row">
-                    <div class="col-5">         
-                      <label class="label" for="type_of_coverage">
-                        LOB
-                      </label>
-                    </div>
-                    <div class="col-5">             
-                        <select name="lob" class="col-md-4 form-group">
-                          <option  value="{{$file[0]->lob}}">{{$file[0]->lob}}</option>                    
-                        </select>
-                    </div>
-                    <div class="col-2">             
-                      <label class="label" for="type_of_coverage">
-                        {{$rater->lob}}
-                      </label>
-                    </div>                  
+              <div class="field">
+                <div class="row">
+                  <div class="col-5">         
+                    <label class="label" for="type_of_coverage">
+                      LOB
+                    </label>
                   </div>
-                </div>           
-                <div class="field">
-                  <div class="row">
-                    <div class="col-5">         
-                      <label class="label" for="cov_a">
-                      <p>Coverage A</p>
-                      </label>
-                    </div>
-                    <div class="col-5">             
-                      <input name="cov_a" type="text" value="{{$file[0]->cov_a}}" class="input" id="cov_a">
-                    </div>
-                    <div class="col-2">             
-                      <label class="label" for="type_of_coverage">
-                        {{$rater->cov_a}}
-                      </label>
-                    </div>                  
+                  <div class="col-5">             
+                    <label class="label" for="type_of_coverage">
+                      {{$file[0]->lob}}
+                    </label>
                   </div>
+                  <div class="col-2">             
+                    <label class="label" for="type_of_coverage">
+                      {{$rater->lob}}
+                    </label>
+                  </div>                  
                 </div>
-                <div class="field">
-                  <div class="row">
-                    <div class="col">         
-                      <label class="label" for="other_structures">
-                      <p>Other Structures</p>
-                      </label>
-                    </div>
-                    <div class="col">             
-                      <input name="other_structures" value="{{$file[0]->other_structures}}" type="text" class="input" id="other_structures">
-                    </div>
-                    <div class="col-2">             
-                      <label class="label" for="type_of_coverage">
-                        {{$rater->other_structures}}
-                      </label>
-                    </div>                  
+              </div>           
+              <div class="field">
+                <div class="row">
+                  <div class="col-5">         
+                    <label class="label" for="cov_a">
+                    <p>Coverage A</p>
+                    </label>
                   </div>
+                  <div class="col-5">             
+                    <label class="label" for="cov_a">
+                      {{$file[0]->cov_a}}
+                    </label>
+                  </div>
+                  <div class="col-2">             
+                    <label class="label" for="type_of_coverage">
+                      {{$rater->cov_a}}
+                    </label>
+                  </div>                  
                 </div>
+              </div>
+              <div class="field">
+                <div class="row">
+                  <div class="col">         
+                    <label class="label" for="other_structures">
+                    <p>Other Structures</p>
+                    </label>
+                  </div>
+                  <div class="col">             
+                    <label class="label" for="other_structures">
+                      {{$file[0]->other_structures}}
+                    </label>
+                  </div>
+                  <div class="col-2">             
+                    <label class="label" for="type_of_coverage">
+                      {{$rater->other_structures}}
+                    </label>
+                  </div>                  
+                </div>
+              </div>
                 <div class="field">
                   <div class="row">
                     <div class="col">         
@@ -70,8 +74,10 @@
                       <p>Loss of Use</p>
                       </label>
                     </div>
-                    <div class="col">             
-                      <input name="loss_of_use" type="text" value="{{$file[0]->loss_of_use}}" class="input" id="loss_of_use">
+                    <div class="col">      
+                      <label class="label" for="loss_of_use">
+                        {{$file[0]->loss_of_use}}
+                      </label>                           
                     </div>
                     <div class="col-2">             
                       <label class="label" for="type_of_coverage">
@@ -128,7 +134,15 @@
                     </div>
                     <div class="col">             
                       <label class="label" for="type_of_coverage">
-                        {{$file[0]->construction_type}}
+                        @if($rater->contruction_type = 'jm')
+                          Joisted Masonry
+                        @elseif($rater->contruction_type = 'bv')
+                          Brick Veneer
+                        @elseif($rater->contruction_type = 'masonry')
+                          Masonry
+                        @elseif($rater->contruction_type = 'frame')
+                          Frame                        
+                        @endif
                       </label>                    
                     </div>
                     <div class="col-2">             
@@ -166,7 +180,11 @@
                     </div>
                     <div class="col">             
                       <label class="label" for="type_of_coverage">
-                         {{$file[0]->new_purchase}}
+                        @if($rater->new_purchase = '1')
+                          Yes
+                        @else
+                          No                      
+                        @endif
                       </label>                    
                     </div>
                     <div class="col-2">             
@@ -185,7 +203,11 @@
                     </div>
                     <div class="col">             
                       <label class="label" for="type_of_coverage">
-                        {{$file[0]->prior_carrier}}
+                        @if($rater->prior_carrier = '1')
+                          Yes
+                        @else
+                          No                      
+                        @endif
                       </label>                    
                     </div>
                     <div class="col-2">             
@@ -271,7 +293,7 @@
                           </div>
                           <div class="col">
                             <label class="label" for="inspection_fee">
-                              $1,350.00
+                              {{$premium->grand_premium}}
                             </label>
                           </div>
                         </div>
@@ -285,7 +307,7 @@
                           </div>
                           <div class="col">
                             <label class="label" for="inspection_fee">
-                              $13,50.00
+                              {{$premium->surplus_lines_tax_fee}}
                             </label>
                           </div>
                         </div>
@@ -299,7 +321,7 @@
                           </div>
                           <div class="col">
                             <label class="label" for="inspection_fee">
-                              $6,50.00
+                              {{$premium->empa}}
                             </label>
                           </div>
                         </div>
@@ -312,9 +334,11 @@
              <div class="column is-half is-offset-one-quarter">
               <div class="field is-grouped is-grouped-centered">
                 <p class="control">
-                  <button type="button" href="/rater/rate/rw/{{$file[0]->id}}/{{$rater->id}}" class="btn btn-outline-secondary">Pdf</button>&nbsp;
-                  <a class="btn btn-primary" href="/rater/rate/rw/{{$file[0]->id}}/{{$rater->id}}" role="button">Excel</a>         
-                  <button type="button" class="btn btn-outline-secondary">Email</button>
+                  <button type="button" href="/rater/rate/rw/{{$file[0]->id}}/{{$rater->id}}" class="btn btn-outline-secondary">Save as Word</button>&nbsp;
+                  <button type="button" href="/rater/rate/rw/{{$file[0]->id}}/{{$rater->id}}" class="btn btn-outline-secondary">Add to file RWs</button>&nbsp;                  
+                  <a class="btn btn-primary" href="/rater/rate/rw/{{$file[0]->id}}/{{$rater->id}}" role="button">Save & Quote</a>         
+                  <button type="button" class="btn btn-outline-secondary">Email to Agent</button>
+                  <a class="btn btn-primary" href="/rater/rate/rw/{{$file[0]->id}}/{{$rater->id}}" role="button">Decline</a>                 
                 </p>
                 @include('errors')
               </form>     

@@ -40,8 +40,7 @@
                     <p>State:</p>
                     <input type="text" value="{{$file->mailing_address_state}}" name="location_address_state" required><br>          
                     <br>
-                    <button type="button" href="/file/edit" class="btn btn-default">Edit</button> &nbsp;
-                    <button type="button" class="btn btn-primary">Edit</button>
+                <button type="button" href="/rater/update/rating-characteristics/{{$file->id}}" class="btn btn-outline-secondary">Update</button>
                     </div>
                 </div>
             </div>
@@ -80,7 +79,7 @@
                         <hr>
                         <p><a href="/rater/prepare/{{$file->id}}">Rate</a></p>
                         <hr>
-                        <p>Submission</p>
+                        <p><a href="/subs/show/{{$file->submission_id}}">Submission</a></p>
                         <hr>
                         <p>Quote</p>
                         <hr>
