@@ -100,6 +100,11 @@ Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{provider}/callback','Auth\LoginController@handleProviderCallback');
 
 Route::group(['prefix' => 'manage'], function () {
-	Route::get('/dashboard','ManageController@dashboard');
+	Route::get('/dashboard','ManageController@dashboard');//->middleware('role:superadministratr|administrator|seniorUw');
+	Route::get('/users/index','ManageController@indexUsers');
+	Route::get('/users/create','ManageController@createUsers');
+	Route::post('/users/create','ManageController@storeUsers');
+	Route::get('/users/edit/{id}','ManageController@editUsers');
+	Route::get('/users/edit/{id}','ManageController@updateUsers');
 
 });

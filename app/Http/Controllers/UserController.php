@@ -41,39 +41,37 @@ class UserController extends Controller
 
     public function index() {
 
-    $users = DB::table('users')->get();
-    $users = $this->groupAndCountBasedOnAge($users);
-    $users = $this->setDepartment($users);
-    dd($users);
-    $usersUnderTwentyFive = $users['underTwenty']['count'];
+        $users = DB::table('users')->get();
+        $users = $this->groupAndCountBasedOnAge($users);
+        $users = $this->setDepartment($users);
+        dd($users);
+        $usersUnderTwentyFive = $users['underTwenty']['count'];
 
 
-    return view('/users/list', [
-        'users' => $users
-    ]);
-}
+        return view('/users/list', [
+            'users' => $users
+        ]);
 
-public function groupAndCountBasedOnAge($users)
-{
-    list($under, $equalOrAbove) = collect($users)->partition(function ($user) {
-        return Carbon::now()
-                ->diffInYears(Carbon::createFromFormat('Y-m-d', $user->bith_date)) < 25;
-    });
+    }
 
-    return [
-        'underTwenty'  => [
-            'users' => $under->all(),
-            'count' => $under->count()
-        ],
+    public function groupAndCountBasedOnAge($users)  {
+        list($under, $equalOrAbove) = collect($users)->partition(function ($user) {
+            return Carbon::now()
+                    ->diffInYears(Carbon::createFromFormat('Y-m-d', $user->bith_date)) < 25;
+        });
 
-        'equalOrAboveTwenty' => [
-            'users' => $equalOrAbove->all(),
-            'count' => $equalOrAbove->count()
-        ]
-    ];
-    
+        return [
+            'underTwenty'  => [
+                'users' => $under->all(),
+                'count' => $under->count()
+            ],
 
-} 
+            'equalOrAboveTwenty' => [
+                'users' => $equalOrAbove->all(),
+                'count' => $equalOrAbove->count()
+            ]
+        ];
+    } 
 
 
 
