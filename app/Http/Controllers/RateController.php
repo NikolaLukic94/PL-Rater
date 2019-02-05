@@ -107,7 +107,10 @@ class RateController extends Controller
      */
     public function create()
     {
-        return view('/rate/define');
+        return view('/rate/define',[
+            'credit' => $this->credit,
+            'lob' => $this->lob            
+        ]);
     }
 
     /**

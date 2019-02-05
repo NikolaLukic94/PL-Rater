@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use Validator;
 use Dompdf\Dompdf;
 use Illuminate\Http\Request;
@@ -142,7 +143,16 @@ class SubmissionController extends Controller
     }
 
     public function createSubEmail()  {
-        return view('subs/create');
+
+        return view('subs/create',[
+          'state' => $this->state,
+          'lob' => $this->lob,
+          'med_pay' => $this->med_pay,
+          'aop' => $this->aop,
+          'constr_type' => $this->constr_type,
+          'pc' => $this->pc,
+          'yes_no' => $this->yes_no
+        ]);
     }
 
     /**
@@ -220,7 +230,16 @@ class SubmissionController extends Controller
 
         $submission = Submission::findOrFail($id);
 
-        return view('/subs/edit', compact('submission'));
+        return view('/subs/edit', [
+          'submission' => $submission,
+          'state' => $this->state,
+          'lob' => $this->lob,
+          'med_pay' => $this->med_pay,
+          'aop' => $this->aop,
+          'constr_type' => $this->constr_type,
+          'pc' => $this->pc,
+          'yes_no' => $this->yes_no          
+        ]);
     }
 
     /**

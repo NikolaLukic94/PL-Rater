@@ -94,7 +94,10 @@ class FileController extends Controller
 
         $submission = Submission::findOrFail($id); 
                
-        return view('file/create', compact('file','candidates','submission'));
+        return view('file/create', [
+          'submission' => $submission,
+          'state' => $this->state
+        ]);
     }
 
     /**

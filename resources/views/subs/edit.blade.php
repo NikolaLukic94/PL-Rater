@@ -61,23 +61,15 @@
 					<div class="row">
 						<div class="col">					
 					<label class="label" for="type_of_coverage">
-						Type of Coverage
-					</label>
-						</div>
-						<div class="col">							
-							<input name="type_of_coverage" type="text" class="input" placeholder="Your name here" id="type_of_coverage">
-						</div>
-					</div>
-				</div>	
-				<div class="field">
-					<div class="row">
-						<div class="col">					
-					<label class="label" for="type_of_coverage">
 						LOB
 					</label>
 						</div>
 						<div class="col">							
-							<input name="lob" type="text" class="input" placeholder="Your name here" id="lob">
+					  	  @if($lob)
+					  	  	@for($i = 1; $i < count($lob); $i++)		
+						 		 <option value="{{$i}}">{{$lob[$i]}}</option>
+						 	@endfor	 
+						  @endif
 						</div>
 					</div>
 				</div>	
@@ -235,7 +227,14 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="med_pay" type="text" class="input" placeholder="Your name here" id="med_pay">
+							<select name="med_pay" class="col-md-4 form-group">
+						  	  <option  value="">Select Med Pay</option>
+						  	  @if($med_pay)
+						  	  	@for($i = 1; $i < count($med_pay); $i++)		
+							 		 <option value="{{$i}}">{{$med_pay[$i]}}</option>
+							 	@endfor	 
+							  @endif						  
+							</select>
 						</div>
 					</div>
 				</div>
@@ -247,7 +246,14 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="aop_ded" type="text" class="input" placeholder="Your name here" id="aop_ded">
+							<select name="aop_ded" class="col-md-4 form-group">
+						  	  <option  value="">Select AOP</option>									
+						  	  @if($aop)
+						  	  	@for($i = 1; $i < count($aop); $i++)		
+							 		 <option value="{{$i}}">{{$aop[$i]}}</option>
+							 	@endfor	 
+							  @endif
+							</select>
 						</div>
 					</div>
 				</div>
@@ -260,7 +266,14 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="construction_type" type="text" class="input" placeholder="Your name here" id="construction_type">
+							<select name="construction_type" class="col-md-4 form-group">
+						  	  <option  value="">Select Construction Type</option>
+						  	  @if($constr_type)
+						  	  	@for($i = 1; $i < count($constr_type); $i++)		
+							 		 <option value="{{$i}}">{{$constr_type[$i]}}</option>
+							 	@endfor	 
+							  @endif
+							</select>
 						</div>
 					</div>
 				</div>
@@ -272,7 +285,14 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="protection_class" type="text" class="input" placeholder="Your name here" id="protection_class">
+							<select name="construction_type" class="col-md-4 form-group">
+							  	 <option  value="">Select PC</option>
+							  	  @if($pc)
+							  	  	@for($i = 1; $i < count($pc); $i++)		
+								 		 <option value="{{$i}}">{{$pc[$i]}}</option>
+								 	@endfor	 
+								  @endif
+							</select>
 						</div>
 					</div>
 				</div>
@@ -284,7 +304,13 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="new_purchase" type="text" class="input" placeholder="Your name here" id="new_purchase">
+							  <option  value="">Select answer</option>								
+							  	  @if($yes_no)
+							  	  	@for($i = 1; $i < count($yes_no); $i++)		
+								 		 <option value="{{$i}}">{{$yes_no[$i]}}</option>
+								 	@endfor	 
+								  @endif
+							</select>
 						</div>
 					</div>
 				</div>

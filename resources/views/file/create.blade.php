@@ -35,9 +35,11 @@
                     <p>State:</p>
                     <select name="mailing_address_state" class="col-md-4 form-group">
                       <option  value="{{$submission->mailing_address_state}}"></option>       
-                      <option  value="LA">LA</option>
-                      <option  value="CA">CA</option>
-                      <option  value="FL">FL</option>                             
+                          @if($state)
+                            @for($i = 1; $i < count($state); $i++)      
+                                 <option value="{{$i}}">{{$state[$i]}}</option>
+                            @endfor  
+                          @endif                             
                     </select>                       
                     <hr>
                     <!-- Location address -->
@@ -52,9 +54,11 @@
                     <p>State:</p>
                     <select name="location_address_state" class="col-md-4 form-group">
                       <option  value="{{$submission->location_address_state}}"></option>       
-                      <option  value="LA">LA</option>
-                      <option  value="CA">CA</option>
-                      <option  value="FL">FL</option>                             
+                          @if($state)
+                            @for($i = 1; $i < count($state); $i++)      
+                                 <option value="{{$i}}">{{$state[$i]}}</option>
+                            @endfor  
+                          @endif                            
                     </select>         
                     <br>
                     <button type="button" href="/file/create" class="btn btn-default">Log</button> &nbsp;

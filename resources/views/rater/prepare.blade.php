@@ -20,9 +20,11 @@
                   <div class="col">             
                       <select name="lob" class="col-md-4 form-group">
                         <option  value="{{$file->lob}}">{{$file->lob}}</option>               
-                        <option  value="HO3">HO3</option>
-                        <option  value="DP3">DP3</option>
-                        <option  value="DP1">DP1</option>               
+                          @if($lob)
+                            @for($i = 1; $i < count($lob); $i++)    
+                           <option value="{{$i}}">{{$lob[$i]}}</option>
+                          @endfor  
+                        @endif              
                       </select>
                   </div>
                 </div>

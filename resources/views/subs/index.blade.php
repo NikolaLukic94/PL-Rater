@@ -25,6 +25,7 @@
                   <th><abbr title="">Agency</abbr></th>
                   <th><abbr title="">Agent</abbr></th>
                   <th><abbr title="">Options</abbr></th>
+                  <th><abbr title="">Created at</abbr></th>                  
                   <th><abbr title=""></abbr></th>                    
                   <th><abbr title=""></abbr></th>                  
                   <th><abbr title=""></abbr></th>
@@ -57,6 +58,11 @@
                         <td>
                           {{ $sub->agent_name }}
                         </td>
+                        <td>
+                          @if(isset($sub->created_at))
+                            {{date('m/d/Y',strtotime($sub->created_at))}}
+                          @endif  
+                        </td>                        
                         <td>
                           <a class="btn btn-primary" href="/subs/search" role="button"><i class="fas fa-search-plus"></i></a> &nbsp;        
  

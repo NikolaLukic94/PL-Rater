@@ -52,7 +52,7 @@ class StatsController extends Controller
         $nullAgency = [];
 
         foreach($subs as $sub) {
-            array_push($allStates, $sub->state);
+            array_push($allStates, $sub->location_address_state);
         }
         $countPerState = [];
 

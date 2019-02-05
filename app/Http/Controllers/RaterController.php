@@ -22,7 +22,8 @@ class RaterController extends Controller
         $file = File::findOrFail($id); 
 
     	return view('/rater/prepare',[
-    		'file' => $file
+    		'file' => $file,
+            'lob' => $lob
     	]);
     }
         /* ENTER RW COEFICIENTS IN DB */

@@ -16,7 +16,11 @@ class Controller extends BaseController
 
     public function __construct() 
     {
-    	$credit = array(
+
+    
+    }
+
+    public	$credit = array(
 		  "1" => "0.7",
 		  "2" => "0.8",
 		  "3" => "0.85",	
@@ -28,45 +32,43 @@ class Controller extends BaseController
 		  "9" => "1.15"		  		  		  		  		  		  	  
 		);
 
-		$lob = array('1'=> 'HO-3',
-					'2' => 'DP-1',
-					'3' => 'DP-3'
+	public	$lob = array('1'=> 'HO3',
+					'2' => 'DP1',
+					'3' => 'DP3'
 	    );
 
-		$state = array('1' => 'LA',
+	public	$state = array('1' => 'LA',
 					'2' => 'CA',
 					'3' => 'FL'
 	    );
 
-		$med_pay = array('1' => '1000',
+	public	$med_pay = array('1' => '1000',
 					'2' => '2500',
 					'3' => '5000'
 	    );
 
-		$aop = array('1' => '1',
+	public	$aop = array('1' => '1',
 					'2' => '2',
 					'3' => '3',
 					'4'=> '5'
 	    );
 
 
-		$constr_type = array('1' => 'Frame',
+	public	$constr_type = array('1' => 'Frame',
 					'2' => 'JM',
 					'3' => 'MV',
 					'4'=> 'MNC'
 	    );
 
-		$pc = array('1' => '1',
+	public	$pc = array('1' => '1',
 					'2' => '2',
 					'3' => '3',
 					'4'=> '4',
 					'5' => '5'
 	    );
 
-		$yes_no = array('1' => 'yes',
+	public	$yes_no = array('1' => 'yes',
 						'2' => 'no'
 					
-	    );
-    
-    }
+	    );    
 }
