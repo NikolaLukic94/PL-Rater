@@ -19,80 +19,6 @@ class RateController extends Controller
     public function index()
     {
 
-/*
-
-        if($submission->lob == "HO-3"){
-            $lobRate == 1;
-        }
-        else if ($submission->lob == "DP-1"){
-            $lobRate == 1.05;
-        }
-        else if ($submission->lob == "DP-3"){
-            $lobRate == 1.10;
-        }
-
-
-
-        if($submission->construction_type == "Frame"){
-            $pcRate == 0.85
-        }
-        else if ($submission->protection class == "JM"){
-            $pcRate == 0.90
-        }
-        else if ($submission->protection class == "MV"){
-            $pcRate == 0.95
-        }
-        else if ($submission->protection class == "MNC"){
-            $pcRate == 1.05
-        }
-
-
-
-
-        if($submission->protection class == 1){
-            $pcRate == 0.80
-        }
-        else if ($submission->protection class == 2){
-            $pcRate == 0.85
-        }
-        else if ($submission->protection class == 3){
-            $pcRate == 0.90
-        }
-        else if ($submission->protection class == 4){
-            $pcRate == 0.95
-        }
-        else if ($submission->protection class == 5){
-            $pcRate == 1
-        }
-        else if ($submission->protection class == 6){
-            $pcRate == 1.3
-        }
-        else if ($submission->protection class == 7){
-            $pcRate == 1.7
-        }
-        else if ($submission->protection class == 8){
-            $pcRate == 2.3
-        }
-        else if ($submission->protection class == 9){
-            $pcRate == 2.7
-        }     
-
-
-        if($request->construction_type == "Frame"){
-            $pcRate == 0.85
-        }
-        else if ($request->protection class == "JM"){
-            $pcRate == 0.90
-        }
-        else if ($request->protection class == "MV"){
-            $pcRate == 0.95
-        }
-        else if ($request->protection class == "MNC"){
-            $pcRate == 1.05
-        }
-                            
-        */
-
         $rate = DB::table('rates')->get();
 
         return view('/rate/index',[
@@ -147,9 +73,13 @@ class RateController extends Controller
      * @param  \App\Rate  $rate
      * @return \Illuminate\Http\Response
      */
-    public function show(Rate $rate)
+    public function show($id)
     {
-        //
+        $rate = Rate::findOrFail($id);
+
+        return view('/rate/show',[
+            'rate' => $rate           
+        ]);
     }
 
     /**
@@ -158,9 +88,14 @@ class RateController extends Controller
      * @param  \App\Rate  $rate
      * @return \Illuminate\Http\Response
      */
-    public function edit(Rate $rate)
+    public function edit($id)
     {
-        //
+        $rate = Rate::findOrFail($id);
+
+        return view('/rate/edit',[
+            'rate' => $rate,
+            'credit' => $this->credit                       
+        ]);
     }
 
     /**
@@ -181,9 +116,14 @@ class RateController extends Controller
      * @param  \App\Rate  $rate
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Rate $rate)
-    {
-        //
+    public function destroy($id) {
+
+        $rate = Rate::find($id);
+
+        $rate->delete();
+
+        return redirect('/rate/index');
+        
     }
 
     public function rate($id)

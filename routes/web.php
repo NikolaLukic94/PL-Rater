@@ -52,6 +52,9 @@ Route::group(['prefix' => 'rate'], function () {
 	Route::get('/index','RateController@index');
 	Route::get('/define','RateController@create');
 	Route::post('/define','RateController@store');
+	Route::get('/show/{id}','RateController@show');	
+	Route::get('/edit/{id}', 'RateController@edit');	
+	Route::post('/edit/{id}', 'RateController@update');	
 });
 
 Route::group(['prefix' => 'rater'], function () {
@@ -106,5 +109,14 @@ Route::group(['prefix' => 'manage'], function () {
 	Route::post('/users/create','ManageController@storeUsers');
 	Route::get('/users/edit/{id}','ManageController@editUsers');
 	Route::get('/users/edit/{id}','ManageController@updateUsers');
+});
 
+
+Route::group(['prefix' => 'manage/role'], function () {
+	//Route::get('/dashboard','ManageController@dashboard');//->middleware('role:superadministratr|administrator|seniorUw');
+	Route::get('/index','RoleController@index');
+	Route::get('/create','RoleController@create');
+	Route::post('/create','RoleController@store');
+	Route::get('/edit/{id}','RoleController@edit');
+	Route::get('/edit/{id}','RoleController@update');
 });

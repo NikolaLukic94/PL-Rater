@@ -70,7 +70,7 @@
       <div class="form-row">
         <div class="col-md-12 col-lg-12">
           <button type="submit" href="/file/search/results" class="btn btn-custom"><i class="fa fa-search" aria-hidden="true"></i>Search</button>
-          <a href="/file/index" class="btn btn-custom"><i class="fa fa-times-circle" aria-hidden="true"></i>Clear</a>
+          <a href="/file/search" class="btn btn-custom"><i class="fa fa-times-circle" aria-hidden="true"></i>Clear</a>
         </div>
       </div>
     </form>

@@ -1,4 +1,4 @@
-@extends('layouts.manage')
+@extends('layouts.app')
 
 @section('content')
   <div class="flex-container">
@@ -8,7 +8,7 @@
       </div>
     </div>
     <hr class="m-t-0">
-    <form action="/manage/roles/store" method="POST">
+    <form action="/manage/roles/create" method="POST">
       {{csrf_field()}}
       <div class="columns">
         <div class="column">
@@ -20,35 +20,25 @@
           </div>
 
           <div class="field">
-            <label for="email" class="label">Email:</label>
+            <label for="display_name" class="label">Display name:</label>
             <p class="control">
-              <input type="text" class="input" name="email" id="email">
+              <input type="text" class="input" name="display_name" id="display_name">
             </p>
           </div>
 
           <div class="field">
-            <label for="password" class="label">Password</label>
+            <label for="description" class="label">Description</label>
             <p class="control">
-              <input type="text" class="input" name="password" id="password" placeholder="Manually give a password to this user">
+              <input type="text" class="input" name="description" id="description" placeholder="What do you do with this??">
             </p>
           </div>
         </div> <!-- end of .column -->
 
-        <div class="column">
-          <label for="roles" class="label">Roles:</label>
-          <input type="hidden" name="roles" :value="rolesSelected" />
-
-            @foreach ($roles as $role)
-              <div class="field">
-                <b-checkbox v-model="rolesSelected" :native-value="{{$role->id}}">{{$role->display_name}}</b-checkbox>
-              </div>
-            @endforeach
-        </div>
       </div> <!-- end of .columns for forms -->
       <div class="columns">
         <div class="column">
           <hr />
-          <button class="button is-primary is-pulled-right" style="width: 250px;">Create New User</button>
+          <button class="button is-primary is-pulled-right" style="width: 250px;">Create New Role</button>
         </div>
       </div>
     </form>

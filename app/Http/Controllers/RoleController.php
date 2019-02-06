@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class RoleController extends Controller
 {
 
-    public function indexUsers() {
+    public function index() {
 
-    	$reoles = DB::table('roles')->simplePaginate(2);
+    	$roles = DB::table('roles')->simplePaginate(2);
 
         return view('/manage/roles/index', [
         	'roles' => $roles
@@ -20,7 +21,7 @@ class RoleController extends Controller
     {
         $role = Role::findOrFail($id);
 
-        return view('/manage/role/show', [
+        return view('/manage/roles/show', [
             'role' => $role
         ]);
     
@@ -35,11 +36,21 @@ class RoleController extends Controller
 
     public function create() {
 
-        return view('/manage/role/create');
+        return view('/manage/roles/create');
     }
 
     public function store(Request $request) {
 
-    	return redirect('/manage/roles/index');
-    }
+        Role::create([
+
+            'name' => request('name'),
+            'display_name' => request('display_name'),
+            'description' => request('description'),
+
+                  ]);                                                                                             
+
+        return redirect('/manage/roles/index');
+    }    
+
+
 }
