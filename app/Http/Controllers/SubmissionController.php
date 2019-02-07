@@ -226,7 +226,7 @@ class SubmissionController extends Controller
      * @param  \App\Submission  $submission
      * @return \Illuminate\Http\Response
      */
-    public function editSubEmail(Submission $submission)  {
+    public function editSubEmail($id)  {
 
         $submission = Submission::findOrFail($id);
 
@@ -249,7 +249,7 @@ class SubmissionController extends Controller
      * @param  \App\Submission  $submission
      * @return \Illuminate\Http\Response
      */
-    public function updateSubEmail(Request $request, Submission $submission)  {
+    public function updateSubEmail(Request $request, $id)  {
 
         $submission = Submission::findOrFail($id);
 

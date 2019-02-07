@@ -5,42 +5,46 @@
     <div class="row justify-content-center">
         <div class="col-md-3">
             <div class="card">
-                <div class="card-header"></div>
+                <div class="card-header">General Info</div>
                     <div class="card-body">
-                    <p>Named Insured:</p> 
-                    <input type="text" value="{{$file->named_insured}}" name="named_insured" required><br>
-                    <p>Additional Named Insured/DBA:</p>
-                    <input type="text" value="{{$file->additional_ni}}" name="additional_ni"><br>
-                    <p>Type of entitiy:</p>
-                    <input type="text" value="{{$file->entity_type}}" name="entity_type" required><br>
-                    <p>SSN:</p>
-                    <input type="text" value="{{$file->ssn}}" name="ssn"><br>
-                    <hr>
-                    <!-- Mailing address -->
-                    <p>Street name/number:</p>
-                    <input type="text" value="{{$file->mailing_address_street_name_and_number}}" name="mailing_address_street_name_and_number" required><br>
-                    <p>City:</p>
-                    <input type="text" value="{{$file->mailing_address_city}}" name="mailing_address_city" required><br>
-                    <p>ZIP code:</p>
-                    <input type="text" value="{{$file->mailing_address_zip}}" name="mailing_address_zip" required><br>
-                    <p>County:</p>
-                    <input type="text" value="{{$file->mailing_address_county}}" name="mailing_address_county" required><br>
-                    <p>State:</p>
-                    <input type="text" value="{{$file->mailing_address_state}}" name="mailing_address_state" required><br>
-                    <hr>
-                    <!-- Location address -->
-                    <p>Street name/number:</p>
-                    <input type="text" value="{{$file->location_address_street_name_and_number}}" name="location_address_street_name_and_number" required><br>
-                    <p>City:</p>
-                    <input type="text" value="{{$file->location_address_city}}" name="location_address_city" required><br>
-                    <p>ZIP code:</p>
-                    <input type="text" value="{{$file->location_address_zip}}" name="location_address_zip" required><br>
-                    <p>County:</p>
-                    <input type="text" value="{{$file->location_address_county}}" name="location_address_county" required><br>
-                    <p>State:</p>
-                    <input type="text" value="{{$file->mailing_address_state}}" name="location_address_state" required><br>          
-                    <br>
-                <button type="button" href="/rater/update/rating-characteristics/{{$file->id}}" class="btn btn-outline-secondary">Update</button>
+                        <form method="POST" action="/file/update/general-info/{{$file->id}}">
+                            {{ csrf_field()  }}
+                            {{ method_field('POST') }}                        
+                                <p>Named Insured:</p> 
+                                <input type="text" value="{{$file->named_insured}}" name="named_insured" required><br>
+                                <p>Additional Named Insured/DBA:</p>
+                                <input type="text" value="{{$file->additional_ni}}" name="additional_ni"><br>
+                                <p>Type of entitiy:</p>
+                                <input type="text" value="{{$file->entity_type}}" name="entity_type" required><br>
+                                <p>SSN:</p>
+                                <input type="text" value="{{$file->ssn}}" name="ssn"><br>
+                                <hr>
+                                <!-- Mailing address -->
+                                <p>Street name/number:</p>
+                                <input type="text" value="{{$file->mailing_address_street_name_and_number}}" name="mailing_address_street_name_and_number" required><br>
+                                <p>City:</p>
+                                <input type="text" value="{{$file->mailing_address_city}}" name="mailing_address_city" required><br>
+                                <p>ZIP code:</p>
+                                <input type="text" value="{{$file->mailing_address_zip}}" name="mailing_address_zip" required><br>
+                                <p>County:</p>
+                                <input type="text" value="{{$file->mailing_address_county}}" name="mailing_address_county" required><br>
+                                <p>State:</p>
+                                <input type="text" value="{{$file->mailing_address_state}}" name="mailing_address_state" required><br>
+                                <hr>
+                                <!-- Location address -->
+                                <p>Street name/number:</p>
+                                <input type="text" value="{{$file->location_address_street_name_and_number}}" name="location_address_street_name_and_number" required><br>
+                                <p>City:</p>
+                                <input type="text" value="{{$file->location_address_city}}" name="location_address_city" required><br>
+                                <p>ZIP code:</p>
+                                <input type="text" value="{{$file->location_address_zip}}" name="location_address_zip" required><br>
+                                <p>County:</p>
+                                <input type="text" value="{{$file->location_address_county}}" name="location_address_county" required><br>
+                                <p>State:</p>
+                                <input type="text" value="{{$file->mailing_address_state}}" name="location_address_state" required><br>          
+                                <br>
+                            <button type="submit" class="btn btn-outline-secondary">Update</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -96,6 +100,8 @@
                         <p>Notes</p>
                         <hr>
                         <p>All</p>
+                        <hr>
+                        <p>Log</p>                        
                     </div>
                 </div>
             </div>

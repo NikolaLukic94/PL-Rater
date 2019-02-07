@@ -218,7 +218,9 @@ class FileController extends Controller
         $file->location_address_state =      $request->location_address_state;                                                                 
         $file->save();
 
-        return redirect('/file/index/{{$file->id}}');
+        return view('/file/index',[
+          'file' => $file
+        ]);
     }
 
     /**

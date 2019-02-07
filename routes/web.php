@@ -42,6 +42,7 @@ Route::group(['prefix' => 'file'], function () {
 	Route::any('/search/results', 'FileController@searchResultWithSearchMask');
 	Route::get('/index/{id}','FileController@show');	
 	Route::post('/update/rating-characteristics/{id}','FileController@updateRatingCharacteristicsOnly');
+	Route::post('/update/general-info/{id}','FileController@updateGeneralInfo');
 });
 
 Route::group(['prefix' => 'users'], function () {

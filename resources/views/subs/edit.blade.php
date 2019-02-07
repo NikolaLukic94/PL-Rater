@@ -7,8 +7,9 @@
             <div class="card">
                 <div class="card-header text-center">Please submit all info:</div>
                 <div class="card-body">
-				<form action="/subs/create" method="POST">
-				{{ csrf_field() }}
+				<form method="POST" action="/subs/edit/{{$submission->id}}">
+					{{ csrf_field()  }}
+	              		{{ method_field('POST') }}
 				<div class="field">
 					<div class="row">
 						<div class="col">
@@ -17,7 +18,7 @@
 							</label>
 						</div>
 						<div class="col">
-							<input name="agent_name" type="text" class="input" placeholder="Your name here" id="agent_name">
+							<input name="agent_name" type="text" class="input" value="{{$submission->agent_name}}" placeholder="Your name here" id="agent_name">
 						</div>
 				</div>
 				</div>
@@ -29,7 +30,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="agency_name" type="text" class="input" placeholder="Your name here" id="agency_name">
+							<input name="agency_name" type="text" class="input" value="{{$submission->agency_name}}" id="agency_name">
 						</div>
 					</div>
 				</div>
@@ -41,7 +42,7 @@
 							</label>
 						</div>
 							<div class="col">	
-								<input name="agent_email_address" type="email" class="input" placeholder="Your name here" id="agent_email_address">
+								<input name="agent_email_address" type="email" class="input" value="{{$submission->agent_email_address}}" id="agent_email_address">
 							</div>	
 					</div>
 				</div>	
@@ -53,7 +54,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="agent_phone_number" type="text" class="input" placeholder="Your name here" id="agent_phone_number">
+							<input name="agent_phone_number" type="text" class="input" value="{{$submission->agent_name}}" id="agent_phone_number">
 						</div>
 					</div>
 				</div>		
@@ -64,12 +65,15 @@
 						LOB
 					</label>
 						</div>
-						<div class="col">							
+						<div class="col">	
+						<select>	
+						<option value="">{{$submission->lob}}</option>				
 					  	  @if($lob)
 					  	  	@for($i = 1; $i < count($lob); $i++)		
 						 		 <option value="{{$i}}">{{$lob[$i]}}</option>
 						 	@endfor	 
 						  @endif
+						  </select>
 						</div>
 					</div>
 				</div>	
@@ -81,7 +85,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="effective_date" type="date" class="input" placeholder="Your name here" id="effective_date">
+							<input name="effective_date" type="date" class="input" value="{{$submission->effective_date}}" id="effective_date">
 						</div>
 					</div>
 				</div>	
@@ -95,7 +99,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="named_insured" type="text" class="input" placeholder="Your name here" id="named_insured">
+							<input name="named_insured" type="text" class="input" value="{{$submission->named_insured}}" id="named_insured">
 						</div>
 					</div>
 				</div>	
@@ -107,7 +111,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="mailing_address" type="text" class="input" placeholder="Your name here" id="mailing_address">
+							<input name="mailing_address" type="text" class="input" value="{{$submission->mailing_address}}" id="mailing_address">
 						</div>
 					</div>
 				</div>
@@ -119,7 +123,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="street_name_and_number" type="text" class="input" placeholder="Your name here" id="street_name_and_number">
+							<input name="street_name_and_number" type="text" class="input" value="{{$submission->location_address_street_name_and_number}}" id="street_name_and_number">
 						</div>
 					</div>
 				</div>
@@ -131,7 +135,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="city" type="text" class="input" placeholder="Your name here" id="city">
+							<input name="city" type="text" class="input" value="{{$submission->location_address_city}}" id="city">
 						</div>
 					</div>
 				</div>
@@ -143,7 +147,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="county" type="text" class="input" placeholder="Your name here" id="county">
+							<input name="county" type="text" class="input" value="{{$submission->location_address_county}}" id="county">
 						</div>
 					</div>
 				</div>
@@ -155,7 +159,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="state" type="text" class="input" placeholder="Your name here" id="state">
+							<input name="state" type="text" class="input" value="{{$submission->location_address_state}}" id="state">
 						</div>
 					</div>
 				</div>
@@ -167,7 +171,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="phone_number" type="text" class="input" placeholder="Your name here" id="phone_number">
+							<input name="phone_number" type="text" class="input" value="{{$submission->phone_number}}" id="phone_number">
 						</div>
 					</div>
 				</div>
@@ -179,7 +183,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="email_address" type="text" class="input" placeholder="Your name here" id="email_address">
+							<input name="email_address" type="text" class="input" value="{{$submission->email_address}}" id="email_address">
 						</div>
 					</div>
 				</div>
@@ -191,7 +195,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="cov_a" type="text" class="input" placeholder="Your name here" id="cov_a">
+							<input name="cov_a" type="text" class="input" value="{{$submission->cov_a}}" id="cov_a">
 						</div>
 					</div>
 				</div>
@@ -203,7 +207,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="other_structures" type="text" class="input" placeholder="Your name here" id="other_structures">
+							<input name="other_structures" type="text" class="input" value="{{$submission->other_structures}}" id="other_structures">
 						</div>
 					</div>
 				</div>
@@ -215,7 +219,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="loss_of_use" type="text" class="input" placeholder="Your name here" id="loss_of_use">
+							<input name="loss_of_use" type="text" class="input" value="{{$submission->loss_of_use}}" id="loss_of_use">
 						</div>
 					</div>
 				</div>
@@ -228,7 +232,7 @@
 						</div>
 						<div class="col">							
 							<select name="med_pay" class="col-md-4 form-group">
-						  	  <option  value="">Select Med Pay</option>
+						  	  <option  value="">{{$submission->med_pay}}</option>
 						  	  @if($med_pay)
 						  	  	@for($i = 1; $i < count($med_pay); $i++)		
 							 		 <option value="{{$i}}">{{$med_pay[$i]}}</option>
@@ -247,7 +251,7 @@
 						</div>
 						<div class="col">							
 							<select name="aop_ded" class="col-md-4 form-group">
-						  	  <option  value="">Select AOP</option>									
+						  	  <option  value="">{{$submission->aop}}</option>									
 						  	  @if($aop)
 						  	  	@for($i = 1; $i < count($aop); $i++)		
 							 		 <option value="{{$i}}">{{$aop[$i]}}</option>
@@ -267,7 +271,7 @@
 						</div>
 						<div class="col">							
 							<select name="construction_type" class="col-md-4 form-group">
-						  	  <option  value="">Select Construction Type</option>
+						  	  <option  value="">{{$submission->construction_type}}</option>
 						  	  @if($constr_type)
 						  	  	@for($i = 1; $i < count($constr_type); $i++)		
 							 		 <option value="{{$i}}">{{$constr_type[$i]}}</option>
@@ -286,7 +290,7 @@
 						</div>
 						<div class="col">							
 							<select name="construction_type" class="col-md-4 form-group">
-							  	 <option  value="">Select PC</option>
+							  	 <option  value="">{{$submission->protection_class}}</option>
 							  	  @if($pc)
 							  	  	@for($i = 1; $i < count($pc); $i++)		
 								 		 <option value="{{$i}}">{{$pc[$i]}}</option>
@@ -303,8 +307,9 @@
 						New purchase
 					</label>
 						</div>
-						<div class="col">							
-							  <option  value="">Select answer</option>								
+						<div class="col">	
+							<select>					
+							  <option  value="">-- {{$submission->new_purchase}} --</option>								
 							  	  @if($yes_no)
 							  	  	@for($i = 1; $i < count($yes_no); $i++)		
 								 		 <option value="{{$i}}">{{$yes_no[$i]}}</option>
@@ -334,7 +339,7 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="prior_carrier_name" type="text" class="input" placeholder="Your name here" id="prior_carrier_name">
+							<input name="prior_carrier_name" type="text" class="input" value="{{$submission->prior_carrier_name}}" id="prior_carrier_name">
 						</div>
 					</div>
 				</div>
@@ -346,30 +351,15 @@
 					</label>
 						</div>
 						<div class="col">							
-							<input name="prior_carrier_effective_date" type="date" class="input" placeholder="Your name here" id="prior_carrier_effective_date">
+							<input name="prior_carrier_effective_date" type="date" class="input" value="{{$submission->prior_carrier_effective_date}}" id="prior_carrier_effective_date">
 						</div>
 					</div>
 				</div>
 				<div class="block">
-					<button class="button is-primary is-outlined">Submit</button>
+					<button class="btn btn-outline-secondary">Update</button>
 				</div>
 		</div>
-				<div class="block">
-					<div class="notification">
-						<hr>
-						<div class="delete"></div>
-							<p class="text-center">For more accurate pricing, please provide us with all information available!</p>
-					</div>
-					<hr>
-				</div>
-					<div class="columns">
-					 <div class="column is-half is-offset-one-quarter">
-				<div class="field is-grouped is-grouped-centered">
-				  <p class="control">
-				 
-                <button type="button" class="btn btn-outline-secondary">Add new</button>
-				  
-				  </p>
+
 				  @include('errors')
 	  </form>			
                 </div>
