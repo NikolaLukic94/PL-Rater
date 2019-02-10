@@ -121,3 +121,7 @@ Route::group(['prefix' => 'manage/role'], function () {
 	Route::get('/edit/{id}','RoleController@edit');
 	Route::get('/edit/{id}','RoleController@update');
 });
+
+
+Route::get('add-to-log', 'WelcomeController@myTestAddToLog');
+Route::get('logActivity', 'WelcomeController@logActivity');

@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use App\Mail\SubmissionSubmitted;
+use App\LogActivity;
+
 
 class FileController extends Controller
 {
@@ -93,7 +95,7 @@ class FileController extends Controller
     {
 
         $submission = Submission::findOrFail($id); 
-               
+
         return view('file/create', [
           'submission' => $submission,
           'state' => $this->state
@@ -167,7 +169,7 @@ class FileController extends Controller
                       ]);   
 
       //      $file->save();
-
+            LogActivity::addToLog('created file' . $file->id . $file->named_insured);  
             return view('/file/search');
     }
 
@@ -218,6 +220,7 @@ class FileController extends Controller
         $file->location_address_state =      $request->location_address_state;                                                                 
         $file->save();
 
+        LogActivity::addToLog('file update general char ' . $file->id . $file->named_insured);          
         return view('/file/index',[
           'file' => $file
         ]);
@@ -247,6 +250,7 @@ class FileController extends Controller
 
         $file->save();
 
+        LogActivity::addToLog('file update rating char ' . $file->id . $file->named_insured);
         return redirect('/file/index/{{$file->id}}');
     }
 
@@ -259,6 +263,8 @@ class FileController extends Controller
     public function destroy($id) {
 
         $file = File::find($id);
+
+        LogActivity::addToLog('file deleted ' . $file->id . $file->named_insured);
 
         $file->delete();
 

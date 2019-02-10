@@ -371,7 +371,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<select name="construction_type" class="col-md-4 form-group">
+							<select name="protection_class" class="col-md-4 form-group">
 						  	  <option  value="">Select PC</option>
 						  	  @if($pc)
 						  	  	@for($i = 1; $i < count($pc); $i++)		

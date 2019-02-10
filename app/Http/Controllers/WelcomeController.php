@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Submission;
+use App\LogActivity;
 use Illuminate\Support\Facades\DB;
 
 class WelcomeController extends Controller
@@ -23,4 +24,18 @@ class WelcomeController extends Controller
 			'submission' => $submission
 		]);
     }
+
+    public function myTestAddToLog()
+    {
+        LogActivity::addToLog('My Testing Add To Log.');
+        dd('log insert successfully.');
+    }
+
+    public function logActivity()
+    {
+        $logs = LogActivity::logActivityLists();
+        return view('/log/index',compact('logs'));
+    }
+
+
 }

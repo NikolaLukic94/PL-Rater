@@ -17,6 +17,7 @@ use App\User;
 use App\Submission;
 use Illuminate\Support\Facades\Input;
 use App\Http\Requests\AgentSendSubmissionEmail;
+use App\LogActivity;
 
 class SubmissionController extends Controller
 {
@@ -144,6 +145,7 @@ class SubmissionController extends Controller
 
     public function createSubEmail()  {
 
+
         return view('subs/create',[
           'state' => $this->state,
           'lob' => $this->lob,
@@ -200,7 +202,7 @@ class SubmissionController extends Controller
                   ]);   
                                                                                                    
         \Mail::to($request->agent_email_address)->send(new SubmissionEmailSent);
-
+        LogActivity::addToLog('created Submission' . request('named_insured'));
         return view('/subs/success');
     }
 
@@ -280,6 +282,7 @@ class SubmissionController extends Controller
 
         $submission->save();        
 
+        LogActivity::addToLog('updated submission id# '. $id);
         return view('subs/change/success');
     }
 
@@ -294,6 +297,8 @@ class SubmissionController extends Controller
 
         $submission = Submission::find($id);
 
+        LogActivity::addToLog('deleted submission id ' . $id . $submission->named_insured );
+        
         $submission->delete();
 
         return redirect('/subs/index');
@@ -324,6 +329,7 @@ class SubmissionController extends Controller
             $message->from('support@quotedept.com', 'Your Submission');
             $message->to($to)->subject('Welcome to laravel');
         });
+        LogActivity::addToLog('contacted agent '. $request->to);
     }
 
     public function toPdf(Request $request) {

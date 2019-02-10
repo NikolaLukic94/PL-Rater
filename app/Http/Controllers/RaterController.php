@@ -161,6 +161,8 @@ class RaterController extends Controller
 
         $file->status = 'rated';
 
+        LogActivity::addToLog('generated rw premium/file id' . $premium->id . $file->id);
+
     	return view('/rater/rw',[
             'file' => $file,
             'rater' => $rater,
