@@ -446,7 +446,7 @@
 				</div>
 				<hr>
 				<div class="block">
-					<button class="button is-primary is-outlined">Submit</button>
+                    <button type="submit" class="btn btn-outline-secondary">Update</button>
 				</div>
 		</div>
 				<div class="block">

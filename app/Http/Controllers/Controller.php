@@ -32,6 +32,11 @@ class Controller extends BaseController
 		  "9" => "1.15"		  		  		  		  		  		  	  
 		);
 
+    public	$type_of_entity = array(
+		  "1" => "individual",
+		  "2" => "corporately_titled",  		  		  		  		  	  
+		);
+
 	public	$lob = array('1'=> 'HO3',
 					'2' => 'DP1',
 					'3' => 'DP3'

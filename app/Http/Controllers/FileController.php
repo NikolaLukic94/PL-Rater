@@ -98,7 +98,8 @@ class FileController extends Controller
 
         return view('file/create', [
           'submission' => $submission,
-          'state' => $this->state
+          'state' => $this->state,
+          'type_of_entity' => $this->type_of_entity
         ]);
     }
 

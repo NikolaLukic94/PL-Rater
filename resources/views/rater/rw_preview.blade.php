@@ -19,7 +19,7 @@
                   </div>
                   <div class="col-5">             
                     <label class="label" for="type_of_coverage">
-                      {{$file[0]->lob}}
+                      {{$file->lob}}
                     </label>
                   </div>
                   <div class="col-2">             
@@ -38,7 +38,7 @@
                   </div>
                   <div class="col-5">             
                     <label class="label" for="cov_a">
-                      {{$file[0]->cov_a}}
+                      {{$file->cov_a}}
                     </label>
                   </div>
                   <div class="col-2">             
@@ -57,7 +57,7 @@
                   </div>
                   <div class="col">             
                     <label class="label" for="other_structures">
-                      {{$file[0]->other_structures}}
+                      {{$file->other_structures}}
                     </label>
                   </div>
                   <div class="col-2">             
@@ -76,7 +76,7 @@
                   </div>
                   <div class="col">             
                     <label class="label" for="type_of_coverage">
-                      {{$file[0]->loss_of_use}}
+                      {{$file->loss_of_use}}
                     </label>
                   </div>
                   <div class="col-2">             
@@ -95,7 +95,7 @@
                   </div>
                   <div class="col">             
                     <label class="label" for="type_of_coverage">
-                      {{$file[0]->med_pay}}
+                      {{$file->med_pay}}
                     </label>                    
                   </div>
                   <div class="col-2">             
@@ -114,7 +114,7 @@
                   </div>
                   <div class="col">             
                     <label class="label" for="type_of_coverage">
-                      {{$file[0]->aop_ded}}
+                      {{$file->aop_ded}}
                     </label>                     
                   </div>
                   <div class="col-2">             
@@ -134,7 +134,7 @@
                   </div>
                   <div class="col">             
                     <label class="label" for="type_of_coverage">
-                      {{$file[0]->construction_type}}
+                      {{$file->construction_type}}
                     </label>                    
                   </div>
                   <div class="col-2">             
@@ -153,7 +153,7 @@
                   </div>
                   <div class="col">             
                     <label class="label" for="type_of_coverage">
-                      {{$file[0]->protection_class}}
+                      {{$file->protection_class}}
                     </label>                    
                   </div>
                   <div class="col-2">             
@@ -172,7 +172,7 @@
                   </div>
                   <div class="col">             
                     <label class="label" for="type_of_coverage">
-                       {{$file[0]->new_purchase}}
+                       {{$file->new_purchase}}
                     </label>                    
                   </div>
                   <div class="col-2">             
@@ -191,7 +191,7 @@
                   </div>
                   <div class="col">             
                     <label class="label" for="type_of_coverage">
-                      {{$file[0]->prior_carrier}}
+                      {{$file->prior_carrier}}
                     </label>                    
                   </div>
                   <div class="col-2">             
@@ -210,7 +210,7 @@
                   </div>
                   <div class="col">             
                     <label class="label" for="type_of_coverage">
-                      {{$file[0]->prior_carrier_name}}
+                      {{$file->prior_carrier_name}}
                     </label>                    
                   </div>
                   <div class="col-2">             

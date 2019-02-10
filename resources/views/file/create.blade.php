@@ -19,7 +19,15 @@
                     <p>Additional Named Insured/DBA:</p>
                     <input type="text" value="{{$submission->additional_ni}}" name="additional_ni"><br>
                     <p>Type of entitiy:</p>
-                    <input type="text" value="{{$submission->entity_type}}" name="entity_type" required><br>
+                    <select name="type_of_entity" class="col-md-4 form-group">
+                      <option  value="">-- Select --</option>       
+                          @if($type_of_entity)
+                            @for($i = 1; $i <= count($type_of_entity); $i++)      
+                                 <option value="{{$i}}">{{$type_of_entity[$i]}}</option>
+                            @endfor  
+                          @endif                             
+                    </select>                      
+                    <br>
                     <p>SSN:</p>
                     <input type="text" value="{{$submission->ssn}}" name="ssn"><br>
                     <hr>
