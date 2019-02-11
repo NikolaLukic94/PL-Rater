@@ -68,7 +68,7 @@
 							<select name="lob" class="col-md-4 form-group">
 						  	  <option  value="">Select State</option>
 							  	  @if($lob)
-							  	  	@for($i = 1; $i < count($lob); $i++)		
+							  	  	@for($i = 1; $i <= count($lob); $i++)		
 								 		<option value="{{$i}}">{{$lob[$i]}}</option>
 								 	@endfor	 
 								  @endif							  
@@ -162,7 +162,7 @@
 								<select name="mailing_address_state" class="col-md-4 form-group">
 							  	  <option  value="">Select State</option>
 							  	  @if($state)
-							  	  	@for($i = 1; $i < count($state); $i++)		
+							  	  	@for($i = 1; $i <= count($state); $i++)		
 								 		 <option value="{{$i}}">{{$state[$i]}}</option>
 								 	@endfor	 
 								  @endif							  
@@ -232,7 +232,7 @@
 								<select name="state" class="col-md-4 form-group">	
 							  	  <option  value="">Select State</option>
 							  	  @if($state)
-							  	  	@for($i = 1; $i < count($state); $i++)		
+							  	  	@for($i = 1; $i <= count($state); $i++)		
 								 		 <option value="{{$i}}">{{$state[$i]}}</option>
 								 	@endfor	 
 								  @endif							  					  
@@ -313,7 +313,7 @@
 								<select name="med_pay" class="col-md-4 form-group">
 							  	  <option  value="">Select Med Pay</option>
 							  	  @if($med_pay)
-							  	  	@for($i = 1; $i < count($med_pay); $i++)		
+							  	  	@for($i = 1; $i <= count($med_pay); $i++)		
 								 		 <option value="{{$i}}">{{$med_pay[$i]}}</option>
 								 	@endfor	 
 								  @endif						  
@@ -334,7 +334,7 @@
 								<select name="aop_ded" class="col-md-4 form-group">
 							  	  <option  value="">Select AOP</option>									
 							  	  @if($aop)
-							  	  	@for($i = 1; $i < count($aop); $i++)		
+							  	  	@for($i = 1; $i <= count($aop); $i++)		
 								 		 <option value="{{$i}}">{{$aop[$i]}}</option>
 								 	@endfor	 
 								  @endif
@@ -355,7 +355,7 @@
 							<select name="construction_type" class="col-md-4 form-group">
 						  	  <option  value="">Select Construction Type</option>
 						  	  @if($constr_type)
-						  	  	@for($i = 1; $i < count($constr_type); $i++)		
+						  	  	@for($i = 1; $i <= count($constr_type); $i++)		
 							 		 <option value="{{$i}}">{{$constr_type[$i]}}</option>
 							 	@endfor	 
 							  @endif
@@ -374,7 +374,7 @@
 							<select name="protection_class" class="col-md-4 form-group">
 						  	  <option  value="">Select PC</option>
 						  	  @if($pc)
-						  	  	@for($i = 1; $i < count($pc); $i++)		
+						  	  	@for($i = 1; $i <= count($pc); $i++)		
 							 		 <option value="{{$i}}">{{$pc[$i]}}</option>
 							 	@endfor	 
 							  @endif
@@ -393,7 +393,7 @@
 							<select name="new_purchase" class="col-md-4 form-group">
 							  <option  value="">Select answer</option>								
 							  	  @if($yes_no)
-							  	  	@for($i = 1; $i < count($yes_no); $i++)		
+							  	  	@for($i = 1; $i <= count($yes_no); $i++)		
 								 		 <option value="{{$i}}">{{$yes_no[$i]}}</option>
 								 	@endfor	 
 								  @endif
@@ -412,7 +412,7 @@
 							<select name="prior_carrier" class="col-md-4 form-group">
 							  <option  value="">Select answer</option>									
 							  	  @if($yes_no)
-							  	  	@for($i = 1; $i < count($yes_no); $i++)		
+							  	  	@for($i = 1; $i <= count($yes_no); $i++)		
 								 		 <option value="{{$i}}">{{$yes_no[$i]}}</option>
 								 	@endfor	 
 								  @endif
@@ -446,7 +446,7 @@
 				</div>
 				<hr>
 				<div class="block">
-                    <button type="submit" class="btn btn-outline-secondary">Update</button>
+                    <button type="submit" class="btn btn-outline-secondary">Send</button>
 				</div>
 		</div>
 				<div class="block">

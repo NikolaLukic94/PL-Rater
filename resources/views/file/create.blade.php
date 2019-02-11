@@ -9,87 +9,237 @@
                 <div class="card-body">   
             <form action="/file/create/{{$submission->id}}" method="POST">
                 {{ csrf_field() }}
-                    <p>Effective date:</p> 
-                    <input type="text" value="{{$submission->effective_date}}" name="effective_date" required><br>
-                    <p>Expiration_date:</p>
-                    <input type="text" value="{{$submission->expiration_date}}" name="expiration_date"><br>
-                    <hr>   
-                    <p>Named Insured:</p> 
-                    <input type="text" value="{{$submission->named_insured}}" name="named_insured" required><br>
-                    <p>Additional Named Insured/DBA:</p>
-                    <input type="text" value="{{$submission->additional_ni}}" name="additional_ni"><br>
-                    <p>Type of entitiy:</p>
-                    <select name="type_of_entity" class="col-md-4 form-group">
-                      <option  value="">-- Select --</option>       
-                          @if($type_of_entity)
-                            @for($i = 1; $i <= count($type_of_entity); $i++)      
-                                 <option value="{{$i}}">{{$type_of_entity[$i]}}</option>
-                            @endfor  
-                          @endif                             
-                    </select>                      
-                    <br>
-                    <p>SSN:</p>
-                    <input type="text" value="{{$submission->ssn}}" name="ssn"><br>
-                    <hr>
-                    <!-- Mailing address -->
-                    <p>Street name/number:</p>
-                    <input type="text" value="{{$submission->street_name_and_number}}" name="mailing_address_street_name_and_number" required><br>
-                    <p>City:</p>
-                    <input type="text" value="{{$submission->city}}" name="mailing_address_city" required><br>
-                    <p>ZIP code:</p>
-                    <input type="text" value="{{$submission->zip}}" name="mailing_address_zip" required><br>
-                    <p>County:</p>
-                    <input type="text" value="{{$submission->county}}" name="mailing_address_county" required><br>
-                    <p>State:</p>
-                    <select name="mailing_address_state" class="col-md-4 form-group">
-                      <option  value="{{$submission->mailing_address_state}}"></option>       
-                          @if($state)
-                            @for($i = 1; $i < count($state); $i++)      
-                                 <option value="{{$i}}">{{$state[$i]}}</option>
-                            @endfor  
-                          @endif                             
-                    </select>                       
-                    <hr>
-                    <!-- Location address -->
-                    <p>Street name/number:</p>
-                    <input type="text" value="{{$submission->street_name_and_number}}" name="location_address_street_name_and_number" required><br>
-                    <p>City:</p>
-                    <input type="text" value="{{$submission->city}}" name="location_address_city" required><br>
-                    <p>ZIP code:</p>
-                    <input type="text" value="{{$submission->zip}}" name="location_address_zip" required><br>
-                    <p>County:</p>
-                    <input type="text" value="{{$submission->county}}" name="location_address_county" required><br>
-                    <p>State:</p>
-                    <select name="location_address_state" class="col-md-4 form-group">
-                      <option  value="{{$submission->location_address_state}}"></option>       
-                          @if($state)
-                            @for($i = 1; $i < count($state); $i++)      
-                                 <option value="{{$i}}">{{$state[$i]}}</option>
-                            @endfor  
-                          @endif                            
-                    </select>         
-                    <br>
-                    <button type="button" href="/file/create" class="btn btn-default">Log</button> &nbsp;
-                    <button type="button" class="btn btn-primary">Edit</button>
-                    <button class="button is-primary is-outlined" href="/file/create/{{$submission->id}}">Submit</button>
+                <div class="field">
+                    <div class="row">
+                        <div class="col">
+                            <label class="label" for="agent_name">
+                                Effective date:
+                            </label>
+                        </div>
+                        <div class="col">
+                            <input type="text" value="{{$submission->effective_date}}" name="effective_date" required><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="row">
+                        <div class="col">
+                            <label class="label" for="agent_name">
+                                Expiration_date:
+                            </label>
+                        </div>
+                        <div class="col">
+                            <input type="text" value="{{$submission->expiration_date}}" name="expiration_date">
+                        </div>
+                    </div>
+                </div>
+                <hr> 
+                <div class="field">
+                    <div class="row">
+                        <div class="col">
+                            <label class="label" for="agent_name">
+                                Named Insured:
+                            </label>
+                        </div>
+                        <div class="col">
+                            <input type="text" value="{{$submission->named_insured}}" name="named_insured" required>
+                        </div>
+                    </div>
+                </div>                
+                <div class="field">
+                    <div class="row">
+                        <div class="col">
+                            <label class="label" for="agent_name">
+                                Additional Named Insured/DBA:
+                            </label>
+                        </div>
+                        <div class="col">
+                            <input type="text" value="{{$submission->additional_ni}}" name="additional_ni">
+                        </div>
+                    </div>
+                </div>                       
+                <div class="field">
+                    <div class="row">
+                        <div class="col">
+                            <label class="label" for="agent_name">
+                                Type of entitiy:
+                            </label>
+                        </div>
+                        <div class="col">
+                            <select name="type_of_entity" class="col-md-4 form-group">
+                              <option  value="">-- Select --</option>       
+                                  @if($type_of_entity)
+                                    @for($i = 1; $i <= count($type_of_entity); $i++)      
+                                         <option value="{{$i}}">{{$type_of_entity[$i]}}</option>
+                                    @endfor  
+                                  @endif                             
+                            </select> 
+                        </div>
+                    </div>
+                </div> 
+                <div class="field">
+                    <div class="row">
+                        <div class="col">
+                            <label class="label" for="agent_name">
+                                SSN:
+                            </label>
+                        </div>
+                        <div class="col">
+                            <input type="text" value="{{$submission->ssn}}" name="ssn"><br>
+                        </div>
+                    </div>
+                </div>     
+                <hr>
+                <!-- Mailing address -->                
+                <div class="field">
+                    <div class="row">
+                        <div class="col">
+                            <label class="label" for="agent_name">
+                                Street name/number:
+                            </label>
+                        </div>
+                        <div class="col">
+                            <input type="text" value="{{$submission->street_name_and_number}}" name="mailing_address_street_name_and_number" required>
+                        </div>
+                    </div>
+                </div>                   
+                <div class="field">
+                    <div class="row">
+                        <div class="col">
+                            <label class="label" for="agent_name">
+                                City:
+                            </label>
+                        </div>
+                        <div class="col">
+                             <input type="text" value="{{$submission->city}}" name="mailing_address_city" required>
+                        </div>
+                    </div>
+                </div>  
+                <div class="field">
+                    <div class="row">
+                        <div class="col">
+                            <label class="label" for="agent_name">
+                               ZIP code:
+                            </label>
+                        </div>
+                        <div class="col">
+                             <input type="text" value="{{$submission->zip}}" name="mailing_address_zip" required>
+                        </div>
+                    </div>
+                </div> 
+                <div class="field">
+                    <div class="row">
+                        <div class="col">
+                            <label class="label" for="agent_name">
+                               County:
+                            </label>
+                        </div>
+                        <div class="col">
+                            <select name="mailing_address_state" class="col-md-4 form-group">
+                              <option  value="{{$submission->mailing_address_state}}"></option>       
+                                  @if($state)
+                                    @for($i = 1; $i < count($state); $i++)      
+                                         <option value="{{$i}}">{{$state[$i]}}</option>
+                                    @endfor  
+                                  @endif                             
+                            </select>  
+                        </div>
+                    </div>
+                </div> 
+                <div class="field">
+                    <div class="row">
+                        <div class="col">
+                            <label class="label" for="agent_name">
+                               State:
+                            </label>
+                        </div>
+                        <div class="col">
+                            <select name="mailing_address_state" class="col-md-4 form-group">
+                              <option  value="{{$submission->mailing_address_state}}"></option>       
+                                  @if($state)
+                                    @for($i = 1; $i < count($state); $i++)      
+                                         <option value="{{$i}}">{{$state[$i]}}</option>
+                                    @endfor  
+                                  @endif                             
+                            </select>  
+                        </div>
+                    </div>
+                </div> 
+                <hr>
+                <!-- Location address -->
+                <div class="field">
+                    <div class="row">
+                        <div class="col">
+                            <label class="label" for="agent_name">
+                                Street name/number:
+                            </label>
+                        </div>
+                        <div class="col">
+                            <input type="text" value="{{$submission->street_name_and_number}}" name="location_address_street_name_and_number" required>
+                        </div>
+                    </div>
+                </div>                   
+                <div class="field">
+                    <div class="row">
+                        <div class="col">
+                            <label class="label" for="agent_name">
+                                City:
+                            </label>
+                        </div>
+                        <div class="col">
+                             <input type="text" value="{{$submission->city}}" name="location_address_city" required>
+                        </div>
+                    </div>
+                </div>  
+                <div class="field">
+                    <div class="row">
+                        <div class="col">
+                            <label class="label" for="agent_name">
+                               ZIP code:
+                            </label>
+                        </div>
+                        <div class="col">
+                             <input type="text" value="{{$submission->zip}}" name="location_address_zip" required>
+                        </div>
+                    </div>
+                </div> 
+                <div class="field">
+                    <div class="row">
+                        <div class="col">
+                            <label class="label" for="agent_name">
+                               County:
+                            </label>
+                        </div>
+                        <div class="col">
+                            <input type="text" value="{{$submission->county}}" name="location_address_county" required>
+                        </div>
+                    </div>
+                </div> 
+                <div class="field">
+                    <div class="row">
+                        <div class="col">
+                            <label class="label" for="agent_name">
+                               State:
+                            </label>
+                        </div>
+                        <div class="col">
+                            <select name="location_address_state" class="col-md-4 form-group">
+                              <option  value="{{$submission->location_address_state}}"></option>       
+                                  @if($state)
+                                    @for($i = 1; $i < count($state); $i++)      
+                                         <option value="{{$i}}">{{$state[$i]}}</option>
+                                    @endfor  
+                                  @endif                            
+                            </select>   
+                        </div>
+                    </div>
+                </div> 
+                <hr>
+                <button type="submit" class="btn btn-outline-secondary">Submit</button>
                 </form>
-                    <!--- this should be separate tabs in column next to this one 
-                    <p>Info</p>
-                    <p>Documents</p>
-                    <p>Submission</p>
-                    <p>Quote</p>
-                    <p>Binder</p>
-                    <p>Policy</p>
-                    <p>Atachments</p>
-                    <p>Finance</p>
-                    <p>Support</p>
-                    <button type="button" class="btn btn-success">Test</button>
-                    <button type="button" class="btn btn-info">Test</button>
-                   end -->
                 </div>
             </div>
         </div>    
-
     <div class="col-md-3">
                 <div class="card-header">Dashboard</div>
                 <div class="card-body">

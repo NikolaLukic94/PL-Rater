@@ -109,4 +109,25 @@ class StatsController extends Controller
                 'countPerProtectionClasses' => $countPerProtectionClasses
 	        ]);    		
     }
+
+    public function thisWeekStats(Request $request) {
+
+        $en = Carbon::now();
+        $weekStartDate = $en->startOfWeek()->format('Y-m-d H:i');
+        $weekEndDate = $en->endOfWeek()->format('Y-m-d H:i');
+        
+        //logic goes here
+        //admin should be able to select time period for which he would like go get stats
+        //if non selected, the current week stats are displayed
+
+
+        return view('/status/subs/this_week', [
+                'countPerAgency' => $countPerAgency,
+                'countPerLob' => $countPerLob,
+                'countPerState' => $countPerState,
+                'countPerConstructionType' => $countPerConstructionType,
+                'countPerProtectionClasses' => $countPerProtectionClasses
+            ]);
+
+    }
 }

@@ -16,13 +16,18 @@ class WelcomeController extends Controller
 	    $bgTime = Carbon::now()->format('H:i');
 	    $usTime = Carbon::now('US/Central')->format('H:i'); 
 	    $montrealTime = Carbon::now('America/Montreal')->format('H:i');   	
-
+        
 	    return view('/welcome',[
 			'bgTime' => $bgTime,
 			'usTime' => $usTime,
 			'montrealTime' => $montrealTime,
 			'submission' => $submission
 		]);
+
+
+
+
+
     }
 
     public function myTestAddToLog()
