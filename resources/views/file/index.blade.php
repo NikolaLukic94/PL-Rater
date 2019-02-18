@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-3">
             <div class="card">
-                <div class="card-header">General Info</div>
+                <div class="card-header text-center">General Info</div>
                     <div class="card-body">
                         <form method="POST" action="/file/update/general-info/{{$file->id}}">
                             {{ csrf_field()  }}
@@ -49,8 +49,8 @@
                 </div>
             </div>
         <div class="col-md-7">
-             <div class="card">
-                <div class="card-header">--  {{$file->named_insured}}  --</div>
+            <div class="card">
+                <div class="card-header text-center"><b>--  {{$file->named_insured}}  --</b></div>
                     <div class="card-body">
                         <div class="col-md-6">
                             <h5>Status: {{$file->status}}</h5>
@@ -72,7 +72,29 @@
                             <h5>Effective date: {{$file->effective_date}}</h5>
                         </div>    
                         </div>
-                    </div>            
+                    </div>     
+
+                    <br>
+        <div class="col-md-7">
+            <div class="card">
+                <div class="card-header text-center">
+                    <form method="POST" action="/uploadImg" enctype="multipart/form-data">
+                        @foreach ($errors->all() as $error)
+                            <p class="alert alert-danger">{{ $error }}</p>
+                        @endforeach
+                        @if (session('status'))
+                            <div class="alert alert-success">
+                        {{ session('status') }}
+                            </div>
+                        @endif
+                         {!! csrf_field() !!}
+                         <div class="form-group">
+                         <label for="image">Choose an image</label>
+                         <input type="file" id="image" name="image">
+                         </div>
+                         <button type="submit" class="btn btn-default">Upload</button>
+                    </form>
+                </div></div></div>
                 </div>    
             <div class="card">
                 <div class="card-header"></div>
@@ -81,7 +103,7 @@
                         <hr>
                         <p>Documents</p>
                         <hr>
-                        <p><a href="/rater/prepare/{{$file->id}}">Rate</a></p>
+                        <p><a href="/rater/prepare/{{$file->id}}">Rate It</a></p>
                         <hr>
                         <p><a href="/subs/show/{{$file->submission_id}}">Submission</a></p>
                         <hr>

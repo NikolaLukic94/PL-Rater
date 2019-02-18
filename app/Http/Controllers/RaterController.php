@@ -11,7 +11,7 @@ use App\Premium;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
-
+use App\LogActivity;
 /* USED FOR GENERATING RATING WORKSHEETS AND CALCULATING PREMIUM */
 
 class RaterController extends Controller
@@ -76,15 +76,18 @@ class RaterController extends Controller
                          $aop_ded_rate = $rate->aop_ded_5; }
 
                 if($file->construction_type == 'frame') { 
-                    $construction_type_rate == $rate->frame; }    
+                    $construction_type_rate == $rate->frame; 
+                }    
                     elseif  ($file->construction_type == 'jm') { 
-                        $construction_type_rate = $rate->jm; }
+                        $construction_type_rate = $rate->jm; 
+                }
                     elseif  ($file->construction_type == 'bv') { 
-                        $construction_type_rate = $rate->bv; }
+                        $construction_type_rate = $rate->bv; 
+                }
                     elseif  ($file->construction_type == 'masonry') { 
-                        $construction_type_rate = $rate->masonry; }
-                        else{ 
-                        $construction_type_rate = 'frame'; }
+                        $construction_type_rate = $rate->masonry; 
+                }
+
 
                 if($file->protection_class == '1') { 
                     $protection_class_rate == $rate->protection_class_1; }    
@@ -120,7 +123,7 @@ class RaterController extends Controller
                 'loss_of_use' => $rate->loss_of_use,
                 'med_pay' => $med_pay_rate,
                 'aop_ded' => $aop_ded_rate,
-                'construction_type' => $construction_type_rate,
+                'construction_type' => '1',
                 'new_purchase' => '1',
                 'prior_carrier' => $prior_carrier_rate,
                 'prior_carrier_name' => $prior_carrier_name_rate,
@@ -145,7 +148,7 @@ class RaterController extends Controller
     public function generateRw($file_id, $rater_id) {
 
         $file = DB::table('files')->where('id',$file_id)->first(); 
-        $rater = DB::table('rates')->where('lob', $file->lob)->first();
+        $rater = DB::table('raters')->where('lob', $file->lob)->first();
 
         $cov_limits = $file->cov_a + $file->other_structures + $file->loss_of_use;
         $cov_limits_rate = ($rater->cov_a + $rater->other_structures + $rater->loss_of_use) / 3;

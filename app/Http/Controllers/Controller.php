@@ -72,8 +72,25 @@ class Controller extends BaseController
 					'5' => '5'
 	    );
 
-	public	$yes_no = array('1' => 'yes',
-						'2' => 'no'
-					
-	    );    
+	public	$yes_no = array(
+		'1' => 'yes',
+		'2' => 'no'			
+	    );  
+
+	public	$priority = array(
+		'1' => 'low',
+		'2' => 'medium',
+		'3' => 'high'	
+	    );  
+
+	public	$ticket_groups = array(
+		'1' => 'software',
+		'2' => 'hardware'		
+	    ); 
+
+	public	$ticket_type = array(
+		'1' => 'failure',
+		'2' => 'request'
+	    ); 
+
 }

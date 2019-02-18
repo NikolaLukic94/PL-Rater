@@ -65,6 +65,12 @@ Route::group(['prefix' => 'rater'], function () {
 	Route::get('/rate/rw/{file_id}/{rater_id}/word','RaterController@rwToWord');
 });
 
+Route::group(['prefix' => 'rating-worksheet'], function () {
+	Route::get('/store/{file_id}/{rater_id}','RatingWorksheetController@store');
+
+});
+
+
 Route::get('/prepemail','SubmissionController@prepemail');
 Route::post('/prepemail','SubmissionController@sendemail');
 
@@ -125,3 +131,5 @@ Route::group(['prefix' => 'manage/role'], function () {
 
 Route::get('add-to-log', 'WelcomeController@myTestAddToLog');
 Route::get('logActivity', 'WelcomeController@logActivity');
+
+Route::post('/uploadImg','FolderController@uploadImg');

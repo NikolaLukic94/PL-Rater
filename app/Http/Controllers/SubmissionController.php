@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
 use Validator;
 use Dompdf\Dompdf;
 use Illuminate\Http\Request;

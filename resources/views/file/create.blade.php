@@ -67,7 +67,7 @@
                         </div>
                         <div class="col">
                             <select name="type_of_entity" class="col-md-4 form-group">
-                              <option  value="">-- Select --</option>       
+                              <option  value="{{ $submission->type_of_entity }}">-- Select --</option>       
                                   @if($type_of_entity)
                                     @for($i = 1; $i <= count($type_of_entity); $i++)      
                                          <option value="{{$i}}">{{$type_of_entity[$i]}}</option>
@@ -99,7 +99,7 @@
                             </label>
                         </div>
                         <div class="col">
-                            <input type="text" value="{{$submission->street_name_and_number}}" name="mailing_address_street_name_and_number" required>
+                            <input type="text" value="{{$submission->mailing_address_street_name_and_number}}" name="mailing_address_street_name_and_number" required>
                         </div>
                     </div>
                 </div>                   
@@ -111,7 +111,7 @@
                             </label>
                         </div>
                         <div class="col">
-                             <input type="text" value="{{$submission->city}}" name="mailing_address_city" required>
+                             <input type="text" value="{{$submission->mailing_address_city}}" name="mailing_address_city" required>
                         </div>
                     </div>
                 </div>  
@@ -123,7 +123,7 @@
                             </label>
                         </div>
                         <div class="col">
-                             <input type="text" value="{{$submission->zip}}" name="mailing_address_zip" required>
+                             <input type="text" value="{{$submission->mailing_address_zip}}" name="mailing_address_zip" required>
                         </div>
                     </div>
                 </div> 
@@ -135,14 +135,7 @@
                             </label>
                         </div>
                         <div class="col">
-                            <select name="mailing_address_state" class="col-md-4 form-group">
-                              <option  value="{{$submission->mailing_address_state}}"></option>       
-                                  @if($state)
-                                    @for($i = 1; $i < count($state); $i++)      
-                                         <option value="{{$i}}">{{$state[$i]}}</option>
-                                    @endfor  
-                                  @endif                             
-                            </select>  
+                            <input type="text" value="{{$submission->mailing_address_county}}" name="mailing_address_county" required>
                         </div>
                     </div>
                 </div> 
@@ -175,7 +168,7 @@
                             </label>
                         </div>
                         <div class="col">
-                            <input type="text" value="{{$submission->street_name_and_number}}" name="location_address_street_name_and_number" required>
+                            <input type="text" value="{{$submission->location_address_street_name_and_number}}" name="location_address_street_name_and_number" required>
                         </div>
                     </div>
                 </div>                   
@@ -187,7 +180,7 @@
                             </label>
                         </div>
                         <div class="col">
-                             <input type="text" value="{{$submission->city}}" name="location_address_city" required>
+                             <input type="text" value="{{$submission->location_address_city}}" name="location_address_city" required>
                         </div>
                     </div>
                 </div>  
@@ -199,7 +192,7 @@
                             </label>
                         </div>
                         <div class="col">
-                             <input type="text" value="{{$submission->zip}}" name="location_address_zip" required>
+                             <input type="text" value="{{$submission->location_address_zip}}" name="location_address_zip" required>
                         </div>
                     </div>
                 </div> 
@@ -211,7 +204,7 @@
                             </label>
                         </div>
                         <div class="col">
-                            <input type="text" value="{{$submission->county}}" name="location_address_county" required>
+                            <input type="text" value="{{$submission->location_address_county}}" name="location_address_county" required>
                         </div>
                     </div>
                 </div> 

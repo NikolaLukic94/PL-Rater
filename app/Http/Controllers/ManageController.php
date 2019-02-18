@@ -52,7 +52,7 @@ class ManageController extends Controller
     		'name' => 'required|max:100',
     		'email' => 'required|unique:users|email' 
     	]);
-
+/*
 		if (Request::has('password') && !empty($request->password)) {
 			$password = trim($request->password);
 		} else {  //set the manual password
@@ -60,9 +60,9 @@ class ManageController extends Controller
 			$keyspace = '123456789abcdefghijkmnopqrstuvwyzyABCDEFGHIJKLMNPQRSTUVWXZY';
 			$str = '';
 			$max = mb_strlen($keyspace, '8bit') - 1;
-			for (i=0; $i < $length; ++$i) {
+			for ( $i=0; $i < $length; ++$i;) {
 				$str .= $keyspace[random_int(0,$max)];
-			}
+			} 
 			$user->password = Hash::make($str);
 
 	    	$user = new User();
@@ -76,7 +76,7 @@ class ManageController extends Controller
 	        } else {
 	        	Session::flash('danger','Sorry a problem occured while creating this user');
 	        	return view('/manage/users/create')
-	        }
+	        }*/
     }
 
 }

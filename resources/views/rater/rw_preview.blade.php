@@ -288,8 +288,8 @@
            <div class="column is-half is-offset-one-quarter">
             <div class="field is-grouped is-grouped-centered">
               <p class="control">
-                <button type="button" href="/rater/rate/rw/{{$file[0]->id}}/{{$rater->id}}" class="btn btn-outline-secondary">Create RW</button>
-                <a class="btn btn-primary" href="/rater/rate/rw/{{$file[0]->id}}/{{$rater->id}}" role="button">Create RW</a>                 
+                <button type="button" href="/rater/rate/rw/{{$file->id}}/{{$rater->id}}" class="btn btn-outline-secondary">Create RW</button>
+                <a class="btn btn-primary" href="/rater/rate/rw/{{$file->id}}/{{$rater->id}}" role="button">Create RW</a>                 
                 <button type="button" class="btn btn-outline-secondary">Create RW and Save to PDF</button>
               </p>
               @include('errors')

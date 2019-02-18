@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ImageFormRequest;
 
 class FolderController extends Controller
 {
@@ -13,9 +14,7 @@ class FolderController extends Controller
      */
     public function index()
     {
-        return view('/folder',
-            'folder' => $folder
-        ]);
+        return view('/folder');
     }
 
     /**
@@ -63,41 +62,24 @@ class FolderController extends Controller
      * @param  \App\File  $file
      * @return \Illuminate\Http\Response
      */
-    public function show(File $file)
-    {
-        //
-    }
+    public function uploadImg(ImageFormRequest $request) {
+        //this should be option for UW to add some img as a note/reminder, not tied to any sub or account.
+        if ($request->hasFile('image')) {
+        
+            $file = $request->file('image');
+        
+            $name = $file->getClientOriginalName();
+        
+            $file->move(public_path() . '/images/', $name);
+        
+            $imagePath = public_path().'/images/'.$name;
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\File  $file
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(File $file)
-    {
-        //
-    }
+           // $image = Image::make($imagePath)->resize(1000, 250)->save();
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\File  $file
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, File $file)
-    {
-        //
-    }
+            return redirect('/')->with('status', 'Your image has been uploaded successfully!');
+        
+        }
+    }    
+}
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\File  $file
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(File $file)
-    {
-        //
-    }
+

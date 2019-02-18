@@ -334,11 +334,11 @@
              <div class="column is-half is-offset-one-quarter">
               <div class="field is-grouped is-grouped-centered">
                 <p class="control">
-                  <button type="button" href="/rater/rate/rw/{{$file[0]->id}}/{{$rater->id}}" class="btn btn-outline-secondary">Save as Word</button>&nbsp;
-                  <button type="button" href="/rater/rate/rw/{{$file[0]->id}}/{{$rater->id}}" class="btn btn-outline-secondary">Add to file RWs</button>&nbsp;                  
-                  <a class="btn btn-primary" href="/rater/rate/rw/{{$file[0]->id}}/{{$rater->id}}" role="button">Save & Quote</a>         
+                  <button type="button" href="/rater/rate/rw/{{$file->id}}/{{$rater->id}}" class="btn btn-outline-secondary">Save as Word</button>&nbsp;
+                  <button type="button" href="/rating-worksheet/store/{{$file->id}}/{{$rater->id}}" class="btn btn-outline-secondary">Add to file RWs</button>&nbsp;                  
+                  <a class="btn btn-primary" href="/rating-worksheet/store/{{$file->id}}/{{$rater->id}}" role="button">Save to File</a>         
                   <button type="button" class="btn btn-outline-secondary">Email to Agent</button>
-                  <a class="btn btn-primary" href="/rater/rate/rw/{{$file[0]->id}}/{{$rater->id}}" role="button">Decline</a>                 
+                  <a class="btn btn-primary" href="/rater/rate/rw/{{$file->id}}/{{$rater->id}}" role="button">Decline</a>                 
                 </p>
                 @include('errors')
               </form>     
