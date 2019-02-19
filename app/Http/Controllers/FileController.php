@@ -36,16 +36,9 @@ class FileController extends Controller
       $search_from_date =      $request->search_from_date;
       $search_to_date =      $request->search_to_date;
 
-      $file = DB::table('files')
-              ->leftJoin('submissions', 'files.submission_id', '=', 'submissions.id')
-              ->select('submissions.named_insured as named_insured',
-                       'submissions.agent_name as agent_name',
-                       'submissions.lob as lob',
-                       'submissions.effective_date as effective_date',                       
-                       'submissions.agency as agency', 
-                       'submissions.state as state'
+      $files = DB::table('files')
                   ->when($search_named_insured, function ($query) use ($search_named_insured) {
-                      return $query->where('named_insured', 'like', '%' . $search_named_insured . '%');
+                      return $query->where('files.named_insured', 'like', '%' . $search_named_insured . '%');
                   })
                   ->when($search_lob, function ($query) use ($search_lob) {
                       return $query->where('lob', $search_lob);
@@ -69,7 +62,7 @@ class FileController extends Controller
                      return $query->where('created_at', $search_to_date);
                   })
                   ->orderBy('named_insured', 'asc')
-                  ->get());                    
+                  ->get();                    
 
                   Session::flash('inputs', [
                       'search_named_insured' => $search_named_insured,
@@ -83,7 +76,8 @@ class FileController extends Controller
                       ]);
                   
       return view('/file/search_with_results',[
-        'file' => $file]);
+        'files' => $files
+      ]);
     }
 
     /**

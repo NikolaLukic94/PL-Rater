@@ -4,16 +4,12 @@
 <div class="row">
   <div class="container">
   <div class="col-lg-12 col-md-12">
-    <form class="search-form search-form-basic" action="/subs/index" method="post">
+     <form class="search-form search-form-basic" action="/subs/search/results" method="post">
     {{ csrf_field() }}
       <div class="form-row">        
         <div class="col-md-4 form-group">
           <label for="search_named_insured">Named Insured:</label>
           <input type="text"  name="search_named_insured" id="search_named_insured" class="form-control input-sm" @if(isset(Session::get('inputs')['search_named_insured'])) value="{{ Session::get('inputs')['search_named_insured'] }}" @endif>
-        </div> 
-        <div class="col-md-4 form-group">
-          <label for="search_type_of_coverage">Type of Coverage:</label>
-          <input type="text" name="search_type_of_coverage" id="search_type_of_coverage" class="form-control input-sm" @if(isset(Session::get('inputs')['search_type_of_coverage'])) value="{{ Session::get('inputs')['search_type_of_coverage'] }}" @endif>
         </div> 
         <div class="col-md-4 form-group">
           <label for="search_lob">LOB:</label>
@@ -68,7 +64,7 @@
       <div class="card">
         <div class="card-header"><b>Submissions (existing in system):</b></div>
           <div class="card-body">
-            <form action="/rate/create" method="POST">
+            <form action="/search/results" method="POST">
               {{ csrf_field() }}
                 <table class="table">     
                   <thead>
@@ -79,7 +75,6 @@
                         </label>
                       </th> 
                       <th><abbr title="Named_insured">Named Insured</abbr></th>
-                      <th>Type of coverage</th>
                       <th><abbr title="">lob</abbr></th>
                       <th><abbr title="">Effective date</abbr></th>
                       <th><abbr title="">State</abbr></th>
@@ -101,9 +96,6 @@
                             </td>
                             <td>
                               {{ $sub->named_insured }}
-                            </td>
-                            <td>
-                              {{ $sub->type_of_coverage }}
                             </td>
                             <td>
                               {{ $sub->lob }}

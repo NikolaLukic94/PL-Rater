@@ -80,7 +80,6 @@ class SubmissionController extends Controller
     public function searchResultWithSearchMask(Request $request)
     {
       $search_named_insured =    $request->search_named_insured;
-      $search_type_of_coverage =     $request->search_type_of_coverage;
       $search_lob =         $request->search_lob;
       $search_effective_date =  $request->search_effective_date;
       $search_agency_name =      $request->search_agency_name;
@@ -92,9 +91,6 @@ class SubmissionController extends Controller
       $submissions = DB::table('submissions')
                   ->when($search_named_insured, function ($query) use ($search_named_insured) {
                       return $query->where('named_insured', 'like', '%' . $search_named_insured . '%');
-                  })
-                  ->when($search_type_of_coverage, function ($query) use ($search_type_of_coverage) {
-                      return $query->where('type_of_coverage', 'like', '%' . $search_type_of_coverage . '%');
                   })
                   ->when($search_lob, function ($query) use ($search_lob) {
                       return $query->where('lob', $search_lob);
@@ -109,7 +105,7 @@ class SubmissionController extends Controller
                      return $query->where('agent_name', $search_agent_name);
                   })
                   ->when($search_state, function ($query) use ($search_state) {
-                     return $query->where('state', $search_state);
+                     return $query->where('location_address_state', $search_state);
                   })                           
                   ->when($search_from_date, function ($query) use ($search_from_date) {
                      return $query->where('created_at', $search_from_date);
@@ -118,12 +114,10 @@ class SubmissionController extends Controller
                      return $query->where('created_at', $search_to_date);
                   })
                   ->orderBy('named_insured', 'asc')
-                  ->orderBy('state', 'asc')
                   ->get();                     
 
                   Session::flash('inputs', [
                       'search_named_insured' => $search_named_insured,
-                      'search_type_of_coverage' => $search_type_of_coverage,
                       'search_lob' => $search_lob,
                       'search_effective_date' => $search_effective_date,
                       'search_agency_name' => $search_agency_name,

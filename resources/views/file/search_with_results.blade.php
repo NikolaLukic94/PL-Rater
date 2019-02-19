@@ -4,7 +4,7 @@
 <div class="row">
   <div class="container">
   <div class="col-lg-12 col-md-12">
-    <form class="search-form search-form-basic" action="/subs/index" method="post">
+    <form class="search-form search-form-basic" action="/file/search/results" method="post">
     {{ csrf_field() }}
       <div class="form-row">        
         <div class="col-md-4 form-group">
@@ -89,9 +89,8 @@
                       <th><abbr title=""></abbr></th>                                          
                     </tr>
                   </thead>
-                    @if($submissions)
-                      @foreach($submissions as $sub)
-                        @if($sub->status != 'not_logged')
+                    @if($files)
+                      @foreach($files as $file)
                           <tr>
                             <td>
                               <label class="checkbox">
@@ -99,25 +98,27 @@
                               </label>
                             </td>
                             <td>
-                              {{ $sub->named_insured }}
+                              @if(isset($file->named_insured))
+                              {{ $file->named_insured }}
+                              @endif
                             </td>
                             <td>
-                              {{ $sub->lob }}
+                              {{ $file->lob }}
                             </td>
                             <td>
-                              {{ $sub->effective_date }}
+                              {{ $file->effective_date }}
                             </td>
                             <td>
-                              {{ $sub->state }}
+                              {{ $file->location_address_state }}
                             </td>
                             <td>
-                              {{ $sub->agency_name }}
+                              {{ $file->agency_name }}
                             </td>
                             <td>
-                              {{ $sub->agent_name }}
+                              {{ $file->agent_name }}
                             </td>
                             <td>
-                              <a class="btn btn-primary" href="/file/show/{{$sub->id}}" role="button">Open</a> &nbsp;         
+                              <a class="btn btn-primary" href="/file/show/{{$file->id}}" role="button">Open</a> &nbsp;         
                             </td> 
                             <td>
                               <a class="btn btn-primary" href="/subs/search" role="button">Add new</a> &nbsp;
@@ -126,7 +127,6 @@
                               <a class="btn btn-primary" href="" role="button">Rate</a> &nbsp;
                             </td>                                                        
                           </tr>
-                            @endif
                           @endforeach
                         @else
                       <p>There are no new emails!</p>
