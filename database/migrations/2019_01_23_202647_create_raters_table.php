@@ -23,7 +23,9 @@ class CreateRatersTable extends Migration
             $table->string('aop_ded', 50)->nullable();       
             $table->string('construction_type', 50);
             $table->string('protection_class', 50);
-            $table->string('new_purchase', 50)->default(0)->nullable();                  
+            $table->string('new_purchase', 50)->default(0)->nullable();
+            $table->string('zero_two_losses', 50)->default(0)->nullable();
+            $table->string('more_than_two_losses', 50)->default(0)->nullable();                                          
             $table->string('prior_carrier', 50)->nullable()->nullable();       
             $table->string('prior_carrier_name', 50)->nullable()->nullable();           
             $table->unsignedInteger('file_id');

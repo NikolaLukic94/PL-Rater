@@ -6,6 +6,7 @@ use App\RatingWorksheet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
+use App\LogActivity;
 
 class RatingWorksheetController extends Controller
 {
@@ -16,7 +17,11 @@ class RatingWorksheetController extends Controller
      */
     public function index()
     {
-        //
+        $rw = RatingWorksheet::all();
+
+        return view('/rating_worksheet/index',[
+            'rw' => $rw
+        ])
     }
 
     /**
@@ -47,7 +52,7 @@ class RatingWorksheetController extends Controller
                                                                                                    
         LogActivity::addToLog('added new rating worksheet' );
 
-        return view('/file/index');
+        return redirect('/file/search');
     }
 
     /**

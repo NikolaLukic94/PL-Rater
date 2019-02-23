@@ -66,7 +66,7 @@
   <div class="row justify-content-center">
     <div class="col-md-12">
       <div class="card">
-        <div class="card-header"><b>Submissions (existing in system):</b></div>
+        <div class="card-header"><b>Accounts:</b></div>
           <div class="card-body">
             <form action="/rate/create" method="POST">
               {{ csrf_field() }}
@@ -118,7 +118,7 @@
                               {{ $file->agent_name }}
                             </td>
                             <td>
-                              <a class="btn btn-primary" href="/file/show/{{$file->id}}" role="button">Open</a> &nbsp;         
+                              <a class="btn btn-primary" href="/file/index/{{$file->id}}" role="button">Open</a> &nbsp;         
                             </td> 
                             <td>
                               <a class="btn btn-primary" href="/subs/search" role="button">Add new</a> &nbsp;

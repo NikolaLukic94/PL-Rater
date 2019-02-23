@@ -28,6 +28,7 @@ class WelcomeController extends Controller
 
 
 
+
     }
 
     public function myTestAddToLog()

@@ -55,6 +55,8 @@ class CreateFilesTable extends Migration
             $table->string('prior_carrier_name', 50)->nullable();
             $table->date('prior_carrier_effective_date', 50)->nullable(); 
             $table->string('status');
+            $table->string('zero_two_losses');   
+            $table->string('more_than_two_losses');                      
             $table->integer('submission_number');      
 
             $table->unsignedInteger('submission_id');

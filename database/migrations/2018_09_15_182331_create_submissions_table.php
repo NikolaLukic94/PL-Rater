@@ -52,7 +52,8 @@ class CreateSubmissionsTable extends Migration
             $table->string('prior_carrier', 50)->nullable();
             $table->string('prior_carrier_name', 50)->nullable();
             $table->date('prior_carrier_effective_date', 50)->nullable();
-
+            $table->string('zero_two_losses');              
+            $table->string('more_than_two_losses'); 
             $table->string('status');
             $table->integer('submission_number');                
 

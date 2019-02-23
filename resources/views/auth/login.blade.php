@@ -39,8 +39,7 @@
                                     </span>
                                 @endif
                             </div>
-                        </div>
-
+                        </div>                     
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
@@ -65,6 +64,33 @@
                             </div>
                         </div>
                     </form>
+                    <hr>
+                    <div class="col text-center">
+                        <div class="row">
+                         <a href="/login/facebook">
+                            <div class="btn btn-md btn-primary ladda-button" data-style="expand-left">
+                                <i class="fa fa-facebook"></i> Login with Facebook 
+                            </div>
+                        </a>    
+                        </div>
+
+                        <div class="row">
+                         <a href="/login/facebook">
+                            <div class="btn btn-md btn-primary ladda-button" data-style="expand-left">
+                                <i class="fa fa-twitter"></i> Login with Twitter 
+                            </div>
+                        </a>    
+                        </div>
+
+                        <div class="row">
+                         <a href="/login/facebook">
+                            <div class="btn btn-md btn-primary ladda-button" data-style="expand-left" data-color="green">
+                                <i class="fa fa-github"></i> Login with Github 
+                            </div>
+                        </a>    
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

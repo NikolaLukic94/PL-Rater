@@ -67,7 +67,8 @@ Route::group(['prefix' => 'rater'], function () {
 
 Route::group(['prefix' => 'rating-worksheet'], function () {
 	Route::get('/store/{file_id}/{rater_id}','RatingWorksheetController@store');
-
+	Route::get('/index/{id}','RatingWorksheetController@index'); //since will be redirected from files page to RWs belonging to that file
+	Route::get('/show/{id}','RatingWorksheetController@show');	
 });
 
 
