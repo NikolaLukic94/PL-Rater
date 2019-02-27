@@ -15,13 +15,14 @@ class RatingWorksheetController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
         $rw = RatingWorksheet::all();
+        $rw = $rw->where('file_id',$id);
 
         return view('/rating_worksheet/index',[
             'rw' => $rw
-        ])
+        ]);
     }
 
     /**

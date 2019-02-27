@@ -99,30 +99,21 @@
             <div class="card">
                 <div class="card-header"></div>
                     <div class="card-body">
-                        <p>Info</p>
-                        <hr>
+                        <p>Correspondence</p>                        
+                        <p><a href="/notes/create/{{$file->id}}">Info/Notes</a></p>
                         <p>Documents</p>
                         <hr>
+                        <p>RW</p>
                         <p><a href="/rater/prepare/{{$file->id}}">Rate It</a></p>
+                        <p><a href="/rating_worksheet/index/{{$file->id}}">View RWs</a></p>
                         <hr>
                         <p><a href="/subs/show/{{$file->submission_id}}">Submission</a></p>
-                        <hr>
                         <p>Quote</p>
-                        <hr>
                         <p>Binder</p>
-                        <hr>
                         <p>Policy</p>
-                        <hr>
                         <p>Atachments</p>
-                        <hr>
                         <p>Finance</p>
-                        <hr>
                         <p>Support</p>
-                        <hr>
-                        <p>Notes</p>
-                        <hr>
-                        <p>All</p>
-                        <hr>
                         <p>Log</p>                        
                     </div>
                 </div>
