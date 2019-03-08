@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Input;
 use App\Http\Requests\AgentSendSubmissionEmail;
 use App\LogActivity;
 
+
 class SubmissionController extends Controller
 {
     /**

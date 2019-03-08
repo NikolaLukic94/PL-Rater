@@ -7,6 +7,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/test', 'HomeController@test');
+
 Route::group(['prefix' => 'subs'], function () {
 	Route::get('/index','SubmissionController@indexSubEmail');
 	Route::get('/create','SubmissionController@createSubEmail');
@@ -16,8 +18,6 @@ Route::group(['prefix' => 'subs'], function () {
 	Route::get('/edit/{id}', 'SubmissionController@editSubEmail');
 	Route::post('/edit/{id}', 'SubmissionController@updateSubEmail');
 	Route::delete('/delete/{id}', 'SubmissionController@destroy');
-	Route::get('/define','RateController@store');	
-	Route::post('/define','RateController@store');	
 	Route::get('/search','SubmissionController@searchSubEmail');	
 	Route::post('/search/results','SubmissionController@searchResultWithSearchMask');
 	Route::get('/eff','SubmissionController@getSubsWithEffDateWithinCurrentMonth');

@@ -29,4 +29,13 @@ class HomeController extends Controller
         */
         return view('home');
     } 
+
+    public function test()
+    {
+
+       /* $submissions = DB::table('submissions')->where('status','not_logged')->count()->get();
+        */
+        return view('test');
+    } 
+
 }

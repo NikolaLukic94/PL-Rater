@@ -1,127 +1,112 @@
 @extends('layouts.app')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-3">
-            <div class="card">
-                <div class="card-header text-center">General Info</div>
-                    <div class="card-body">
-                        <form method="POST" action="/file/update/general-info/{{$file->id}}">
-                            {{ csrf_field()  }}
-                            {{ method_field('POST') }}                        
-                                <p>Named Insured:</p> 
-                                <input type="text" value="{{$file->named_insured}}" name="named_insured" required><br>
-                                <p>Additional Named Insured/DBA:</p>
-                                <input type="text" value="{{$file->additional_ni}}" name="additional_ni"><br>
-                                <p>Type of entitiy:</p>
-                                <input type="text" value="{{$file->entity_type}}" name="entity_type" required><br>
-                                <p>SSN:</p>
-                                <input type="text" value="{{$file->ssn}}" name="ssn"><br>
-                                <hr>
-                                <!-- Mailing address -->
-                                <p>Street name/number:</p>
-                                <input type="text" value="{{$file->mailing_address_street_name_and_number}}" name="mailing_address_street_name_and_number" required><br>
-                                <p>City:</p>
-                                <input type="text" value="{{$file->mailing_address_city}}" name="mailing_address_city" required><br>
-                                <p>ZIP code:</p>
-                                <input type="text" value="{{$file->mailing_address_zip}}" name="mailing_address_zip" required><br>
-                                <p>County:</p>
-                                <input type="text" value="{{$file->mailing_address_county}}" name="mailing_address_county" required><br>
-                                <p>State:</p>
-                                <input type="text" value="{{$file->mailing_address_state}}" name="mailing_address_state" required><br>
-                                <hr>
-                                <!-- Location address -->
-                                <p>Street name/number:</p>
-                                <input type="text" value="{{$file->location_address_street_name_and_number}}" name="location_address_street_name_and_number" required><br>
-                                <p>City:</p>
-                                <input type="text" value="{{$file->location_address_city}}" name="location_address_city" required><br>
-                                <p>ZIP code:</p>
-                                <input type="text" value="{{$file->location_address_zip}}" name="location_address_zip" required><br>
-                                <p>County:</p>
-                                <input type="text" value="{{$file->location_address_county}}" name="location_address_county" required><br>
-                                <p>State:</p>
-                                <input type="text" value="{{$file->mailing_address_state}}" name="location_address_state" required><br>          
-                                <br>
-                            <button type="submit" class="btn btn-outline-secondary">Update</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        <div class="col-md-7">
-            <div class="card">
-                <div class="card-header text-center"><b>--  {{$file->named_insured}}  --</b></div>
-                    <div class="card-body">
-                        <div class="col-md-6">
-                            <h5>Status: {{$file->status}}</h5>
-                        </div>    
-                            <hr>
-                        <div class="col-md-6">                            
-                            <h5>Underwriter:</h5>
-                        </div>    
-                            <hr>
-                        <div class="col-md-6"> 
-                            <h5>Agency: {{$file->agency_name}}</h5>
-                        </div>
-                            <hr>
-                        <div class="col-md-6">
-                            <h5>Agency status:</h5>
-                        </div>                        
-                            <hr>
-                        <div class="col-md-6">                            
-                            <h5>Effective date: {{$file->effective_date}}</h5>
-                        </div>    
-                        </div>
-                    </div>     
+<html>
 
-                    <br>
-        <div class="col-md-7">
-            <div class="card">
-                <div class="card-header text-center">
-                    <form method="POST" action="/uploadImg" enctype="multipart/form-data">
-                        @foreach ($errors->all() as $error)
-                            <p class="alert alert-danger">{{ $error }}</p>
-                        @endforeach
-                        @if (session('status'))
-                            <div class="alert alert-success">
-                        {{ session('status') }}
-                            </div>
-                        @endif
-                         {!! csrf_field() !!}
-                         <div class="form-group">
-                         <label for="image">Choose an image</label>
-                         <input type="file" id="image" name="image">
-                         </div>
-                         <button type="submit" class="btn btn-default">Upload</button>
-                    </form>
-                </div></div></div>
-                </div>    
-            <div class="card">
-                <div class="card-header"></div>
-                    <div class="card-body">
-                        <p>Correspondence</p>                        
-                        <p><a href="/notes/create/{{$file->id}}">Info/Notes</a></p>
-                        <p>Documents</p>
-                        <hr>
-                        <p>RW</p>
-                        <p><a href="/rater/prepare/{{$file->id}}">Rate It</a></p>
-                        <p><a href="/rating_worksheet/index/{{$file->id}}">View RWs</a></p>
-                        <hr>
-                        <p><a href="/subs/show/{{$file->submission_id}}">Submission</a></p>
-                        <p>Quote</p>
-                        <p>Binder</p>
-                        <p>Policy</p>
-                        <p>Atachments</p>
-                        <p>Finance</p>
-                        <p>Support</p>
-                        <p>Log</p>                        
-                    </div>
-                </div>
-            </div>
-                </div>
-            </div>
+<head>
+  <meta charset="utf-8">
 
-        </div>
+  <title>Home</title>
+  <!-- Favicon -->
+</head>
+
+<body>
+        @include('/partials/sidebar')
+        <!-- Navigation -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">
+              <i class="ni ni-tv-2 text-primary"></i> Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/file/search">
+              <i class="ni ni-planet text-blue"></i> Accounts
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/subs/index">
+              <i class="ni ni-pin-3 text-orange"></i> Submissions
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/prepemail">
+              <i class="ni ni-single-02 text-yellow"></i> Email
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./examples/tables.html">
+              <i class="ni ni-bullet-list-67 text-red"></i> Follow Ups
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/stats/subs">
+              <i class="ni ni-key-25 text-info"></i> Statistics
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./examples/register.html">
+              <i class="ni ni-circle-08 text-pink"></i> Profile
+            </a>
+          </li>
+        </ul>
+        <!-- Divider -->
+        <hr class="my-3">
+        <!-- Heading -->
+        <h6 class="navbar-heading text-muted">Documentation</h6>
+        <!-- Navigation -->
+        <ul class="navbar-nav mb-md-3">
+          <li class="nav-item">
+            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html">
+              <i class="ni ni-spaceship"></i> Getting started
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html">
+              <i class="ni ni-palette"></i> Foundation
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html">
+              <i class="ni ni-ui-04"></i> Components
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-</div>
-@endsection
+  </nav>
+  <!-- Main content -->
+  <div class="main-content">
+    @include('/partials/top_nav')
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+        </div>
+      </div>
+    </div>
+    <!-- Page content -->
+    <div class="container-fluid mt--7">
+      <div class="row mt-5">
+        <div class="col-xl-8 mb-5 mb-xl-0">
+          <div class="card shadow">
+            <div class="card-header border-0">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h1 class="mb-0">Welcome, Master!</h1>
+                </div>
+                <div class="col text-right">
+                  <a href="#!" class="btn btn-sm btn-primary">See all</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        @include('/partials/footer')
+    </div>
+  </div>
+
+</body>
+
+</html>
