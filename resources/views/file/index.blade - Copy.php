@@ -51,12 +51,7 @@
 </div>
 
 <!-- Page content -->
-<div class="main">
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-</div>
+
 
 <div id="test" class="tabcontent">
   <h3>Correspondence</h3>

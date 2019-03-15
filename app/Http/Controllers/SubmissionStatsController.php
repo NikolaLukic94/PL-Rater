@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\DB;
 use App\Submission;
 use Illuminate\Http\Request;
 
-class StatsController extends Controller
+class SubmissionStatsController extends Controller
 {
     public function index() {
         /* Getting all subs results */

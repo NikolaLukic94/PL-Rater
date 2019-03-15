@@ -1,146 +1,53 @@
+
+
+
+
 @extends('layouts.app')
-@section('content')
 
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>PLR</title>
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+<html>
+<head>
+  <title>Home</title>
+</head>
+<body>
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-                
-                
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                        <a href="">Submissions</a>
-                        <a href="Quotes">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-header"><b>Where do you wanna go?</b></div>
-                            <div class="card-body">
-                                <ul>
-                                    <li><i class="fa fa-arrows"></i><a href="/file/search">&nbsp;Accounts</a></li>
-                                    <hr>    
-                                    <li><i class="fa fa-battery-2"></i><a href="/subs/index">&nbsp;Submissions</a></li>
-                                            <ul>    
-                                                <li><a href="/subs/create">New</a>
-                                                <li><a href="/subs/search">Subs</a></li>
-                                                <li><a href="/subs/index">Emails ({{$submission}} new)</a></li>
-                                            </ul>
-                                    <hr>    
-                                    <li class="active"><i class="fa fa-bell"></i><a href="/prepemail">&nbsp;Emails</a></li>
-                                    <hr>    
-                                    <li><i class="fa fa-bicycle"></i><a href="#">&nbsp;Follow ups</a></li>
-                                    <hr>    
-                                    <li><i class="fa fa-circle"></i><a href="#">&nbsp;circle</a></li>
-                                    <hr>    
-                                    <li><i class="fa fa-crosshairs"></i><a href="#">&nbsp;crosshairs</a></li>
-                                    <hr>    
-                                    <li><i class="fa fa-deaf"></i><a href="#">&nbsp;Candidates</a></li>
-                                    <hr>    
-                                    <li><i class="fa fa-desktop"></i><a href="#">&nbsp;desktop</a></li>
-                                    <hr>    
-                                    <li><i class="fa fa-dot-circle-o"></i><a href="/stats/subs">&nbsp;Statistics</a></li>
-                                    <hr>    
-                                    <li><i class="fa fa-folder"></i><a href="#">&nbsp;folder</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <div class="container ">
-            <div class="row ">
-                <div class="col-md-3">
-                    <div class="card float-right">
-                        <div class="card-header"></div>
-                            <div class="card-body">
-                                BG:{{$bgTime}}<hr>
-                                US:{{$usTime}}<hr>
-                                CA:{{$montrealTime}} 
-                            </div>  
-                        </div>
-                    </div>        
-                </div>    
+        
+      </div>
+    </div>
+  </nav>
+  <!-- Main content -->
+  <div class="main-content">
+    @include('/partials/top_nav')
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+        </div>
+      </div>
+    </div>
+    <!-- Page content -->
+    <div class="container-fluid mt--7">
+      <div class="row mt-5">
+        <div class="col-xl-8 mb-5 mb-xl-0">
+          <div class="card shadow">
+            <div class="card-header border-0">
+              <div class="row align-items-center">
+                <div class="col">
+                    <h1 class="mb-0">BG:{{$bgTime}}</h1>
+                    <h1 class="mb-0">US:{{$usTime}}</h1>
+                    <h1 class="mb-0">CA:{{$montrealTime}} </h1>   
             </div>
         </div>
-    </body>
-<footer class="page-footer font-small blue">
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2018 Copyright:
-    <a href="">Developed by Nikola</a>
+                </div>
+                <div class="col text-right">
+                  <a href="#!" class="btn btn-sm btn-primary">See all</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    @include('/partials/footer')
+    </div>
   </div>
-  <!-- Copyright -->
-</footer>
-
+</body>
 </html>

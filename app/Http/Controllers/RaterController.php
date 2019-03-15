@@ -17,7 +17,7 @@ use App\LogActivity;
 class RaterController extends Controller
 {
 	/* CHECK FOR ACCUARACY OF INFO AND IF NEEDED AMEND LIMITS/COVERAGES */
-    public function prepareRw($id) {
+    public function index($id) {
 
         $file = File::findOrFail($id); 
 
@@ -28,7 +28,7 @@ class RaterController extends Controller
     }
         /* ENTER RW COEFICIENTS IN DB */
         /* SHOW LIMITS AND COEFICIENTS THAT WILL BE APPLIED WITH LIMITS GIVEN */
-    public function getRateCoeficientsAndPreview($id) {
+    public function create($id) {
 
         // file we are currently rating
         $file = DB::table('files')->where('id',$id)->first(); 
@@ -40,8 +40,8 @@ class RaterController extends Controller
 
             return view('/rater/rates_not_found'); 
         } 
+            else 
 
-else 
         {
             // getting coeficients that will be used for rating
             $lob = null;
@@ -169,7 +169,7 @@ else
     }
  }
     /* CREATE RATING WORKESHEET, SAVE IT TO PDF, SEND PDF TO AGENT AND ATTACH IN FILE/ATTACHMENTS  */
-    public function generateRw($file_id, $rater_id) {
+    public function store($file_id, $rater_id) {
 
         $file = DB::table('files')->where('id',$file_id)->first(); 
         $rater = DB::table('raters')->where('lob', $file->lob)->first();
@@ -204,87 +204,6 @@ else
             'rater' => $rater,
             'premium' => $premium
         ]);
-    }
-
-    public function rwToWord($file_id, $rater_id) {
-
-        $file = DB::table('files')->where('id',$file_id)->get();
-        $rater = Rater::findOrFail($rater_id); 
-        $premium = DB::table('premiums')->where('file_id', $file_id)->get();
-        $total_premium = $premium[0]->grand_premium + $premium[0]->surplus_lines_tax_fee + $premium[0]->empa;
-
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
-
-        $section = $phpWord->addSection();
-
-        $section->addText(
-            'Named Insured: '
-                . $file[0]->named_insured  ,
-                 array('name' => 'Tahoma', 'size' => 15)
-        );
-
-        $section->addText(
-            'Coverage A '
-                . $file[0]->cov_a  
-        );
-
-        $section->addText(
-            'Other Structures Limit '
-                . $file[0]->other_structures
-        );
-
-        $section->addText(
-            'Loss of use '
-                . $file[0]->loss_of_use   
-        );
-
-        $section->addText(
-            'Med Pay '
-                . $file[0]->med_pay    
-        );
-
-        $section->addText(
-            'AOP deductible '
-                . $file[0]->aop_ded    
-        );        
-
-        $section->addText(
-            'Construction type '
-                . $file[0]->construction_type     
-        );   
-
-        $section->addText(
-            'Protection class '
-                . $file[0]->protection_class     
-        );   
-
-        $section->addText(
-            'Premium: ',
-            array('name' => 'Tahoma', 'size' => 12)
-        );
-        
-        $section->addText(
-            'Grand premium '
-                . $premium[0]->grand_premium     
-        ); 
-        $section->addText(
-            'SL Tax '
-                . $premium[0]->surplus_lines_tax_fee     
-        );  
-        $section->addText(
-            'Empa '
-                . $premium[0]->empa     
-        );         
-        $section->addText(
-            'Total Premium: '
-                . $total_premium    
-        ); 
-        // Saving the document as OOXML file...
-        $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
-        $objWriter->save(storage_path('Rw.docx'));
-
-        return response()->download(storage_path('rw.docx'));
-
     }
 
 }

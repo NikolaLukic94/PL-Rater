@@ -11,8 +11,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <!-- Icons -->
   <link href="theme_assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
-  <link href="theme_assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <!-- Argon CSS -->
+  <link href="theme_assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet"> <!-- Argon CSS -->
   <link type="text/css" href="theme_assets/css/argon.css?v=1.0.0" rel="stylesheet">
 </head>
 

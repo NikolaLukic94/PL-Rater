@@ -8,14 +8,14 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Hash;
 
-class ManageController extends Controller
+class ManageUsersController extends Controller
 {
     public function dashboard() {
 
     	return view('/manage/dashboard');
     }
 
-    public function indexUsers() {
+    public function index() {
 
     	$users = DB::table('users')->simplePaginate (2);
 
@@ -24,7 +24,7 @@ class ManageController extends Controller
         ]);
     }
 
-    public function showUser($id)
+    public function show($id)
     {
         $user = User::findOrFail($id);
 
@@ -34,19 +34,19 @@ class ManageController extends Controller
     
     }
 
-    public function editUser($id)  {
+    public function edit($id)  {
 
         $user = User::findOrFail($id);
 
         return view('/manage/users/edit', compact('user'));
     }
 
-    public function createUsers() {
+    public function create() {
 
         return view('/manage/users/create');
     }
 
-    public function storeUsers(Request $request) {
+    public function store(Request $request) {
 
     	$this->validate($request,[
     		'name' => 'required|max:100',
