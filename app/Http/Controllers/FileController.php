@@ -19,7 +19,7 @@ class FileController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
       if($request->isMethod('post')){ 
 
@@ -182,8 +182,11 @@ class FileController extends Controller
     {
         $file = File::findOrFail($id);
 
+        $rw = DB::table('rating_worksheets')->where('file_id', $id)->get();
+
         return view('/file/index',[
-            'file' => $file
+            'file' => $file,
+            'rw' => $rw
         ]);
     }
 

@@ -1,7 +1,26 @@
 @extends('layouts.app')
 
-@section('content')
-<div class="container">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>PLQR</title>
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    @include('partials.sidebar')
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+    @include('partials.navbar')
+
+  <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -17,4 +36,14 @@
         </div>
     </div>
 </div>
-@endsection
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+
+
+</body>
+
+</html>
+

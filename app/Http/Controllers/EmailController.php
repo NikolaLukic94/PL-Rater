@@ -65,6 +65,8 @@ class EmailController extends Controller
             $message->to($to)->subject('Welcome to laravel');
         });
         LogActivity::addToLog('contacted agent '. $request->to);
+
+        return redirect('/home');
     }
 
     /**

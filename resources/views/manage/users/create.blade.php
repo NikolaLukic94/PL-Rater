@@ -1,14 +1,32 @@
-@extends('layouts.manage')
+@extends('layouts.app')
 
-@section('content')
-  <div class="flex-container">
-    <div class="columns m-t-10">
-      <div class="column">
-        <h1 class="title">Create New User</h1>
-      </div>
-    </div>
-    <hr class="m-t-0">
-    <form action="/manage/users/store" method="POST">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>PLQR</title>
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    @include('partials.sidebar')
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+    @include('partials.navbar')
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header text-center">Please verify current info:</div>
+                <div class="card-body">
+<form action="/manage/users/store" method="POST">
       {{csrf_field()}}
       <div class="columns">
         <div class="column">
@@ -51,6 +69,27 @@
           <button class="button is-primary is-pulled-right" style="width: 250px;">Create New User</button>
         </div>
       </div>
-    </form>
-  </div> <!-- end of .flex-container -->
-@endsection
+    </form>  
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+

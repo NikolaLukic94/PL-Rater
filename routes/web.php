@@ -7,11 +7,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/test','WelcomeController@test');
+
 Route::group(['prefix' => 'subs/emails'], function () {
 	Route::get('/index','SubmissionEmailController@index');
 	Route::get('/create','SubmissionEmailController@create');	
 	Route::post('/create','SubmissionEmailController@store');
-	Route::get('/show/{id}','SubmissionEmailController@showS');
+	Route::get('/show/{id}','SubmissionEmailController@show');
 	Route::get('/edit/{id}', 'SubmissionEmailController@edit');
 	Route::post('/edit/{id}', 'SubmissionEmailController@updateS');
 	Route::delete('/delete/{id}', 'SubmissionEmailController@destroy');
@@ -21,12 +23,12 @@ Route::group(['prefix' => 'subs/emails'], function () {
 });
 
 Route::group(['prefix' => 'subs'], function () {
-	Route::any('/index','SubmissionEmailController@index');
-	Route::get('/create','SubmissionEmailController@create');	
-	Route::post('/create','SubmissionEmailController@store');
-	Route::get('/show/{id}','SubmissionEmailController@showS');
-	Route::get('/edit/{id}', 'SubmissionEmailController@edit');
-	Route::post('/edit/{id}', 'SubmissionEmailController@updateS');
+	Route::any('/index','SubmissionController@index');
+	Route::get('/create','SubmissionController@create');//FIXED	
+	Route::post('/create','SubmissionController@store');
+	Route::get('/show/{id}','SubmissionController@show');
+	Route::get('/edit/{id}', 'SubmissionController@edit');
+	Route::post('/edit/{id}', 'SubmissionController@updateS');
 });
 
 Route::group(['prefix' => 'file'], function () {
@@ -46,7 +48,7 @@ Route::group(['prefix' => 'file/general-info'], function () {
 
 Route::group(['prefix' => 'rate'], function () {
 	Route::get('/index','RateController@index');
-	Route::get('/create','RateController@create');
+	Route::get('/create','RateController@create'); 
 	Route::post('/create','RateController@store');
 	Route::get('/show/{id}','RateController@show');	
 	Route::get('/edit/{id}', 'RateController@edit');	
@@ -55,8 +57,8 @@ Route::group(['prefix' => 'rate'], function () {
 
 Route::group(['prefix' => 'rater'], function () {
 	Route::get('/index/{id}','RaterController@index');
-	Route::get('/create/{id}','RaterController@create');
-	Route::get('/rate/rw/{file_id}/{rater_id}','RaterController@store');
+	Route::get('/create/{id}','RaterController@create'); 
+	Route::get('/rate/rw/{file_id}/{rater_id}','RaterController@store'); 
 });
 
 Route::get('/rate/rw/{file_id}/{rater_id}/word','RwWordController@store');
@@ -79,7 +81,7 @@ Route::group(['prefix' => 'notes'], function () {
 });
 
 Route::group(['prefix' => 'subs/stats'], function () {
-	Route::get('/index','SubmissionStatsController@index');
+	Route::get('/index','SubmissionStatsController@index'); 
 });
 
 Route::get('/create-pdf','PdfSubmissionEmailController@store');
@@ -92,8 +94,9 @@ Route::group(['prefix' => 'manage/users'], function () {
 	Route::get('/index','ManageUsersController@index');
 	Route::get('/create','ManageUsersController@create');
 	Route::post('/create','ManageUsersController@store');
+	Route::get('/show/{id}','ManageUsersController@show');	
 	Route::get('/edit/{id}','ManageUsersController@edit');
-	Route::get('/edit/{id}','ManageUsersController@update');
+	Route::post('/edit/{id}','ManageUsersController@update');
 });
 
 Route::group(['prefix' => 'manage/role'], function () {

@@ -24,8 +24,12 @@ class WelcomeController extends Controller
 			'submission' => $submission
 		]);
 
+  }
 
+    public function test() {
 
+        
+        return view('/test');
 
 
 

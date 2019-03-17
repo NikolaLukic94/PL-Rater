@@ -4,18 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Role;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Hash;
 
 class ManageUsersController extends Controller
 {
-    public function dashboard() {
-
-    	return view('/manage/dashboard');
-    }
-
-    public function index() {
+	public function index() {
 
     	$users = DB::table('users')->simplePaginate (2);
 
@@ -42,8 +38,12 @@ class ManageUsersController extends Controller
     }
 
     public function create() {
+        
+        $roles = Role::all();
 
-        return view('/manage/users/create');
+        return view('/manage/users/create',[
+            'roles' => $roles
+        ]);
     }
 
     public function store(Request $request) {
@@ -78,5 +78,4 @@ class ManageUsersController extends Controller
 	        	return view('/manage/users/create')
 	        }*/
     }
-
 }

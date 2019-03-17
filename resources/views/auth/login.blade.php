@@ -1,10 +1,25 @@
 @extends('layouts.app')
 
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
 
-<div class="container">
-    <div class="row justify-content-center">
+  <title>PLQR</title>
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+    @include('partials.navbar')
+
+      <div class="container">
+           <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
@@ -95,5 +110,17 @@
             </div>
         </div>
     </div>
-</div>
-@endsection
+      </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+
+
+</body>
+
+</html>
+
+
+

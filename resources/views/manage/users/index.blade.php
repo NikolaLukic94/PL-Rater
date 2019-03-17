@@ -1,9 +1,26 @@
 @extends('layouts.app')
 
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="container">
-      <div class="column-md-10">
+<head>
+
+  <title>PLQR</title>
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    @include('partials.sidebar')
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+    @include('partials.navbar')
+<div class="container">
+<div class="column-md-10">
         <div class="column">
           <h1 class="title">Manage Users</h1>
         </div>
@@ -33,7 +50,9 @@
                   <td>{{$user->name}}</td>
                   <td>{{$user->email}}</td>
                   <td>{{$user->created_at}}</td>
-                  <td class="has-text-right"><a class="button is-outlined m-r-5" href="manage/users/show', $user->id">View</a><a class="button is-light" href="/manage/users/edit', $user->id">Edit</a></td>
+                  <td class="has-text-right">
+                    <a class="button is-outlined m-r-5" href="manage/users/show', $user->id">View</a>
+                    <a class="button is-light" href="/manage/users/edit', $user->id">Edit</a></td>
                 </tr>
               @endforeach
             </tbody>
@@ -43,7 +62,15 @@
       <br>
        {{ $users->links() }}
     </div>
-    
-    </div>
+    <!-- /#page-content-wrapper -->
 
-@endsection
+  </div>
+  <!-- /#wrapper -->
+</div>
+
+
+</body>
+
+</html>
+
+

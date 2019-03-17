@@ -8,19 +8,16 @@
     <title>{{ config('app.name', 'PLQR') }}</title>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-  <!-- Argon Scripts -->
-  <!-- Core -->
-  <script src="{{ asset('theme_assets/vendor/jquery/dist/jquery.min.js') }}"></script>
-  <script src="{{ asset('theme_assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
-  <!-- Optional JS -->
-  <script src="{{ asset('theme_assets/vendor/chart.js/dist/Chart.min.js') }}"></script>
-  <script src="{{ asset('theme_assets/vendor/chart.js/dist/Chart.extension.js') }}"></script>  
-  <!-- Argon JS -->
-  <script src="{{ asset('theme_assets/js/argon.js?v=1.0.0') }}"></script>  
+ 
   <!-- LADA js -->
   <script src="{{ asset('/js/spin.min.js') }}"></script>
   <script src="{{ asset('/js/ladda.min.js') }}"></script>
   <script src="{{ asset('/js/custom_script.js') }}"></script>
+  <!-- LADA js -->
+  <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.js') }}"></script>
+  <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('vendor/bootstrap/js/bootstrap.js') }}"></script>
+  <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>  
     <!-- Fonts -->
   <link href="theme_assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
   <link href="theme_assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -44,8 +41,22 @@
 
 
 
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
 
 
 </head>

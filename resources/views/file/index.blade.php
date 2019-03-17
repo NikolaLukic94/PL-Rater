@@ -1,117 +1,145 @@
 @extends('layouts.app')
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-
-  <title>Home</title>
-  <!-- Favicon -->
+  <title>PLQR</title>
 </head>
 
 <body>
-        @include('/partials/sidebar')
-        <!-- Navigation -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html">
-              <i class="ni ni-tv-2 text-primary"></i> Dashboard
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/file/search">
-              <i class="ni ni-planet text-blue"></i> Accounts
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/subs/index">
-              <i class="ni ni-pin-3 text-orange"></i> Submissions
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/prepemail">
-              <i class="ni ni-single-02 text-yellow"></i> Email
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./examples/tables.html">
-              <i class="ni ni-bullet-list-67 text-red"></i> Follow Ups
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/stats/subs">
-              <i class="ni ni-key-25 text-info"></i> Statistics
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./examples/register.html">
-              <i class="ni ni-circle-08 text-pink"></i> Profile
-            </a>
-          </li>
-        </ul>
-        <!-- Divider -->
-        <hr class="my-3">
-        <!-- Heading -->
-        <h6 class="navbar-heading text-muted">Documentation</h6>
-        <!-- Navigation -->
-        <ul class="navbar-nav mb-md-3">
-          <li class="nav-item">
-            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html">
-              <i class="ni ni-spaceship"></i> Getting started
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html">
-              <i class="ni ni-palette"></i> Foundation
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html">
-              <i class="ni ni-ui-04"></i> Components
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- Main content -->
-  <div class="main-content">
-    @include('/partials/top_nav')
-    <!-- Header -->
-    <div class="header bg-gradient-primary pb-4 pt-5 pt-md-8">
-      <div class="container-fluid">
-        <div class="header-body">
-          <!-- Card stats -->
-        </div>
-      </div>
-    </div>
-    <!-- Page content -->
-    <div class="container-fluid mt--7">
-      <div class="row mt-5">
-        <div class="col-xl-8 mb-5 mb-xl-0">
-          <div class="card shadow">
-            <div class="card-header border-0">
-              <div class="row align-items-center">
-                <div class="col">
 
+  <div class="d-flex" id="wrapper">
+
+    @include('partials.sidebar')
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+    @include('partials.navbar')
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-<button type="button" class="btn btn-primary">Primary</button>
-                </div>
-                <div class="col text-right">
-                  <a href="#!" class="btn btn-sm btn-primary">See all</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        @include('/partials/footer')
+  <button class="tablinks" onclick="openCity(event, 'London')">General Info</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Correspondence</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Submission</button>
+  <button class="tablinks" onclick="openCity(event, 'rw')">RW</button>     
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Quote</button>   
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Binder</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Policy</button>                              
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Finance</button>      
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Support</button>   
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Log</button>           
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Note</button>                     
+</div>
+<!-- Tab content -->
+<div id="London" class="tabcontent">
+  <div class="col">
+    <div class="card-header text-center">General Info</div>
+      <div class="card-body">
+        <form method="POST" action="/file/update/general-info/{{$file->id}}">
+          {{ csrf_field()  }}
+          {{ method_field('POST') }}                        
+            <p>Named Insured:</p> 
+            <input type="text" value="{{$file->named_insured}}" name="named_insured" required><br>
+            <p>Additional Named Insured/DBA:</p>
+            <input type="text" value="{{$file->additional_ni}}" name="additional_ni"><br>
+            <p>Type of entitiy:</p>
+            <input type="text" value="{{$file->entity_type}}" name="entity_type" required><br>
+            <p>SSN:</p>
+            <input type="text" value="{{$file->ssn}}" name="ssn"><br>
+            <hr>
+            <!-- Mailing address -->
+            <p>Street name/number:</p>
+            <input type="text" value="{{$file->mailing_address_street_name_and_number}}" name="mailing_address_street_name_and_number" required><br>
+            <p>City:</p>
+            <input type="text" value="{{$file->mailing_address_city}}" name="mailing_address_city" required><br>
+            <p>ZIP code:</p>
+            <input type="text" value="{{$file->mailing_address_zip}}" name="mailing_address_zip" required><br>
+            <p>County:</p>
+            <input type="text" value="{{$file->mailing_address_county}}" name="mailing_address_county" required><br>
+            <p>State:</p>
+            <input type="text" value="{{$file->mailing_address_state}}" name="mailing_address_state" required><br>
+            <hr>
+            <!-- Location address -->
+            <p>Street name/number:</p>
+            <input type="text" value="{{$file->location_address_street_name_and_number}}" name="location_address_street_name_and_number" required><br>
+            <p>City:</p>
+            <input type="text" value="{{$file->location_address_city}}" name="location_address_city" required><br>
+            <p>ZIP code:</p>
+            <input type="text" value="{{$file->location_address_zip}}" name="location_address_zip" required><br>
+            <p>County:</p>
+            <input type="text" value="{{$file->location_address_county}}" name="location_address_county" required><br>
+            <p>State:</p>
+            <input type="text" value="{{$file->mailing_address_state}}" name="location_address_state" required><br>          
+            <br>
+            <button type="submit" class="btn btn-outline-secondary">Update</button>
+        </form>
+      </div>
     </div>
   </div>
+</div>
+<div id="Paris" class="tabcontent">
+  <div class="col">
+    <div class="card-header text-center">General Info</div>
+      <div class="card-body">
+        <form method="POST" action="/file/update/general-info/{{$file->id}}">
+          <h5>Status: {{$file->status}}</h5>
+          <hr>   
+          <h5>Underwriter:</h5>
+          <hr>
+          <h5>Agency: {{$file->agency_name}}</h5>
+          <hr>
+          <h5>Agency status:</h5>
+          <hr>  
+          <h5>Effective date: {{$file->effective_date}}</h5>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="rw" class="tabcontent">
+  <div class="col">
+    <div class="card-header text-center">General Info</div>
+      <div class="card-body">
+        @if($rw)
+          @foreach($rw as $r)
+            {{ $r->id }}
+          @endforeach
+        @endif    
+      </div>
+    </div>
+  </div>
+</div>
+
+     
+    <!-- /#page-content-wrapper -->
+
+
+  <!-- /#wrapper -->
+
+
 
 </body>
 
 </html>
+<script>
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
