@@ -17,11 +17,11 @@
         "laravel-mix": "^4.0.14",
         "lodash": "^4.17.5",
         "popper.js": "^1.12",
+        "sweetalert": "^2.0.8",
         "vue": "^2.5.7"
     },
     "dependencies": {
         "bulma": "^0.7.1",
-        "chart.js": "file:chart.js",
-        "sweetalert": "^2.1.2"
+        "chart.js": "file:chart.js"
     }
 }

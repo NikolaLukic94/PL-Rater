@@ -7,7 +7,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/test','WelcomeController@test');
+Route::get('/test','HomeController@test');
 
 Route::group(['prefix' => 'subs/emails'], function () {
 	Route::get('/index','SubmissionEmailController@index');
@@ -38,13 +38,10 @@ Route::group(['prefix' => 'file'], function () {
 	Route::get('/show/{id}','FileController@show');	
 });
 
-Route::group(['prefix' => 'file/rating-characteristics'], function () {	
-	Route::post('/update/{id}','FileRatingCharacteristicsController@update');
-});
 
-Route::group(['prefix' => 'file/general-info'], function () {	
-	Route::post('/update/{id}','FileGeneralInfoController@update');
-});
+Route::post('file/rating-characteristics/update/{id}','FileRatingCharacteristicsController');
+Route::post('file/general-info/update/{id}','FileGeneralInfoController');
+
 
 Route::group(['prefix' => 'rate'], function () {
 	Route::get('/index','RateController@index');
@@ -61,7 +58,7 @@ Route::group(['prefix' => 'rater'], function () {
 	Route::get('/rate/rw/{file_id}/{rater_id}','RaterController@store'); 
 });
 
-Route::get('/rate/rw/{file_id}/{rater_id}/word','RwWordController@store');
+Route::get('/rate/rw/{file_id}/{rater_id}/word','RwWordController');
 
 
 Route::group(['prefix' => 'rating-worksheet'], function () {
@@ -70,8 +67,12 @@ Route::group(['prefix' => 'rating-worksheet'], function () {
 	Route::get('/show/{id}','RatingWorksheetController@show');	
 });
 
-Route::get('/create','EmailController@create');
-Route::post('/send','EmailController@store');
+
+Route::group(['prefix' => 'emails'], function () {
+	Route::get('/create','EmailController@create');
+	Route::post('/send','EmailController@store');	
+});
+
 
 Route::group(['prefix' => 'notes'], function () {
 	Route::get('/index/{id}','NotesController@index');
@@ -82,12 +83,17 @@ Route::group(['prefix' => 'notes'], function () {
 
 Route::group(['prefix' => 'subs/stats'], function () {
 	Route::get('/index','SubmissionStatsController@index'); 
+	Route::get('/edit','SubmissionStatsController@edit'); 	
 });
 
-Route::get('/create-pdf','PdfSubmissionEmailController@store');
+Route::get('/create-pdf','PdfSubmissionEmailController');
 
-Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
-Route::get('login/{provider}/callback','Auth\LoginController@handleProviderCallback');
+
+Route::group(['prefix' => 'login'], function () {
+	Route::get('/{provider}', 'Auth\LoginController@redirectToProvider');
+	Route::get('/{provider}/callback','Auth\LoginController@handleProviderCallback'); 	
+});
+
 
 Route::group(['prefix' => 'manage/users'], function () {
 	Route::get('/dashboard','ManageUsersController@dashboard');//->middleware('role:superadministratr|administrator|seniorUw');
@@ -108,4 +114,8 @@ Route::group(['prefix' => 'manage/role'], function () {
 	Route::post('/edit/{id}','RoleController@update');
 });
 
-Route::post('/uploadImg','FolderController@uploadImg');
+Route::group(['prefix' => 'folder'], function () {
+	Route::get('/index','ManageUsersController@index');
+	Route::get('/create','ManageUsersController@create');
+	Route::post('/create','ManageUsersController@store');
+});

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\TCAtegory;
 use Illuminate\Http\Request;
 
-class TCAtegoryController extends Controller
+class TCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.

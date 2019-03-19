@@ -182,34 +182,51 @@ class FileController extends Controller
     {
         $file = File::findOrFail($id);
 
-        $rw = DB::table('rating_worksheets')->where('file_id', $id)->get();
+        $rw = DB::table('rating_worksheets')
+                  ->leftJoin('files', 'rating_worksheets.file_id', '=', 'files.id')   
+                  ->leftJoin('raters', 'rating_worksheets.rater_id', '=', 'raters.id')    
+                  ->leftJoin('premiums', 'rating_worksheets.premium_id', '=', 'premiums.id')                
+                  ->select('rating_worksheets.id as rw_id',
+                           'rating_worksheets.created_at as rw_created_at',
+                           'files.lob as file_lob',
+                           'files.effective_date as files_effective_date',
+                           'files.expiration_date as files_expiration_date',
+                           'files.named_insured as named_insured',
+                           'files.cov_a as file_cov_a',
+                           'files.other_structures as file_os',
+                           'files.loss_of_use as file_lou',
+                           'files.med_pay as file_med_pay',
+                           'files.aop as file_aop',
+                           'files.construction_type as file_construction_type',
+                           'files.protection_class as file_pc',
+                           'files.new_purchase as file_new_purchase',
+                           'files.prior_carrier as file_prior_carrier',
+                           'files.zero_two_losses as file_losses',
+                           'files.more_than_two_losses as file_more_than_two_losses',
+                           'premiums.grand_premim as grand_premim',
+                           'premiums.surplus_lines_tax_fee as sl_tax_fee',
+                           'premiums.empa as empa_fee',
+                           'raters.cov_a as cov_a_rate',
+                           'raters.other_structures as os_rate',
+                           'raters.loss_of_use as loss_of_use_rate',
+                           'raters.med_pay as med_pay_rate',
+                           'raters.aop_ded as aop_rate',
+                           'raters.construction_type as construction_type_rate',
+                           'raters.protection_class as pc_rate',
+                           'raters.new_purchase as new_purchase_rate',
+                           'raters.more_than_two_losses as more_than_two_losses_rate',
+                           'raters.prior_carrier as prior_carrier_rate'
+                           )
+                  ->where('file.id', $id)
+                  ->orderBy('rating_worksheets.id')
+                  ->get();
 
         return view('/file/index',[
             'file' => $file,
             'rw' => $rw
         ]);
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\File  $file
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(File $file)
-    {
-        //this will be default file/index view that will have
-        //forms and when user select "update" the update method will be triggered
-    }
-
-
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\File  $file
-     * @return \Illuminate\Http\Response
-     */
+    
     public function destroy($id) {
 
         $file = File::find($id);

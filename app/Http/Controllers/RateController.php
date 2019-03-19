@@ -18,7 +18,6 @@ class RateController extends Controller
      */
     public function index()
     {
-
         $rate = DB::table('rates')->get();
 
         return view('/rate/index',[
