@@ -20,7 +20,7 @@
             <div class="card">
               <div class="card-header text-center">Please verify current info:</div>
               <div class="card-body">
-            <form action="/send" method="POST">
+            <form action="/emails/send" method="POST">
                 {{ csrf_field()  }}
                <br>
                   <div class="form-group">

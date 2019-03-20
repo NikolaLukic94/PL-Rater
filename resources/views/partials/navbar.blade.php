@@ -8,10 +8,10 @@
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             @if (Auth::guest())
             <li class="nav-item active">
-              <a class="nav-link" href="#">Log In <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/login">Log In <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Register</a>
+              <a class="nav-link" href="/register">Register</a>
             </li>
             @else
             <li class="nav-item">

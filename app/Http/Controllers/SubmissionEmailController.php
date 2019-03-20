@@ -55,7 +55,6 @@ class SubmissionEmailController extends Controller
 
     public function create()  {
 
-
         return view('subs/create',[
           'state' => $this->state,
           'lob' => $this->lob,
@@ -211,7 +210,7 @@ class SubmissionEmailController extends Controller
         
         $submission->delete();
 
-        return redirect('/subs/index');
+        return redirect('/subs/emails/index');
         
     }
 }

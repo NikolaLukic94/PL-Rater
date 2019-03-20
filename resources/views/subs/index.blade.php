@@ -34,30 +34,42 @@
               </thead>
                 @if($submission)
                   @foreach($submission as $sub)
-                     @if($sub->status != 'not_logged')
+                     @if($sub->status = 'not_logged')
                       <tr>
                         <td>
                         </td>
                         <td>
-                          {{ $sub->named_insured }}
+                          @if(isset($sub->named_insured))
+                            {{ $sub->named_insured }}
+                          @endif                           
                         </td>
                         <td>
-                          {{ $sub->lob }}
+                          @if(isset($sub->lob))
+                            {{ $sub->lob }}
+                          @endif                           
                         </td>
                         <td>
-                          {{ $sub->effective_date }}
+                          @if(isset($sub->effective_date))
+                            {{ $sub->effective_date }}
+                          @endif                           
                         </td>
                         <td>
                           <p>1</p>
                         </td>                        
                         <td>
-                          {{ $sub->location_address_state }}
+                          @if(isset($sub->location_address_state))
+                            {{ $sub->location_address_state }}
+                          @endif                          
                         </td>
                         <td>
+                          @if(isset($sub->agency_name))
                           {{ $sub->agency_name }}
+                          @endif                          
                         </td>
                         <td>
+                          @if(isset($sub->agent_name))
                           {{ $sub->agent_name }}
+                          @endif                           
                         </td>
                         <td>
                           @if(isset($sub->created_at))
@@ -65,18 +77,18 @@
                           @endif  
                         </td>                        
                         <td>
-                          <a class="btn btn-primary" href="/subs/search" role="button"><i class="fas fa-search-plus"></i></a> &nbsp;        
+                          <a class="btn btn-primary" href="/subs/emails/search" role="button"><i class="fas fa-search-plus"></i></a> &nbsp;        
  
                         </td>   
                         <td>
-                            <a class="btn btn-primary" href="/subs/show/{{$sub->id}}" role="button">Open</a> &nbsp;
+                            <a class="btn btn-primary" href="/subs/emails/show/{{$sub->id}}" role="button">Open</a> &nbsp;
                           </form>                            
                         </td>                                     
                         <td>
                             <a class="btn btn-primary" href="/file/create/{{$sub->id}}" role="button">Log</a> 
                         </td> 
                         <td>   
-                            <form action="/subs/delete/{{ $sub->id }}" method="POST">
+                            <form action="/subs/emails/delete/{{ $sub->id }}" method="POST">
                               {{ csrf_field() }}
                               {{ method_field('DELETE') }} 
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-trash"></i></button>

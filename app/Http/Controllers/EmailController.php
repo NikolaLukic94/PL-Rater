@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
 use App\Mail;
+use App\Mail\CustomEmail;
 use App\Mail\SubmissionEmailSent; 
 use App\Mail\ContactAgentEmail;
 use Carbon\Carbon;
@@ -25,24 +26,14 @@ class EmailController extends Controller
         return view('/functionalities/create_email',compact('submission'));
     }
 
-    public function store(SendEmailRequest $request) {
+    public function store(Request $request) {
 
-        $content = array('');
-
-        $subject_line = $request->input('subject_line');
+        $subject = $request->input('subject_line');
         $body = $request->input('body');
         $to = $request->input('to');
   
-        $content = [
-            'title'=> $request->subject_line, 
-            'body'=> $request->body,
-            'to'=>$request->to
-            ];
+       \Mail::to($request->to)->send(new CustomEmail($subject,$body));
 
-        \Mail::send('emails.subs.cetest', ['content' => $content], function ($message) use ($content,$to) {
-            $message->from('support@quotedept.com', 'Your Submission');
-            $message->to($to)->subject('Welcome to laravel');
-        });
         LogActivity::addToLog('contacted agent '. $request->to);
 
         return redirect('/home');

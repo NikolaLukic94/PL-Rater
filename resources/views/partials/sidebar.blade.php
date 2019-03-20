@@ -9,7 +9,7 @@
       <a href="/subs/emails/index" class="list-group-item list-group-item-action bg-light">Search</a>
       <a href="/subs/emails/create" class="list-group-item list-group-item-action bg-light">Create</a>      
     </div>        
-    <a href="/create" class="list-group-item list-group-item-action bg-light">Email</a>
+    <a href="/emails/create" class="list-group-item list-group-item-action bg-light">Email</a>
     <button class="dropdown-btn">Rates 
       <i class="fa fa-caret-down"></i>
     </button>
