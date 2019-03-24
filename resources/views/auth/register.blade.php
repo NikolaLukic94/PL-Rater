@@ -74,14 +74,28 @@
                             </div>
                         </div>
                         <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">                        
+                            <p><b>Are you:</b></p>
+                            </div>
+                        </div>                        
+
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">                        
+                                <input type="checkbox" name="mga" value="mga">MGA<br>
+                                <input type="checkbox" name="underwriter" value="udnerwriter" checked>Underwriter<br>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
                             </div>
                         </div>
-                       <div class="form-group">
-                           <div class="col-md-6 col-md-offset-4">
+                        <br>
+                       <div class="form-group row mb-0">
+                           <div class="col-md-6 offset-md-4"> 
                                <a href="{{ url('/login/github') }}" class="btn btn-github"><i class="fa fa-github"></i> Github</a>
                                <a href="{{ url('/login/twitter') }}" class="btn btn-twitter" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
                                <a href="{{ url('/login/facebook') }}" class="btn btn-facebook" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>

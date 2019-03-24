@@ -91,6 +91,23 @@ class Controller extends BaseController
 	public	$ticket_type = array(
 		'1' => 'failure',
 		'2' => 'request'
-	    ); 
+	    );
+
+    public	$statuses = array(
+		  "1" => "Pending",
+		  "2" => "Questions to agent",
+		  "3" => "Rated",	
+		  "4" => "Quoted",
+		  "5" => "Quoted - expired",
+		  "6" => "Bound - pending",
+		  "7" => "Binder Issued",
+		  "8" => "Policy Issued",
+		  "9" => "Endorsed",
+		  "10" => "DNOC",
+		  "11" => "Cancelled",
+		  "12" => "Follow Up"
+		);
+
+
 
 }

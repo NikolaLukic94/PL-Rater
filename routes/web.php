@@ -1,3 +1,4 @@
+
 <?php
 
 
@@ -17,18 +18,6 @@ Route::group(['prefix' => 'subs/emails'], function () {
 	Route::get('/edit/{id}', 'SubmissionEmailController@edit');
 	Route::post('/edit/{id}', 'SubmissionEmailController@updateS');
 	Route::delete('/delete/{id}', 'SubmissionEmailController@destroy');
-//	Route::get('/IndexAndSearch','SubmissionController@IndexAndSearch');//maybe not needed?
-//	Route::get('/search','SubmissionController@searchSubEmail');	
-//	Route::post('/search/results','SubmissionController@searchResultWithSearchMask');
-});
-
-Route::group(['prefix' => 'subs'], function () {
-	Route::any('/index','SubmissionController@index');
-	Route::get('/create','SubmissionController@create');//FIXED	
-	Route::post('/create','SubmissionController@store');
-	Route::get('/show/{id}','SubmissionController@show');
-	Route::get('/edit/{id}', 'SubmissionController@edit');
-	Route::post('/edit/{id}', 'SubmissionController@updateS');
 });
 
 Route::group(['prefix' => 'file'], function () {
@@ -38,10 +27,10 @@ Route::group(['prefix' => 'file'], function () {
 	Route::get('/show/{id}','FileController@show');	
 });
 
-
-Route::post('file/rating-characteristics/update/{id}','FileRatingCharacteristicsController');
-Route::post('file/general-info/update/{id}','FileGeneralInfoController');
-
+Route::group(['prefix' => 'file'], function () {
+	Route::post('rating-characteristics/update/{id}','FileRatingCharacteristicsController');
+	Route::post('general-info/update/{id}','FileGeneralInfoController');
+});
 
 Route::group(['prefix' => 'rate'], function () {
 	Route::get('/index','RateController@index');
@@ -118,4 +107,9 @@ Route::group(['prefix' => 'folder'], function () {
 	Route::get('/index','ManageUsersController@index');
 	Route::get('/create','ManageUsersController@create');
 	Route::post('/create','ManageUsersController@store');
+});
+
+Route::group(['prefix' => 'contactus'], function () {
+	Route::get('/create','ContactUsController@create');
+	Route::post('/send','ContactUsController@store');
 });

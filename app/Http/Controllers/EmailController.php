@@ -15,6 +15,7 @@ use App\Submission;
 use Illuminate\Support\Facades\Input;
 use App\LogActivity;
 use App\Http\Requests\SendEmailRequest;
+use App\Jobs\SendCustomEmail;
 
 class EmailController extends Controller
 {
@@ -32,7 +33,9 @@ class EmailController extends Controller
         $body = $request->input('body');
         $to = $request->input('to');
   
-       \Mail::to($request->to)->send(new CustomEmail($subject,$body));
+      // \Mail::to($request->to)->send(new CustomEmail($subject,$body));
+
+        dispatch(new \App\Jobs\SendCustomEmail($subject,$body,$to));
 
         LogActivity::addToLog('contacted agent '. $request->to);
 

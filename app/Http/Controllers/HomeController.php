@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Carbon\Carbon;
 use Alert;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -26,16 +26,17 @@ class HomeController extends Controller
     public function index()
     {
 
-       /* $submissions = DB::table('submissions')->where('status','not_logged')->count()->get();
-        */
+     //   $submissions = DB::table('submissions')->where('status','not_logged')->count()->get();
+        
+
         return view('home');
     } 
 
     public function test()
     {
 
-       /* $submissions = DB::table('submissions')->where('status','not_logged')->count()->get();
-        */
+       $submissions = DB::table('submissions')->where('status','not_logged')->count()->get();
+        
         return view('test');
     } 
 

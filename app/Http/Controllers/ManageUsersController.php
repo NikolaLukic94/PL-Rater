@@ -13,7 +13,7 @@ class ManageUsersController extends Controller
 {
 	public function index() {
 
-    	$users = DB::table('users')->simplePaginate (2);
+    	$users = DB::table('users')->simplePaginate(10);
 
         return view('/manage/users/index', [
         	'users' => $users

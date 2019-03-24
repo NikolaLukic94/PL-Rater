@@ -6,7 +6,7 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-container">
-      <a href="/subs/emails/index" class="list-group-item list-group-item-action bg-light">Search</a>
+      <a href="/subs/emails/index" class="list-group-item list-group-item-action bg-light">Received</a>
       <a href="/subs/emails/create" class="list-group-item list-group-item-action bg-light">Create</a>      
     </div>        
     <a href="/emails/create" class="list-group-item list-group-item-action bg-light">Email</a>
