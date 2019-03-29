@@ -81,8 +81,8 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">                        
-                                <input type="checkbox" name="mga" value="mga">MGA<br>
-                                <input type="checkbox" name="underwriter" value="udnerwriter" checked>Underwriter<br>
+                                <input type="checkbox" name="ceo" value="ceo">Senior UW<br>
+                                <input type="checkbox" name="underwriter" value="underwriter" checked>Underwriter<br>
                             </div>
                         </div>
                         <br>

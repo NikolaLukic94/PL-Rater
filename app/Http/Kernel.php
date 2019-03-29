@@ -62,6 +62,8 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'role' => \Laratrust\Middleware\LaratrustRole::class,
         'permission' => \Laratrust\Middleware\LaratrustPermission::class,
-        'ability' => \Laratrust\Middleware\LaratrustPermission::class
+        'ability' => \Laratrust\Middleware\LaratrustPermission::class,
+        'approved' => \App\Http\Middleware\CheckApproved::class,
+        'admin' => \App\Http\Middleware\CheckAdmin::class,
     ];
 }

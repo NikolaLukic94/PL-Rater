@@ -6,11 +6,14 @@ Route::get('/', 'WelcomeController@index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['prefix' => 'home',  'middleware' => 'approved'], function () {
+	Route::get('/', 'HomeController@index')->name('home');
+});
+Route::get('/approval', 'HomeController@show')->name('approval');
 
 Route::get('/test','HomeController@test');
 
-Route::group(['prefix' => 'subs/emails'], function () {
+Route::group(['prefix' => 'subs/emails',  'middleware' => 'approved'], function () {
 	Route::get('/index','SubmissionEmailController@index');
 	Route::get('/create','SubmissionEmailController@create');	
 	Route::post('/create','SubmissionEmailController@store');
@@ -20,19 +23,19 @@ Route::group(['prefix' => 'subs/emails'], function () {
 	Route::delete('/delete/{id}', 'SubmissionEmailController@destroy');
 });
 
-Route::group(['prefix' => 'file'], function () {
+Route::group(['prefix' => 'file',  'middleware' => 'approved'], function () {
 	Route::any('/index/','FileController@index');
 	Route::get('/create/{id}','FileController@create');
 	Route::post('/create/{id}','FileController@store');	
 	Route::get('/show/{id}','FileController@show');	
 });
 
-Route::group(['prefix' => 'file'], function () {
+Route::group(['prefix' => 'file',  'middleware' => 'approved'], function () {
 	Route::post('rating-characteristics/update/{id}','FileRatingCharacteristicsController');
 	Route::post('general-info/update/{id}','FileGeneralInfoController');
 });
 
-Route::group(['prefix' => 'rate'], function () {
+Route::group(['prefix' => 'rate',  'middleware' => 'approved'], function () {
 	Route::get('/index','RateController@index');
 	Route::get('/create','RateController@create'); 
 	Route::post('/create','RateController@store');
@@ -41,7 +44,7 @@ Route::group(['prefix' => 'rate'], function () {
 	Route::post('/edit/{id}', 'RateController@update');	
 });
 
-Route::group(['prefix' => 'rater'], function () {
+Route::group(['prefix' => 'rater',  'middleware' => 'approved'], function () {
 	Route::get('/index/{id}','RaterController@index');
 	Route::get('/create/{id}','RaterController@create'); 
 	Route::get('/rate/rw/{file_id}/{rater_id}','RaterController@store'); 
@@ -50,27 +53,27 @@ Route::group(['prefix' => 'rater'], function () {
 Route::get('/rate/rw/{file_id}/{rater_id}/word','RwWordController');
 
 
-Route::group(['prefix' => 'rating-worksheet'], function () {
+Route::group(['prefix' => 'rating-worksheet',  'middleware' => 'approved'], function () {
 	Route::get('/store/{file_id}/{rater_id}','RatingWorksheetController@store');
 	Route::get('/index/{id}','RatingWorksheetController@index');
 	Route::get('/show/{id}','RatingWorksheetController@show');	
 });
 
 
-Route::group(['prefix' => 'emails'], function () {
+Route::group(['prefix' => 'emails',  'middleware' => 'approved'], function () {
 	Route::get('/create','EmailController@create');
 	Route::post('/send','EmailController@store');	
 });
 
 
-Route::group(['prefix' => 'notes'], function () {
+Route::group(['prefix' => 'notes',  'middleware' => 'approved'], function () {
 	Route::get('/index/{id}','NotesController@index');
 	Route::get('/create/{id}','NotesController@create');
 	Route::post('/create/{id}','NotesController@store');
 	Route::get('/delete','NotesController@index');
 });
 
-Route::group(['prefix' => 'subs/stats'], function () {
+Route::group(['prefix' => 'subs/stats',  'middleware' => 'approved'], function () {
 	Route::get('/index','SubmissionStatsController@index'); 
 	Route::get('/edit','SubmissionStatsController@edit'); 	
 });
@@ -84,7 +87,7 @@ Route::group(['prefix' => 'login'], function () {
 });
 
 
-Route::group(['prefix' => 'manage/users'], function () {
+Route::group(['prefix' => 'manage/users',  'middleware' => 'approved'], function () {
 	Route::get('/dashboard','ManageUsersController@dashboard');//->middleware('role:superadministratr|administrator|seniorUw');
 	Route::get('/index','ManageUsersController@index');
 	Route::get('/create','ManageUsersController@create');
@@ -94,7 +97,7 @@ Route::group(['prefix' => 'manage/users'], function () {
 	Route::post('/edit/{id}','ManageUsersController@update');
 });
 
-Route::group(['prefix' => 'manage/role'], function () {
+Route::group(['prefix' => 'manage/role',  'middleware' => 'approved'], function () {
 	//Route::get('/dashboard','ManageController@dashboard');//->middleware('role:superadministratr|administrator|seniorUw');
 	Route::get('/index','RoleController@index');
 	Route::get('/create','RoleController@create');
@@ -103,7 +106,7 @@ Route::group(['prefix' => 'manage/role'], function () {
 	Route::post('/edit/{id}','RoleController@update');
 });
 
-Route::group(['prefix' => 'folder'], function () {
+Route::group(['prefix' => 'folder',  'middleware' => 'approved'], function () {
 	Route::get('/index','ManageUsersController@index');
 	Route::get('/create','ManageUsersController@create');
 	Route::post('/create','ManageUsersController@store');
@@ -113,3 +116,10 @@ Route::group(['prefix' => 'contactus'], function () {
 	Route::get('/create','ContactUsController@create');
 	Route::post('/send','ContactUsController@store');
 });
+
+Route::middleware(['admin'])->group(function () {
+    Route::get('/users', 'UserApprovalController@index')->name('admin.users.index');
+    Route::get('/users/{user_id}/approve', 'UserApprovalController@create')->name('admin.users.approve');
+});
+
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );

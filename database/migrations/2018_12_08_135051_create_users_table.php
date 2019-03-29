@@ -21,9 +21,8 @@ class CreateUsersTable extends Migration
             $table->string('password')->nullable();
             $table->rememberToken();
             $table->timestamps();
-
-            $table->unsignedInteger('carrier_id')->nullable();
-            $table->foreign('carrier_id')->references('id')->on('carriers');            
+            $table->boolean('admin')->default(0);
+            $table->timestamp('approved_at')->nullable();         
         });
     }
 
