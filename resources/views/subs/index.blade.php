@@ -25,7 +25,6 @@
                   <th><abbr title="">State</abbr></th>
                   <th><abbr title="">Agency</abbr></th>
                   <th><abbr title="">Agent</abbr></th>
-                  <th><abbr title="">Options</abbr></th>
                   <th><abbr title="">Created at</abbr></th>                  
                   <th><abbr title=""></abbr></th>                    
                   <th><abbr title=""></abbr></th>                  
@@ -37,6 +36,9 @@
                      @if($sub->status = 'not_logged')
                       <tr>
                         <td>
+                          <label class="checkbox">
+                            <input type="checkbox">
+                          </label>                            
                         </td>
                         <td>
                           @if(isset($sub->named_insured))

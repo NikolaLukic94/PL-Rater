@@ -145,7 +145,7 @@
                               {{ $file->agent_name }}
                             </td>
                             <td>
-                              <a class="btn btn-primary" href="/file/index/{{$file->id}}" role="button">Open</a> &nbsp;         
+                              <a class="btn btn-primary" href="/file/show/{{$file->id}}" role="button">Open</a> &nbsp;         
                             </td> 
                             <td>
                               <a class="btn btn-primary" href="/subs/search" role="button">Add new</a> &nbsp;

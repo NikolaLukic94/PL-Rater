@@ -168,14 +168,14 @@ class RaterController extends Controller
   
     }
  }
-    /* CREATE RATING WORKESHEET, SAVE IT TO PDF, SEND PDF TO AGENT AND ATTACH IN FILE/ATTACHMENTS  */
+    /* CREATE/STORE RATING WORKESHEET */
     public function store($file_id, $rater_id) {
 
         $file = DB::table('files')->where('id',$file_id)->first(); 
         $rater = DB::table('raters')->where('lob', $file->lob)->first();
 
         $cov_limits = $file->cov_a + $file->other_structures + $file->loss_of_use;
-        $cov_limits_rate = ($rater->cov_a + $rater->other_structures + $rater->loss_of_use) / 3;
+        $cov_limits_rate = ($rater->cov_a + $rater->other_structures + $rater->loss_of_use) / 4;
 
         $other_rater = ($rater->aop_ded + 
                         $rater->protection_class +
@@ -199,11 +199,7 @@ class RaterController extends Controller
 
         LogActivity::addToLog('generated rw premium/file id' . $premium->id . $file->id);
 
-    	return view('/rater/rw',[
-            'file' => $file,
-            'rater' => $rater,
-            'premium' => $premium
-        ]);
+    	return redirect('/file/index');
     }
 
 }

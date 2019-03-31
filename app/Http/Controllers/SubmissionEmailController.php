@@ -18,9 +18,6 @@ use Illuminate\Support\Facades\Input;
 use App\Http\Requests\AgentSendSubmissionEmail;
 use App\LogActivity;
 
-/*CONTROLER FOR CURRENTLY NOT LOGGED SUBMISSIONS W/STATUS OF "RECEIVED"*/
-/*LISTED IN THE "NEW SUBS" QUEUE ONLY*/
-
 class SubmissionEmailController extends Controller
 {
     /**

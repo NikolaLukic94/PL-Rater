@@ -239,7 +239,7 @@
                   </div>                  
                 </div>
               </div>
-                @endif    
+@endif    
               <div class="block">
                 <div class="notification">
                   <hr>

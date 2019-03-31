@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\File;
 use App\Submission;
+use App\RatingWorksheet;
+use App\Notes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\DB;
@@ -76,8 +78,11 @@ class FileController extends Controller
               ]);
 
       } else {
+              $files = File::all();
               
-              return view('/file/search');
+              return view('/file/search',[
+                'files' => $files
+              ]);
         }
         
     }
@@ -182,6 +187,11 @@ class FileController extends Controller
     {
         $file = File::findOrFail($id);
 
+        $allRw = RatingWorksheet::all();
+        $rw = $allRw->where('file_id',$id);
+
+        $submission = Submission::where('id',$file->submission_id)->first();
+/*
         $rw = DB::table('rating_worksheets')
                   ->leftJoin('files', 'rating_worksheets.file_id', '=', 'files.id')   
                   ->leftJoin('raters', 'rating_worksheets.rater_id', '=', 'raters.id')    
@@ -220,10 +230,12 @@ class FileController extends Controller
                   ->where('file.id', $id)
                   ->orderBy('rating_worksheets.id')
                   ->get();
-
+*/
         return view('/file/index',[
             'file' => $file,
-            'rw' => $rw
+            'rw' => $rw,
+            'notes' => Notes::all(),
+            'submission' => $submission
         ]);
     }
     

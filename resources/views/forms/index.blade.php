@@ -23,6 +23,7 @@
                   <td>
                     <p>{{ $f->name }} </p> 
                     <a href="/form/download/{{$f->id}}" class="btn btn-primary">Attachment</a>
+                    <a href="/forms/delete/{{$f->id}}" class="btn btn-primary">Delete</a>
                       <hr>
                   </td>
               </tr>
