@@ -123,3 +123,15 @@ Route::middleware(['admin'])->group(function () {
 });
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );
+
+Route::group(['prefix' => 'forms',  'middleware' => 'approved'], function () {
+	Route::get('/index','FormController@index');
+	Route::get('/create','FormController@create');	
+	Route::post('/create','FormController@store');
+	Route::get('/show/{id}','FormController@show');
+	Route::get('/edit/{id}', 'FormController@edit');
+	Route::post('/edit/{id}', 'FormController@updateS');
+	Route::delete('/delete/{id}', 'FormController@destroy');
+});
+
+Route::get('form/download/{id}','FormAttachmentController@show');

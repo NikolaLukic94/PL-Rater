@@ -169,7 +169,7 @@ class FileController extends Controller
   //      $file->save();
         LogActivity::addToLog('created file' . $file->id . $file->named_insured);  
 
-        return view('/file/search');
+        return redirect('/file/index');
     }
 
     /**

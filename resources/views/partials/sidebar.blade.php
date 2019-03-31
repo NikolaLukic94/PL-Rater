@@ -26,6 +26,13 @@
       <a href="/file/create" class="list-group-item list-group-item-action bg-light">Create</a>      
     </div>     
     <a href="/subs/stats/index" class="list-group-item list-group-item-action bg-light">Stats</a>
+    <button class="dropdown-btn">Forms 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="/forms/index" class="list-group-item list-group-item-action bg-light">Open</a>
+      <a href="/forms/create" class="list-group-item list-group-item-action bg-light">Create</a>      
+    </div>     
       </div>
 </div>
 
