@@ -184,7 +184,7 @@
           <p class="control">
          
                 <button type="button" class="btn btn-outline-secondary">Quote</button>
-          
+                
           </p>
           @include('errors')
     </form>     

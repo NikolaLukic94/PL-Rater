@@ -18,228 +18,207 @@
 
     @include('partials.navbar')
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'general')">General Info</button>
-  <button class="tablinks" onclick="openCity(event, 'correspondence')">Correspondence</button>
-  <button class="tablinks" onclick="openCity(event, 'submission')">Submission</button>
-  <button class="tablinks" onclick="openCity(event, 'rw')">RW</button>     
-  <button class="tablinks" onclick="openCity(event, 'quote')">Quote</button>   
-  <button class="tablinks" onclick="openCity(event, 'binder')">Binder</button>
-  <button class="tablinks" onclick="openCity(event, 'policy')">Policy</button>                              
-  <button class="tablinks" onclick="openCity(event, 'finance')">Finance</button>      
-  <button class="tablinks" onclick="openCity(event, 'support')">Support</button>   
-  <button class="tablinks" onclick="openCity(event, 'log')">Log</button>           
-  <button class="tablinks" onclick="openCity(event, 'note')">Note</button>                     
+  <button class="tablinks" onclick="openCity(event, 'general_info')">General Info</button>
+  <button class="tablinks" onclick="openCity(event, 'exposure_info')">Exposure Info</button>
+  <button class="tablinks" onclick="openCity(event, 'additional_coverage')">Additional Coverage</button>
+  <button class="tablinks" onclick="openCity(event, 'forms')">Forms</button>     
+  <button class="tablinks" onclick="openCity(event, 'additional_insured_or_interest')">Additional Insured/Interest</button>   
+  <button class="tablinks" onclick="openCity(event, 'prior_carrier')">Prior Carrier</button>
+  <button class="tablinks" onclick="openCity(event, 'premium')">Premium</button> 
+  <button class="tablinks" onclick="openCity(event, 'agency_info')">Agency Info</button>                 
+            
 </div>
 <!-- Tab content -->
-<div id="general" class="tabcontent">
+<div id="agency_info" class="tabcontent">
   <div class="col">
-    <div class="card-header text-center">General Info</div>
+    <div class="card-header text-center">Quoting</div>
       <div class="card-body">
-        <form method="POST" action="/file/update/general-info/{{$file->id}}">
+        <form method="POST" action="/quote/create/{{$file->id}}">
           {{ csrf_field()  }}
           {{ method_field('POST') }}    
         <div class="field">
           <div class="row">
             <div class="col">
-              <label class="label" for="named_insured">
-                <p>Named Insured:</p> 
+              <label class="label" for="agent_name">
+                <p>Agent's name</p>
+              </label>
+            </div>
+            <div class="col">
+              <input name="agent_name" value="{{$file->agent_name}}" type="text" class="input" id="agent_name">
+            </div>
+        </div>
+        </div>
+        <div class="field">
+          <div class="row">
+            <div class="col">
+              <label class="label" for="agency_name">
+                <p>Agency name</p>
               </label>
             </div>
             <div class="col">             
-              <input type="text" value="{{$file->named_insured}}" name="named_insured" required><br>
+              <input name="agency_name" value="{{$file->agency_name}}" type="text" class="input" id="agency_name">
             </div>
           </div>
         </div>
         <div class="field">
           <div class="row">
-            <div class="col">
-              <label class="label" for="additional_ni">
-                <p>Additional Named Insured/DBA:</p>
+            <div class="col">         
+              <label class="label" for="agent_email_address">
+                <p>Agent's email address</p>
               </label>
             </div>
-            <div class="col">             
-              <input type="text" value="{{$file->additional_ni}}" name="additional_ni"><br>
-            </div>
+              <div class="col"> 
+                <input name="agent_email_address" value="{{$file->agent_email_address}}"  type="email" class="input" id="agent_email_address">
+              </div>  
           </div>
-        </div>
+        </div>  
         <div class="field">
           <div class="row">
-            <div class="col">
-              <label class="label" for="entity_type">
-                <p>Type of entitiy:</p>
-              </label>
+            <div class="col">         
+              <label class="label" for="agent_phone_number"></label>
+              <p>Agent's phone number</p>
             </div>
             <div class="col">             
-              <input type="text" value="{{$file->entity_type}}" name="entity_type" required><br><br>
+              <input name="agent_phone_number" value="{{$file->agent_phone_number}}" type="text" class="input"  id="agent_phone_number">
             </div>
           </div>
-        </div>
-        <div class="field">
-          <div class="row">
-            <div class="col">
-              <label class="label" for="ssn">
-                <p>SSN:</p>
-              </label>
-            </div>
-            <div class="col">             
-              <input type="text" value="{{$file->ssn}}" name="ssn"><br>
-            </div>
-          </div>
-        </div>            
-        <hr>
-        <div class="field">
-          <div class="row">
-            <div class="col">
-              <label class="label" for="mailing_address_street_name_and_number">
-                <p>Street name/number:</p>
-              </label>
-            </div>
-            <div class="col">             
-              <input type="text" value="{{$file->mailing_address_street_name_and_number}}" name="mailing_address_street_name_and_number" required><br>
-            </div>
-          </div>
-        </div> 
-        <div class="field">
-          <div class="row">
-            <div class="col">
-              <label class="label" for="mailing_address_city">
-                <p>City:</p>
-              </label>
-            </div>
-            <div class="col">             
-              <input type="text" value="{{$file->mailing_address_city}}" name="mailing_address_city" required><br>
-            </div>
-          </div>
-        </div> 
-        <div class="field">
-          <div class="row">
-            <div class="col">
-              <label class="label" for="mailing_address_zip">
-                <p>ZIP code:</p>
-              </label>
-            </div>
-            <div class="col">             
-              <input type="text" value="{{$file->mailing_address_zip}}" name="mailing_address_zip" required><br>
-            </div>
-          </div>
-        </div> 
-        <div class="field">
-          <div class="row">
-            <div class="col">
-              <label class="label" for="mailing_address_county">
-                <p>County:</p>
-              </label>
-            </div>
-            <div class="col">             
-              <input type="text" value="{{$file->mailing_address_county}}" name="mailing_address_county" required><br>
-            </div>
-          </div>
-        </div> 
-        <div class="field">
-          <div class="row">
-            <div class="col">
-              <label class="label" for="mailing_address_state">
-                <p>State:</p>
-              </label>
-            </div>
-            <div class="col">             
-              <input type="text" value="{{$file->mailing_address_state}}" name="mailing_address_state" required><br>
-            </div>
-          </div>
-        </div> 
-        <div class="field">
-          <div class="row">
-            <div class="col">
-              <label class="label" for="location_address_street_name_and_number">
-                <p>Street name/number:</p>
-              </label>
-            </div>
-            <div class="col">             
-              <input type="text" value="{{$file->location_address_street_name_and_number}}" name="location_address_street_name_and_number" required><br>
-            </div>
-          </div>
-        </div> 
-        <div class="field">
-          <div class="row">
-            <div class="col">
-              <label class="label" for="location_address_city">
-                <p>City:</p>
-              </label>
-            </div>
-            <div class="col">             
-              <input type="text" value="{{$file->location_address_city}}" name="location_address_city" required><br>
-            </div>
-          </div>
-        </div> 
-        <div class="field">
-          <div class="row">
-            <div class="col">
-              <label class="label" for="location_address_zip">
-                <p>ZIP code:</p>
-              </label>
-            </div>
-            <div class="col">             
-              <input type="text" value="{{$file->location_address_zip}}" name="location_address_zip" required><br>
-            </div>
-          </div>
-        </div> 
-        <div class="field">
-          <div class="row">
-            <div class="col">
-              <label class="label" for="location_address_county">
-                <p>County:</p>
-              </label>
-            </div>
-            <div class="col">             
-              <input type="text" value="{{$file->location_address_county}}" name="location_address_county" required><br>
-            </div>
-          </div>
-        </div> 
-        <div class="field">
-          <div class="row">
-            <div class="col">
-              <label class="label" for="location_address_state">
-                <p>State:</p>
-              </label>
-            </div>
-            <div class="col">             
-              <input type="text" value="{{$file->mailing_address_state}}" name="location_address_state" required><br>
-            </div>
-          </div>
-        </div> 
-
-
-
-
-
-
-          
+        </div>    
             <br>
             <button type="submit" class="btn btn-outline-secondary">Update</button>
         </form>
       </div>
     </div>
 
-
-<div id="Paris" class="tabcontent">
+<div id="general_info" class="tabcontent">
   <div class="col">
     <div class="card-header text-center">General Info</div>
       <div class="card-body">
         <form method="POST" action="/file/update/general-info/{{$file->id}}">
-          <h5>Status: {{$file->status}}</h5>
-          <hr>   
-          <h5>Underwriter:</h5>
-          <hr>
-          <h5>Agency: {{$file->agency_name}}</h5>
-          <hr>
-          <h5>Agency status:</h5>
-          <hr>  
-          <h5>Effective date: {{$file->effective_date}}</h5>
+<div class="field">
+          <div class="row">
+            <div class="col">         
+              <label class="label" for="effective_date">
+              <p>Effective date</p>
+              </label>
+            </div>
+            <div class="col">             
+              <input name="effective_date" value="{{$file->effective_date}}" type="date" class="input" id="effective_date">
+            </div>
+          </div>
+        </div>  
+        <p class="subtitle">Insured info</p>
+        <hr>
+        <div class="field">
+          <div class="row">
+            <div class="col">         
+              <label class="label" for="named_insured">
+              <p>Named Insured</p>
+              </label>
+            </div>
+            <div class="col">             
+              <input name="named_insured" value="{{$file->named_insured}}" type="text" class="input" id="named_insured">
+            </div>
+          </div>
+        </div>  
+        <div class="field">
+          <div class="row">
+            <div class="col">         
+              <label class="label" for="mailing_address">
+              <p>Mailing address</p>
+              </label>
+            </div>
+            <div class="col">             
+              <input name="mailing_address" value="{{$file->lob}}" type="text" class="input" id="mailing_address">
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="row">
+            <div class="col">         
+              <label class="label" for="street_name_and_number">
+              <p>Street name and number</p>
+              </label>
+            </div>
+            <div class="col">             
+              <input name="street_name_and_number" value="{{$file->lob}}" type="text" class="input" id="street_name_and_number">
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="row">
+            <div class="col">         
+              <label class="label" for="city">
+              <p>City</p>
+              </label>
+            </div>
+            <div class="col">             
+              <input name="city" type="text" value="{{$file->lob}}" class="input" id="city">
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="row">
+            <div class="col">         
+              <label class="label" for="county">
+              <p>County</p>
+              </label>
+            </div>
+            <div class="col">             
+              <input name="county" type="text" value="{{$file->lob}}" class="input" id="county">
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="row">
+            <div class="col">         
+              <label class="label" for="state">
+              <p>State</p>
+              </label>
+            </div>
+            <div class="col">             
+              <input name="state" type="text" value="{{$file->lob}}" class="input"  id="state">
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="row">
+            <div class="col">         
+              <label class="label" for="phone_number">
+              <p>Named Insured's phone #</p>
+              </label>
+            </div>
+            <div class="col">             
+              <input name="phone_number" type="text" value="{{$file->phone_number}}" class="input" id="phone_number">
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="row">
+            <div class="col">         
+              <label class="label" for="email_address">
+              <p>Email address</p>
+              </label>
+            </div>
+            <div class="col">             
+              <input name="email_address" value="{{$file->email_address}}" type="text" class="input" id="email_address">
+            </div>
+          </div>
+        </div>
         </form>
       </div>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
 <div id="submission" class="tabcontent">
   <div class="col">
     <div class="card-header text-center">Submission Info</div>
@@ -258,7 +237,7 @@
               </label>
             </div>
             <div class="col">
-              <input name="agent_name" value="{{$submission->agent_name}}" type="text" class="input" id="agent_name">
+              <input name="agent_name" value="{{$file->agent_name}}" type="text" class="input" id="agent_name">
             </div>
         </div>
         </div>
@@ -270,7 +249,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="agency_name" value="{{$submission->agency_name}}" type="text" class="input" id="agency_name">
+              <input name="agency_name" value="{{$file->agency_name}}" type="text" class="input" id="agency_name">
             </div>
           </div>
         </div>
@@ -282,7 +261,7 @@
               </label>
             </div>
               <div class="col"> 
-                <input name="agent_email_address" value="{{$submission->agent_email_address}}"  type="email" class="input" id="agent_email_address">
+                <input name="agent_email_address" value="{{$file->agent_email_address}}"  type="email" class="input" id="agent_email_address">
               </div>  
           </div>
         </div>  
@@ -293,7 +272,7 @@
               <p>Agent's phone number</p>
             </div>
             <div class="col">             
-              <input name="agent_phone_number" value="{{$submission->agent_phone_number}}" type="text" class="input"  id="agent_phone_number">
+              <input name="agent_phone_number" value="{{$file->agent_phone_number}}" type="text" class="input"  id="agent_phone_number">
             </div>
           </div>
         </div>    
@@ -305,7 +284,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="type_of_coverage" value="{{$submission->type_of_coverage}}" type="text" class="input"  id="type_of_coverage">
+              <input name="type_of_coverage" value="{{$file->type_of_coverage}}" type="text" class="input"  id="type_of_coverage">
             </div>
           </div>
         </div>  
@@ -317,7 +296,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="lob" type="text" value="{{$submission->type_of_coverage}}" class="input" id="lob">
+              <input name="lob" type="text" value="{{$file->type_of_coverage}}" class="input" id="lob">
             </div>
           </div>
         </div>  
@@ -329,7 +308,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="effective_date" value="{{$submission->effective_date}}" type="date" class="input" id="effective_date">
+              <input name="effective_date" value="{{$file->effective_date}}" type="date" class="input" id="effective_date">
             </div>
           </div>
         </div>  
@@ -343,7 +322,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="named_insured" value="{{$submission->named_insured}}" type="text" class="input" id="named_insured">
+              <input name="named_insured" value="{{$file->named_insured}}" type="text" class="input" id="named_insured">
             </div>
           </div>
         </div>  
@@ -355,7 +334,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="mailing_address" value="{{$submission->mailing_address}}" type="text" class="input" id="mailing_address">
+              <input name="mailing_address" value="{{$file->mailing_address}}" type="text" class="input" id="mailing_address">
             </div>
           </div>
         </div>
@@ -367,7 +346,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="street_name_and_number" value="{{$submission->street_name_and_number}}" type="text" class="input" id="street_name_and_number">
+              <input name="street_name_and_number" value="{{$file->street_name_and_number}}" type="text" class="input" id="street_name_and_number">
             </div>
           </div>
         </div>
@@ -379,7 +358,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="city" type="text" value="{{$submission->city}}" class="input" id="city">
+              <input name="city" type="text" value="{{$file->city}}" class="input" id="city">
             </div>
           </div>
         </div>
@@ -391,7 +370,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="county" type="text" value="{{$submission->county}}" class="input" id="county">
+              <input name="county" type="text" value="{{$file->county}}" class="input" id="county">
             </div>
           </div>
         </div>
@@ -403,7 +382,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="state" type="text" value="{{$submission->state}}" class="input"  id="state">
+              <input name="state" type="text" value="{{$file->state}}" class="input"  id="state">
             </div>
           </div>
         </div>
@@ -415,7 +394,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="phone_number" type="text" value="{{$submission->phone_number}}" class="input" id="phone_number">
+              <input name="phone_number" type="text" value="{{$file->phone_number}}" class="input" id="phone_number">
             </div>
           </div>
         </div>
@@ -427,7 +406,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="email_address" value="{{$submission->email_address}}" type="text" class="input" id="email_address">
+              <input name="email_address" value="{{$file->email_address}}" type="text" class="input" id="email_address">
             </div>
           </div>
         </div>
@@ -439,7 +418,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="cov_a" type="text" value="{{$submission->cov_a}}" class="input" id="cov_a">
+              <input name="cov_a" type="text" value="{{$file->cov_a}}" class="input" id="cov_a">
             </div>
           </div>
         </div>
@@ -451,7 +430,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="other_structures" value="{{$submission->other_structures}}" type="text" class="input" id="other_structures">
+              <input name="other_structures" value="{{$file->other_structures}}" type="text" class="input" id="other_structures">
             </div>
           </div>
         </div>
@@ -463,7 +442,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="loss_of_use" type="text" value="{{$submission->loss_of_use}}" class="input" id="loss_of_use">
+              <input name="loss_of_use" type="text" value="{{$file->loss_of_use}}" class="input" id="loss_of_use">
             </div>
           </div>
         </div>
@@ -475,7 +454,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="med_pay" type="text" value="{{$submission->med_pay}}" class="input" id="med_pay">
+              <input name="med_pay" type="text" value="{{$file->med_pay}}" class="input" id="med_pay">
             </div>
           </div>
         </div>
@@ -487,7 +466,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="aop_ded" type="text" value="{{$submission->aop_ded}}" class="input" id="aop_ded">
+              <input name="aop_ded" type="text" value="{{$file->aop_ded}}" class="input" id="aop_ded">
             </div>
           </div>
         </div>
@@ -500,7 +479,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="construction_type" value="{{$submission->construction_type}}" type="text" class="input" id="construction_type">
+              <input name="construction_type" value="{{$file->construction_type}}" type="text" class="input" id="construction_type">
             </div>
           </div>
         </div>
@@ -512,7 +491,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="protection_class" value="{{$submission->protection_class}}" type="text" class="input" id="protection_class">
+              <input name="protection_class" value="{{$file->protection_class}}" type="text" class="input" id="protection_class">
             </div>
           </div>
         </div>
@@ -524,7 +503,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="new_purchase" value="{{$submission->new_purchase}}" type="text" class="input" id="new_purchase">
+              <input name="new_purchase" value="{{$file->new_purchase}}" type="text" class="input" id="new_purchase">
             </div>
           </div>
         </div>
@@ -536,7 +515,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="prior_carrier" value="{{$submission->prior_carrier}}" type="text" class="input" id="prior_carrier">
+              <input name="prior_carrier" value="{{$file->prior_carrier}}" type="text" class="input" id="prior_carrier">
             </div>
           </div>
         </div>
@@ -548,7 +527,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="prior_carrier_name" value="{{$submission->prior_carrier_name}}" type="text" class="input" id="prior_carrier_name">
+              <input name="prior_carrier_name" value="{{$file->prior_carrier_name}}" type="text" class="input" id="prior_carrier_name">
             </div>
           </div>
         </div>
@@ -560,7 +539,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="prior_carrier_effective_date" value="{{$submission->prior_carrier_effective_date}}" type="date" class="input" id="prior_carrier_effective_date">
+              <input name="prior_carrier_effective_date" value="{{$file->prior_carrier_effective_date}}" type="date" class="input" id="prior_carrier_effective_date">
             </div>
           </div>
         </div>
@@ -588,7 +567,7 @@
                           HO3  
                         </td>                                                 
                         <td>
-                            <a class="btn btn-primary" href="/rating-worksheet/show/{{$r->id}}" role="button">Open</a> &nbsp;
+                            <a class="btn btn-primary" href="/rating-worksheet/show/" role="button">Open</a> &nbsp;
                             <a class="btn btn-primary" href="/send-rw" role="button">Email</a>
                             <a class="btn btn-primary" href="" >Quote</a> &nbsp;                            
                           </form>                            
@@ -607,11 +586,7 @@
   <div class="col">
     <div class="card-header text-center">General Info</div>
       <div class="card-body">
-        @if($rw)
-          @foreach($rw as $r)
-            {{ $r->id }}
-          @endforeach
-        @endif    
+   
       </div>
     </div>
   </div>
@@ -651,3 +626,130 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 </script>
+
+
+
+
+
+@extends('layouts.app')
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>PLQR</title>
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    @include('partials.sidebar')
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+    @include('partials.navbar')
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header text-center">Please verify current info:</div>
+                <div class="card-body">
+        <form action="/subs/create" method="POST">
+        {{ csrf_field() }}
+
+
+        <!-- COVERAGES SECTION -->
+            <!--cov_a, all others, w/h, ns etc page-->
+        <!-- RISK details -->
+
+              <!--               <!--
+                  construction type 
+                  siding
+                  Actual cash value
+                  Replacement cash value
+                  Home type (dweling, condo)
+                  Type of use (primary, secndary, rental)
+                  Year built
+                  dates of updates for hvac, roof, plumbing
+                  type of roof
+                  roof material
+                  roof shape
+                  roof protection (shutters, shingle)
+                  plumbing system condition
+                  plumbing system and known leaks
+                  occupancy(primary, secondary, rental)
+                  fuel tank storage - yes no
+                  swimming pool - yes no
+                  - swiming pool approved fence or inground
+                  distance to coast
+                  distance to fire station
+                  distance to hydant
+                  
+                  
+              -->
+        <!-- ADDITIONAL COVERAGE -->
+              <!--mold, water back up-->
+        <!-- FORMS -->
+              <!--for now, let it pull all forms names with option to add them thru checkbox
+                  need to add two windows for mandatory and optional-->
+        <!-- ADDITINAL INSURED -->
+              <!--type of ai, name, address, form, description(none mandatory) need table as well-->
+        <!-- PRIOR CARRIER - need table for it as it can have more that one --> 
+              <!--name, expiry date, if any claims, if so claim #, if open or closed, and $$-->
+        <!-- PREMIUM -->
+              <!-- to be prefiled per rw but with option to change it and save quote -->
+        <!-- agent / agency info -->      
+        <div class="field">
+          <div class="row">
+            <div class="col">
+              <label class="label" for="agent_name">
+                Agent Name
+              </label>
+            </div>
+            <div class="col">
+              <input name="agent_name" type="text" class="input" id="agent_name" required>
+            </div>
+          </div>
+        </div>
+     
+
+        <hr>
+        <div class="block">
+                    <button type="submit" class="btn btn-outline-secondary">Send</button>
+        </div>
+    </div>
+        <div class="block">
+          <div class="notification">
+            <hr>
+            <div class="delete"></div>
+              <p class="text-center">For more accurate pricing, please provide us with all information available!</p>
+          </div>
+          <hr>
+        </div>
+          <div class="columns">
+           <div class="column is-half is-offset-one-quarter">
+        <div class="field is-grouped is-grouped-centered">
+
+          @include('errors')
+    </form>     
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+
+
+</body>
+
+</html>

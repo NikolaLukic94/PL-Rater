@@ -58,7 +58,12 @@ Route::group(['prefix' => 'rating-worksheet',  'middleware' => 'approved'], func
 	Route::get('/index/{id}','RatingWorksheetController@index');
 	Route::get('/show/{id}','RatingWorksheetController@show');	
 });
+Route::post('/send-rw','RwEmailController');
 
+Route::group(['prefix' => 'quoting',  'middleware' => 'approved'], function () {
+	Route::get('/create','QuoteController@create');
+	Route::post('/send','QuoteController@store');	
+});
 
 Route::group(['prefix' => 'emails',  'middleware' => 'approved'], function () {
 	Route::get('/create','EmailController@create');
@@ -79,7 +84,6 @@ Route::group(['prefix' => 'subs/stats',  'middleware' => 'approved'], function (
 });
 
 Route::get('/create-pdf','PdfSubmissionEmailController');
-
 
 Route::group(['prefix' => 'login'], function () {
 	Route::get('/{provider}', 'Auth\LoginController@redirectToProvider');
