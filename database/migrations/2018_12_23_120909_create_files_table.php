@@ -59,8 +59,15 @@ class CreateFilesTable extends Migration
             $table->string('more_than_two_losses');                      
             $table->integer('submission_number');      
 
+            $table->string('mold', 50);//should also be used as rating factor
+            $table->string('mold_limit', 50);  //should also be used as rating factor
+            $table->string('water_back_up', 50);   //should also be used as rating factor
+            $table->string('water_back_up_limit', 50);     //should also be used as rating factor 
+
             $table->unsignedInteger('submission_id');
             $table->foreign('submission_id')->references('id')->on('submissions');
+
+
 
         });
     }

@@ -48,7 +48,12 @@ class SubmissionTableSeeder extends Seeder
 			'prior_carrier_name'=> 'Lloyds of London',
 			'prior_carrier_effective_date'=> '2019/8/8',
 			'status'=> 'submission',
-			'submission_number'=> '000001'
+			'submission_number'=> '000001', 
+            'mold' => 'no',
+            'mold_limit' => '0',
+            'water_back_up' => 'no',
+            'water_back_up_limit' => '0'
+
         	        ]);
 
         Submission::create([
@@ -87,7 +92,11 @@ class SubmissionTableSeeder extends Seeder
 			'prior_carrier_name'=> 'Lloyds of London',
 			'prior_carrier_effective_date'=> '2019/5/5',
 			'status'=> 'submission',
-			'submission_number'=> '000002'
+			'submission_number'=> '000002',
+            'mold' => 'no',
+            'mold_limit' => '0',
+            'water_back_up' => 'no',
+            'water_back_up_limit' => '0'			
         	        ]);
 
 

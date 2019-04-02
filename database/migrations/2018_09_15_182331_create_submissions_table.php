@@ -54,6 +54,11 @@ class CreateSubmissionsTable extends Migration
             $table->date('prior_carrier_effective_date', 50)->nullable();
             $table->string('zero_two_losses');              
             $table->string('more_than_two_losses'); 
+            $table->string('mold', 50);//should also be used as rating factor
+            $table->string('mold_limit', 50);  //should also be used as rating factor
+            $table->string('water_back_up', 50);   //should also be used as rating factor
+            $table->string('water_back_up_limit', 50);     //should also be used as rating factor 
+            
             $table->string('status');
             $table->integer('submission_number');                
 

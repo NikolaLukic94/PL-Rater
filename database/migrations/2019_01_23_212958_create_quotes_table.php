@@ -71,12 +71,10 @@ class CreateQuotesTable extends Migration
             $table->string('roof_protections', 50);//shutters//shingle 
             $table->string('plumbing_system_condition', 50);  
             $table->string('plumbing_system_any_known_leaks', 50); 
-            $table->string('roof_material', 50);
             $table->string('fuel_tank_storage_on_premises', 50);
             $table->string('swimming_pool_present', 50);  
             $table->string('swimming_pool_approved_fence', 50); 
             $table->string('swimming_pool_ingorund', 50);
-            $table->string('fuel_tank_storage_on_premises', 50);
             $table->string('distance_to_coast', 50);
             $table->string('distance_to_fire_station', 50);  
             $table->string('distance_to_hydrant', 50); 

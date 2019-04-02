@@ -168,7 +168,12 @@ class FileController extends Controller
           'prior_carrier_effective_date' => $submission->prior_carrier_effective_date,                                                            
           'status' => 'file',    
           'submission_number' => $submission->submission_number,    
-          'submission_id' => $submission->id
+          'submission_id' => $submission->id,
+              //additional coverage
+          'mold' => $submission->mold,
+          'mold_limit' => $submission->mold_limit,
+          'water_back_up' => $submission->water_back_up,
+          'water_back_up_limit' => $submission->water_back_up_limit
                   ]);   
 
   //      $file->save();
