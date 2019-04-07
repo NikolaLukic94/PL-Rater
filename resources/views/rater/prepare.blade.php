@@ -409,7 +409,7 @@
 
                 <button type="button" href="/rater/create/{{$file->id}}" class="btn btn-outline-secondary">Preview</button>
 
-                <a class="btn btn-primary" href="/rater/rate/{{$file->id}}" role="button">Open</a>
+                <a class="btn btn-primary" href="/rater/create/{{$file->id}}" role="button">Open</a>
 
               </p>
 

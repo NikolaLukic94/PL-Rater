@@ -585,7 +585,7 @@
                           @endif  
                         </td> 
                         <td>
-                          HO3  
+                          {{$r->cov_a}}
                         </td>                                                 
                         <td>
                             <a class="btn btn-primary" href="/rating-worksheet/show/{{$r->id}}" role="button">Open</a> &nbsp;
@@ -596,7 +596,7 @@
                     </tr>
                   @endforeach
                 @else
-                    <p>There are no RWs for this file! Go rate it!</p>
+                    <p>There are no RWs for this file! Go rate it <a href="/rater/index/{{$file->id}}">here!</a></p>
                 @endif
         </form>
       </div>

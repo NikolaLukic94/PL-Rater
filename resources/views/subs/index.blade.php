@@ -56,7 +56,7 @@
                           @endif                           
                         </td>
                         <td>
-                          <p>1</p>
+                          <p>{{ $sub->agingDate() }}</p>
                         </td>                        
                         <td>
                           @if(isset($sub->location_address_state))

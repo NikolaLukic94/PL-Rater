@@ -52,7 +52,6 @@ Route::group(['prefix' => 'rater',  'middleware' => 'approved'], function () {
 
 Route::get('/rate/rw/{file_id}/{rater_id}/word','RwWordController');
 
-
 Route::group(['prefix' => 'rating-worksheet',  'middleware' => 'approved'], function () {
 	Route::get('/store/{file_id}/{rater_id}','RatingWorksheetController@store');
 	Route::get('/index/{id}','RatingWorksheetController@index');

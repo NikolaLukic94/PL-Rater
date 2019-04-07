@@ -10,7 +10,6 @@
 <body>
 
   <div class="d-flex" id="wrapper">
-    @include('partials.sidebar')
     <!-- Page Content -->
     <div id="page-content-wrapper">
     @include('partials.navbar')
@@ -20,22 +19,18 @@
             <div class="card">
               <div class="card-header text-center">Please verify current info:</div>
               <div class="card-body">
-            <form action="/countactus/send" method="POST">
+            <form action="/contactus/send" method="POST">
                 {{ csrf_field()  }}
                <br>
                   <div class="form-group">
                     <label for="sender">Your email</label>
-                    <input name="sender" type="text" class="form-control" id="sender" placeholder="sender">
+                    <input name="sender" type="text" class="form-control" id="sender">
                   </div>
                   <div class="form-group">
                     {{Form::label('body', 'Text')}}
                     {{Form::textarea('body', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Your email here...'])}}
-                  </div>
-                  <div class="form-group">
-                    <label for="to">To:</label>
-                    <input name="to" type="text" class="form-control" id="to" >
                   </div>                  
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Send</button>
             </form>       
                 </div>
             </div>

@@ -5,9 +5,12 @@
 <body>
   <div class="d-flex" id="wrapper">
     <!-- Page Content -->
+
     <div id="page-content-wrapper">
+
     @include('partials.navbar')
       <body onload="startTime()">
+              <div class="jumbotron">
         <div id="clockdate">
           <div class="clockdate-wrapper">
             <div id="clock"></div>
@@ -23,12 +26,17 @@
       <div class="container">
         <div class="row">
           <div class="col text-center">
-              <button type="button" href="/subs/emails/create" class="btn btn-secondary">Send a submission?</button>
-              <button type="button" class="btn btn-secondary">Contact Us</button>
+              <a href="/subs/emails/create">
+                <button type="button" href="/subs/emails/create" class="btn btn-secondary">Send a submission?
+                </button>
+              </a>
+              <a href="/contactus/create">
+                <button type="button" class="btn btn-secondary">Contact Us</button>
+              </a>
           </div>
         </div>
       </div>
-
+</div>
       </div>
 </body>
 

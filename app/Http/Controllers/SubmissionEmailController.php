@@ -28,8 +28,8 @@ class SubmissionEmailController extends Controller
 
     public function index() {
 
-      $submission = DB::table('submissions')->orderBy('location_address_state', 'asc')
-                                            ->get();
+      $submission = Submission::orderBy('location_address_state', 'asc')
+                                    ->get();
 
       /* CALCULATING DATE 7 DAYS FROM TODAY */
       $date = new \DateTime(date("Y-m-d"));
@@ -43,10 +43,12 @@ class SubmissionEmailController extends Controller
                                     ->count();                                
       /* END */
 
+
+
       return view('/subs/index', [
-              'submission' => $submission,
-              'subsEffWithinNextWeek' => $subsEffWithinNextWeek
-          ]);
+            'submission' => $submission,
+            'subsEffWithinNextWeek' => $subsEffWithinNextWeek
+      ]);
 
     }
 

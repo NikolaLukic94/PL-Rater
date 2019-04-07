@@ -20,6 +20,41 @@ class Controller extends BaseController
     
     }
 
+    public	$home_type = array(
+		  "1" => "dwelling",
+		  "2" => "condominium",  		  		  		  		  	  
+		);
+
+    public	$usage = array(
+		  "1" => "primary",
+		  "2" => "secondary",
+		  "3" => "rental"  		  		  		  		  	  
+		);
+
+    public	$roof_type = array(
+		  "1" => "gable",
+		  "2" => "flat",
+		  "3" => "shed"  		  		  		  		  	  
+		);
+
+    public	$roof_material = array(
+		  "1" => "asphalt_shingle",
+		  "2" => "metal",
+		  "3" => "wood_shake",
+		  "4" => "slate"	  		  		  		  	  
+		);
+
+    public	$roof_protections = array(
+		  "1" => "shutters",
+		  "2" => "plywood"		  		  		  		  	  
+		);
+
+    public	$default_limits = array(
+		  "1" => "1000",
+		  "2" => "5000",
+		  "3" => "10000"  		  		  		  	  
+		);
+
     public	$credit = array(
 		  "1" => "0.7",
 		  "2" => "0.8",

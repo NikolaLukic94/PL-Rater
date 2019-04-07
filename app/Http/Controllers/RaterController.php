@@ -138,8 +138,9 @@ class RaterController extends Controller
                 $agency_fee = '0';
             }
 
+            //coeficitents that will be used for each 
             $rater = Rater::create([    
-                    'lob' => $file->lob,       
+                    'lob' => 'HO3',       
                     'file_id' => $file_id,
                     'general_rate' => $rate->general_rate,
                     'cov_a' => $rate->cov_a,
@@ -172,7 +173,7 @@ class RaterController extends Controller
     public function store($file_id, $rater_id) {
 
         $file = DB::table('files')->where('id',$file_id)->first(); 
-        $rater = DB::table('raters')->where('lob', $file->lob)->first();
+        $rater = DB::table('raters')->where('lob', 'HO3')->first();
 
         $cov_limits = $file->cov_a + $file->other_structures + $file->loss_of_use;
         $cov_limits_rate = ($rater->cov_a + $rater->other_structures + $rater->loss_of_use) / 4;

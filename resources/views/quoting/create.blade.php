@@ -6,18 +6,13 @@
 <head>
   <title>PLQR</title>
 </head>
-  <!-- ADDITIONAL COVERAGE -->
-              <!--mold, water back up-->
         <!-- FORMS -->
               <!--for now, let it pull all forms names with option to add them thru checkbox
                   need to add two windows for mandatory and optional-->
         <!-- ADDITINAL INSURED -->
-              <!--type of ai, name, address, form, description(none mandatory) need table as well-->
+              <!--need table as well-->
         <!-- PRIOR CARRIER - need table for it as it can have more that one --> 
               <!--name, expiry date, if any claims, if so claim #, if open or closed, and $$-->
-        <!-- PREMIUM -->
-              <!-- to be prefiled per rw but with option to change it and save quote -->
-        <!-- agent / agency info -->  
 <body>
 
   <div class="d-flex" id="wrapper">
@@ -489,7 +484,7 @@
             <div class="row">
               <div class="col">         
                 <label class="label" for="fuel_tank_storage_on_premises"></label>
-                <p>Fuel Storege Tank On Premises</p>
+                <p>Fuel Storage Tank On Premises</p>
               </div>
               <div class="col">             
                 <input name="fuel_tank_storage_on_premises" type="text" class="input"  id="fuel_tank_storage_on_premises">
@@ -633,21 +628,70 @@
     <div class="card-header text-center"><h1>Forms:</h1></div>
       <div class="card-body">
         <form method="POST" action="/file/update/general-info/{{$file->id}}">
-                
+              @if($forms)
+                @foreach($forms as $form)
+                  <p>{{$form->name}}</p>
+                @endforeach
+              @endif    
         </form>
       </div>
     </div>
   </div>
 </div>
 
-
-
 <div id="additional_insured_or_interest" class="tabcontent">
   <div class="col">
     <div class="card-header text-center"><h1>Additional Insured/Interest:</h1></div>
       <div class="card-body">
         <form method="POST" action="/file/update/general-info/{{$file->id}}">
-                
+          <div class="field">
+            <div class="row">
+              <div class="col">
+                <label class="label" for="name">
+                  <p>Name</p> 
+                </label>
+              </div>
+              <div class="col">             
+                <input type="text" name="name" required><br>
+              </div>
+            </div>
+          </div> 
+          <div class="field">
+            <div class="row">
+              <div class="col">
+                <label class="label" for="address">
+                  <p>Address</p> 
+                </label>
+              </div>
+              <div class="col">             
+                <input type="text" name="address" required><br>
+              </div>
+            </div>
+          </div> 
+          <div class="field">
+            <div class="row">
+              <div class="col">
+                <label class="label" for="type">
+                  <p>Type</p> 
+                </label>
+              </div>
+              <div class="col">             
+                <input type="text" name="type" required><br>
+              </div>
+            </div>
+          </div>           
+          <div class="field">
+            <div class="row">
+              <div class="col">
+                <label class="label" for="description">
+                  <p>Description</p> 
+                </label>
+              </div>
+              <div class="col">             
+                <input type="text" name="description" required><br>
+              </div>
+            </div>
+          </div>                                    
         </form>
       </div>
     </div>
@@ -659,7 +703,54 @@
     <div class="card-header text-center"><h1>Prior Carrier:</h1></div>
       <div class="card-body">
         <form method="POST" action="/file/update/general-info/{{$file->id}}">
-                
+          <div class="field">
+            <div class="row">
+              <div class="col">
+                <label class="label" for="name">
+                  <p>Name</p> 
+                </label>
+              </div>
+              <div class="col">             
+                <input type="text" name="name" required><br>
+              </div>
+            </div>
+          </div> 
+          <div class="field">
+            <div class="row">
+              <div class="col">
+                <label class="label" for="policy_number">
+                  <p>Policy #</p> 
+                </label>
+              </div>
+              <div class="col">             
+                <input type="text" name="policy_number" required><br>
+              </div>
+            </div>
+          </div> 
+          <div class="field">
+            <div class="row">
+              <div class="col">
+                <label class="label" for="losses">
+                  <p>Losses</p> 
+                </label>
+              </div>
+              <div class="col">             
+                <input type="text" name="losses" required><br>
+              </div>
+            </div>
+          </div>           
+          <div class="field">
+            <div class="row">
+              <div class="col">
+                <label class="label" for="claim_number">
+                  <p>Claim #</p> 
+                </label>
+              </div>
+              <div class="col">             
+                <input type="text" name="claim_number" required><br>
+              </div>
+            </div>
+          </div>                  
         </form>
       </div>
     </div>
@@ -765,16 +856,12 @@
 </div>
      </div>
        </div>
-    <!-- /#page-content-wrapper -->
-
-
-  <!-- /#wrapper -->
-
 
 
 </body>
 
 </html>
+
 <script>
 function openCity(evt, cityName) {
   // Declare all variables
