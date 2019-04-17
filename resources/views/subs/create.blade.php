@@ -26,7 +26,7 @@
             <div class="card">
                 <div class="card-header text-center">Please verify current info:</div>
                 <div class="card-body">
-        <form action="/subs/create" method="POST">
+        <form action="/subs/emails/create" method="POST">
         {{ csrf_field() }}
         <div class="field">
           <div class="row">

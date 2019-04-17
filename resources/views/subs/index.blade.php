@@ -99,11 +99,16 @@
                     </tr>
                     @endif
                   @endforeach
+
                 @else
                     <p>There are no new emails!</p>
                 @endif
+            </table>
     <!-- /#page-content-wrapper -->
+      <div class="container">{{ $submission->links() }}</div>
   </div>
+
+                  
   <!-- /#wrapper -->
 </body>
 </html>

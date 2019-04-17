@@ -39,7 +39,7 @@ class LoginTest extends TestCase
     {
         //we create user
         $user = factory(User::class)->create([
-            'password' => bcrypt($password = 'i-love-laravel'),
+            'password' => bcrypt($password = 'test-user'),
         ]);
         //login user
         $response = $this->post('/login', [

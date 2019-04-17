@@ -15,15 +15,18 @@
 <!-- Page Content -->
   <div id="page-content-wrapper">
 @include('partials.navbar')
-    <div class="card-header">Your forms:</div>
+    <div class="card-header text-center">Your forms:</div>
       <div class="card-body">
         @if($forms)
           @foreach($forms as $f)
               <tr>
                   <td>
+                    <div class="row">
+                      <div class="col">
                     <p>{{ $f->name }} </p> 
-                    <a href="/form/download/{{$f->id}}" class="btn btn-primary">Attachment</a>
-                    <a href="/forms/delete/{{$f->id}}" class="btn btn-primary">Delete</a>
+                    <a href="/form/download/{{$f->id}}" class="btn btn-primary float-right">Attachment</a>
+                    <a href="/forms/delete/{{$f->id}}" class="btn btn-primary float-right">Delete</a>
+                    </div></div>
                       <hr>
                   </td>
               </tr>
@@ -35,6 +38,7 @@
       <button type="submit" href="/forms/create" class="btn btn-outline-secondary">Add new</button>
     </div>
   </div>
+        <div class="container">{{ $forms->links() }}</div>
 </div>
 
 

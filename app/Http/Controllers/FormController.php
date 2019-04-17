@@ -18,10 +18,9 @@ class FormController extends Controller
 {
     public function index(Request $request)
     {
-        $forms = Form::all();
         
         return view('/forms/index',[
-            'forms' => $forms
+            'forms' => Form::paginate(10)
         ]);
     }
 

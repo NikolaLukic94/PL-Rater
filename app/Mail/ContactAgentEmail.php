@@ -30,8 +30,6 @@ class ContactAgentEmail extends Mailable
      */
     public function build(Request $request)
     {
-
-
         return $this->view('emails.contactagent')->to($request->to);
     }
 }

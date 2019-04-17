@@ -17,6 +17,7 @@ use App\Submission;
 use Illuminate\Support\Facades\Input;
 use App\Http\Requests\AgentSendSubmissionEmail;
 use App\LogActivity;
+use App\Jobs\SendSubmissionSuccessfullEmail;
 
 class SubmissionEmailController extends Controller
 {
@@ -27,9 +28,6 @@ class SubmissionEmailController extends Controller
      */
 
     public function index() {
-
-      $submission = Submission::orderBy('location_address_state', 'asc')
-                                    ->get();
 
       /* CALCULATING DATE 7 DAYS FROM TODAY */
       $date = new \DateTime(date("Y-m-d"));
@@ -43,10 +41,8 @@ class SubmissionEmailController extends Controller
                                     ->count();                                
       /* END */
 
-
-
       return view('/subs/index', [
-            'submission' => $submission,
+            'submission' => Submission::orderBy('location_address_state', 'asc')->paginate(10),
             'subsEffWithinNextWeek' => $subsEffWithinNextWeek
       ]);
 
@@ -73,7 +69,7 @@ class SubmissionEmailController extends Controller
      */
     public function store(AgentSendSubmissionEmail $request)  {
 
-        Submission::create([
+        $submission = Submission::create([
 
         'agent_name' => request('agent_name'),
         'agency_name' => request('agency_name'),
@@ -106,10 +102,14 @@ class SubmissionEmailController extends Controller
         'prior_carrier_name' => request('prior_carrier_name'),
         'prior_carrier_effective_date' => request('prior_carrier_effective_date'),
         'status' => 'not_logged',
-        'submission_number' => rand(10,555555)
+        'submission_number' => rand(100,555555)
                   ]);   
-                                                                                                   
-        \Mail::to($request->agent_email_address)->send(new SubmissionEmailSent);
+
+        $to = $request->agent_email_address;           
+        $submission_number = $submission->submission_number;
+
+        dispatch(new \App\Jobs\SendSubmissionSuccessfullEmail($to,$submission_number));
+
         LogActivity::addToLog('created Submission' . request('named_insured'));
         return view('/subs/success');
     }

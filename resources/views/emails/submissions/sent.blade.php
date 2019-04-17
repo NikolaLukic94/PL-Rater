@@ -1,12 +1,12 @@
 @component('mail::message')
 # Introduction
 
-Your submission was recevied. Your submission number is: 
+Your submission has been recevied. Your submission number is: 
 
 @component('mail::button', ['url' => ''])
-Submission number here
+{{$submission_number}}
 @endcomponent
 
 Thanks,<br>
-{{ config('app.name') }}
+Support Team
 @endcomponent

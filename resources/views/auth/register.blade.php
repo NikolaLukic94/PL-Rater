@@ -9,6 +9,7 @@
 
 </head>
 
+
 <body>
 
   <div class="d-flex" id="wrapper">
@@ -18,7 +19,7 @@
 
     @include('partials.navbar')
 
-<div class="container">
+<div class="container" id="register_box">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

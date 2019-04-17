@@ -46,24 +46,30 @@ class RateController extends Controller
      */
     public function store(Request $request)
     {
-        $rate = new Rate;
 
-        Rate::create([
-            'lob' => request('lob'),
-            'county' => request('county'),
-            'state'=>request('state'),
-            'cov_a' => request('cov_a'),    
-            'other_structures' => request('other_structures'),
-            'loss_of_use' => request('loss_of_use'),
-            'med_pay' => request('agent_phone_number'),
-            'aop_ded' => request('aop_ded'),
-            'construction_type' => request('construction_type'),
-            'protection_class' => request('protection_class'),
-            'new_purchase' => request('new_purchase'),    
-            'prior_carrier' => request('prior_carrier'),
-            'prior_carrier_name' => request('prior_carrier_name'),
-            'prior_carrier_effective_date' => request('prior_carrier_effective_date')
-        ]);
+        if (Rate::where('lob', '=', Input::get('lob'))->exists()) {
+           return redirect('/');
+        } else {
+            $rate = new Rate;
+
+            Rate::create([
+                'lob' => request('lob'),
+                'county' => request('county'),
+                'state'=>request('state'),
+                'cov_a' => request('cov_a'),    
+                'other_structures' => request('other_structures'),
+                'loss_of_use' => request('loss_of_use'),
+                'med_pay' => request('agent_phone_number'),
+                'aop_ded' => request('aop_ded'),
+                'construction_type' => request('construction_type'),
+                'protection_class' => request('protection_class'),
+                'new_purchase' => request('new_purchase'),    
+                'prior_carrier' => request('prior_carrier'),
+                'prior_carrier_name' => request('prior_carrier_name'),
+                'prior_carrier_effective_date' => request('prior_carrier_effective_date')
+            ]);            
+        }
+
     }
 
     /**
