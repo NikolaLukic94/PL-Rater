@@ -9,16 +9,14 @@
 
 </head>
 
-
 <body>
 
   <div class="d-flex" id="wrapper">
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
-
     @include('partials.navbar')
-
+<br>
 <div class="container" id="register_box">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -82,8 +80,8 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">                        
-                                <input type="checkbox" name="ceo" value="ceo">Senior UW<br>
-                                <input type="checkbox" name="underwriter" value="underwriter" checked>Underwriter<br>
+                                <input type="checkbox" name="position" value="ceo">Senior UW<br>
+                                <input type="checkbox" name="position" value="underwriter" checked>Underwriter<br>
                             </div>
                         </div>
                         <br>

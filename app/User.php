@@ -34,5 +34,8 @@ class User extends Authenticatable
        return $this->hasMany('App\SocialIdentity');
     }
     
+    protected $dispatchesEvents = [
+        'created' => Events\NewUserRequiringApproval::class
 
+    ];
 }

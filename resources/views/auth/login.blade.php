@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +17,7 @@
     <div id="page-content-wrapper">
 
     @include('partials.navbar')
-
+    <br>
       <div class="container">
            <div class="row justify-content-center">
         <div class="col-md-8">
@@ -80,15 +80,17 @@
                         </div>
                     </form>
                     <hr>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">                 
                     <div class="col text-center">
                         <div class="row">
                          <a href="/login/facebook">
-                            <div class="btn btn-md btn-primary ladda-button" data-style="expand-left">
+                            <div class="ladda-button" data-style="expand-left">
                                 <i class="fa fa-facebook"></i> Login with Facebook 
                             </div>
                         </a>    
                         </div>
-
+                        <br>
                         <div class="row">
                          <a href="/login/facebook">
                             <div class="btn btn-md btn-primary ladda-button" data-style="expand-left">
@@ -96,7 +98,7 @@
                             </div>
                         </a>    
                         </div>
-
+                        <br>
                         <div class="row">
                          <a href="/login/facebook">
                             <div class="btn btn-md btn-primary ladda-button" data-style="expand-left" data-color="green">
@@ -105,7 +107,8 @@
                         </a>    
                         </div>
                     </div>
-
+                    </div>
+                </div>
                 </div>
             </div>
         </div>

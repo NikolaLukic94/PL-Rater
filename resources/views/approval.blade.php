@@ -17,15 +17,15 @@
     <div id="page-content-wrapper">
 
     @include('partials.navbar')
-
+      <br>
       <div class="container">
           <div class="row justify-content-center">
               <div class="col-md-8">
                   <div class="card" id="card">
-                    <div class="card-header">Waiting for Approval</div>
-                      <div class="card-body">
+                    <div class="card-header text-center">Waiting for Approval</div>
+                      <div class="card-body text-center">
                         Your account is waiting for our administrator approval.
-                        <br />
+                        <hr/>
                         Please check back later.
                       </div>
                   </div>

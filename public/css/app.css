@@ -11,7 +11,6 @@ body {
 
 }
 
-
 #sidebar-wrapper {
   min-height: 100vh;
   margin-left: -15rem;
@@ -158,4 +157,19 @@ body {
     font-size:14px;
     font-family:arial,sans-serif;
     color:#fff;
+}
+
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width:100%;
+}
+
+
+table td.shrink {
+    white-space:nowrap
+}
+table td.expand {
+    width: 99%
 }

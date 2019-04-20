@@ -3,41 +3,41 @@
   <title>PLQR</title>
 </head>
 <body>
-  <div class="d-flex" id="wrapper">
-    <!-- Page Content -->
 
-    <div id="page-content-wrapper">
-
-    @include('partials.navbar')
-      <body onload="startTime()">
-              <div class="jumbotron">
-        <div id="clockdate">
-          <div class="clockdate-wrapper">
-            <div id="clock"></div>
-            <div id="date"></div>
-          </div>
+<div class="d-flex" id="wrapper"><!-- d-flex start -->
+  <div id="page-content-wrapper"><!-- page-content-wrapper start -->
+  @include('partials.navbar')
+    <body onload="startTime()">
+      <div class="jumbotron"><!-- jumbotron start -->
+      <div id="clockdate">
+        <div class="clockdate-wrapper">
+          <div id="clock"></div>
+          <div id="date"></div>
         </div>
-        <br>
-      <!--<div class="col">
-          <h1 class="mb-0">BG:{{$bgTime}}</h1>
-          <h1 class="mb-0">US:{{$usTime}}</h1>
-          <h1 class="mb-0">CA:{{$montrealTime}} </h1>   
-      </div> -->
-      <div class="container">
-        <div class="row">
+      </div>
+      <br>
+    <!--<div class="col">
+        <h1 class="mb-0">BG:{{$bgTime}}</h1>
+        <h1 class="mb-0">US:{{$usTime}}</h1>
+        <h1 class="mb-0">CA:{{$montrealTime}} </h1>   
+    </div> -->
+      <div class="container"><!-- container start -->
+        <div class="row"><!-- row start -->
           <div class="col text-center">
-              <a href="/subs/emails/create">
-                <button type="button" href="/subs/emails/create" class="btn btn-secondary">Send a submission?
-                </button>
-              </a>
-              <a href="/contactus/create">
-                <button type="button" class="btn btn-secondary">Contact Us</button>
-              </a>
-          </div>
-        </div>
-      </div>
-</div>
-      </div>
+            <a href="/subs/emails/create">
+              <button type="button" href="/subs/emails/create" class="btn btn-secondary">Send a submission?
+              </button>
+            </a>
+            <a href="/contactus/create">
+              <button type="button" class="btn btn-secondary">Contact Us</button>
+            </a>
+          </div>  
+        </div><!-- row end -->
+      </div><!-- container end -->
+    </div><!-- jumbotron end -->
+  </div><!-- page-content-wrapper end -->
+</div><!-- d-flex end -->
+  @include('partials.footer')
 </body>
 
 <script>
