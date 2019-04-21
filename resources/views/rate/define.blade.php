@@ -26,7 +26,7 @@
             <div class="card">
                 <div class="card-header text-center">Define new rate:</div>
                 <div class="card-body">
-<form action="/rate/define" method="POST">
+<form action="/rate/create" method="POST">
         {{ csrf_field() }}
         <div class="field">
 					<div class="row">

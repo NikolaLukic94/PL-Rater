@@ -22,13 +22,15 @@ Route::get('/test','HomeController@test');
 
 Route::group(['prefix' => 'subs/emails',  'middleware' => 'approved'], function () {
 	Route::get('/index','SubmissionEmailController@index');
-	Route::get('/create','SubmissionEmailController@create');	
-	Route::post('/create','SubmissionEmailController@store');
 	Route::get('/show/{id}','SubmissionEmailController@show');
 	Route::get('/edit/{id}', 'SubmissionEmailController@edit');
 	Route::post('/edit/{id}', 'SubmissionEmailController@updateS');
 	Route::delete('/delete/{id}', 'SubmissionEmailController@destroy');
 });
+//middleware does not apply to the next two routes:
+	Route::get('/subs/emails/create','SubmissionEmailController@create');	
+	Route::post('/subs/emails/create','SubmissionEmailController@store');
+
 
 Route::group(['prefix' => 'file',  'middleware' => 'approved'], function () {
 	Route::any('/index/','FileController@index');
@@ -49,6 +51,7 @@ Route::group(['prefix' => 'rate',  'middleware' => 'approved'], function () {
 	Route::get('/show/{id}','RateController@show');	
 	Route::get('/edit/{id}', 'RateController@edit');	
 	Route::post('/edit/{id}', 'RateController@update');	
+	Route::delete('/delete/{id}', 'RateController@destroy');	
 });
 
 Route::group(['prefix' => 'rater',  'middleware' => 'approved'], function () {

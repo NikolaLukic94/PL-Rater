@@ -1,11 +1,8 @@
 @component('mail::message')
 # Introduction
 
-Your submission has been recevied. Your submission number is: 
+Your submission has been recevied. Someone from our team will contat you shortly.
 
-@component('mail::button', ['url' => ''])
-{{$submission_number}}
-@endcomponent
 
 Thanks,<br>
 Support Team

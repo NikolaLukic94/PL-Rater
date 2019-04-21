@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Rate extends Model
 {
+        use Traits\RecordsActivity;
+
         protected $fillable = [ 'lob',
                                 'cov_a',
                                 'other_structures',
@@ -36,4 +38,6 @@ class Rate extends Model
                                 'more_than_two_losses',
 
                             ];
+
+               
 }

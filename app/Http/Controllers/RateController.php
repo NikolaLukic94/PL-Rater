@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Rate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Input;
 
 /* USED FOR DEFINING, EDITING AND DELETING RATE COEFICIENTS  */
 
@@ -47,10 +47,6 @@ class RateController extends Controller
     public function store(Request $request)
     {
 
-        if (Rate::where('lob', '=', Input::get('lob'))->exists()) {
-           return redirect('/');
-        } else {
-            $rate = new Rate;
 
             Rate::create([
                 'lob' => request('lob'),
@@ -67,8 +63,10 @@ class RateController extends Controller
                 'prior_carrier' => request('prior_carrier'),
                 'prior_carrier_name' => request('prior_carrier_name'),
                 'prior_carrier_effective_date' => request('prior_carrier_effective_date')
-            ]);            
-        }
+            ]);     
+
+            return redirect('/rate/index');       
+
 
     }
 
@@ -122,6 +120,8 @@ class RateController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id) {
+
+        $this->authorize('update', $id);
 
         $rate = Rate::find($id);
 

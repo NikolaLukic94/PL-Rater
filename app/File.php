@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class File extends Model
 {
+        use Traits\RecordsActivity;
+
         protected $fillable = [ 'agent_name',
                                 'agency_name',
                                 'lob',

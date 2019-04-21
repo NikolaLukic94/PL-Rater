@@ -21,11 +21,6 @@ use App\Jobs\SendSubmissionSuccessfullEmail;
 
 class SubmissionEmailController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
 
     public function index() {
 
@@ -61,12 +56,6 @@ class SubmissionEmailController extends Controller
         ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(AgentSendSubmissionEmail $request)  {
 
         $submission = Submission::create([
@@ -114,12 +103,6 @@ class SubmissionEmailController extends Controller
         return view('/subs/success');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Submission  $submission
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         $submission = Submission::findOrFail($id);
@@ -130,12 +113,6 @@ class SubmissionEmailController extends Controller
     
     }
     
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Submission  $submission
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)  {
 
         $submission = Submission::findOrFail($id);
@@ -152,13 +129,6 @@ class SubmissionEmailController extends Controller
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Submission  $submission
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)  {
 
         $submission = Submission::findOrFail($id);
@@ -193,13 +163,6 @@ class SubmissionEmailController extends Controller
         LogActivity::addToLog('updated submission id# '. $id);
         return view('subs/change/success');
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Submission  $submission
-     * @return \Illuminate\Http\Response
-     */
 
     public function destroy($id) {
 

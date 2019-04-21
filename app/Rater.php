@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Rater extends Model
 {
+        use Traits\RecordsActivity;
+
         protected $fillable = [ 
                                 'cov_a',
                                 'other_structures',

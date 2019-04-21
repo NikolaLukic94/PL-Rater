@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Premium extends Model
 {
 
-		protected $table = 'premiums';
+		use Traits\RecordsActivity;
 
+		protected $table = 'premiums';
 
         protected $fillable = [ 'grand_premium',
                                 'surplus_lines_tax_fee',

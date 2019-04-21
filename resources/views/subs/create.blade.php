@@ -12,9 +12,9 @@
 <body>
 
   <div class="d-flex" id="wrapper">
-
+  @if(Auth::check())
     @include('partials.sidebar')
-
+  @endif
     <!-- Page Content -->
     <div id="page-content-wrapper">
 

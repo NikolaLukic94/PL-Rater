@@ -15,16 +15,29 @@
 <!-- Page Content -->
   <div id="page-content-wrapper">
 @include('partials.navbar')
-    <div class="card-header">Your rates:</div>
+    <div class="card-header text-center">Your rates:</div>
       <div class="card-body">
         @if($rate)
           @foreach($rate as $r)
+          <div class="container">
+          <div class="row">
               <tr>
                   <td>
                       {{ $r->lob }}
-                      <hr>
                   </td>
+                  <th>
+                    <div class="offset-md-4">
+                    <form action="/rate/delete/{{ $r->id }}" method="POST">
+                      {{ csrf_field() }}
+                      {{ method_field('DELETE') }} 
+                        <button id="tt" type="submit" class="btn btn-primary col-md-offset-3"><i class="fa fa-trash"></i></button>
+                    </form>
+                    <br>   
+                </div>
               </tr>
+
+          </div>    
+          </div>
           @endforeach
         @else    
           <p>You currently don have any defined yet!</p>
