@@ -31,7 +31,6 @@ class FileRatingCharacteristicsController extends Controller
 
         $file->save();
 
-        LogActivity::addToLog('file update rating char ' . $file->id . $file->named_insured);
         return redirect('/file/index/{{$file->id}}');
     }
 

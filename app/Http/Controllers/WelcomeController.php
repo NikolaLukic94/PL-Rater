@@ -26,22 +26,4 @@ class WelcomeController extends Controller
 
   }
 
-    public function test() {
-
-        return view('/test');
-    }
-
-    public function myTestAddToLog()
-    {
-        LogActivity::addToLog('My Testing Add To Log.');
-        dd('log insert successfully.');
-    }
-
-    public function logActivity()
-    {
-        $logs = LogActivity::logActivityLists();
-        return view('/log/index',compact('logs'));
-    }
-
-
 }

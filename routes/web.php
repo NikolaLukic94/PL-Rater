@@ -7,18 +7,15 @@ Route::get('/', 'WelcomeController@index');
 Auth::routes();
 
 Route::group(['prefix' => 'home',  'middleware' => 'approved'], function () {
-	Route::get('/', 'HomeController@index')->name('home');
+	Route::get('/{id}', 'HomeController@index')->name('home');
 });
 
 Route::get('/approval', 'HomeController@show')->name('approval');
 
 Route::middleware(['admin'])->group(function () {
     Route::get('/users', 'UserApprovalController@index')->name('admin.users.index');
-    Route::post('/users/{user_id}/approve', 'UserApprovalController@create')->name('admin.users.approve');
+    Route::post('/users/{user_id}/approve', 'UserApprovalController@create');
 });
-
-
-Route::get('/test','HomeController@test');
 
 Route::group(['prefix' => 'subs/emails',  'middleware' => 'approved'], function () {
 	Route::get('/index','SubmissionEmailController@index');

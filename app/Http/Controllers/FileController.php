@@ -177,7 +177,6 @@ class FileController extends Controller
                   ]);   
 
   //      $file->save();
-        LogActivity::addToLog('created file' . $file->id . $file->named_insured);  
 
         return redirect('/file/index');
     }
@@ -247,8 +246,6 @@ class FileController extends Controller
     public function destroy($id) {
 
         $file = File::find($id);
-
-        LogActivity::addToLog('file deleted ' . $file->id . $file->named_insured);
 
         $file->delete();
 

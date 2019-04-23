@@ -37,8 +37,6 @@ class EmailController extends Controller
 
         dispatch(new \App\Jobs\SendCustomEmail($subject,$body,$to));
 
-        LogActivity::addToLog('contacted agent '. $request->to);
-
         return redirect('/home');
     }
 

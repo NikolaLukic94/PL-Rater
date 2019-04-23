@@ -86,8 +86,6 @@ class QuoteController extends Controller
           'water_back_up_limit' => $file->water_back_up_limit
                   ]);   
 
-  //      $file->save();
-        LogActivity::addToLog('created file' . $file->id . $file->named_insured);  
 
         return redirect('/file/index');
     }

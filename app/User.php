@@ -38,4 +38,10 @@ class User extends Authenticatable
         'created' => Events\NewUserRequiringApproval::class
 
     ];
+
+    public function getRouteKeyName() {
+
+        return 'name';
+    }
+
 }

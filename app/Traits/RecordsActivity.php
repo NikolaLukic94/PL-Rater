@@ -30,12 +30,14 @@ trait RecordsActivity {
       
 
     public function activity() {
-    	return $this->morphMany('App\Activity', 'subject_id');
+    	return $this->morphMany('App\Activity', 'subject');
     }
 
     public function getActivityType($event) {
 
-        return event .'_' . strtolower(new \ReflectionClass($event))->getShortName();
+        $type = strtolower(new \ReflectionClass($this));
+
+        return $event .'_' . $type;
     }  
 
 }

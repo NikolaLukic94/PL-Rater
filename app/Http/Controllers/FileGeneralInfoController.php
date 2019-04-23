@@ -33,8 +33,7 @@ class FileGeneralInfoController extends Controller
         $file->location_address_zip =      $request->location_address_zip;
         $file->location_address_state =      $request->location_address_state;                                                                 
         $file->save();
-
-        LogActivity::addToLog('file update general char ' . $file->id . $file->named_insured);          
+          
         return view('/file/index',[
           'file' => $file
         ]);

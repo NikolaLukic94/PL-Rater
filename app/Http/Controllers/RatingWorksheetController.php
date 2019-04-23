@@ -49,9 +49,7 @@ class RatingWorksheetController extends Controller
         'rater_id' => $rater_id,
         'premium_id' => $id
 
-                  ]);   
-                                                                                                   
-        LogActivity::addToLog('added new rating worksheet' );
+                  ]);                                                                                      
 
         return redirect('/file/search');
     }

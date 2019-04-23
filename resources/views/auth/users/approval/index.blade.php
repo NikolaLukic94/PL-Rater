@@ -1,9 +1,28 @@
 @extends('layouts.app')
 
-@section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>PLQR</title>
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    @include('partials.sidebar')
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+    @include('partials.navbar')
+    <br>
+      <div class="container">
+          <div class="row justify-content-center">
+                          <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Users List to Approve</div>
 
@@ -15,6 +34,7 @@
                             </div>
                         @endif
 
+                        
                         <table class="table">
                             <tr>
                                 <th>User name</th>
@@ -23,12 +43,15 @@
                                 <th></th>
                             </tr>
                             @forelse ($users as $user)
+                            <form method="POST" action="/users/{{$user->id}}/approve">
+                                {{ csrf_field() }}
                                 <tr>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->created_at }}</td>
-                                    <td><a href="{{ route('admin.users.approve', $user->id) }}"
-                                           class="btn btn-primary btn-sm">Approve</a></td>
+                                    <td>
+                                        <button type="submit" class="btn btn-primary">Approve</button>
+                                    </td>
                                 </tr>
                             @empty
                                 <tr>
@@ -36,9 +59,15 @@
                                 </tr>
                             @endforelse
                         </table>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-@endsection
+          </div>
+      </div>
+    <!-- /#page-content-wrapper -->
+  </div>
+  <!-- /#wrapper -->
+</body>
+
+</html>

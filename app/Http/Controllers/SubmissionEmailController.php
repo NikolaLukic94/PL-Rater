@@ -99,7 +99,6 @@ class SubmissionEmailController extends Controller
 
         dispatch(new \App\Jobs\SendSubmissionSuccessfullEmail($to,$submission_number));
 
-        LogActivity::addToLog('created Submission' . request('named_insured'));
         return view('/subs/success');
     }
 
@@ -160,7 +159,6 @@ class SubmissionEmailController extends Controller
 
         $submission->save();        
 
-        LogActivity::addToLog('updated submission id# '. $id);
         return view('subs/change/success');
     }
 

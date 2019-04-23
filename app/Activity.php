@@ -12,4 +12,5 @@ class Activity extends Model
 
     	return $this->morphTo();
     }
+
 }

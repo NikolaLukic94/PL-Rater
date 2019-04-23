@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Alert;
+use App\User;
+use App\Activity;
+use Auth;
 use Carbon\Carbon;
 
 class HomeController extends Controller
@@ -23,21 +26,14 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(User $user)
     {
+        $activities = Activity::where('user_id', Auth::user()->id)->get();
 
-     //   $submissions = DB::table('submissions')->where('status','not_logged')->count()->get();
-        
-
-        return view('home');
-    } 
-
-    public function test()
-    {
-
-       $submissions = DB::table('submissions')->where('status','not_logged')->count()->get();
-        
-        return view('test');
+        return view('home',[
+            'user' => $user, //user who's signed it
+            'activities' => $activities
+        ]);
     } 
 
     public function show()

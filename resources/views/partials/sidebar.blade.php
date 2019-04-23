@@ -1,7 +1,8 @@
 <div class="bg-light border-right" id="sidebar-wrapper">
   <div class="sidebar-heading">PLQR</div>
   <div class="list-group list-group-flush">
-    <a href="#" class="list-group-item list-group-item-action bg-light">Test</a>
+
+    <a href="/users" class="list-group-item list-group-item-action bg-light">Users</a>
     <button class="dropdown-btn">Submissions 
       <i class="fa fa-caret-down"></i>
     </button>
@@ -17,7 +18,7 @@
       <a href="/rate/index" class="list-group-item list-group-item-action bg-light">Open</a>
       <a href="/rate/create" class="list-group-item list-group-item-action bg-light">Create</a>      
     </div>   
-    <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
+    <a href="user/profile/{{Auth::user()->name }}" class="list-group-item list-group-item-action bg-light">Profile</a>
     <button class="dropdown-btn">Accounts 
       <i class="fa fa-caret-down"></i>
     </button>
