@@ -1,13 +1,11 @@
-
 <?php
-
 
 Route::get('/', 'WelcomeController@index');
 
 Auth::routes();
 
-Route::group(['prefix' => 'home',  'middleware' => 'approved'], function () {
-	Route::get('/{id}', 'HomeController@index')->name('home');
+Route::group(['middleware' => 'approved'], function () {
+	Route::get('/home', 'HomeController@index')->name('home');
 });
 
 Route::get('/approval', 'HomeController@show')->name('approval');
@@ -27,7 +25,6 @@ Route::group(['prefix' => 'subs/emails',  'middleware' => 'approved'], function 
 //middleware does not apply to the next two routes:
 	Route::get('/subs/emails/create','SubmissionEmailController@create');	
 	Route::post('/subs/emails/create','SubmissionEmailController@store');
-
 
 Route::group(['prefix' => 'file',  'middleware' => 'approved'], function () {
 	Route::any('/index/','FileController@index');
@@ -54,7 +51,7 @@ Route::group(['prefix' => 'rate',  'middleware' => 'approved'], function () {
 Route::group(['prefix' => 'rater',  'middleware' => 'approved'], function () {
 	Route::get('/index/{id}','RaterController@index');
 	Route::get('/create/{id}','RaterController@create'); 
-	Route::get('/rate/rw/{file_id}/{rater_id}','RaterController@store'); 
+	Route::get('/rw/{file_id}/{rater_id}','RaterController@store'); 
 });
 
 Route::get('/rate/rw/{file_id}/{rater_id}/word','RwWordController');
@@ -76,7 +73,6 @@ Route::group(['prefix' => 'emails',  'middleware' => 'approved'], function () {
 	Route::post('/send','EmailController@store');	
 });
 
-
 Route::group(['prefix' => 'notes',  'middleware' => 'approved'], function () {
 	Route::get('/index/{id}','NotesController@index');
 	Route::get('/create/{id}','NotesController@create');
@@ -95,7 +91,6 @@ Route::group(['prefix' => 'login'], function () {
 	Route::get('/{provider}', 'Auth\LoginController@redirectToProvider');
 	Route::get('/{provider}/callback','Auth\LoginController@handleProviderCallback'); 	
 });
-
 
 Route::group(['prefix' => 'manage/users',  'middleware' => 'approved'], function () {
 	Route::get('/dashboard','ManageUsersController@dashboard');//->middleware('role:superadministratr|administrator|seniorUw');

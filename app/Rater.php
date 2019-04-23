@@ -7,8 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Rater extends Model
 {
         use Traits\RecordsActivity;
+        
+        public $table = 'raters';
 
-        protected $fillable = [ 
+        protected $fillable = [ 'lob',
                                 'cov_a',
                                 'other_structures',
                                 'loss_of_use',

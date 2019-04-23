@@ -17,8 +17,7 @@ class RatingWorksheetController extends Controller
      */
     public function index($id)
     {
-        $rw = RatingWorksheet::all();
-        $rw = $rw->where('file_id',$id);
+        $rw = RatingWorksheet::where('file_id', $id);
 
         return view('/rating_worksheet/index',[
             'rw' => $rw
@@ -45,13 +44,13 @@ class RatingWorksheetController extends Controller
 
         RatingWorksheet::create([
 
-        'file_id' => $file_id,
-        'rater_id' => $rater_id,
-        'premium_id' => $id
+            'file_id' => $file_id,
+            'rater_id' => $rater_id,
+            'premium_id' => $id
 
                   ]);                                                                                      
 
-        return redirect('/file/search');
+        return redirect('/file/show/'. $file_id);
     }
 
     /**
@@ -97,8 +96,7 @@ class RatingWorksheetController extends Controller
                              'raters.more_than_two_losses as more_than_two_losses_rate'
                     )
                 ->first(); 
-
-
+                
         return view('rating_worksheet/show',[
             'rw' => $rw
         ]);        

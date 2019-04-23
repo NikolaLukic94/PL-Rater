@@ -18,7 +18,7 @@
       <a href="/rate/index" class="list-group-item list-group-item-action bg-light">Open</a>
       <a href="/rate/create" class="list-group-item list-group-item-action bg-light">Create</a>      
     </div>   
-    <a href="user/profile/{{Auth::user()->name }}" class="list-group-item list-group-item-action bg-light">Profile</a>
+    <a href="/home" class="list-group-item list-group-item-action bg-light">Profile</a>
     <button class="dropdown-btn">Accounts 
       <i class="fa fa-caret-down"></i>
     </button>

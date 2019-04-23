@@ -206,22 +206,15 @@
               <input type="text" value="{{$file->mailing_address_state}}" name="location_address_state" required><br>
             </div>
           </div>
-        </div> 
-
-
-
-
-
-
+        </div>
           
             <br>
             <button type="submit" class="btn btn-outline-secondary">Update</button>
         </form>
       </div>
     </div>
-
-
-<div id="Paris" class="tabcontent">
+<!-- general info -->
+<div id="#" class="tabcontent">
   <div class="col">
     <div class="card-header text-center">General Info</div>
       <div class="card-body">
@@ -571,47 +564,56 @@
     </div>
   </div>
 </div>
+
 <div id="rw" class="tabcontent">
   <div class="col">
     <div class="card-header text-center">RWs:</div>
+    <div class="container">
       <div class="card-body">
         <form method="POST" action="/file/update/general-info/{{$file->id}}">
                 @if($rw)
+            <table class="text-center">
+                <tr>
+                  <th><abbr title="">lob</abbr></th>
+                  <th><abbr title="">Created at</abbr></th>                                   
+                  <th><abbr title=""></abbr></th>
+                </tr>                
                   @foreach($rw as $r)
+                  <div class="row">
                       <tr>
                         <td>
-                          @if(isset($r->created_at))
-                            {{date('m/d/Y',strtotime($r->created_at))}}
+                          {{$r->file_lob}}
+                        </td>                         
+                        <td>
+                          @if(isset($r->rw_created_at))
+                            {{date('m/d/Y',strtotime($r->rw_created_at))}}
                           @endif  
-                        </td> 
-                        <td>
-                          {{$r->cov_a}}
-                        </td>                                                 
-                        <td>
-                            <a class="btn btn-primary" href="/rating-worksheet/show/{{$r->id}}" role="button">Open</a> &nbsp;
-                            <a class="btn btn-primary" href="/send-rw" role="button">Email</a>
-                            <a class="btn btn-primary" href="" >Quote</a> &nbsp;                            
+                        </td>                                                  
+                        <td>    
+                          <a class="btn btn-primary" href="/rating-worksheet/show/{{$r->rw_id}}" role="button"><i class="fa fa-eye"></i></a> &nbsp;  
+                           <a class="btn btn-primary" href="" role="button"><i class="fas fa-envelope"></i></a> &nbsp;                             
+                           <a class="btn btn-primary" href="" role="button"><i class="fas fa-copy"></i></a> &nbsp; 
+                        </td>                                                                    
                           </form>                            
                         </td>                                     
                     </tr>
+                  </div>  
                   @endforeach
                 @else
                     <p>There are no RWs for this file! Go rate it <a href="/rater/index/{{$file->id}}">here!</a></p>
                 @endif
+            </div>
+          </table>  
         </form>
       </div>
     </div>
   </div>
 </div>
-<div id="rw" class="tabcontent">
+<div id="correspondence" class="tabcontent">
   <div class="col">
     <div class="card-header text-center">General Info</div>
       <div class="card-body">
-        @if($rw)
-          @foreach($rw as $r)
-            {{ $r->id }}
-          @endforeach
-        @endif    
+        <input type="file" name="file">
       </div>
     </div>
   </div>
@@ -651,3 +653,14 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 </script>
+
+<style>
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+table td{
+  padding-bottom: 4px;
+}
+
+</style>

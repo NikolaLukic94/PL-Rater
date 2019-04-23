@@ -27,70 +27,19 @@
                 <div class="card-header text-center">Please verify current info:</div>
                 <div class="card-body">
                    @if(isset($file))
-<form action="/file/rate/prepare/rw" method="POST">
-
-              {{ csrf_field() }} 
-
+            <form action="/file/rate/prepare/rw" method="POST">
+              {{ csrf_field() }}        
               <div class="field">
-
                 <div class="row">
-
                   <div class="col">         
-
-                    <label class="label" for="type_of_coverage">
-
-                      LOB
-
-                    </label>
-
-                  </div>
-
-                  <div class="col">             
-
-                      <select name="lob" class="col-md-4 form-group">
-
-                        <option  value="{{$file->lob}}">{{$file->lob}}</option>               
-
-                          @if($lob)
-
-                            @for($i = 1; $i < count($lob); $i++)    
-
-                           <option value="{{$i}}">{{$lob[$i]}}</option>
-
-                          @endfor  
-
-                        @endif              
-
-                      </select>
-
-                  </div>
-
-                </div>
-
-              </div>           
-
-              <div class="field">
-
-                <div class="row">
-
-                  <div class="col">         
-
                     <label class="label" for="cov_a">
-
                     <p>Coverage A</p>
-
                     </label>
-
                   </div>
-
                   <div class="col">             
-
                     <input name="cov_a" type="text" value="{{$file->cov_a}}" class="input" id="cov_a">
-
                   </div>
-
                 </div>
-
               </div>
 
               <div class="field">

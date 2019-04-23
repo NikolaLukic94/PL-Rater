@@ -36,7 +36,7 @@ class FileController extends Controller
 
               $files = DB::table('files')
                           ->when($search_named_insured, function ($query) use ($search_named_insured) {
-                              return $query->where('files.named_insured', 'like', '%' . $search_named_insured . '%');
+                              return $query->where('named_insured', 'like', '%' . $search_named_insured . '%');
                           })
                           ->when($search_lob, function ($query) use ($search_lob) {
                               return $query->where('lob', $search_lob);
@@ -73,15 +73,14 @@ class FileController extends Controller
                               'search_to_date' => $search_to_date,
                               ]);
                           
-              return view('/file/search_with_results',[
+              return view('/file/index',[
                 'files' => $files
               ]);
 
       } else {
-              $files = File::all();
               
               return view('/file/search',[
-                'files' => $files
+                'files' => File::all()
               ]);
         }
         
@@ -190,12 +189,9 @@ class FileController extends Controller
     public function show($id)
     {
         $file = File::findOrFail($id);
-
-        $allRw = RatingWorksheet::all();
-        $rw = $allRw->where('file_id',$id);
-
+        $rw = RatingWorksheet::where('file_id',$id);
         $submission = Submission::where('id',$file->submission_id)->first();
-/*
+
         $rw = DB::table('rating_worksheets')
                   ->leftJoin('files', 'rating_worksheets.file_id', '=', 'files.id')   
                   ->leftJoin('raters', 'rating_worksheets.rater_id', '=', 'raters.id')    
@@ -210,14 +206,14 @@ class FileController extends Controller
                            'files.other_structures as file_os',
                            'files.loss_of_use as file_lou',
                            'files.med_pay as file_med_pay',
-                           'files.aop as file_aop',
+                           'files.aop_ded as file_aop',
                            'files.construction_type as file_construction_type',
                            'files.protection_class as file_pc',
                            'files.new_purchase as file_new_purchase',
                            'files.prior_carrier as file_prior_carrier',
                            'files.zero_two_losses as file_losses',
                            'files.more_than_two_losses as file_more_than_two_losses',
-                           'premiums.grand_premim as grand_premim',
+                           'premiums.grand_premium as grand_premim',
                            'premiums.surplus_lines_tax_fee as sl_tax_fee',
                            'premiums.empa as empa_fee',
                            'raters.cov_a as cov_a_rate',
@@ -231,10 +227,9 @@ class FileController extends Controller
                            'raters.more_than_two_losses as more_than_two_losses_rate',
                            'raters.prior_carrier as prior_carrier_rate'
                            )
-                  ->where('file.id', $id)
                   ->orderBy('rating_worksheets.id')
                   ->get();
-*/
+
         return view('/file/index',[
             'file' => $file,
             'rw' => $rw,

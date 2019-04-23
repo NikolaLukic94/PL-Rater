@@ -19,22 +19,20 @@ class RaterController extends Controller
 	/* CHECK FOR ACCUARACY OF INFO AND IF NEEDED AMEND LIMITS/COVERAGES */
     public function index($id) {
 
-        $file = File::findOrFail($id); 
-
     	return view('/rater/prepare',[
-    		'file' => $file,
+    		'file' => File::findOrFail($id),
             'lob' => $this->lob
     	]);
     }
         /* ENTER RW COEFICIENTS IN DB */
         /* SHOW LIMITS AND COEFICIENTS THAT WILL BE APPLIED WITH LIMITS GIVEN */
-    public function create($id) {
+    public function create($id, Request $request) {
 
         // file we are currently rating
-        $file = DB::table('files')->where('id',$id)->first(); 
+        $file = File::where('id', $id)->first();
 
         // finding rates that should be applied, since different rates will apply to different lob
-        $rate = DB::table('rates')->where('lob', $file->lob)->first();
+        $rate = Rate::where('lob', $file->lob)->first();
 
         if ($rate == null) {
 
@@ -43,8 +41,7 @@ class RaterController extends Controller
             else 
 
         {
-            // getting coeficients that will be used for rating
-            $lob = null;
+            // getting coeficients that will be used for rating; lob of rates will always match the lob of file
             $cov_a  = null;
             $other_structures = null;
             $loss_of_use = null;
@@ -130,7 +127,7 @@ class RaterController extends Controller
                 $brokerage_fee = $request->brokerage_fee;
             } else {
                 $brokerage_fee = '0';
-            }
+            }       
 
             if(isset($request->agency_fee)) {
                 $agency_fee = $request->agency_fee;
@@ -140,7 +137,7 @@ class RaterController extends Controller
 
             //coeficitents that will be used for each 
             $rater = Rater::create([    
-                    'lob' => 'HO3',       
+                    'lob' => $file->lob,
                     'file_id' => $file_id,
                     'general_rate' => $rate->general_rate,
                     'cov_a' => $rate->cov_a,
@@ -158,7 +155,6 @@ class RaterController extends Controller
                     'inspection_fee' => $inspection_fee,
                     'brokerage_fee' => $brokerage_fee,
                     'agency_fee' => $agency_fee
-
                           ]);                      
 
             return view('/rater/rw_preview',[
@@ -172,8 +168,8 @@ class RaterController extends Controller
     /* CREATE/STORE RATING WORKESHEET */
     public function store($file_id, $rater_id) {
 
-        $file = DB::table('files')->where('id',$file_id)->first(); 
-        $rater = DB::table('raters')->where('lob', 'HO3')->first();
+        $file = File::where('id',$file_id)->first(); 
+        $rater = Rater::where('lob', $file->lob)->first();
 
         $cov_limits = $file->cov_a + $file->other_structures + $file->loss_of_use;
         $cov_limits_rate = ($rater->cov_a + $rater->other_structures + $rater->loss_of_use) / 4;
@@ -198,7 +194,7 @@ class RaterController extends Controller
 
         $file->status = 'rated';
 
-    	return redirect('/file/index');
+    	return redirect('/rating-worksheet/store/'. $file->id . '/' . $rater->id);
     }
 
 }

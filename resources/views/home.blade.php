@@ -43,7 +43,7 @@
                           <tr>
                             <th>Action</th>
                             <th>Subject</th>
-                            <th>Type</th>
+                            <th>Id</th>
                             <th>At</th>
                           </tr>
                           @foreach($activities as $activity)
