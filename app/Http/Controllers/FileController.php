@@ -115,8 +115,6 @@ class FileController extends Controller
 
         $submission = Submission::findOrFail($id); 
 
-        $file = new File;
-
         File::create([
 
           'named_insured' =>  request('named_insured'),
@@ -175,7 +173,7 @@ class FileController extends Controller
           'water_back_up_limit' => $submission->water_back_up_limit
                   ]);   
 
-  //      $file->save();
+          $submission->status = 'logged';
 
         return redirect('/file/index');
     }

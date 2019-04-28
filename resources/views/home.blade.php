@@ -1,23 +1,13 @@
 @extends('layouts.app')
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <title>PLQR</title>
-
 </head>
-
 <body>
-
   <div class="d-flex" id="wrapper">
-
     @include('partials.sidebar')
-
-    <!-- Page Content -->
     <div id="page-content-wrapper">
-
     @include('partials.navbar')
     <br>
       <div class="container">
@@ -34,9 +24,7 @@
                                   <b>Hello Again! </b>
                       </div>
                   </div><br>
-              
-
-                  <div class="card text-center" id="card">
+                  <div class="card text-center" id="card-act">
                       <div class="card-header">Your recent activities:</div>
                       <div class="card-body">
                         <table>
@@ -64,19 +52,26 @@
                             <td>{{ $activity->created_at->diffForHumans() }}</td>
                           </tr>  
                           @endforeach
-                        </table>
+                        </table><br>
+                        <div class="offset-4">
+                        {{ $activities->links() }}
+                        </div>
                       </div>
                   </div> 
+                </div>
+                </div>  
             </div>
           </div>
       </div>
-    <!-- /#page-content-wrapper -->
-
   </div>
-  <!-- /#wrapper -->
-
-
 
 </body>
 
 </html>
+
+<style>
+  #card-act {
+    padding-bottom: 50px;
+  }
+
+</style>

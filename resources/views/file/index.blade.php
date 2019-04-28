@@ -22,10 +22,10 @@
   <button class="tablinks" onclick="openCity(event, 'correspondence')">Correspondence</button>
   <button class="tablinks" onclick="openCity(event, 'submission')">Submission</button>
   <button class="tablinks" onclick="openCity(event, 'rw')">RW</button>     
-  <button class="tablinks" onclick="openCity(event, 'quote')">Quote</button>   
-  <button class="tablinks" onclick="openCity(event, 'binder')">Binder</button>
-  <button class="tablinks" onclick="openCity(event, 'policy')">Policy</button>                              
-  <button class="tablinks" onclick="openCity(event, 'finance')">Finance</button>      
+  <button class="tablinks" onclick="openCity(event, 'quote')" >Quote</button>   
+  <button class="tablinks" onclick="openCity(event, 'binder')" disabled>Binder</button>
+  <button class="tablinks" onclick="openCity(event, 'policy')" disabled>Policy</button>                              
+  <button class="tablinks" onclick="openCity(event, 'finance')" disabled>Finance</button>      
   <button class="tablinks" onclick="openCity(event, 'support')">Support</button>   
   <button class="tablinks" onclick="openCity(event, 'log')">Log</button>           
   <button class="tablinks" onclick="openCity(event, 'note')">Note</button>                     

@@ -28,11 +28,9 @@ class HomeController extends Controller
      */
     public function index(User $user)
     {
-        $activities = Activity::where('user_id', Auth::user()->id)->get();
-
         return view('home',[
             'user' => $user, //user who's signed it
-            'activities' => $activities
+            'activities' => Activity::where('user_id', Auth::user()->id)->paginate(10)
         ]);
     } 
 
