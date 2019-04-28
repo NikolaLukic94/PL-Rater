@@ -56,8 +56,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
+                                 <input type="password" id="pwd" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" onkeyup="validatePassword(this.value);"/ name="password" required><span id="msg"></span>
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('password') }}</strong>
