@@ -13,6 +13,7 @@ Route::get('/approval', 'HomeController@show')->name('approval');
 Route::middleware(['admin'])->group(function () {
     Route::get('/users', 'UserApprovalController@index')->name('admin.users.index');
     Route::post('/users/{user_id}/approve', 'UserApprovalController@create');
+    Route::post('/users/{user_id}/disapprove', 'UserApprovalController@destroy');    
 });
 
 Route::group(['prefix' => 'subs/emails',  'middleware' => 'approved'], function () {
@@ -100,6 +101,7 @@ Route::group(['prefix' => 'manage/users',  'middleware' => 'approved'], function
 	Route::get('/show/{id}','ManageUsersController@show');	
 	Route::get('/edit/{id}','ManageUsersController@edit');
 	Route::post('/edit/{id}','ManageUsersController@update');
+	Route::delete('/delete/{id}', 'ManageUsersController@destroy');		
 });
 
 Route::group(['prefix' => 'manage/role',  'middleware' => 'approved'], function () {
@@ -110,13 +112,13 @@ Route::group(['prefix' => 'manage/role',  'middleware' => 'approved'], function 
 	Route::get('/edit/{id}','RoleController@edit');
 	Route::post('/edit/{id}','RoleController@update');
 });
-
+/*
 Route::group(['prefix' => 'folder',  'middleware' => 'approved'], function () {
 	Route::get('/index','ManageUsersController@index');
 	Route::get('/create','ManageUsersController@create');
 	Route::post('/create','ManageUsersController@store');
 });
-
+*/
 Route::group(['prefix' => 'contactus'], function () {
 	Route::get('/create','ContactUsController@create');
 	Route::post('/send','ContactUsController@store');

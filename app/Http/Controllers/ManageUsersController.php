@@ -78,4 +78,14 @@ class ManageUsersController extends Controller
 	        	return view('/manage/users/create')
 	        }*/
     }
+
+    public function destroy($id) {
+
+        $user = User::find($id);
+
+        $user->delete();
+
+        return back();
+    }
+
 }
