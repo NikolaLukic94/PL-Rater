@@ -1,21 +1,9 @@
 @extends('layouts.app')
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <title>PLQR</title>
-
-</head>
-
-<body>
-
   <div class="d-flex" id="wrapper">
 
     @include('partials.sidebar')
 
-    <!-- Page Content -->
     <div id="page-content-wrapper">
 
     @include('partials.navbar')
@@ -82,16 +70,16 @@
         </select>
     </div>          
   </div>
-        <div class="form-row">
+      <div class="form-row">
         <div class="col-md-12 col-lg-12">
           <button type="submit" href="/file/index" class="btn btn-custom">
             <i class="fa fa-search" aria-hidden="true"></i>Search</button>
-          <a href="/file/search" class="btn btn-custom">
-            <i class="fa fa-times-circle" aria-hidden="true"></i>Clear</a>
+
         </div>
       </div>
     </form>
-    </div>
+  </div>
+<!-- results -->  
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-12">
@@ -117,7 +105,7 @@
                     <th><abbr title=""></abbr></th>  
                     <th><abbr title=""></abbr></th>
                   </tr>
-                  <tr><br>
+                  <tr>
                       @if($files)
                         @foreach($files as $file)
                             <tr>
@@ -176,19 +164,21 @@
 
 </html>
 
-
-
-
-
-
-
 <style type="text/css">
   input, select {
-    width: 100%;
-  }
+  width: 100%;
+  border-radius:25px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+table td{
+  padding-bottom: 4px;
+}
+
+
+
 
 </style>
-
-
-
 

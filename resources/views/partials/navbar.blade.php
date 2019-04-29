@@ -1,4 +1,4 @@
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <nav class="navbar navbar-expand-lg border-bottom">
         @if((Auth::check()) && (auth()->user()->approved_at !== null))
           <button class="btn btn-primary" id="menu-toggle">Menu</button>
         @endif
@@ -16,17 +16,17 @@
             </li>
             @else
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="#"><i class="fa fa-home" aria-hidden="true"></i>&nbsp Home</a>
             </li>            
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{ Auth::user()->name }}
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Profile</a>
-                <a class="dropdown-item" href="#">Settings</a>
+                <a class="dropdown-item" href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp Profile</a>
+                <a class="dropdown-item" href="#"><i class="fas fa-cog"></i>&nbsp Settings</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Log Out</a>
+                <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i>&nbsp Log Out</a>
               </div>
             </li>
             @endif

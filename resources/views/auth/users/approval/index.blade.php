@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 <!DOCTYPE html>
 <html lang="en">
@@ -9,30 +10,29 @@
     @include('partials.sidebar')
     <div id="page-content-wrapper">
     @include('partials.navbar')
-<<<<<<< HEAD
         <br>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-8">
+                <div class="col-md-10">
                     <div class="card text-center">
                         <div class="card-header">Users List to Approve</div>
                         <div class="card-body">
-=======
+
     <br>
       <div class="container">
           <div class="row justify-content-center">
-                          <div class="col-md-8">
+                          <div class="col-md-10">
                 <div class="card">
                     <div id="approve"><!-- div approve -->
                     <div class="card-header">Users List to Approve</div>
                     <div class="card-body">
->>>>>>> aeb4c07cb0541ac2a625f19929a876dd883506ab
+
                         @if (session('message'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('message') }}
                             </div>
                         @endif
-<<<<<<< HEAD
+
                             <table class="table">
                                 <tr>
                                     <th>User name</th>
@@ -62,7 +62,7 @@
                         </div>
                     </div>
                   </div>
-=======
+
                         <table class="table">
                             <tr>
                                 <th>User name</th>
@@ -140,11 +140,11 @@
                         </table>
                     </div>
                 </div><!-- div disapprove -->                
->>>>>>> aeb4c07cb0541ac2a625f19929a876dd883506ab
+
               </div>
             </div>
 </body>
-<<<<<<< HEAD
+
 </html>
 =======
 
@@ -162,4 +162,4 @@ table td{
 
 </style>
 
->>>>>>> aeb4c07cb0541ac2a625f19929a876dd883506ab
+

@@ -1,17 +1,14 @@
 @extends('layouts.app')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>PLQR</title>
-</head>
-<body>
+
   <div class="d-flex" id="wrapper">
     @include('partials.sidebar')
-    <!-- Page Content -->
+
     <div id="page-content-wrapper">
     @include('partials.navbar') 
+    <br>
     <div class="container text-center">
-<table>
+      <div class="card">
+  <table> 
     <tr>
       <th></th>
       <th><abbr title="Named_insured">Named Insured</abbr></th>
@@ -26,7 +23,7 @@
       <th><abbr title=""></abbr></th>                  
       <th><abbr title=""></abbr></th>
     </tr>
-    <tr><br>
+    <tr>
         @if($submission)
           @foreach($submission as $sub)
              @if($sub->status = 'not_logged')
@@ -99,7 +96,8 @@
             <p>There are no new emails!</p>
         @endif
     </tr>
-</table>
+  </table>
+</div>
 </div>
 
 
@@ -108,12 +106,11 @@
   <!-- /#wrapper -->
 </div>
 
-
-</body>
-
-</html>
 <style>
-
+  input, select {
+  width: 100%;
+  border-radius:25px;
+}
 tr:nth-child(even) {
   background-color: #dddddd;
 }

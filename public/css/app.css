@@ -8,10 +8,27 @@
 /* Style the tab */
 body {
   overflow-x: hidden;
+  background-color: gray;
+}
 
+input, select {
+	width: 100%;
+}
+
+.navbar{
+	font-size: 1.6em;
+	width: 100%;
+	padding: 16px;
+	background-color: #19222a;
+	color: white;
+}
+.sidebar {
+	background-color: #19222a;
 }
 
 #sidebar-wrapper {
+  font-weight: 400;
+  font-size: 1.2em;
   min-height: 100vh;
   margin-left: -15rem;
   -webkit-transition: margin .25s ease-out;
@@ -22,11 +39,30 @@ body {
 
 #sidebar-wrapper .sidebar-heading {
   padding: 0.875rem 1.25rem;
+  width: 100%;
+  display:block;
   font-size: 1.2rem;
+  color: #333;
+  background-color: #09f;
+}
+
+#sidebar-wrapper a {
+  padding: 0.875rem 1.25rem;
+  width: 100%;
+  display:block;
+  font-size: 1.2rem;
+  background-color: #19222a;
+  color: white;
 }
 
 #sidebar-wrapper .list-group {
   width: 15rem;
+  background-color: #19222a;
+  color: #white;
+}
+
+#sidebar-wrapper .list-group button{
+    color: white;
 }
 
 #page-content-wrapper {
@@ -40,6 +76,7 @@ body {
 @media (min-width: 768px) {
   #sidebar-wrapper {
     margin-left: 0;
+
   }
 
   #page-content-wrapper {
@@ -52,15 +89,14 @@ body {
   }
 }
 
-
 .dropdown-btn {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 20px;
-  color: #818181;
   display: block;
   border: none;
-  background: none;
+  color: white;
+  background-color: #19222a;
   width:100%;
   text-align: left;
   cursor: pointer;
@@ -73,7 +109,6 @@ body {
   font-size: 20px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
-
 
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
@@ -91,12 +126,12 @@ body {
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
-  background-color: #f1f1f1;
+
 }
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
-  background-color: inherit;
+
   float: left;
   border: none;
   outline: none;
@@ -154,8 +189,6 @@ body {
     font-family:arial,sans-serif;
     color:#fff;
 }
-
-
 
 table {
     width:100%;
