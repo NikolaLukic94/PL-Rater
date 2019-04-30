@@ -14,6 +14,7 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
     @include('partials.navbar')
+    <br>
     <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -54,7 +55,7 @@
                     {{Form::label('body', 'Text')}}
                     {{Form::textarea('body', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Your email here...'])}}
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-outline-secondary" style="width: 100%">Send</button>
             </form>       
                 </div>
             </div>

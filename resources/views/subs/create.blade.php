@@ -1,16 +1,4 @@
 @extends('layouts.app')
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <title>PLQR</title>
-
-</head>
-
-<body>
-
   <div class="d-flex" id="wrapper">
   @if(Auth::check())
     @include('partials.sidebar')
@@ -19,12 +7,12 @@
     <div id="page-content-wrapper">
 
     @include('partials.navbar')
-
+<br>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header text-center">Please verify current info:</div>
+                <div class="card-header text-center">Please provide the most current info:</div>
                 <div class="card-body">
         <form action="/subs/emails/create" method="POST">
         {{ csrf_field() }}
@@ -83,9 +71,9 @@
                 LOB
               </label>
             </div>
-            <div class="col">             
-              <select name="lob" class="col-md-4 form-group">
-                  <option  value="">Select State</option>
+            <div class="form-group col-md-6">             
+              <select name="lob" class="form-group">
+                  <option  value="">Select LOB</option>
                     @if($lob)
                       @for($i = 1; $i <= count($lob); $i++)   
                     <option value="{{$i}}">{{$lob[$i]}}</option>
@@ -176,9 +164,9 @@
                 State
               </label>
             </div>
-            <div class="col">             
-              <div class="col">             
-                <select name="mailing_address_state" class="col-md-4 form-group">
+            <div class="col">
+            <div class="form-group col-md-6">                         
+                <select name="mailing_address_state" class="form-group">
                     <option  value="">Select State</option>
                     @if($state)
                       @for($i = 1; $i <= count($state); $i++)   
@@ -465,14 +453,13 @@
         </div>
         <hr>
         <div class="block">
-                    <button type="submit" class="btn btn-outline-secondary">Send</button>
+          <button type="submit" class="btn btn-outline-secondary" style="width: 100%">Send</button>
         </div>
     </div>
         <div class="block">
           <div class="notification">
             <hr>
             <div class="delete"></div>
-              <p class="text-center">For more accurate pricing, please provide us with all information available!</p>
           </div>
           <hr>
         </div>
@@ -488,13 +475,4 @@
         </div>
     </div>
 </div>
-    <!-- /#page-content-wrapper -->
-
   </div>
-  <!-- /#wrapper -->
-
-
-
-</body>
-
-</html>
