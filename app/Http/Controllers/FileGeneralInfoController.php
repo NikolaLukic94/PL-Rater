@@ -18,20 +18,20 @@ class FileGeneralInfoController extends Controller
     {
         $file = File::findOrFail($id);
 
-        $file->named_insured =    $request->named_insured;
-        $file->entity_type =     $request->entity_type;   
-        $file->ssn =  $request->ssn;
-        $file->additional_ni =      $request->additional_ni;
-        $file->mailing_address_street_name_and_number =      $request->mailing_address_street_name_and_number;
-        $file->mailing_address_city =      $request->mailing_address_city;
-        $file->mailing_address_county =      $request->mailing_address_county;
-        $file->mailing_address_zip =      $request->mailing_address_zip;
-        $file->mailing_address_state =      $request->mailing_address_state;
-        $file->location_address_street_name_and_number =      $request->location_address_street_name_and_number;
-        $file->location_address_city =      $request->location_address_city;
-        $file->location_address_county =      $request->location_address_county;
-        $file->location_address_zip =      $request->location_address_zip;
-        $file->location_address_state =      $request->location_address_state;                                                                 
+            $file->named_insured =    $request->named_insured;
+            $file->entity_type =     $request->entity_type;   
+            $file->ssn =  $request->ssn;
+            $file->additional_ni =      $request->additional_ni;
+            $file->mailing_address_street_name_and_number =      $request->mailing_address_street_name_and_number;
+            $file->mailing_address_city =      $request->mailing_address_city;
+            $file->mailing_address_county =      $request->mailing_address_county;
+            $file->mailing_address_zip =      $request->mailing_address_zip;
+            $file->mailing_address_state =      $request->mailing_address_state;
+            $file->location_address_street_name_and_number =      $request->location_address_street_name_and_number;
+            $file->location_address_city =      $request->location_address_city;
+            $file->location_address_county =      $request->location_address_county;
+            $file->location_address_zip =      $request->location_address_zip;
+            $file->location_address_state =      $request->location_address_state;                                                                 
         $file->save();
           
         return view('/file/index',[

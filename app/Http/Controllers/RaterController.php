@@ -29,10 +29,10 @@ class RaterController extends Controller
     public function create($id, Request $request) {
 
         // file we are currently rating
-        $file = File::where('id', $id)->first();
+        $file = File::findOrFail($id);
 
         // finding rates that should be applied, since different rates will apply to different lob
-        $rate = Rate::where('lob', $file->lob)->first();
+        $rate = Rate::where('lob', $file->lob);
 
         if ($rate == null) {
 
@@ -168,7 +168,7 @@ class RaterController extends Controller
     /* CREATE/STORE RATING WORKESHEET */
     public function store($file_id, $rater_id) {
 
-        $file = File::where('id',$file_id)->first(); 
+        $file = File::findOrFail($file_id); 
         $rater = Rater::where('lob', $file->lob)->first();
 
         $cov_limits = $file->cov_a + $file->other_structures + $file->loss_of_use;

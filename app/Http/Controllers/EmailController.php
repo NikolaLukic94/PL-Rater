@@ -34,7 +34,6 @@ class EmailController extends Controller
         $to = $request->input('to');
   
       // \Mail::to($request->to)->send(new CustomEmail($subject,$body));
-
         dispatch(new \App\Jobs\SendCustomEmail($subject,$body,$to));
 
         return redirect('/home');

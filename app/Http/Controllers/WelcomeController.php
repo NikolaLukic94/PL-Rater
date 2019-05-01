@@ -10,9 +10,7 @@ use Illuminate\Support\Facades\DB;
 class WelcomeController extends Controller
 {
     public function index() {
-
-        $submission = DB::table('submissions')->where('status', 'email')->count();
-                                            
+                                                
 	    $bgTime = Carbon::now()->format('H:i');
 	    $usTime = Carbon::now('US/Central')->format('H:i'); 
 	    $montrealTime = Carbon::now('America/Montreal')->format('H:i');   	
@@ -21,7 +19,7 @@ class WelcomeController extends Controller
 			'bgTime' => $bgTime,
 			'usTime' => $usTime,
 			'montrealTime' => $montrealTime,
-			'submission' => $submission
+			'submission' => Submission::where('status', 'email')->count()
 		]);
 
   }

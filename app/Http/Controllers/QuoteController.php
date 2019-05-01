@@ -14,13 +14,9 @@ class QuoteController extends Controller
 {
     public function create() {
 
-    	$file = DB::table('files')->where('id',1)->first();
-
-    	$rw = DB::table('rating_worksheets')->where('id',1)->first();
-
     	return view('/quoting/create',[
-    		'file' => $file,
-    		'rw' => $rw,
+    		'file' => File::where('id',1)->first(),
+    		'rw' => RatingWorksheet::where('id',1)->first();
     		'forms' => Form::all()
     	]);
 

@@ -13,36 +13,30 @@ class ManageUsersController extends Controller
 {
 	public function index() {
 
-    	$users = DB::table('users')->simplePaginate(10);
-
         return view('/manage/users/index', [
-        	'users' => $users
+        	'users' => User::simplePaginate(10)
         ]);
     }
 
     public function show($id)
     {
-        $user = User::findOrFail($id);
-
         return view('/manage/users/show', [
-            'user' => $user
+            'user' => User::findOrFail($id)
         ]);
     
     }
 
     public function edit($id)  {
 
-        $user = User::findOrFail($id);
-
-        return view('/manage/users/edit', compact('user'));
+        return view('/manage/users/edit', [
+            'user' => User::findOrFail($id)
+        ]);
     }
 
     public function create() {
-        
-        $roles = Role::all();
-
+    
         return view('/manage/users/create',[
-            'roles' => $roles
+            'roles' => Role::all()
         ]);
     }
 

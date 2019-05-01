@@ -46,5 +46,21 @@ class File extends Model
                                 'location_address_state',
 		             	'status',
         		        'submission_number',
-                                'submission_id' ];       
+                                'submission_id' ];     
+
+        public function rws(){
+        
+            return $this->hasMany(RatingWorksheet::class);
+        
+        }   
+
+        public function submission(){
+        
+            return $this->belongsTo(Submission::class, 'submission_id');
+        
+        }       
+
+        public function notes() {
+            return $this->hasMany(Note::class)->latest();
+        }                                          
 }

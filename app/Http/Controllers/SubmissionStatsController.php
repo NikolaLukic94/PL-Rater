@@ -10,7 +10,7 @@ class SubmissionStatsController extends Controller
 {
     public function index() {
         /* Getting all subs results */
-    	$subs = DB::table('submissions')->get();
+    	$subs = Submission::all();
     	/* COUNTING # OF SUBS PER AGENCY */
     	$allAgencies = [];
     	$nullAgency = [];

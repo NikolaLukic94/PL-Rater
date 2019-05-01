@@ -17,10 +17,8 @@ class RatingWorksheetController extends Controller
      */
     public function index($id)
     {
-        $rw = RatingWorksheet::where('file_id', $id);
-
         return view('/rating_worksheet/index',[
-            'rw' => $rw
+            'rw' => RatingWorksheet::findOrFail($id)
         ]);
     }
 
@@ -39,7 +37,7 @@ class RatingWorksheetController extends Controller
     public function store($file_id, $rater_id)
     {
 
-        $premium = DB::table('raters')->where('file_id', $file_id)->first();
+        $premium = Premium::where('file_id', $file_id)->first();
         $id = $premium->id;
 
         RatingWorksheet::create([

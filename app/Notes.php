@@ -11,4 +11,8 @@ class Notes extends Model
     protected $fillable = [
         'title', 'text', 'file_id'
     ];
+
+    public function file() {
+        return $this->belongsTo(File::class, 'file_id');
+    }    
 }

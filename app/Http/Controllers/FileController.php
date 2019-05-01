@@ -6,6 +6,7 @@ use App\File;
 use App\Submission;
 use App\RatingWorksheet;
 use App\Notes;
+use App\Activity;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\DB;
@@ -173,7 +174,7 @@ class FileController extends Controller
           'water_back_up_limit' => $submission->water_back_up_limit
                   ]);   
 
-          $submission->status = 'logged';
+       // $submission->status = 'logged';
 
         return redirect('/file/index');
     }
@@ -187,8 +188,9 @@ class FileController extends Controller
     public function show($id)
     {
         $file = File::findOrFail($id);
-        $rw = RatingWorksheet::where('file_id',$id);
-        $submission = Submission::where('id',$file->submission_id)->first();
+        $rw = $file->rws()->get();
+        $submission =  $file->submission()->first(); 
+        $log = Activity::where('subject_id', $id)->first();
 
         $rw = DB::table('rating_worksheets')
                   ->leftJoin('files', 'rating_worksheets.file_id', '=', 'files.id')   
@@ -232,7 +234,8 @@ class FileController extends Controller
             'file' => $file,
             'rw' => $rw,
             'notes' => Notes::all(),
-            'submission' => $submission
+            'submission' => $submission,
+            'log' => $log
         ]);
     }
     

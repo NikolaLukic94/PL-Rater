@@ -17,9 +17,9 @@ class RwWordController extends Controller
 {
     public function __invoke($file_id, $rater_id) {
 
-        $file = DB::table('files')->where('id',$file_id)->get();
+        $file = File::where('id',$file_id)->get();
         $rater = Rater::findOrFail($rater_id); 
-        $premium = DB::table('premiums')->where('file_id', $file_id)->get();
+        $premium = Premium::where('file_id', $file_id)->get();
         $total_premium = $premium[0]->grand_premium + $premium[0]->surplus_lines_tax_fee + $premium[0]->empa;
 
         $phpWord = new \PhpOffice\PhpWord\PhpWord();

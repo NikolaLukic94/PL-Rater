@@ -1,67 +1,60 @@
 @extends('layouts.app')
   <div class="d-flex" id="wrapper">
-
     @include('partials.sidebar')
-
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-
+    <div id="page-content-wrapper"> 
     @include('partials.navbar')
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'general')">General Info</button>
-  <button class="tablinks" onclick="openCity(event, 'correspondence')">Correspondence</button>
-  <button class="tablinks" onclick="openCity(event, 'submission')">Submission</button>
-  <button class="tablinks" onclick="openCity(event, 'rw')">RW</button>     
-  <button class="tablinks" onclick="openCity(event, 'quote')" >Quote</button>   
-  <button class="tablinks" onclick="openCity(event, 'binder')" disabled>Binder</button>
-  <button class="tablinks" onclick="openCity(event, 'policy')" disabled>Policy</button>                              
-  <button class="tablinks" onclick="openCity(event, 'finance')" disabled>Finance</button>      
-  <button class="tablinks" onclick="openCity(event, 'support')">Support</button>   
-  <button class="tablinks" onclick="openCity(event, 'log')">Log</button>           
-  <button class="tablinks" onclick="openCity(event, 'note')">Note</button>                     
-</div>
-<!-- Tab content -->    
-
-    @include('partials.file.rw')
-    @include('partials.file.submission')
-    @include('partials.file.general')
-    @include('partials.file.correspondence')
- 
-<div id="#" class="tabcontent">
-  <div class="col">
-    <div class="card-header text-center">General Info</div>
-      <div class="card-body">
-        <form method="POST" action="/file/update/general-info/{{$file->id}}">
-          <h5>Status: {{$file->status}}</h5>
-          <hr>   
-          <h5>Underwriter:</h5>
-          <hr>
-          <h5>Agency: {{$file->agency_name}}</h5>
-          <hr>
-          <h5>Agency status:</h5>
-          <hr>  
-          <h5>Effective date: {{$file->effective_date}}</h5>
-        </form>
+      <div class="tab">
+        <div class="container">
+          <button class="tablinks" onclick="openCity(event, 'general')">General Info</button>
+          <button class="tablinks" onclick="openCity(event, 'correspondence')">Correspondence</button>
+          <button class="tablinks" onclick="openCity(event, 'submission')">Submission</button>
+          <button class="tablinks" onclick="openCity(event, 'rw')">RW</button>     
+          <button class="tablinks" onclick="openCity(event, 'quote')" >Quote</button>   
+          <button class="tablinks" onclick="openCity(event, 'binder')" disabled>Binder</button>
+          <button class="tablinks" onclick="openCity(event, 'policy')" disabled>Policy</button>                              
+          <button class="tablinks" onclick="openCity(event, 'finance')" disabled>Finance</button>      
+          <button class="tablinks" onclick="openCity(event, 'support')">Support</button>   
+          <button class="tablinks" onclick="openCity(event, 'log')">Log</button>           
+          <button class="tablinks" onclick="openCity(event, 'note')">Note</button>                     
+        </div>
       </div>
-    </div>
+        @include('partials.file.rw')
+        @include('partials.file.submission')
+        @include('partials.file.general')
+        @include('partials.file.correspondence')
+        <div id="#" class="tabcontent">
+          <div class="col">
+            <div class="card-header text-center">General Info</div>
+              <div class="card-body">
+                <form method="POST" action="/file/update/general-info/{{$file->id}}">
+                  <h5>Status: {{$file->status}}</h5>
+                  <hr>   
+                  <h5>Underwriter:</h5>
+                  <hr>
+                  <h5>Agency: {{$file->agency_name}}</h5>
+                  <hr>
+                  <h5>Agency status:</h5>
+                  <hr>  
+                  <h5>Effective date: {{$file->effective_date}}</h5>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="log" class="tabcontent">
+          <div class="col">
+            <div class="card-header"></div>
+              <div class="card-body">
+                <p>Created on:</p>
+                <p>by:</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
   </div>
 </div>
-
-
-
-
-     </div>
-       </div>
-    <!-- /#page-content-wrapper -->
-
-
-  <!-- /#wrapper -->
-
-
-
-</body>
-
-</html>
 <script>
 function openCity(evt, cityName) {
   // Declare all variables

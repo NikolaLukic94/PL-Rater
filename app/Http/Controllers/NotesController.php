@@ -12,40 +12,20 @@ use Auth;
 
 class NotesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index($id)
     {
-        $notes = DB::table('notes')->where('file_id', $id)->simplePaginate(5);
-
         return view('/notes/index',[
-                'notes' => $notes
+                'notes' => File::where('file_id', $id)->notes()->simplePaginate(5)
             ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create($id)
     {   
-        $file = DB::table('files')->where('id', $id)->first();
-
         return view('/notes/create',[            
-            'file' => $file
+            'file' => File::where('id', $id)->first()
         ]);        
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store($id, Request $request)
     {
         $user = auth()->user();
@@ -67,7 +47,7 @@ class NotesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {   //only superadmin
+    {   
         $notes = Notes::find($id);
         
         $notes->delete();
