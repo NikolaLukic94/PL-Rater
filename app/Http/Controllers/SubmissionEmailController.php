@@ -161,8 +161,6 @@ class SubmissionEmailController extends Controller
     public function destroy($id) {
 
         $submission = Submission::find($id);
-
-        LogActivity::addToLog('deleted submission id ' . $id . $submission->named_insured );
         
         $submission->delete();
 

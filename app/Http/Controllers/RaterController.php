@@ -11,36 +11,20 @@ use App\Premium;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
-use App\LogActivity;
+
 /* USED FOR GENERATING RATING WORKSHEETS AND CALCULATING PREMIUM */
 
 class RaterController extends Controller
 {
-	/* CHECK FOR ACCUARACY OF INFO AND IF NEEDED AMEND LIMITS/COVERAGES */
-    public function index($id) {
 
-    	return view('/rater/prepare',[
-    		'file' => File::findOrFail($id),
-            'lob' => $this->lob
-    	]);
-    }
-        /* ENTER RW COEFICIENTS IN DB */
-        /* SHOW LIMITS AND COEFICIENTS THAT WILL BE APPLIED WITH LIMITS GIVEN */
-    public function create($id, Request $request) {
+public  function createNewWithCalculatedCoeficients($id, $request) {
 
-        // file we are currently rating
-        $file = File::findOrFail($id);
+            $file = null;
+            $rate = null;
 
-        // finding rates that should be applied, since different rates will apply to different lob
-        $rate = Rate::where('lob', $file->lob);
+            $file = File::findOrFail($id);
+            $rate = Rate::where('lob', $file->lob)->first();
 
-        if ($rate == null) {
-
-            return view('/rater/rates_not_found'); 
-        } 
-            else 
-
-        {
             // getting coeficients that will be used for rating; lob of rates will always match the lob of file
             $cov_a  = null;
             $other_structures = null;
@@ -133,61 +117,127 @@ class RaterController extends Controller
                 $agency_fee = $request->agency_fee;
             } else {
                 $agency_fee = '0';
-            }
+            }                
 
-            //coeficitents that will be used for each 
-            $rater = Rater::create([    
-                    'lob' => $file->lob,
-                    'file_id' => $file_id,
-                    'general_rate' => $rate->general_rate,
-                    'cov_a' => $rate->cov_a,
-                    'other_structures' => $rate->other_structures,
-                    'loss_of_use' => $rate->loss_of_use,
-                    'med_pay' => $med_pay_rate,
-                    'aop_ded' => $aop_ded_rate,
-                    'construction_type' => '1',
-                    'new_purchase' => '1',
-                    'prior_carrier' => $prior_carrier_rate,
-                    'prior_carrier_name' => $prior_carrier_name_rate,
-                    'zero_two_losses' => $zero_two_losses_rate,
-                    'more_than_two_losses' => $more_than_two_losses, 
-                    'protection_class' => $protection_class_rate,
-                    'inspection_fee' => $inspection_fee,
-                    'brokerage_fee' => $brokerage_fee,
-                    'agency_fee' => $agency_fee
-                          ]);                      
+            $rater = new Rater;
+
+                $rater->lob = $file->lob;
+                $rater->file_id = $file_id;
+                $rater->cov_a = $rate->cov_a;
+                $rater->other_structures = $rate->other_structures;
+                $rater->loss_of_use = $rate->loss_of_use;
+                $rater->med_pay = $med_pay_rate;
+                $rater->aop_ded = $aop_ded_rate;
+                $rater->construction_type = '1';
+                $rater->new_purchase = '1';
+                $rater->prior_carrier = $prior_carrier_rate;
+                $rater->prior_carrier_name = $prior_carrier_name_rate;
+                $rater->zero_two_losses = $zero_two_losses_rate;
+                $rater->more_than_two_losses = $more_than_two_losses; 
+                $rater->protection_class = $protection_class_rate;
+            /*    $rater->inspection_fee = $inspection_fee;
+                $rater->brokerage_fee = $brokerage_fee;
+                $rater->agency_fee = $agency_fee;*/
+
+            $rater->save();
+
+            return $rater;
+
+        }
+
+
+
+	/* CHECK FOR ACCUARACY OF INFO AND IF NEEDED AMEND LIMITS/COVERAGES */
+    public function index($id) {
+
+    	return view('/rater/prepare',[
+    		'file' => File::findOrFail($id),
+            'lob' => $this->lob
+    	]);
+    }
+        /* ENTER RW COEFICIENTS IN DB */
+        /* SHOW LIMITS AND COEFICIENTS THAT WILL BE APPLIED WITH LIMITS GIVEN */
+    public function create($id, Request $request) {
+
+        // file we are currently rating
+        $file = File::findOrFail($id);
+        // finding rates that should be applied, since different rates will apply to different lob
+        $rate = Rate::where('lob', $file->lob)->first();
+
+        if ($rate == null) {
+            return view('/rater/rates_not_found'); 
+        } 
+            else 
+        {
+            $rater = $this->createNewWithCalculatedCoeficients($id, $request);
 
             return view('/rater/rw_preview',[
                 'file' => $file,
                 'rater' => $rater
             ]);
-
-  
-    }
+        }
  }
+
+    public function getFilesCovLimits($id) {
+
+        $cov_limits = null;
+
+        $file = File::findOrFail($id); 
+
+        $this->$cov_limits = $file->cov_a + $file->other_structures + $file->loss_of_use;
+
+        return $cov_limits;
+
+    }
+
+    public function getFilesCovLimitsRate($id) {
+
+        $cov_limits_rate = null;
+
+        $file = File::find($id); 
+        $rater = Rater::where('lob', $file->lob)->first();
+
+        $this->$cov_limits_rate = ($rater->cov_a + $rater->other_structures + $rater->loss_of_use) / 3;
+
+        return $cov_limits_rate;
+
+    }
+
+    public function getOtherRater($id) {
+
+        $other_rater = null;
+
+        $file = File::findOrFail($id);
+
+        $rater = Rater::where('lob', $file->lob)->first();
+
+
+        $this->$other_rater = ($rater->aop_ded + 
+                                $rater->protection_class +
+                                $rater->new_purchase +
+                                $rater->prior_carrier +
+                                $rater->prior_carrier_name) / 5;
+        return $other_rater;
+
+    }
+
     /* CREATE/STORE RATING WORKESHEET */
     public function store($file_id, $rater_id) {
 
         $file = File::findOrFail($file_id); 
-        $rater = Rater::where('lob', $file->lob)->first();
 
-        $cov_limits = $file->cov_a + $file->other_structures + $file->loss_of_use;
-        $cov_limits_rate = ($rater->cov_a + $rater->other_structures + $rater->loss_of_use) / 4;
-
-        $other_rater = ($rater->aop_ded + 
-                        $rater->protection_class +
-                        $rater->new_purchase +
-                        $rater->prior_carrier +
-                        $rater->prior_carrier_name) / 5;
+        $cov_limits = $this->getFilesCovLimits($file_id);
+        $cov_limits_rate = $this->getFilesCovLimitsRate($file_id);
+        $other_rater = $this->getOtherRater($file_id);
 
         $calc = ($cov_limits/$cov_limits_rate)*$other_rater;
 
-        $tax = $calc * 0.04;
+        $surplus_lines_tax_fee = $calc * 0.04;
         $empa = $calc * 0.02;
 
         $premium = Premium::create([
             'grand_premium' => $calc,
-            'surplus_lines_tax_fee' => $tax,
+            'surplus_lines_tax_fee' => $surplus_lines_tax_fee,
             'file_id' => $file->id,
             'empa' => $empa
          ]);

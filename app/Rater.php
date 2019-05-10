@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Rater;
+use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 
 class Rater extends Model
@@ -24,4 +26,7 @@ class Rater extends Model
                                 'location_address_state',
                                 'file_id'
         		    		]; 
+
+        
+                                        
 }

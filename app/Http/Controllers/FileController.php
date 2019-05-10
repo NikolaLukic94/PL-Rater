@@ -96,10 +96,8 @@ class FileController extends Controller
     public function create($id)
     {
 
-        $submission = Submission::findOrFail($id); 
-
         return view('file/create', [
-          'submission' => $submission,
+          'submission' => Submission::findOrFail($id),
           'state' => $this->state,
           'type_of_entity' => $this->type_of_entity
         ]);
@@ -190,7 +188,6 @@ class FileController extends Controller
         $file = File::findOrFail($id);
         $rw = $file->rws()->get();
         $submission =  $file->submission()->first(); 
-        $log = Activity::where('subject_id', $id)->first();
 
         $rw = DB::table('rating_worksheets')
                   ->leftJoin('files', 'rating_worksheets.file_id', '=', 'files.id')   
@@ -235,7 +232,7 @@ class FileController extends Controller
             'rw' => $rw,
             'notes' => Notes::all(),
             'submission' => $submission,
-            'log' => $log
+            'log' => Activity::where('subject_id', $id)->first()
         ]);
     }
     

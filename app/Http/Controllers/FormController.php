@@ -56,7 +56,7 @@ class FormController extends Controller
             $extension = $request->file('attachment')->getClientOriginalExtension();
         //filename to store
             $fileNameToStore = $filename.'_'.time().'.'.$extension;    
-        // upload img
+        // upload file
             $path = $request->file('attachment')->storeAs('public/forms',$fileNameToStore);
         }
 

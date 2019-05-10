@@ -35,9 +35,7 @@ class ManageUsersController extends Controller
 
     public function create() {
     
-        return view('/manage/users/create',[
-            'roles' => Role::all()
-        ]);
+        return view('/manage/users/create');
     }
 
     public function store(Request $request) {

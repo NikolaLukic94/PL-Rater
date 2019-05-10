@@ -80,7 +80,7 @@ class QuoteController extends Controller
           'mold_limit' => $file->mold_limit,
           'water_back_up' => $file->water_back_up,
           'water_back_up_limit' => $file->water_back_up_limit
-                  ]);   
+        ]);   
 
 
         return redirect('/file/index');

@@ -22,9 +22,9 @@ class EmailController extends Controller
 
     public function create()  {
 
-        $submission = DB::table('submissions')->get();
-
-        return view('/functionalities/create_email',compact('submission'));
+        return view('/functionalities/create_email',[
+            'submission' = Submission::all();
+        ]);
     }
 
     public function store(Request $request) {

@@ -18,16 +18,16 @@ class FileRatingCharacteristicsController extends Controller
     {
         $file = File::findOrFail($id);
 
-        $file->lob =    $request->lob;
-        $file->cov_a =     $request->cov_a;   
-        $file->other_structures =  $request->other_structures;
-        $file->med_pay =      $request->med_pay;
-        $file->aop_ded =      $request->aop_ded;
-        $file->construction_type =      $request->construction_type;
-        $file->protection_class =      $request->protection_class;
-        $file->new_purchase =      $request->new_purchase;
-        $file->prior_carrier =      $request->prior_carrier;
-        $file->prior_carrier_name =      $request->prior_carrier_name;
+            $file->lob =    $request->lob;
+            $file->cov_a =     $request->cov_a;   
+            $file->other_structures =  $request->other_structures;
+            $file->med_pay =      $request->med_pay;
+            $file->aop_ded =      $request->aop_ded;
+            $file->construction_type =      $request->construction_type;
+            $file->protection_class =      $request->protection_class;
+            $file->new_purchase =      $request->new_purchase;
+            $file->prior_carrier =      $request->prior_carrier;
+            $file->prior_carrier_name =      $request->prior_carrier_name;
 
         $file->save();
 
