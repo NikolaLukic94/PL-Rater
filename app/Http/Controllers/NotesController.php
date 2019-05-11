@@ -40,12 +40,6 @@ class NotesController extends Controller
         return redirect('notes/create');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Notes  $notes
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {   
         $notes = Notes::find($id);

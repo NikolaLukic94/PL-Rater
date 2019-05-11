@@ -21,7 +21,5 @@ class WelcomeController extends Controller
 			'montrealTime' => $montrealTime,
 			'submission' => Submission::where('status', 'email')->count()
 		]);
-
   }
-
 }

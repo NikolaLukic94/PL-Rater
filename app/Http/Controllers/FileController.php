@@ -95,7 +95,6 @@ class FileController extends Controller
      */
     public function create($id)
     {
-
         return view('file/create', [
           'submission' => Submission::findOrFail($id),
           'state' => $this->state,
@@ -103,12 +102,6 @@ class FileController extends Controller
         ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request,$id)
     {
 
@@ -177,12 +170,6 @@ class FileController extends Controller
         return redirect('/file/index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\File  $file
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         $file = File::findOrFail($id);
@@ -243,7 +230,6 @@ class FileController extends Controller
         $file->delete();
 
         return redirect('/');
-        
     }
 
 

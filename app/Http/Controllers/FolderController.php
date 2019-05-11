@@ -7,32 +7,16 @@ use App\Http\Requests\ImageFormRequest;
 
 class FolderController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         return view('/folder');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('file/create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(ImageFormRequest $request) {
         //this should be option for UW to add some img as a note/reminder, not tied to any sub or account.
         if ($request->hasFile('image')) {

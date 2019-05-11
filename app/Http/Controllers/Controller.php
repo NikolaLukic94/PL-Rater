@@ -12,8 +12,6 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-
-
     public function __construct() 
     {
 
@@ -142,7 +140,4 @@ class Controller extends BaseController
 		  "11" => "Cancelled",
 		  "12" => "Follow Up"
 		);
-
-
-
 }

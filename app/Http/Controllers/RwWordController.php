@@ -93,7 +93,5 @@ class RwWordController extends Controller
         $objWriter->save(storage_path('Rw.docx'));
 
         return response()->download(storage_path('rw.docx'));
-
     }
-
 }

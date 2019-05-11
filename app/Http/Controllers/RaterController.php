@@ -24,7 +24,6 @@ public  function createNewWithCalculatedCoeficients($id, $request) {
 
             $file = File::findOrFail($id);
             $rate = Rate::where('lob', $file->lob)->first();
-
             // getting coeficients that will be used for rating; lob of rates will always match the lob of file
             $cov_a  = null;
             $other_structures = null;
@@ -138,14 +137,10 @@ public  function createNewWithCalculatedCoeficients($id, $request) {
             /*    $rater->inspection_fee = $inspection_fee;
                 $rater->brokerage_fee = $brokerage_fee;
                 $rater->agency_fee = $agency_fee;*/
-
             $rater->save();
 
             return $rater;
-
         }
-
-
 
 	/* CHECK FOR ACCUARACY OF INFO AND IF NEEDED AMEND LIMITS/COVERAGES */
     public function index($id) {
@@ -155,8 +150,8 @@ public  function createNewWithCalculatedCoeficients($id, $request) {
             'lob' => $this->lob
     	]);
     }
-        /* ENTER RW COEFICIENTS IN DB */
-        /* SHOW LIMITS AND COEFICIENTS THAT WILL BE APPLIED WITH LIMITS GIVEN */
+    /* ENTER RW COEFICIENTS IN DB */
+    /* SHOW LIMITS AND COEFICIENTS THAT WILL BE APPLIED WITH LIMITS GIVEN */
     public function create($id, Request $request) {
 
         // file we are currently rating
@@ -210,7 +205,6 @@ public  function createNewWithCalculatedCoeficients($id, $request) {
         $file = File::findOrFail($id);
 
         $rater = Rater::where('lob', $file->lob)->first();
-
 
         $this->$other_rater = ($rater->aop_ded + 
                                 $rater->protection_class +

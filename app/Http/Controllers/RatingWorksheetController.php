@@ -10,11 +10,6 @@ use App\LogActivity;
 
 class RatingWorksheetController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index($id)
     {
         return view('/rating_worksheet/index',[
@@ -22,18 +17,6 @@ class RatingWorksheetController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store($file_id, $rater_id)
     {
 
@@ -51,12 +34,6 @@ class RatingWorksheetController extends Controller
         return redirect('/file/show/'. $file_id);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\RatingWorksheet  $ratingWorksheet
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         $rw = DB::table('rating_worksheets')
@@ -99,5 +76,4 @@ class RatingWorksheetController extends Controller
             'rw' => $rw
         ]);        
     }
-
 }

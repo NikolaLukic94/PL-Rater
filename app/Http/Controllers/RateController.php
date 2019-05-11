@@ -11,11 +11,6 @@ use Illuminate\Support\Facades\Input;
 
 class RateController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         return view('/rate/index',[
@@ -23,11 +18,6 @@ class RateController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('/rate/define',[
@@ -36,12 +26,6 @@ class RateController extends Controller
         ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         Rate::create([
@@ -64,12 +48,6 @@ class RateController extends Controller
         return redirect('/rate/index');       
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Rate  $rate
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         return view('/rate/show',[
@@ -77,12 +55,6 @@ class RateController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Rate  $rate
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         return view('/rate/edit',[
@@ -100,13 +72,10 @@ class RateController extends Controller
         $rate->delete();
 
         return redirect('/rate/index');
-        
     }
 
     public function rate($id)
     {
         return view('/rate/prepare');
     }
-
-
 }
