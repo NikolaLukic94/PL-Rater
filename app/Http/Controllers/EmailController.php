@@ -23,7 +23,7 @@ class EmailController extends Controller
     public function create()  {
 
         return view('/functionalities/create_email',[
-            'submission' = Submission::all();
+            'submission' => Submission::all()
         ]);
     }
 

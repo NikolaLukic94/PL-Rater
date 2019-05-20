@@ -13,11 +13,9 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
 /* USED FOR GENERATING RATING WORKSHEETS AND CALCULATING PREMIUM */
-
 class RaterController extends Controller
 {
-
-public  function createNewWithCalculatedCoeficients($id, $request) {
+    public  function createNewWithCalculatedCoeficients($id, $request) {
 
             $file = null;
             $rate = null;
@@ -134,13 +132,14 @@ public  function createNewWithCalculatedCoeficients($id, $request) {
                 $rater->zero_two_losses = $zero_two_losses_rate;
                 $rater->more_than_two_losses = $more_than_two_losses; 
                 $rater->protection_class = $protection_class_rate;
-            /*    $rater->inspection_fee = $inspection_fee;
+        /*    $rater->inspection_fee = $inspection_fee;
                 $rater->brokerage_fee = $brokerage_fee;
-                $rater->agency_fee = $agency_fee;*/
+                $rater->agency_fee = $agency_fee;
+        */
             $rater->save();
 
             return $rater;
-        }
+    }
 
 	/* CHECK FOR ACCUARACY OF INFO AND IF NEEDED AMEND LIMITS/COVERAGES */
     public function index($id) {
@@ -171,7 +170,7 @@ public  function createNewWithCalculatedCoeficients($id, $request) {
                 'rater' => $rater
             ]);
         }
- }
+    }
 
     public function getFilesCovLimits($id) {
 
@@ -182,7 +181,6 @@ public  function createNewWithCalculatedCoeficients($id, $request) {
         $this->$cov_limits = $file->cov_a + $file->other_structures + $file->loss_of_use;
 
         return $cov_limits;
-
     }
 
     public function getFilesCovLimitsRate($id) {
@@ -195,7 +193,6 @@ public  function createNewWithCalculatedCoeficients($id, $request) {
         $this->$cov_limits_rate = ($rater->cov_a + $rater->other_structures + $rater->loss_of_use) / 3;
 
         return $cov_limits_rate;
-
     }
 
     public function getOtherRater($id) {
@@ -214,7 +211,6 @@ public  function createNewWithCalculatedCoeficients($id, $request) {
         return $other_rater;
 
     }
-
     /* CREATE/STORE RATING WORKESHEET */
     public function store($file_id, $rater_id) {
 

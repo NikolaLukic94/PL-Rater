@@ -19,17 +19,14 @@ class RatingWorksheetController extends Controller
 
     public function store($file_id, $rater_id)
     {
-
         $premium = Premium::where('file_id', $file_id)->first();
         $id = $premium->id;
 
         RatingWorksheet::create([
-
             'file_id' => $file_id,
             'rater_id' => $rater_id,
             'premium_id' => $id
-
-                  ]);                                                                                      
+        ]);                                                                                      
 
         return redirect('/file/show/'. $file_id);
     }

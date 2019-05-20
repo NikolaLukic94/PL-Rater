@@ -18,7 +18,6 @@ class FormController extends Controller
 {
     public function index(Request $request)
     {
-        
         return view('/forms/index',[
             'forms' => Form::paginate(10)
         ]);
@@ -45,15 +44,10 @@ class FormController extends Controller
         //filename to store
             $fileNameToStore = $filename.'_'.time().'.'.$extension;    
         // upload file
-            $path = $request->file('attachment')->storeAs('public/forms',$fileNameToStore);
+            $path = $request->file('attachment')->storeAs('public/forms', $fileNameToStore);
         }
 
-        Form::create([
-            'name' => request('form_name'),
-            'edition_date' => request('edition_date'),
-            'text' => request('text'),
-            'attachment' =>  $fileNameToStore
-                  ]);   
+        Form::createFromRequest($request, $fileNameToStore);
                                                                                                    
         return redirect('/forms/index');
     }

@@ -28,14 +28,7 @@ class NotesController extends Controller
 
     public function store($id, Request $request)
     {
-        $user = auth()->user();
-
-        Notes::create([
-            'title' => $request->title,
-            'text' => $request->text,
-            'created_by' => $user->id,
-            'file_id' => $id
-        ]);
+        Notes::createFromRequest($request);
 
         return redirect('notes/create');
     }

@@ -24,8 +24,6 @@ class UserApprovalController extends Controller
         return redirect()->route('admin.users.index')->withMessage('User approved successfully');
     }
 
-
-
     public function destroy($id) {
 
         $user = User::find($id);

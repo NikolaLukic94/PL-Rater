@@ -1,21 +1,7 @@
 @extends('layouts.app')
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <title>PLQR</title>
-
-</head>
-
-<body>
-
-  <div class="d-flex" id="wrapper">
-
-    <!-- Page Content -->
+<div class="d-flex" id="wrapper">
     <div id="page-content-wrapper">
-
     @include('partials.navbar')
     <br>
       <div class="container">
@@ -121,7 +107,5 @@
 
 
 
-</body>
 
-</html>
 

@@ -38,12 +38,7 @@
       <a href="/forms/create" class="list-group-item list-group-item-action">Create</a>      
     </div>     
       </div>
-    <button class="dropdown-btn"><i class="fab fa-font-awesome"></i>&nbsp Tickets<i class="fa fa-caret-down"></i> 
-    </button>
-    <div class="dropdown-container">
-      <a href="/file/index" class="list-group-item list-group-item-action">Search</a>
-      <a href="/file/create" class="list-group-item list-group-item-action">Create</a>      
-    </div>      
+     
 </div>
 </div>
 

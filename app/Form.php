@@ -11,4 +11,15 @@ class Form extends Model
     protected $fillable = [
         'name', 'edition_date', 'text', 'attachment', 'archived'
     ];
+
+    public static  function createFromRequest($request, $fileNameToStore) 
+    {
+        Form::create([
+            'name' => request('form_name'),
+            'edition_date' => request('edition_date'),
+            'text' => request('text'),
+            'attachment' =>  $fileNameToStore
+        ]);   
+    }
+
 }
