@@ -15,6 +15,7 @@ class FormAttachmentController extends Controller
         $ppath = 'app\public\forms\\';
         
         return response()->download(storage_path($ppath.$form->attachment));
+        
         return back();
     }
 

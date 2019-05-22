@@ -102,9 +102,9 @@ class FileController extends Controller
 
     public function store(Request $request,$id)
     {
-      File::createFromRequest($request, $id);
+        File::createFromRequest($request, $id);
 
-      return redirect('/file/index');
+        return redirect('/file/index');
     }
 
     public function show($id)

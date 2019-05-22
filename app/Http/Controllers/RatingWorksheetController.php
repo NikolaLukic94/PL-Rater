@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Premium;
 use App\RatingWorksheet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;

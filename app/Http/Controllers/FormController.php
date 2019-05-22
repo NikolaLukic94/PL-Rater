@@ -31,7 +31,6 @@ class FormController extends Controller
 
     public function store(Request $request)
     {
-
         $fileNameToStore = null;
 
         if($request->hasFile('attachment')){
@@ -57,7 +56,7 @@ class FormController extends Controller
         $forms = Form::all();
 
         return view('/forms/show',[
-
+            'forms' => Form::paginate(10)
         ]);
     }
     

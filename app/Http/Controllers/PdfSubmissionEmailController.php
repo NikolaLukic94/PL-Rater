@@ -11,7 +11,6 @@ class PdfSubmissionEmailController extends Controller
         $dompdf = new Dompdf();
         $dompdf->loadHtml('/subs/index');
         $dompdf->stream();
-
     }
 
 }
