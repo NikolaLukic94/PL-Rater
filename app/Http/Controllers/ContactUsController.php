@@ -15,10 +15,7 @@ class ContactUsController extends Controller
 
     public function store(ContactUsRequest $request)
     {
-        $subject = $request->input('subject_line');
-        $body = $request->input('body');
-
-        dispatch(new \App\Jobs\SendContactUsEmail($subject,$body));
+        dispatch(new \App\Jobs\SendContactUsEmail($request->input('subject_line'), $request->input('body')));
 
         return redirect('/');
     }
