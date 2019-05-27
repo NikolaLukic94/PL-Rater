@@ -12,7 +12,7 @@ use Carbon\Carbon;
 use App\User;
 use App\Form;
 use Illuminate\Support\Facades\Input;
-use App\LogActivity;
+
 
 class FormController extends Controller
 {
@@ -31,20 +31,7 @@ class FormController extends Controller
 
     public function store(Request $request)
     {
-        $fileNameToStore = null;
-
-        if($request->hasFile('attachment')){
-        //get the filename with the extension    
-            $filenameWithExt = $request->file('attachment')->getClientOriginalName();
-        //get just filename    
-            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-        //get just extension
-            $extension = $request->file('attachment')->getClientOriginalExtension();
-        //filename to store
-            $fileNameToStore = $filename.'_'.time().'.'.$extension;    
-        // upload file
-            $path = $request->file('attachment')->storeAs('public/forms', $fileNameToStore);
-        }
+        $fileNameToStore = Form::getFileNameToStore($request, 'attachment', 'forms');
 
         Form::createFromRequest($request, $fileNameToStore);
                                                                                                    

@@ -23,6 +23,8 @@ class RaterController extends Controller
             'lob' => $this->lob
     	]);
     }
+
+
     /* ENTER RW COEFICIENTS IN DB */
     /* SHOW LIMITS AND COEFICIENTS THAT WILL BE APPLIED WITH LIMITS GIVEN */
     public function create($id, Request $request) {
@@ -46,6 +48,7 @@ class RaterController extends Controller
         }
     }
 
+
     /* CREATE/STORE RATING WORKESHEET */
     public function store($file_id, $rater_id) {
 
@@ -53,7 +56,7 @@ class RaterController extends Controller
 
         $calculation = Rater::createPremiumValues($file_id, $rater_id);
 
-        $file->status = 'rated';
+        $file->update(['status' = 'rated']);
 
         $rater = Rater::findOrFail($rater_id)->first();
 

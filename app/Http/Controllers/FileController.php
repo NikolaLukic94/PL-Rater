@@ -17,11 +17,7 @@ use App\LogActivity;
 
 class FileController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index(Request $request)
     {
       if($request->isMethod('post')){ 
@@ -86,11 +82,7 @@ class FileController extends Controller
         }
     }
     
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create($id)
     {
         return view('file/create', [
@@ -109,13 +101,9 @@ class FileController extends Controller
 
     public function show($id)
     {
-        $file = File::findOrFail($id);
-
-        $rw = File::getRWjoinFileRatePremium($id);
-
         return view('/file/index',[
-            'file' => $file,
-            'rw' => $rw,
+            'file' => File::findOrFail($id),
+            'rw' => File::getRWjoinFileRatePremium($id),
             'notes' => Notes::all(),
             'submission' => $file->submission()->first(),
             'log' => Activity::where('subject_id', $id)->first()

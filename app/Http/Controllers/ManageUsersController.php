@@ -11,12 +11,13 @@ use Hash;
 
 class ManageUsersController extends Controller
 {
-	public function index() {
-
+	public function index() 
+    {
         return view('/manage/users/index', [
         	'users' => User::simplePaginate(10)
         ]);
     }
+
 
     public function show($id)
     {
@@ -26,20 +27,23 @@ class ManageUsersController extends Controller
     
     }
 
-    public function edit($id)  {
 
+    public function edit($id)  
+    {
         return view('/manage/users/edit', [
             'user' => User::findOrFail($id)
         ]);
     }
 
-    public function create() {
-    
+
+    public function create() 
+    {
         return view('/manage/users/create');
     }
 
-    public function store(Request $request) {
 
+    public function store(Request $request) 
+    {
     	$this->validate($request,[
     		'name' => 'required|max:100',
     		'email' => 'required|unique:users|email' 
@@ -71,8 +75,9 @@ class ManageUsersController extends Controller
 	        }*/
     }
 
-    public function destroy($id) {
 
+    public function destroy($id) 
+    {
         $user = User::find($id);
 
         $user->delete();

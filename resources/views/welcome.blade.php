@@ -16,11 +16,6 @@
         </div>
       </div>
       <br>
-    <!--<div class="col">
-        <h1 class="mb-0">BG:{{$bgTime}}</h1>
-        <h1 class="mb-0">US:{{$usTime}}</h1>
-        <h1 class="mb-0">CA:{{$montrealTime}} </h1>   
-    </div> -->
       <div class="container"><!-- container start -->
         <div class="row"><!-- row start -->
           <div class="col text-center">

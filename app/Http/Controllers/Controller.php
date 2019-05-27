@@ -15,7 +15,6 @@ class Controller extends BaseController
     public function __construct() 
     {
 
-    
     }
 
     public	$home_type = array(

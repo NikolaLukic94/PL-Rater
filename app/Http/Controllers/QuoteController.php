@@ -12,8 +12,8 @@ use App\LogActivity;
 
 class QuoteController extends Controller
 {
-    public function create() {
-
+    public function create() 
+    {
     	return view('/quoting/create',[
     		'file' => File::where('id',1)->first(),
     		'rw' => RatingWorksheet::where('id',1)->first();
@@ -22,8 +22,8 @@ class QuoteController extends Controller
 
     }
 
-    public function store($request, $id) {
-
+    public function store($request, $id) 
+    {
       Quote::createFromRequest($request, $id); 
 
       return redirect('/file/index');

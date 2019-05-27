@@ -19,16 +19,15 @@ use App\Jobs\SendCustomEmail;
 
 class EmailController extends Controller
 {
-
-    public function create()  {
-
+    public function create()  
+    {
         return view('/functionalities/create_email',[
             'submission' => Submission::all()
         ]);
     }
 
-    public function store(Request $request) {
-
+    public function store(Request $request) 
+    {
         $properties = Email::getCustomEmailProperties($request);
 
         dispatch(new \App\Jobs\SendCustomEmail($properties['subject'], $properties['body'], $properties['to']));

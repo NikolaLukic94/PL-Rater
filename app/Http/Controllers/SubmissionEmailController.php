@@ -21,8 +21,8 @@ use App\Jobs\SendSubmissionSuccessfullEmail;
 
 class SubmissionEmailController extends Controller
 {
-    public function index() {
-
+    public function index() 
+    {
       return view('/subs/index', [
             'submission' => Submission::orderBy('location_address_state', 'asc')->paginate(10),
             'subsEffWithinNextWeek' => DB::table('submissions')
@@ -31,8 +31,9 @@ class SubmissionEmailController extends Controller
       ]);
     }
 
-    public function create()  {
 
+    public function create()  
+    {
         return view('subs/create',[
           'state' => $this->state,
           'lob' => $this->lob,
@@ -44,14 +45,16 @@ class SubmissionEmailController extends Controller
         ]);
     }
 
-    public function store(AgentSendSubmissionEmail $request)  {
 
+    public function store(AgentSendSubmissionEmail $request)  
+    {
         $submission = Submission::createFromRequest($request);
 
         dispatch(new \App\Jobs\SendSubmissionSuccessfullEmail($submission->agent_email_address, $submission->submission_number));
 
         return view('/subs/success');
     }
+
 
     public function show($id)
     {
@@ -60,6 +63,7 @@ class SubmissionEmailController extends Controller
         ]);    
     }
     
+
     public function edit($id)  {
 
         return view('/subs/edit', [
@@ -74,12 +78,14 @@ class SubmissionEmailController extends Controller
         ]);
     }
 
+
     public function update(Request $request, $id)  {
 
         Submission::updateFromRequest($request, $id);      
 
         return view('subs/change/success');
     }
+
 
     public function destroy($id) {
 
