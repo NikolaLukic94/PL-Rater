@@ -1,26 +1,26 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Unit;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
 
 class SubmissionTest extends TestCase
 {
-
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
-    public function test_a_user_can_see_submissions()
+    /** @test **/
+    public function user_can_see_submissions()
     {   //given we have submissions in db
         $submision = factory('App\Submission')->create();
         //when users visits submissions/index page
         $response = $this->get('/subs/emails/index');
-        //He should be able to read the lob 
+        //He should be able to read the lob attribute
         $response->assertSee($submision->lob);        
+    }
+
+    /** @test **/
+    public function upon_creating_confirmation_email_containing_submission_number_will_be_sent()
+    {   
+
     }
 }

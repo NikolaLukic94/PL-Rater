@@ -25,7 +25,7 @@ class RaterController extends Controller
     }
 
 
-    /* ENTER RW COEFICIENTS IN DB */
+    /* ENTERS RW COEFICIENTS IN DB */
     /* SHOW LIMITS AND COEFICIENTS THAT WILL BE APPLIED WITH LIMITS GIVEN */
     public function create($id, Request $request) {
 

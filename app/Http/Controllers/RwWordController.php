@@ -7,7 +7,6 @@ use App\File;
 use App\Rate;
 use App\Rater;
 use App\Premium;
-
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
