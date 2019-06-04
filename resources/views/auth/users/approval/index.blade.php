@@ -5,19 +5,24 @@
         @include('partials.navbar')
         <br>
         <div class="container"><!-- container start -->
+            @if (session('message'))
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="card">
+                            <div class="alert alert-success" role="alert">
+                                {{ session('message') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            @endif
+            <br>
             <div class="row justify-content-center">
                 <div class="col-md-10">
                     <div class="card">
                         <div id="approve"><!-- div approve -->
-                            <div class="card-header">Users List to Approve</div>
+                            <div class="card-header text-center">Users List to Approve</div>
                                 <div class="card-body">
-
-                                @if (session('message'))
-                                    <div class="alert alert-success" role="alert">
-                                        {{ session('message') }}
-                                    </div>
-                                @endif
-
                                     <table class="table">
                                         <tr>
                                             <th>User name</th>
@@ -33,7 +38,7 @@
                                                 <td>{{ $user->email }}</td>
                                                 <td>{{ $user->created_at }}</td>
                                                 <td>
-                                                    <button type="submit" class="btn btn-primary">Approve</button>
+                                                    <button type="submit" class="btn btn-primary"><i class="fa fa-check" aria-hidden="true"></i></button>
                                                 </td>
                                             </tr>
                                         </form>    
@@ -48,19 +53,11 @@
                                 </div>
                             </div>
                         </div><!-- div approve -->
-
                     <br>
-
                     <div class="card"><!-- card dissaprove -->
-                        <div class="card-header">Existing & Approved Users</div><!-- card-heade start -->
+                        <div class="card-header text-center">Existing & Approved Users</div><!-- card-heade start -->
                             <div id="approve">
                                 <div class="card-body">
-
-                                    @if (session('message'))
-                                        <div class="alert alert-success" role="alert">
-                                            {{ session('message') }}
-                                        </div>
-                                    @endif
 
                                     <table class="table">
                                         <tr>

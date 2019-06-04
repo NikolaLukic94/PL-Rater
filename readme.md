@@ -9,18 +9,41 @@
 
 <b>PLQR - Personal Lines Quote Rater:</b>
 
-This is a rating system that will calculate the insurance premium per the information provided. Workflow would be: someone sends you risk rating characteristics (or you can add that yourself), you set up rate that will be used for each risk rating characteristic (for example, different construction types will require a surcharge or discount), then create the file in the system based on the information provided in the submission email, and rate it. 
+<p>This is a rating system that will calculate the insurance premium per the information provided.</p>
 
-Prerequisites:
+<b>Features:</b>
 
-To get this app up and running, clone the github repo and run "composer install" to install all necessary packages. Make sure to amend .env file as well.
+- Simple, responsive design using the Bootstrap framework
+- User functions - log in, log out, reset password, update account
+- Admin functions - approve/revoke users access
+- Whenever new user registers, email will be sent to Admin; Admin will have to approve access for newly created user
+- Activity Log
+- Authorization policies
 
-<b>Getting Started:</b>
+<b>Technologies used:</b>
 
-All new users will need to be approved, before using this app. Make sure to run php artisan db:seed AdminSeeder to create the Admin account that will have the option to approve the other users. For testing purposes, you can also use RateTableSeeder, SubmissionTableSeeder or UsersSeeder, as well as the Factories for Forms, Submissions and Users.
+- Laravel
+- Bootstrap
+- JavaScript
 
-<b>This project was Built With:</b>
-- Laravel 5.5
+<b>Basic Configuration:</b>
+
+- Set up .env file (make sure to inlude mailtrap credentials for sending emails)
+- Run: composer install
+- Run: php artisan key:generate
+
+<b>Workflow and Setting up PLQR App:</b>
+
+- Run: php artisan db:seed --class=AdminSeeder. 
+- When user logges in, home page will display past activity information
+To have some sample data, follow the next steps:
+- Run factories for Users, Forms and for Submissions
+- Mailtrap could return error "too many emails per second" ,in that case, run db:seed for UsersSeeder and RateSeeder
+- As an Admin in 'Users' section, approve, revoke or delete users
+- Search for submission, user, form, account, etc.
+- Send an email using email feature
+- Access statistics showing breakdown per agencies, lobs, etc.
+- Add rates and use them to calculate your premium
 
 
-
+<p>...more coming soon!</p>

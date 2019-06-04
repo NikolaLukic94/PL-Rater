@@ -23,7 +23,6 @@ Route::group(['prefix' => 'subs/emails',  'middleware' => 'approved'], function 
 	Route::post('/edit/{id}', 'SubmissionEmailController@updateS');
 	Route::delete('/delete/{id}', 'SubmissionEmailController@destroy');
 });
-//middleware does not apply to the next two routes:
 	Route::get('/subs/emails/create','SubmissionEmailController@create');	
 	Route::post('/subs/emails/create','SubmissionEmailController@store');
 
@@ -64,11 +63,6 @@ Route::group(['prefix' => 'rating-worksheet',  'middleware' => 'approved'], func
 });
 Route::post('/send-rw','RwEmailController');
 
-Route::group(['prefix' => 'quoting',  'middleware' => 'approved'], function () {
-	Route::get('/create','QuoteController@create');
-	Route::post('/send','QuoteController@store');	
-});
-
 Route::group(['prefix' => 'emails',  'middleware' => 'approved'], function () {
 	Route::get('/create','EmailController@create');
 	Route::post('/send','EmailController@store');	
@@ -93,32 +87,6 @@ Route::group(['prefix' => 'login'], function () {
 	Route::get('/{provider}/callback','Auth\LoginController@handleProviderCallback'); 	
 });
 
-Route::group(['prefix' => 'manage/users',  'middleware' => 'approved'], function () {
-	Route::get('/dashboard','ManageUsersController@dashboard');//->middleware('role:superadministratr|administrator|seniorUw');
-	Route::get('/index','ManageUsersController@index');
-	Route::get('/create','ManageUsersController@create');
-	Route::post('/create','ManageUsersController@store');
-	Route::get('/show/{id}','ManageUsersController@show');	
-	Route::get('/edit/{id}','ManageUsersController@edit');
-	Route::post('/edit/{id}','ManageUsersController@update');
-	Route::delete('/delete/{id}', 'ManageUsersController@destroy');		
-});
-
-Route::group(['prefix' => 'manage/role',  'middleware' => 'approved'], function () {
-	//Route::get('/dashboard','ManageController@dashboard');//->middleware('role:superadministratr|administrator|seniorUw');
-	Route::get('/index','RoleController@index');
-	Route::get('/create','RoleController@create');
-	Route::post('/store','RoleController@store');
-	Route::get('/edit/{id}','RoleController@edit');
-	Route::post('/edit/{id}','RoleController@update');
-});
-/*
-Route::group(['prefix' => 'folder',  'middleware' => 'approved'], function () {
-	Route::get('/index','ManageUsersController@index');
-	Route::get('/create','ManageUsersController@create');
-	Route::post('/create','ManageUsersController@store');
-});
-*/
 Route::group(['prefix' => 'contactus'], function () {
 	Route::get('/create','ContactUsController@create');
 	Route::post('/send','ContactUsController@store');
