@@ -1,7 +1,4 @@
 @extends('layouts.app')
-<!DOCTYPE html>
-<html lang="en">
-<head>
   <title>PLQR</title>
 </head>
 <body>
@@ -13,6 +10,13 @@
       <div class="container">
           <div class="row justify-content-center">
               <div class="col-md-8">
+                <img src="/uploads/avatars/{{$user->avatar}}" style="width: 150px; height: 150px; float: left; border-radius: 50%; margin-right: 25px;">
+                <form enctype="multipart/form-data" action="/profile/image/{{ Auth::id() }}" method="post">
+                  {{ csrf_field() }}
+                    <label>Update Profile Image</label>
+                    <input type="file" name="avatar">
+                    <input type="submit" class="pull-right btn btn-sm btn-primary">
+                </form>
                   <div class="card" id="card">
                       <div class="card-header"></div>
                       <div class="card-body text-center">

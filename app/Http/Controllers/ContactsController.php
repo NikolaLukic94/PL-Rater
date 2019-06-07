@@ -6,7 +6,7 @@ use App\ContactUs;
 use Illuminate\Http\Request;
 use App\Http\Requests\ContactUsRequest;
 
-class ContactUsController extends Controller
+class ContactsController extends Controller
 {
     public function create()
     {

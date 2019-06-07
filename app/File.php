@@ -10,45 +10,20 @@ class File extends Model
 {
         use Traits\RecordsActivity;
 
-        protected $fillable = [ 'agent_name',
-                                'agency_name',
-                                'lob',
-                                'effective_date',
-                                'expiration_date',
-                                'named_insured',
-                                'mailing_address',
-                                'ssn',
-                                'entity_type',
-                                'named_insured',
-                                'additional_ni',
-                                'phone_number',
-                                'email_address',
-                                'cov_a',
-                                'other_structures',
-                                'loss_of_use',
-                                'med_pay',
-                                'aop_ded',
-                                'construction_type',
-                                'protection_class',
-                                'new_purchase',
-                                'prior_carrier',
-                                'prior_carrier_name',
-                                'prior_carrier_effective_date',
-                                'agent_email_address',
-                                'agent_phone_number',
-                                'mailing_address_street_name_and_number',
-                                'mailing_address_city',
-                                'mailing_address_county',
-                                'mailing_address_zip',
-                                'mailing_address_state',
-                                'location_address_street_name_and_number',
-                                'location_address_city',
-                                'location_address_county',
-                                'location_address_zip',
-                                'location_address_state',
-		             	'status',
-        		        'submission_number',
-                                'submission_id' ];     
+        protected $guarded = [];     
+
+        /**
+         * Dynamically set attributes on the model.
+         *
+         * @param  string  $key
+         * @param  mixed  $value
+         * @return void
+         */
+        public function __set($key, $value)
+        {
+            $this->setAttribute($key, $value);
+        }
+
 
         public function rws(){
         
@@ -56,15 +31,18 @@ class File extends Model
         
         }   
 
+
         public function submission(){
         
             return $this->belongsTo(Submission::class, 'submission_id');
         
         }       
 
-        public function notes() {
+
+        public function note() {
             return $this->hasMany(Note::class)->latest();
         }         
+
 
         public static  function createFromRequest($request, $id) 
         {
@@ -128,6 +106,7 @@ class File extends Model
             ]);   
         }    
 
+
         public static function getRWjoinFileRatePremium($id)
         {
             $rw = DB::table('rating_worksheets')
@@ -171,46 +150,40 @@ class File extends Model
             return $rw;    
         }                                 
 
+
         public static function updateGeneralInfo($request, $id) 
-        {
-          $file = File::findOrFail($id);
+        {                       
+          return tap($file = File::findOrFail($id))->update([
+              'named_insured' => $request->named_insured,
+              'entity_type' => $request->entity_type,
+              'additional_ni' => $request->additional_ni,
+              'mailing_address_street_name_and_number' => $request->mailing_address_street_name_and_number,               
+              'mailing_address_city' => $request->mailing_address_city,
+              'mailing_address_county' => $request->mailing_address_county,
+              'mailing_address_zip' => $request->mailing_address_zip, 
+              'mailing_address_state' => $request->mailing_address_state, 
+              'location_address_street_name_and_number' => $request->location_address_street_name_and_number, 
+              'location_address_city' => $request->location_address_city, 
+              'location_address_county' => $request->location_address_county, 
+              'location_address_zip' => $request->location_address_zip, 
+              'location_address_state' => $request->location_address_state,                             
+          ]);
 
-              $file->named_insured =    $request->named_insured;
-              $file->entity_type =     $request->entity_type;   
-              $file->ssn =  $request->ssn;
-              $file->additional_ni =      $request->additional_ni;
-              $file->mailing_address_street_name_and_number =      $request->mailing_address_street_name_and_number;
-              $file->mailing_address_city =      $request->mailing_address_city;
-              $file->mailing_address_county =      $request->mailing_address_county;
-              $file->mailing_address_zip =      $request->mailing_address_zip;
-              $file->mailing_address_state =      $request->mailing_address_state;
-              $file->location_address_street_name_and_number =      $request->location_address_street_name_and_number;
-              $file->location_address_city =      $request->location_address_city;
-              $file->location_address_county =      $request->location_address_county;
-              $file->location_address_zip =      $request->location_address_zip;
-              $file->location_address_state =      $request->location_address_state;                                                                 
-          $file->save();
-
-          return $file;
         }      
 
+
         public static function updateFileRatingCharacteristics($request, $id) 
-        {
-          $file = File::findOrFail($id);
-
-              $file->lob =    $request->lob;
-              $file->cov_a =     $request->cov_a;   
-              $file->other_structures =  $request->other_structures;
-              $file->med_pay =      $request->med_pay;
-              $file->aop_ded =      $request->aop_ded;
-              $file->construction_type =      $request->construction_type;
-              $file->protection_class =      $request->protection_class;
-              $file->new_purchase =      $request->new_purchase;
-              $file->prior_carrier =      $request->prior_carrier;
-              $file->prior_carrier_name =      $request->prior_carrier_name;
-
-          $file->save();
-
-          return $file;
+        { 
+          return tap($file = File::findOrFail($id))->update([
+              'lob' => $request->lob,
+              'cov_a' => $request->cov_a,
+              'other_structures' => $request->other_structures,
+              'med_pay' => $request->med_pay,               
+              'aop_ded' => $request->aop_ded,
+              'construction_type' => $request->construction_type,
+              'protection_class' => $request->protection_class, 
+              'prior_carrier' => $request->prior_carrier, 
+              'prior_carrier_name' => $request->prior_carrier_name                           
+          ]);
         }             
 }

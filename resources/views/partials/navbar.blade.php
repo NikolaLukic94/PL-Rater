@@ -23,7 +23,9 @@
                 {{ Auth::user()->name }}
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp Profile</a>
+                <a class="dropdown-item" href="#">if(Auth::user()->avatar;) {
+                  <img src="/uploads/avatars/{{Auth::user()->avatar}}" style="width: 32px; height: 32px; position:absolute; top: 10px; left:10px; border-radius: 50%;">
+                }&nbsp Profile</a>
                 <a class="dropdown-item" href="#"><i class="fas fa-cog"></i>&nbsp Settings</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i>&nbsp Log Out</a>

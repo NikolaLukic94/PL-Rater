@@ -28,9 +28,8 @@ class EmailController extends Controller
 
     public function store(Request $request) 
     {
-        $properties = Email::getCustomEmailProperties($request);
-
-        dispatch(new \App\Jobs\SendCustomEmail($properties['subject'], $properties['body'], $properties['to']));
+     
+        dispatch(new \App\Jobs\SendCustomEmail($request->input('subject_line'), $request->input('body'), $request->input('to')));
 
         return redirect('/home');
     }
