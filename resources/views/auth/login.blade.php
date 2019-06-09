@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts/new');
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="d-flex" id="wrapper">
     <div id="page-content-wrapper">
@@ -7,8 +7,8 @@
       <div class="container">
            <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+            <div class="card" id="card-register">
+                <div class="card-header text-cent">{{ __('Login') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -41,30 +41,22 @@
                                 @endif
                             </div>
                         </div>                     
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" id="login">
                                     {{ __('Login') }}
                                 </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
-                                </a>
                             </div>
                         </div>
                     </form>
+                    <div class="form-group row mb-0">
+                        <div class="col-md-8 offset-md-4">
+                            <a class="text-center" href="{{ route('password.request') }}">
+                                {{ __('Forgot Your Password?') }}
+                            </a>
+                        </div>
+                    </div>
                     <hr>
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">                 

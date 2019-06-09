@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Image;
+use Auth;
 
 class ProfileAvatarController extends Controller
 {
@@ -60,8 +62,8 @@ class ProfileAvatarController extends Controller
     {
         if($request->hasFile('avatar')) {
             $avatar = $request->file('avatar');
-            $file = time() . '.' . avatar->getClientOriginalExtension();
-            Image::make($avatar)->resize(300, 300)->save( public_path('/uploads/avatars/' . $filename));
+            $filename = time() . '.' . $avatar->getClientOriginalExtension();
+            Image::make($avatar)->resize(300, 300)->save( storage_path('/app/public/avatars/' . $filename));
 
             $user = Auth::user();
             $user->avatar = $filename;

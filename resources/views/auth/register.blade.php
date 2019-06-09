@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts/new');
 <div class="d-flex" id="wrapper"><!-- class="d-flex" id="wrapper" start -->
     <div id="page-content-wrapper"><!-- page-content-wrapper start -->
     @include('partials.navbar')
@@ -63,9 +63,11 @@
                         </div>                        
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">                        
+                            <div class="col-md-6 offset-md-4">    
+                            <div class="position-checbkoxes">                    
                                 <input type="checkbox" name="position" value="ceo">Senior UW<br>
                                 <input type="checkbox" name="position" value="underwriter" checked>Underwriter<br>
+                            </div>
                             </div>
                         </div>
                         <br>

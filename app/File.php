@@ -12,16 +12,54 @@ class File extends Model
 
         protected $guarded = [];     
 
-        /**
-         * Dynamically set attributes on the model.
-         *
-         * @param  string  $key
-         * @param  mixed  $value
-         * @return void
-         */
-        public function __set($key, $value)
+
+        protected static function boot()
         {
-            $this->setAttribute($key, $value);
+            parent::boot();
+
+            static::creating(function ($model)  {
+
+                $submission = $file->submission()->first();
+                dd($submission);
+
+                $model->agent_name = $submission->agent_name;
+                $model->agency_name = $submission->agency_name;
+                $model->agent_email_address = $submission->agent_email_address; 
+                $model->agent_phone_number = $submission->agent_phone_number; 
+                $model->agent_name = $submission->agent_name; 
+
+                $model->lob = $submission->lob;
+                $model->effective_date = $submission->effective_date;
+                // need set to have either req for input or info from subs
+                $model->expiration_date = $submission->effective_date;
+                $model->agent_phone_number = $submission->agent_phone_number;
+                $model->agent_name = $submission->agent_name;
+                $model->agent_name = $submission->agent_name;        
+                $model->phone_number = $submission->phone_number; 
+                $model->email_address = $submission->email_address;                                
+                //building info
+                $model->cov_a = $submission->cov_a;
+                $model->other_structures = $submission->other_structures;
+                $model->loss_of_use = $submission->loss_of_use;
+                $model->med_pay = $submission->med_pay;
+                $model->aop_ded = $submission->aop_ded; 
+                $model->construction_type = $submission->construction_type; 
+                $model->protection_class = $submission->protection_class;
+                $model->new_purchase = $submission->new_purchase;
+                $model->email_address = $submission->email_address;  
+                $model->prior_carrier = $submission->prior_carrier;  
+                $model->prior_carrier_name = $submission->prior_carrier_name;  
+                $model->prior_carrier_effective_date = $submission->prior_carrier_effective_date;
+
+                $model->status = 'file';
+                $model->submission_number = $submission->submission_number; 
+                $model->submission_id = $submission->id;
+                //additional coverage
+                $model->mold = $submission->mold;
+                $model->mold_limit = $submission->mold_limit; 
+                $model->water_back_up = $submission->water_back_up; 
+                $model->water_back_up_limit = $submission->water_back_up_limit;
+            });
         }
 
 
@@ -65,44 +103,6 @@ class File extends Model
               'location_address_state'=> $request->location_address_state,
               'mailing_address_zip'=> $request->mailing_address_zip, 
 
-              'agent_name' => $submission->agent_name, 
-              'agency_name' => $submission->agency_name, 
-              'agent_email_address' => $submission->agent_email_address, 
-              'agent_phone_number' => $submission->agent_phone_number, 
-              'agent_name' => $submission->agent_name, 
-
-              'lob' => $submission->lob,
-              'effective_date' => $submission->effective_date,
-              // need set to have either req for input or info from subs
-              'expiration_date' => Input::get('expiration_date'),
-              'agent_phone_number' => $submission->agent_phone_number, 
-              'agent_name' => $submission->agent_name,
-              'agent_name' => $submission->agent_name,   
-                                             
-              'phone_number' => $submission->phone_number, 
-              'email_address' => $submission->email_address,                               
-                            
-                  //building info
-              'cov_a' => $submission->cov_a, 
-              'other_structures' => $submission->other_structures,
-              'loss_of_use' => $submission->loss_of_use, 
-              'med_pay' => $submission->med_pay, 
-              'aop_ded' => $submission->aop_ded, 
-              'construction_type' => $submission->construction_type, 
-              'protection_class' => $submission->protection_class, 
-              'new_purchase' => $submission->new_purchase, 
-              'email_address' => $submission->email_address,  
-              'prior_carrier' => $submission->prior_carrier,  
-              'prior_carrier_name' => $submission->prior_carrier_name,  
-              'prior_carrier_effective_date' => $submission->prior_carrier_effective_date,                                                        
-              'status' => 'file',   
-              'submission_number' => $submission->submission_number, 
-              'submission_id' => $submission->id, 
-                  //additional coverage
-              'mold' => $submission->mold, 
-              'mold_limit' => $submission->mold_limit, 
-              'water_back_up' => $submission->water_back_up, 
-              'water_back_up_limit' => $submission->water_back_up_limit
             ]);   
         }    
 

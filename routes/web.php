@@ -7,7 +7,7 @@ Auth::routes();
 Route::get('/approval', 'HomeController@show')->name('approval');
 
 
-Route::group('middleware' => 'approved'], function () {
+Route::group(['middleware' => 'approved'], function () {
 
 	Route::get('/home', 'HomeController@index')->name('home');
 

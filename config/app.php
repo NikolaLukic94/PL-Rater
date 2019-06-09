@@ -162,7 +162,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Spatie\Activitylog\ActivitylogServiceProvider::class,
-        UxWeb\SweetAlert\SweetAlertServiceProvider::class
+        UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+
+
     ],
 
     /*
@@ -214,7 +216,8 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Captcha' => Mews\Captcha\Facades\Captcha::class,
-        'Alert' => UxWeb\SweetAlert\SweetAlert::class
+        'Alert' => UxWeb\SweetAlert\SweetAlert::class,
+
 
     ],
 
