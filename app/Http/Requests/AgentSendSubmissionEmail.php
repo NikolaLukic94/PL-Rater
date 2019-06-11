@@ -37,7 +37,7 @@ class AgentSendSubmissionEmail extends FormRequest
         'state' => 'required',
             //risk rating characteristics
         'cov_a' => 'required',
-        'construction_type' => 'required'  
+        'construction_type' => 'required',
         ];
     }
 }

@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Middleware;
+
 use Auth;
-use App\User;
 use Closure;
+use App\User;
 
 class CheckApproved
 {
@@ -16,7 +17,7 @@ class CheckApproved
      */
     public function handle($request, Closure $next)
     {
-        if (!Auth::user()->approved_at) {
+        if (! Auth::user()->approved_at) {
             return redirect()->route('approval');
         }
 

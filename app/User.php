@@ -3,20 +3,19 @@
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Auth;
 
 class User extends Authenticatable
 {
     use Notifiable;
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','admin', 'approved_at'
+        'name', 'email', 'password', 'admin', 'approved_at', 'avatar',
     ];
 
     /**
@@ -28,22 +27,23 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function identities() {
-       return $this->hasMany('App\SocialIdentity');
+    public function identities()
+    {
+        return $this->hasMany('App\SocialIdentity');
     }
-    
+
     protected $dispatchesEvents = [
-        'created' => Events\NewUserRequiringApproval::class
+        'created' => Events\NewUserRequiringApproval::class,
 
     ];
 
-    public function getRouteKeyName() {
-
+    public function getRouteKeyName()
+    {
         return 'name';
     }
 
-    public function accounts() {
+    public function accounts()
+    {
         return $this->hasMany(File::class)->latest();
     }
-
 }

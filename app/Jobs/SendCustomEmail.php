@@ -2,29 +2,33 @@
 
 namespace App\Jobs;
 
+use App\Mail\CustomEmail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use App\Mail\CustomEmail;
 
 class SendCustomEmail implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+
     public $to;
+
     public $subject;
+
     public $body;
+
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct($subject,$body,$to)
+    public function __construct($subject, $body, $to)
     {
-        $this->subject = $subject;  
-        $this->body = $body;   
-        $this->to = $to; 
+        $this->subject = $subject;
+        $this->body = $body;
+        $this->to = $to;
     }
 
     /**
@@ -34,6 +38,6 @@ class SendCustomEmail implements ShouldQueue
      */
     public function handle()
     {
-       \Mail::to($this->to)->send(new CustomEmail($this->subject,$this->body));
+        \Mail::to($this->to)->send(new CustomEmail($this->subject, $this->body));
     }
 }

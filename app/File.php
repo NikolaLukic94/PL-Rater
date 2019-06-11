@@ -2,91 +2,84 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Database\Eloquent\Model;
 
 class File extends Model
 {
-        use Traits\RecordsActivity;
+    use Traits\RecordsActivity;
 
-        protected $guarded = [];     
+    protected $guarded = [];
 
+    protected static function boot()
+    {
+        parent::boot();
 
-        protected static function boot()
-        {
-            parent::boot();
+        static::creating(function ($model) {
+            $submission = $file->submission()->first();
+            dd($submission);
 
-            static::creating(function ($model)  {
+            $model->agent_name = $submission->agent_name;
+            $model->agency_name = $submission->agency_name;
+            $model->agent_email_address = $submission->agent_email_address;
+            $model->agent_phone_number = $submission->agent_phone_number;
+            $model->agent_name = $submission->agent_name;
 
-                $submission = $file->submission()->first();
-                dd($submission);
+            $model->lob = $submission->lob;
+            $model->effective_date = $submission->effective_date;
+            // need set to have either req for input or info from subs
+            $model->expiration_date = $submission->effective_date;
+            $model->agent_phone_number = $submission->agent_phone_number;
+            $model->agent_name = $submission->agent_name;
+            $model->agent_name = $submission->agent_name;
+            $model->phone_number = $submission->phone_number;
+            $model->email_address = $submission->email_address;
+            //building info
+            $model->cov_a = $submission->cov_a;
+            $model->other_structures = $submission->other_structures;
+            $model->loss_of_use = $submission->loss_of_use;
+            $model->med_pay = $submission->med_pay;
+            $model->aop_ded = $submission->aop_ded;
+            $model->construction_type = $submission->construction_type;
+            $model->protection_class = $submission->protection_class;
+            $model->new_purchase = $submission->new_purchase;
+            $model->email_address = $submission->email_address;
+            $model->prior_carrier = $submission->prior_carrier;
+            $model->prior_carrier_name = $submission->prior_carrier_name;
+            $model->prior_carrier_effective_date = $submission->prior_carrier_effective_date;
 
-                $model->agent_name = $submission->agent_name;
-                $model->agency_name = $submission->agency_name;
-                $model->agent_email_address = $submission->agent_email_address; 
-                $model->agent_phone_number = $submission->agent_phone_number; 
-                $model->agent_name = $submission->agent_name; 
+            $model->status = 'file';
+            $model->submission_number = $submission->submission_number;
+            $model->submission_id = $submission->id;
+            //additional coverage
+            $model->mold = $submission->mold;
+            $model->mold_limit = $submission->mold_limit;
+            $model->water_back_up = $submission->water_back_up;
+            $model->water_back_up_limit = $submission->water_back_up_limit;
+        });
+    }
 
-                $model->lob = $submission->lob;
-                $model->effective_date = $submission->effective_date;
-                // need set to have either req for input or info from subs
-                $model->expiration_date = $submission->effective_date;
-                $model->agent_phone_number = $submission->agent_phone_number;
-                $model->agent_name = $submission->agent_name;
-                $model->agent_name = $submission->agent_name;        
-                $model->phone_number = $submission->phone_number; 
-                $model->email_address = $submission->email_address;                                
-                //building info
-                $model->cov_a = $submission->cov_a;
-                $model->other_structures = $submission->other_structures;
-                $model->loss_of_use = $submission->loss_of_use;
-                $model->med_pay = $submission->med_pay;
-                $model->aop_ded = $submission->aop_ded; 
-                $model->construction_type = $submission->construction_type; 
-                $model->protection_class = $submission->protection_class;
-                $model->new_purchase = $submission->new_purchase;
-                $model->email_address = $submission->email_address;  
-                $model->prior_carrier = $submission->prior_carrier;  
-                $model->prior_carrier_name = $submission->prior_carrier_name;  
-                $model->prior_carrier_effective_date = $submission->prior_carrier_effective_date;
+    public function rws()
+    {
+        return $this->hasMany(RatingWorksheet::class);
+    }
 
-                $model->status = 'file';
-                $model->submission_number = $submission->submission_number; 
-                $model->submission_id = $submission->id;
-                //additional coverage
-                $model->mold = $submission->mold;
-                $model->mold_limit = $submission->mold_limit; 
-                $model->water_back_up = $submission->water_back_up; 
-                $model->water_back_up_limit = $submission->water_back_up_limit;
-            });
-        }
+    public function submission()
+    {
+        return $this->belongsTo(Submission::class, 'submission_id');
+    }
 
+    public function note()
+    {
+        return $this->hasMany(Note::class)->latest();
+    }
 
-        public function rws(){
-        
-            return $this->hasMany(RatingWorksheet::class);
-        
-        }   
+    public static function createFromRequest($request, $id)
+    {
+        $submission = Submission::findOrFail($id);
 
-
-        public function submission(){
-        
-            return $this->belongsTo(Submission::class, 'submission_id');
-        
-        }       
-
-
-        public function note() {
-            return $this->hasMany(Note::class)->latest();
-        }         
-
-
-        public static  function createFromRequest($request, $id) 
-        {
-            $submission = Submission::findOrFail($id); 
-
-            File::create([
+        self::create([
 
               'named_insured' => $request->named_insured,
               'additional_named_insured' => $request->additional_named_insured,
@@ -96,23 +89,22 @@ class File extends Model
               'mailing_address_city' => $request->mailing_address_city,
               'mailing_address_county' => $request->mailing_address_county,
               'mailing_address_state'=> $request->mailing_address_state,
-              'mailing_address_zip'=> $request->mailing_address_zip, 
+              'mailing_address_zip'=> $request->mailing_address_zip,
               'location_address_street_name_and_number' => $request->location_address_street_name_and_number,
               'location_address_city' => $request->location_address_city,
               'location_address_county' => $request->location_address_county,
               'location_address_state'=> $request->location_address_state,
-              'mailing_address_zip'=> $request->mailing_address_zip, 
+              'mailing_address_zip'=> $request->mailing_address_zip,
 
-            ]);   
-        }    
+            ]);
+    }
 
-
-        public static function getRWjoinFileRatePremium($id)
-        {
-            $rw = DB::table('rating_worksheets')
-                      ->leftJoin('files', 'rating_worksheets.file_id', '=', 'files.id')   
-                      ->leftJoin('raters', 'rating_worksheets.rater_id', '=', 'raters.id')    
-                      ->leftJoin('premiums', 'rating_worksheets.premium_id', '=', 'premiums.id')                
+    public static function getRWjoinFileRatePremium($id)
+    {
+        $rw = DB::table('rating_worksheets')
+                      ->leftJoin('files', 'rating_worksheets.file_id', '=', 'files.id')
+                      ->leftJoin('raters', 'rating_worksheets.rater_id', '=', 'raters.id')
+                      ->leftJoin('premiums', 'rating_worksheets.premium_id', '=', 'premiums.id')
                       ->select('rating_worksheets.id as rw_id',
                                'rating_worksheets.created_at as rw_created_at',
                                'files.lob as file_lob',
@@ -145,45 +137,42 @@ class File extends Model
                                'raters.prior_carrier as prior_carrier_rate'
                                )
                       ->orderBy('rating_worksheets.id')
-                      ->get();  
+                      ->get();
 
-            return $rw;    
-        }                                 
+        return $rw;
+    }
 
-
-        public static function updateGeneralInfo($request, $id) 
-        {                       
-          return tap($file = File::findOrFail($id))->update([
+    public static function updateGeneralInfo($request, $id)
+    {
+        return tap($file = self::findOrFail($id))->update([
               'named_insured' => $request->named_insured,
               'entity_type' => $request->entity_type,
               'additional_ni' => $request->additional_ni,
-              'mailing_address_street_name_and_number' => $request->mailing_address_street_name_and_number,               
+              'mailing_address_street_name_and_number' => $request->mailing_address_street_name_and_number,
               'mailing_address_city' => $request->mailing_address_city,
               'mailing_address_county' => $request->mailing_address_county,
-              'mailing_address_zip' => $request->mailing_address_zip, 
-              'mailing_address_state' => $request->mailing_address_state, 
-              'location_address_street_name_and_number' => $request->location_address_street_name_and_number, 
-              'location_address_city' => $request->location_address_city, 
-              'location_address_county' => $request->location_address_county, 
-              'location_address_zip' => $request->location_address_zip, 
-              'location_address_state' => $request->location_address_state,                             
+              'mailing_address_zip' => $request->mailing_address_zip,
+              'mailing_address_state' => $request->mailing_address_state,
+              'location_address_street_name_and_number' => $request->location_address_street_name_and_number,
+              'location_address_city' => $request->location_address_city,
+              'location_address_county' => $request->location_address_county,
+              'location_address_zip' => $request->location_address_zip,
+              'location_address_state' => $request->location_address_state,
           ]);
+    }
 
-        }      
-
-
-        public static function updateFileRatingCharacteristics($request, $id) 
-        { 
-          return tap($file = File::findOrFail($id))->update([
+    public static function updateFileRatingCharacteristics($request, $id)
+    {
+        return tap($file = self::findOrFail($id))->update([
               'lob' => $request->lob,
               'cov_a' => $request->cov_a,
               'other_structures' => $request->other_structures,
-              'med_pay' => $request->med_pay,               
+              'med_pay' => $request->med_pay,
               'aop_ded' => $request->aop_ded,
               'construction_type' => $request->construction_type,
-              'protection_class' => $request->protection_class, 
-              'prior_carrier' => $request->prior_carrier, 
-              'prior_carrier_name' => $request->prior_carrier_name                           
+              'protection_class' => $request->protection_class,
+              'prior_carrier' => $request->prior_carrier,
+              'prior_carrier_name' => $request->prior_carrier_name,
           ]);
-        }             
+    }
 }

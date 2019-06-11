@@ -2,11 +2,10 @@
 
 namespace App\Mail;
 
+use App\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use App\User;
 
 class ApproveNewUser extends Mailable
 {
@@ -31,6 +30,6 @@ class ApproveNewUser extends Mailable
     {
         return $this->markdown('emails.user.approve')
                         ->with([
-                        'user' => $this->user]);
+                        'user' => $this->user, ]);
     }
 }

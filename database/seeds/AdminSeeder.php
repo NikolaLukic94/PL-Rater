@@ -19,6 +19,5 @@ class AdminSeeder extends Seeder
             'admin' => 1,
             'approved_at' => now(),
         ]);
-
     }
 }

@@ -13,7 +13,7 @@ class UwCreateSubmissionEmail extends FormRequest
      */
     public function authorize()
     {
-        return false;// true?
+        return false; // true?
     }
 
     /**
@@ -45,7 +45,7 @@ class UwCreateSubmissionEmail extends FormRequest
         'new_purchase' =>'somethimes|nullable',
         'prior_carrier' =>'somethimes|nullable',
         'prior_carrier_name' =>'somethimes|nullable',
-        'prior_carrier_effective_date' =>'somethimes|nullable'    
+        'prior_carrier_effective_date' =>'somethimes|nullable',
         ];
     }
 }

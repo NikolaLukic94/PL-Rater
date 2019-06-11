@@ -15,7 +15,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" placeholder="Username" required autofocus>
 
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback" role="alert">
@@ -28,7 +28,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="Email"  required>
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
@@ -51,9 +51,8 @@
                         </div>
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm"  required>
                             </div>
                         </div>
                         <div class="form-group row mb-0">
@@ -65,27 +64,30 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">    
                             <div class="position-checbkoxes">                    
-                                <input type="checkbox" name="position" value="ceo">Senior UW<br>
+                                <input type="checkbox" name="position" value="ceo"><br><p>Senior UW</p>
                                 <input type="checkbox" name="position" value="underwriter" checked>Underwriter<br>
                             </div>
                             </div>
                         </div>
                         <br>
-                        <div class="form-group row mb-0">
+                        <div class="form-group row mb-0" >
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary"  id="login">
                                     {{ __('Register') }}
                                 </button>
                             </div>
                         </div>
                         <br>
-                       <div class="form-group row mb-0">
-                           <div class="col-md-6 offset-md-4"> 
-                               <a href="{{ url('/login/github') }}" class="btn btn-github"><i class="fa fa-github"></i> Github</a>
-                               <a href="{{ url('/login/twitter') }}" class="btn btn-twitter" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
-                               <a href="{{ url('/login/facebook') }}" class="btn btn-facebook" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
-                           </div>
-                       </div>                        
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <button type="submit" class="btn btn-primary" id="/login/twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                                <button type="submit" class="btn btn-primary" id="/login/github">
+                                    <i class="fab fa-github"></i>
+                                </button>   
+                            </div>
+                        </div>                       
                     </form>
                 </div><!-- card start -->
             </div><!-- col-md-8 start -->

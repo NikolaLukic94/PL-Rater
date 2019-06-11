@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\ContactUs;
-use Illuminate\Http\Request;
 use App\Http\Requests\ContactUsRequest;
 
 class ContactsController extends Controller
@@ -19,5 +17,4 @@ class ContactsController extends Controller
 
         return redirect('/');
     }
-
 }

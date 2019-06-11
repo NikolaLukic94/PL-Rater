@@ -27,7 +27,7 @@ class SendEmailRequest extends FormRequest
             'to' => 'required',
             'subject_line' => 'required|max:150',
             'agent_phone_number' => 'required',
-            'cc' => 'sometimes|nullable'           
+            'cc' => 'sometimes|nullable',
         ];
     }
 }

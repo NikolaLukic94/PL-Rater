@@ -14,5 +14,5 @@ return [
     'default_library' => 'Chartjs',
     'height' => 400,
     'width' => 400,
-    'responsive' => true
+    'responsive' => true,
 ];

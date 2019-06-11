@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Rate extends Model
 {
-        use Traits\RecordsActivity;
+    use Traits\RecordsActivity;
 
-        protected $fillable = [ 'lob',
+    protected $fillable = ['lob',
                                 'cov_a',
                                 'other_structures',
                                 'loss_of_use',
@@ -16,16 +16,16 @@ class Rate extends Model
                                 'med_pay_2_5k',
                                 'med_pay_5k',
                                 'aop_ded_1',
-								'aop_ded_2',
-								'aop_ded_3',
-								'aop_ded_4',
-								'aop_ded_5',
-								//construction types
-								'frame',
-								'jm',
-								'bv',
-								'masonry',
-								//
+                                'aop_ded_2',
+                                'aop_ded_3',
+                                'aop_ded_4',
+                                'aop_ded_5',
+                                //construction types
+                                'frame',
+                                'jm',
+                                'bv',
+                                'masonry',
+                                //
                                 'protection_class_1',
                                 'protection_class_2',
                                 'protection_class_3',
@@ -39,9 +39,9 @@ class Rate extends Model
 
                             ];
 
-        public static  function createFromRequest($request) 
-        {
-            Rate::create([
+    public static function createFromRequest($request)
+    {
+        self::create([
                 'lob' =>  $request->lob,
                 'county' => $request->county,
                 'state'=> $request->state,
@@ -56,7 +56,6 @@ class Rate extends Model
                 'prior_carrier' => $request->prior_carrier,
                 'prior_carrier_name' => $request->prior_carrier_name,
                 'prior_carrier_effective_date' => $request->prior_carrier_effective_date,
-            ]);   
-        }
-               
+            ]);
+    }
 }

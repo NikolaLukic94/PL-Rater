@@ -164,7 +164,6 @@ return [
         Spatie\Activitylog\ActivitylogServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
 
-
     ],
 
     /*
@@ -217,7 +216,6 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'Captcha' => Mews\Captcha\Facades\Captcha::class,
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
-
 
     ],
 

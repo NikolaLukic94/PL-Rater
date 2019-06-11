@@ -2,28 +2,32 @@
 
 namespace App\Jobs;
 
+use App\Mail\ContactUsEmail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use App\Mail\ContactUsEmail;
 
 class SendContactUsEmail implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+
     public $to;
+
     public $subject;
+
     public $body;
+
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct($subject,$body)
+    public function __construct($subject, $body)
     {
-        $this->subject = $subject;  
-        $this->body = $body;   
+        $this->subject = $subject;
+        $this->body = $body;
     }
 
     /**
@@ -33,6 +37,6 @@ class SendContactUsEmail implements ShouldQueue
      */
     public function handle()
     {
-       \Mail::to('support@plqr')->send(new ContactUsEmail($this->subject,$this->body));
+        \Mail::to('support@plqr')->send(new ContactUsEmail($this->subject, $this->body));
     }
 }

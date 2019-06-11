@@ -18,7 +18,7 @@ class CreateAlbumsTable extends Migration
             $table->string('name');
             $table->text('description');
             $table->string('cover_image');
-            $table->timestamps();            
+            $table->timestamps();
         });
     }
 

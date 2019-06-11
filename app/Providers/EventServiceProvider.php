@@ -19,8 +19,8 @@ class EventServiceProvider extends ServiceProvider
             SendEmailVerificationNotification::class,
         ],
         'App\Events\NewUserRequiringApproval' => [
-            'App\Listeners\NewUserApprovalApprovalRequest'
-        ]
+            'App\Listeners\NewUserApprovalApprovalRequest',
+        ],
     ];
 
     /**

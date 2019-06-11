@@ -42,14 +42,25 @@
                             </div>
                         </div>                     
 
-                        <div class="form-group row mb-0">
+                        <div class="form-group row mb-0" id="reg-group">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary" id="login">
                                     {{ __('Login') }}
-                                </button>
+                                </button>                     
                             </div>
                         </div>
                     </form>
+                    <div class="form-group row mb-0">
+                        <div class="col-md-8 offset-md-4">
+                                <button type="submit" class="btn btn-primary" id="/login/twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                                <button type="submit" class="btn btn-primary" id="/login/github">
+                                    <i class="fab fa-github"></i>
+                                </button>   
+
+                        </div>
+                    </div>
                     <div class="form-group row mb-0">
                         <div class="col-md-8 offset-md-4">
                             <a class="text-center" href="{{ route('password.request') }}">
@@ -58,35 +69,6 @@
                         </div>
                     </div>
                     <hr>
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">                 
-                    <div class="col text-center">
-                        <div class="row">
-                         <a href="/login/facebook">
-                            <div class="ladda-button" data-style="expand-left">
-                                <i class="fa fa-facebook"></i> Login with Facebook 
-                            </div>
-                        </a>    
-                        </div>
-                        <br>
-                        <div class="row">
-                         <a href="/login/facebook">
-                            <div class="btn btn-md btn-primary ladda-button" data-style="expand-left">
-                                <i class="fa fa-twitter"></i> Login with Twitter 
-                            </div>
-                        </a>    
-                        </div>
-                        <br>
-                        <div class="row">
-                         <a href="/login/facebook">
-                            <div class="btn btn-md btn-primary ladda-button" data-style="expand-left" data-color="green">
-                                <i class="fa fa-github"></i> Login with Github 
-                            </div>
-                        </a>    
-                        </div>
-                    </div>
-                    </div>
-                </div>
                 </div>
             </div>
         </div>

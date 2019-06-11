@@ -2,51 +2,37 @@
 
 namespace App\Http\Controllers;
 
-use Validator;
-use Dompdf\Dompdf;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
-use App\Mail\SubmissionSubmitted;
-use Illuminate\Support\Facades\DB;
-use App\Mail;
-use App\Mail\SubmissionEmailSent; 
-use App\Mail\ContactAgentEmail;
-use Carbon\Carbon;
-use App\User;
 use App\Submission;
-use Illuminate\Support\Facades\Input;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\AgentSendSubmissionEmail;
-use App\LogActivity;
-use App\Jobs\SendSubmissionSuccessfullEmail;
 
 class SubmissionEmailController extends Controller
 {
-    public function index() 
+    public function index()
     {
-      return view('/subs/index', [
+        return view('/subs/index', [
             'submission' => Submission::orderBy('location_address_state', 'asc')->paginate(10),
             'subsEffWithinNextWeek' => DB::table('submissions')
                                     ->where('effective_date', '<', $dateInSevenDays = Submission::currentWeek())
-                                    ->count()
+                                    ->count(),
       ]);
     }
 
-
-    public function create()  
+    public function create()
     {
-        return view('subs/create',[
+        return view('subs/create', [
           'state' => $this->state,
           'lob' => $this->lob,
           'med_pay' => $this->med_pay,
           'aop' => $this->aop,
           'constr_type' => $this->constr_type,
           'pc' => $this->pc,
-          'yes_no' => $this->yes_no
+          'yes_no' => $this->yes_no,
         ]);
     }
 
-
-    public function store(AgentSendSubmissionEmail $request)  
+    public function store(AgentSendSubmissionEmail $request)
     {
         $submission = Submission::createFromRequest($request);
 
@@ -55,17 +41,15 @@ class SubmissionEmailController extends Controller
         return view('/subs/success');
     }
 
-
     public function show($id)
     {
         return view('/subs/show', [
-            'submission' => Submission::findOrFail($id)
-        ]);    
+            'submission' => Submission::findOrFail($id),
+        ]);
     }
-    
 
-    public function edit($id)  {
-
+    public function edit($id)
+    {
         return view('/subs/edit', [
           'submission' => Submission::findOrFail($id),
           'state' => $this->state,
@@ -74,23 +58,21 @@ class SubmissionEmailController extends Controller
           'aop' => $this->aop,
           'constr_type' => $this->constr_type,
           'pc' => $this->pc,
-          'yes_no' => $this->yes_no          
+          'yes_no' => $this->yes_no,
         ]);
     }
 
-
-    public function update(Request $request, $id)  {
-
-        Submission::updateFromRequest($request, $id);      
+    public function update(Request $request, $id)
+    {
+        Submission::updateFromRequest($request, $id);
 
         return view('subs/change/success');
     }
 
-
-    public function destroy($id) {
-
+    public function destroy($id)
+    {
         $submission = Submission::find($id);
-        
+
         $submission->delete();
 
         return redirect('/subs/emails/index');

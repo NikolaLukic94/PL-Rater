@@ -15,15 +15,14 @@ class UsersSeeder extends Seeder
             'name' => 'Tom',
             'email' => 'tome@example.com',
             'password' => bcrypt('exampleuser'),
-            'admin' => 0
+            'admin' => 0,
         ]);
 
         \App\User::create([
             'name' => 'Hank',
             'email' => 'hank@example.com',
             'password' => bcrypt('exampleuser'),
-            'admin' => 0
+            'admin' => 0,
         ]);
-
     }
 }

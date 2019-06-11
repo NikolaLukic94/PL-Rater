@@ -5,7 +5,6 @@ namespace App\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Queue\ShouldQueue;
 
 class CustomEmail extends Mailable
 {
@@ -16,11 +15,10 @@ class CustomEmail extends Mailable
      *
      * @return void
      */
-    public function __construct($subject,$body)
+    public function __construct($subject, $body)
     {
-  
-        $this->subject = $subject;  
-        $this->body = $body;        
+        $this->subject = $subject;
+        $this->body = $body;
     }
 
     /**
@@ -31,7 +29,7 @@ class CustomEmail extends Mailable
     public function build()
     {
         return $this->markdown('emails.templates.custom_email')
-                    ->with('body', $this->body)                    
-                    ->subject($this->subject);                    
+                    ->with('body', $this->body)
+                    ->subject($this->subject);
     }
 }

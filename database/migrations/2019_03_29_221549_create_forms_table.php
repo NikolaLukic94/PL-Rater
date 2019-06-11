@@ -18,7 +18,7 @@ class CreateFormsTable extends Migration
             $table->string('name');
             $table->string('edition_date')->nullable();
             $table->text('text')->nullable();
-            $table->string('attachment');            
+            $table->string('attachment');
             $table->tinyInteger('archived')->default(0);
             $table->rememberToken();
             $table->timestamps();

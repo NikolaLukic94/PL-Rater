@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Rate;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Input;
 
 /* USED FOR DEFINING, EDITING AND DELETING RATE COEFICIENTS  */
 
@@ -13,43 +11,43 @@ class RateController extends Controller
 {
     public function index()
     {
-        return view('/rate/index',[
-            'rate' => Rate::all()
+        return view('/rate/index', [
+            'rate' => Rate::all(),
         ]);
     }
 
     public function create()
     {
-        return view('/rate/define',[
+        return view('/rate/define', [
             'credit' => $this->credit,
-            'lob' => $this->lob            
+            'lob' => $this->lob,
         ]);
     }
 
     public function store(Request $request)
     {
-        Rate::createFromRequest($request);  
+        Rate::createFromRequest($request);
 
-        return redirect('/rate/index');       
+        return redirect('/rate/index');
     }
 
     public function show($id)
     {
-        return view('/rate/show',[
-            'rate' => Rate::findOrFail($id)
+        return view('/rate/show', [
+            'rate' => Rate::findOrFail($id),
         ]);
     }
 
     public function edit($id)
     {
-        return view('/rate/edit',[
+        return view('/rate/edit', [
             'rate' => Rate::findOrFail($id),
-            'credit' => $this->credit                       
+            'credit' => $this->credit,
         ]);
     }
 
-    public function destroy($id) {
-
+    public function destroy($id)
+    {
         $this->authorize('update', $id);
 
         $rate = Rate::find($id);

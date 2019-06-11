@@ -17,7 +17,7 @@ class CreateContactUsesTable extends Migration
             $table->increments('id');
             $table->string('sender');
             $table->text('body');
-            $table->string('to');                                    
+            $table->string('to');
             $table->timestamps();
         });
     }

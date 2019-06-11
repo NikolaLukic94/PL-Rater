@@ -2,16 +2,16 @@
 
 namespace Tests\Feature\Auth;
 
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\User;
+use Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 
 class LoginTest extends TestCase
 {
     use RefreshDatabase;
-    use WithoutMiddleware;//disables csrf protection fortesting purpose
+    use WithoutMiddleware; //disables csrf protection fortesting purpose
+
     /**
      * A basic feature test example.
      *
@@ -22,18 +22,16 @@ class LoginTest extends TestCase
         $response = $this->get('/login');
 
         $response->assertSuccessful();
-        
+
         $response->assertViewIs('auth.login');
     }
 
     public function test_a_user_cannot_see_login_form_if_auth()
     {
-
-
         $response = $this->actingAs($user)->get('/login');
-        
+
         $response->assertRedirect('/home');
-    }    
+    }
 
     public function test_user_can_login_with_correct_credentials()
     {
@@ -48,7 +46,5 @@ class LoginTest extends TestCase
         ]);
 
         $response->assertRedirect('/home');
-
     }
-
 }

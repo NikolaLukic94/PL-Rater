@@ -2,12 +2,10 @@
 
 namespace App\Mail;
 
+use Illuminate\Http\Request;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use App\Submission;
-use Illuminate\Http\Request;
 
 class ContactAgentEmail extends Mailable
 {

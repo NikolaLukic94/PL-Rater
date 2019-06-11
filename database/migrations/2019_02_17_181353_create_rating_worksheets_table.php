@@ -23,8 +23,8 @@ class CreateRatingWorksheetsTable extends Migration
             $table->foreign('premium_id')->references('id')->on('premiums');
 
             $table->unsignedInteger('rater_id');
-            $table->foreign('rater_id')->references('id')->on('raters');    
-                    
+            $table->foreign('rater_id')->references('id')->on('raters');
+
             $table->timestamps();
         });
     }

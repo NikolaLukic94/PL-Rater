@@ -2,29 +2,28 @@
 
 namespace App;
 
-use App\File;
 use Illuminate\Database\Eloquent\Model;
 
 class RatingWorksheet extends Model
 {
     use Traits\RecordsActivity;
-        	
-    protected $fillable = [ 
+
+    protected $fillable = [
                             'file_id',
                             'premium_id',
-                            'rater_id'
-        		    		]; 
-       		    		
+                            'rater_id',
+                            ];
 
-    public function file() {
+    public function file()
+    {
         return $this->belongsTo(File::class, 'file_id');
     }
 
     public static function getRwJoinPremiumFileRater()
     {
         $rw = DB::table('rating_worksheets')
-                ->leftJoin('premiums', 'rating_worksheets.premium_id', '=', 'premiums.id')   
-                ->leftJoin('files', 'rating_worksheets.file_id', '=', 'files.id')                      
+                ->leftJoin('premiums', 'rating_worksheets.premium_id', '=', 'premiums.id')
+                ->leftJoin('files', 'rating_worksheets.file_id', '=', 'files.id')
                 ->leftJoin('raters', 'rating_worksheets.rater_id', '=', 'raters.id')
                     ->select('premiums.grand_premium as grand_premium',
                              'premiums.surplus_lines_tax_fee as sl_tax_fee',
@@ -58,6 +57,6 @@ class RatingWorksheet extends Model
                     )
                 ->first();
 
-        return $rw;                
+        return $rw;
     }
 }

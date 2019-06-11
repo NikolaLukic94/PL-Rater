@@ -18,7 +18,7 @@ class CreatePremiumsTable extends Migration
             $table->double('grand_premium', 10, 2);
             $table->double('surplus_lines_tax_fee', 10, 2);
             $table->double('empa', 10, 2);
-            $table->unsignedInteger('file_id');            
+            $table->unsignedInteger('file_id');
             $table->timestamps();
         });
     }

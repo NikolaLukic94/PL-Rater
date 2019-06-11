@@ -16,11 +16,11 @@ class CreateNotesTable extends Migration
         Schema::create('notes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->text('text');           
+            $table->text('text');
             $table->unsignedInteger('file_id');
             $table->foreign('file_id')->references('id')->on('files');
-            $table->string('created_by');  
-            $table->timestamps();                      
+            $table->string('created_by');
+            $table->timestamps();
         });
     }
 

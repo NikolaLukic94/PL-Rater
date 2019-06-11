@@ -2,12 +2,8 @@
 
 namespace App\Listeners;
 
-use App\Events\NewUserRequiringApproval;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use App\User;
-use Mail;
 use App\Mail\ApproveNewUser;
+use App\Events\NewUserRequiringApproval;
 
 class NewUserApprovalApprovalRequest
 {

@@ -2,16 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\User;
 
 class UserApprovalController extends Controller
 {
     public function index()
     {
-        return view('auth/users/approval/index',[
+        return view('auth/users/approval/index', [
             'users' => User::whereNotNull('approved_at')->paginate(10),
-            'users_pending_approval' => User::whereNull('approved_at')->paginate(10)
+            'users_pending_approval' => User::whereNull('approved_at')->paginate(10),
         ]);
     }
 
@@ -24,14 +23,12 @@ class UserApprovalController extends Controller
         return redirect()->route('admin.users.index')->withMessage('User approved successfully');
     }
 
-    public function destroy($id) {
-
+    public function destroy($id)
+    {
         $user = User::find($id);
-        
+
         $user->update(['approved_at' => null]);
 
         return redirect()->route('admin.users.index')->withMessage('This User is no longer approved');
-        
     }
-
 }
