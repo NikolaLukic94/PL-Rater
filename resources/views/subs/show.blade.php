@@ -24,7 +24,8 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
         	@if(isset($submission))
-            <div class="card">
+            
+            <br><div class="card">
                 <div class="card-header text-center">Please submit all info:</div>
                 <div class="card-body">
 				<form action="/subs/" method="POST">
@@ -358,7 +359,7 @@
 				<div class="field is-grouped is-grouped-centered">
 				  <p class="control">
 				 
-                <button type="button" class="btn btn-outline-secondary">Edit</button>
+
 				  
 				  </p>
 				  @include('errors')

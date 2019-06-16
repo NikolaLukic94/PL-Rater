@@ -13,6 +13,7 @@ class Controller extends BaseController
 
     public function __construct()
     {
+      
     }
 
     public $home_type = [
@@ -110,16 +111,6 @@ class Controller extends BaseController
         '1' => 'low',
         '2' => 'medium',
         '3' => 'high',
-        ];
-
-    public $ticket_groups = [
-        '1' => 'software',
-        '2' => 'hardware',
-        ];
-
-    public $ticket_type = [
-        '1' => 'failure',
-        '2' => 'request',
         ];
 
     public $statuses = [

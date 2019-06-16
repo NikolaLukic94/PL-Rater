@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Submission;
 use Illuminate\Http\Request;
+use App\Http\Requests\SendEmailRequest;
 
 class EmailController extends Controller
 {
@@ -14,7 +15,7 @@ class EmailController extends Controller
         ]);
     }
 
-    public function store(Request $request)
+    public function store(SendEmailRequest $request)
     {
         dispatch(new \App\Jobs\SendCustomEmail($request->input('subject_line'), $request->input('body'), $request->input('to')));
 

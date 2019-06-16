@@ -1,14 +1,5 @@
 @extends('layouts.app')
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <title>PLQR</title>
-
-</head>
-
 <body>
 
   <div class="d-flex" id="wrapper">
@@ -77,25 +68,23 @@
                         </div>
                     </div>
                 </div>                       
-                <div class="field">
+
+              <div class="field">
                     <div class="row">
-                        <div class="col">
-                            <label class="label" for="agent_name">
-                                Type of entitiy:
-                            </label>
-                        </div>
-                        <div class="col">
-                            <select name="type_of_entity" class="col-md-4 form-group">
-                              <option  value="{{ $submission->type_of_entity }}">-- Select --</option>       
-                                  @if($type_of_entity)
-                                    @for($i = 1; $i <= count($type_of_entity); $i++)      
-                                         <option value="{{$i}}">{{$type_of_entity[$i]}}</option>
-                                    @endfor  
-                                  @endif                             
-                            </select> 
-                        </div>
+                      <div class="col">         
+                        <label class="label" for="type_of_entity">
+                          Type of entitiy:
+                        </label>
+                      </div>
+                      <div class="form-group col-md-6">             
+                        <select name="type_of_entity" class="form-group">
+                              <option  value="">-- Select --</option>                                  
+                              <option  value="individual">-- Individual --</option>       
+                              <option  value="corporately_titled">-- Corporately Titled --</option>                      
+                         </select>
+                      </div>
                     </div>
-                </div> 
+                  </div>                 
                 <div class="field">
                     <div class="row">
                         <div class="col">
@@ -158,25 +147,23 @@
                         </div>
                     </div>
                 </div> 
-                <div class="field">
+                  <div class="field">
                     <div class="row">
-                        <div class="col">
-                            <label class="label" for="agent_name">
-                               State:
-                            </label>
-                        </div>
-                        <div class="col">
-                            <select name="mailing_address_state" class="col-md-4 form-group">
-                              <option  value="{{$submission->mailing_address_state}}"></option>       
-                                  @if($state)
-                                    @for($i = 1; $i < count($state); $i++)      
-                                         <option value="{{$i}}">{{$state[$i]}}</option>
-                                    @endfor  
-                                  @endif                             
-                            </select>  
-                        </div>
+                      <div class="col">         
+                        <label class="label" for="location_address_state">
+                          State
+                        </label>
+                      </div>
+                      <div class="form-group col-md-6">             
+                        <select name="location_address_state" class="form-group">
+                            <option  value="">Select State</option>
+                            <option  value="LA">LA</option>
+                            <option  value="CA">CA</option>
+                            <option  value="FL">FL</option>                 
+                         </select>
+                      </div>
                     </div>
-                </div> 
+                  </div>                 
                 <hr>
                 <!-- Location address -->
                 <div class="field">
@@ -227,25 +214,23 @@
                         </div>
                     </div>
                 </div> 
-                <div class="field">
-                    <div class="row">
-                        <div class="col">
-                            <label class="label" for="agent_name">
-                               State:
-                            </label>
-                        </div>
-                        <div class="col">
-                            <select name="location_address_state" class="col-md-4 form-group">
-                              <option  value="{{$submission->location_address_state}}"></option>       
-                                  @if($state)
-                                    @for($i = 1; $i < count($state); $i++)      
-                                         <option value="{{$i}}">{{$state[$i]}}</option>
-                                    @endfor  
-                                  @endif                            
-                            </select>   
-                        </div>
-                    </div>
-                </div> 
+              <div class="field">
+                <div class="row">
+                  <div class="col">         
+                    <label class="label" for="location_address_state">
+                      State
+                    </label>
+                  </div>
+                  <div class="form-group col-md-6">             
+                    <select name="location_address_state" class="form-group">
+                        <option  value="">Select State</option>
+                        <option  value="LA">LA</option>
+                        <option  value="CA">CA</option>
+                        <option  value="FL">FL</option>                 
+                     </select>
+                  </div>
+                </div>
+              </div>                 
                 <hr>
                 <button type="submit" class="btn btn-outline-secondary">Submit</button>
                 </form>

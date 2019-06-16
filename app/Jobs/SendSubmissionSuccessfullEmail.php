@@ -15,17 +15,18 @@ class SendSubmissionSuccessfullEmail implements ShouldQueue
 
     public $to;
 
-    public $submission_number;
+    public $submission;
 
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct($submission_number, $to)
+    public function __construct($to, $submission)
     {
         $this->to = $to;
-        $this->submission_number = $submission_number;
+        $this->submission = $submission;
+
     }
 
     /**
@@ -35,6 +36,6 @@ class SendSubmissionSuccessfullEmail implements ShouldQueue
      */
     public function handle()
     {
-        \Mail::to($this->to)->send(new SubmissionEmailSent($this->submission_number));
+        \Mail::to($this->to)->send(new SubmissionEmailSent($this->submission));
     }
 }

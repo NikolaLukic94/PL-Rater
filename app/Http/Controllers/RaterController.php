@@ -56,8 +56,6 @@ class RaterController extends Controller
 
         $calculation = Rater::createPremiumValues($file_id, $rater_id);
 
-        $file->update(['status' = 'rated']);
-
         $rater = Rater::findOrFail($rater_id)->first();
 
     	return redirect('/rating-worksheet/store/'. $file->id . '/' . $rater->id);

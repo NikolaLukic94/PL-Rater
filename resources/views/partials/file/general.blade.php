@@ -1,6 +1,7 @@
 <div id="general" class="tabcontent">
-  <div class="col">
-    <div class="card-header text-center">General Info</div>
+  <div class="col-md-8 offset-2">
+    <div class="card">
+<div class="card-header text-center">General Info</div>
       <div class="card-body">
         <form method="POST" action="/file/update/general-info/{{$file->id}}">
           {{ csrf_field()  }}
@@ -180,4 +181,6 @@
         </form>
       </div>
     </div>
-<!-- general info -->
+<!-- general info -->  
+    </div>
+  </div>

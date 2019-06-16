@@ -26,120 +26,130 @@
             <div class="card">
                 <div class="card-header text-center">Define new rate:</div>
                 <div class="card-body">
-<form action="/rate/create" method="POST">
-        {{ csrf_field() }}
-        <div class="field">
-					<div class="row">
-						<div class="col">					
-							<label class="label" for="type_of_coverage">
-								LOB
-							</label>
-						</div>
-						<div class="col">							
-							<select name="lob" class="col-md-4 form-group">
-							  <option  value="">Select LOB</option>								
-							  	  @if($lob)
-							  	  	@for($i = 1; $i < count($lob); $i++)		
-								 		 <option value="{{$i}}">{{$lob[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
-							</select>
-						</div>
-					</div>
-				</div>
+				<form action="/rate/create" method="POST">
+		        {{ csrf_field() }}
+                  <div class="field">
+                    <div class="row">
+                      <div class="col">         
+                        <label class="label" for="lob">
+                          LOB
+                        </label>
+                      </div>
+                      <div class="form-group col-md-6">             
+                        <select name="lob" class="form-group">
+                            <option  value="">--- Select ---</option>
+                            <option  value="LA">HO3</option>
+                            <option  value="CA">DP3</option>
+                            <option  value="FL">DP1</option>                 
+                         </select>
+                      </div>
+                    </div>
+                  </div>
 				<hr>
-				<div class="field">
-					<div class="row">
-						<div class="col">
-							<label class="label" for="cov_a">
-								Coverage A rate
-							</label>
-						</div>
-						<div class="col">							
-							<select name="cov_a" class="col-md-4 form-group">
-							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
-							</select>
-						</div>
-					</div>
-				</div>
-				<div class="field">
-					<div class="row">
-						<div class="col">
-							<label class="label" for="other_structures">
-								Other Structures
-							</label>
-						</div>
-						<div class="col">							
-							<select name="other_structures" class="col-md-4 form-group">
-							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
-							</select>							
-						</div>
-					</div>
-				</div>
-				<div class="field">
-					<div class="row">
-						<div class="col">
-							<label class="label" for="loss_of_use">
-								Loss Of Use
-							</label>
-						</div>
-						<div class="col">							
-							<select name="loss_of_use" class="col-md-4 form-group">
-							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
-							</select>							
-						</div>
-					</div>
-				</div>
+
+              <div class="field">
+                <div class="row">
+                  <div class="col">         
+                    <label class="label" for="cov_a">
+                      Cov A
+                    </label>
+                  </div>
+                  <div class="form-group col-md-6">             
+                    <select name="cov_a" class="form-group">
+                        <option  value="">--- Select ---</option>
+                        <option  value="0.7">0.7</option>
+                        <option  value="0.8">0.8</option>
+                        <option  value="0.85">0.85</option>         
+                        <option  value="0.95">0.95</option>   
+                        <option  value="1">1</option>   
+                        <option  value="1.05">1.05</option>   
+                        <option  value="1.15">1.15</option>                                                                                                           
+                     </select>
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <div class="row">
+                  <div class="col">         
+                    <label class="label" for="other_structures">
+                      OS
+                    </label>
+                  </div>
+                  <div class="form-group col-md-6">             
+                    <select name="other_structures" class="form-group">
+                        <option  value="">--- Select ---</option>
+                        <option  value="0.7">0.7</option>
+                        <option  value="0.8">0.8</option>
+                        <option  value="0.85">0.85</option>         
+                        <option  value="0.95">0.95</option>   
+                        <option  value="1">1</option>   
+                        <option  value="1.05">1.05</option>   
+                        <option  value="1.15">1.15</option>                                                                                                                
+                     </select>
+                  </div>
+                </div>
+              </div> 
+              <div class="field">
+                <div class="row">
+                  <div class="col">         
+                    <label class="label" for="loss_of_use">
+                      Loss Of Use
+                    </label>
+                  </div>
+                  <div class="form-group col-md-6">             
+                    <select name="loss_of_use" class="form-group">
+                        <option  value="">--- Select ---</option>
+                        <option  value="0.7">0.7</option>
+                        <option  value="0.8">0.8</option>
+                        <option  value="0.85">0.85</option>         
+                        <option  value="0.95">0.95</option>   
+                        <option  value="1">1</option>   
+                        <option  value="1.05">1.05</option>   
+                        <option  value="1.15">1.15</option>                                                                                                                
+                     </select>
+                  </div>
+                </div>
+              </div>                           
 				<hr>
+              <div class="field">
+                <div class="row">
+                  <div class="col">         
+                    <label class="label" for="loss_of_use">
+                      Med Pay of 1k
+                    </label>
+                  </div>
+                  <div class="form-group col-md-6">             
+                    <select name="med_pay_1000" class="form-group">
+                        <option  value="">--- Select ---</option>
+                        <option  value="0.7">0.7</option>
+                        <option  value="0.8">0.8</option>
+                        <option  value="0.85">0.85</option>         
+                        <option  value="0.95">0.95</option>   
+                        <option  value="1">1</option>   
+                        <option  value="1.05">1.05</option>   
+                        <option  value="1.15">1.15</option>                                                                                                             
+                     </select>
+                  </div>
+                </div>
+              </div> 				
+
 				<div class="field">
 					<div class="row">
 						<div class="col">
-							<label class="label" for="med_pay_1000">
-								Med Pay of 1k
-							</label>
-						</div>
-						<div class="col">							
-							<select name="med_pay" class="col-md-4 form-group">
-							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
-							</select>						
-						</div>
-					</div>
-				</div>
-				<div class="field">
-					<div class="row">
-						<div class="col">
-							<label class="label" for="med_pay_1000">
+							<label class="label" for="med_pay_2_5k">
 								Med Pay of 2.5k
 							</label>
 						</div>
 						<div class="col">							
-							<select name="med_pay_1000" class="col-md-4 form-group">
+							<select name="med_pay_2_5k" class="col-md-4 form-group">
 							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
+		                        <option  value="0.7">0.7</option>
+		                        <option  value="0.8">0.8</option>
+		                        <option  value="0.85">0.85</option>         
+		                        <option  value="0.95">0.95</option>   
+		                        <option  value="1">1</option>   
+		                        <option  value="1.05">1.05</option>   
+		                        <option  value="1.15">1.15</option>  					  
 							</select>							
 						</div>
 					</div>
@@ -154,11 +164,13 @@
 						<div class="col">							
 							<select name="med_pay_5000" class="col-md-4 form-group">
 							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
+		                        <option  value="0.7">0.7</option>
+		                        <option  value="0.8">0.8</option>
+		                        <option  value="0.85">0.85</option>         
+		                        <option  value="0.95">0.95</option>   
+		                        <option  value="1">1</option>   
+		                        <option  value="1.05">1.05</option>   
+		                        <option  value="1.15">1.15</option>  						  
 							</select>	
 						</div>
 					</div>
@@ -174,11 +186,13 @@
 						<div class="col">							
 							<select name="aop_ded_1" class="col-md-4 form-group">
 							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
+		                        <option  value="0.7">0.7</option>
+		                        <option  value="0.8">0.8</option>
+		                        <option  value="0.85">0.85</option>         
+		                        <option  value="0.95">0.95</option>   
+		                        <option  value="1">1</option>   
+		                        <option  value="1.05">1.05</option>   
+		                        <option  value="1.15">1.15</option>  						  
 							</select>	
 						</div>
 					</div>
@@ -193,11 +207,13 @@
 						<div class="col">							
 							<select name="aop_ded_2" class="col-md-4 form-group">
 							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
+		                        <option  value="0.7">0.7</option>
+		                        <option  value="0.8">0.8</option>
+		                        <option  value="0.85">0.85</option>         
+		                        <option  value="0.95">0.95</option>   
+		                        <option  value="1">1</option>   
+		                        <option  value="1.05">1.05</option>   
+		                        <option  value="1.15">1.15</option>  						  
 							</select>	
 						</div>
 					</div>
@@ -212,11 +228,13 @@
 						<div class="col">							
 							<select name="aop_ded_3" class="col-md-4 form-group">
 							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
+		                        <option  value="0.7">0.7</option>
+		                        <option  value="0.8">0.8</option>
+		                        <option  value="0.85">0.85</option>         
+		                        <option  value="0.95">0.95</option>   
+		                        <option  value="1">1</option>   
+		                        <option  value="1.05">1.05</option>   
+		                        <option  value="1.15">1.15</option>  						  
 							</select>	
 						</div>
 					</div>
@@ -231,11 +249,13 @@
 						<div class="col">							
 							<select name="aop_ded_4" class="col-md-4 form-group">
 							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
+		                        <option  value="0.7">0.7</option>
+		                        <option  value="0.8">0.8</option>
+		                        <option  value="0.85">0.85</option>         
+		                        <option  value="0.95">0.95</option>   
+		                        <option  value="1">1</option>   
+		                        <option  value="1.05">1.05</option>   
+		                        <option  value="1.15">1.15</option>  						  
 							</select>	
 						</div>
 					</div>
@@ -250,11 +270,13 @@
 						<div class="col">							
 							<select name="aop_ded_5" class="col-md-4 form-group">
 							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
+		                        <option  value="0.7">0.7</option>
+		                        <option  value="0.8">0.8</option>
+		                        <option  value="0.85">0.85</option>         
+		                        <option  value="0.95">0.95</option>   
+		                        <option  value="1">1</option>   
+		                        <option  value="1.05">1.05</option>   
+		                        <option  value="1.15">1.15</option>  						  
 							</select>
 						</div>
 					</div>
@@ -271,11 +293,13 @@
 						<div class="col">							
 							<select name="frame" class="col-md-4 form-group">
 							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
+		                        <option  value="0.7">0.7</option>
+		                        <option  value="0.8">0.8</option>
+		                        <option  value="0.85">0.85</option>         
+		                        <option  value="0.95">0.95</option>   
+		                        <option  value="1">1</option>   
+		                        <option  value="1.05">1.05</option>   
+		                        <option  value="1.15">1.15</option>  						  
 							</select>							
 						</div>
 					</div>
@@ -290,11 +314,13 @@
 						<div class="col">							
 							<select name="jm" class="col-md-4 form-group">
 							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
+		                        <option  value="0.7">0.7</option>
+		                        <option  value="0.8">0.8</option>
+		                        <option  value="0.85">0.85</option>         
+		                        <option  value="0.95">0.95</option>   
+		                        <option  value="1">1</option>   
+		                        <option  value="1.05">1.05</option>   
+		                        <option  value="1.15">1.15</option>  						  
 							</select>
 						</div>
 					</div>
@@ -309,11 +335,13 @@
 						<div class="col">							
 							<select name="bv" class="col-md-4 form-group">
 							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
+		                        <option  value="0.7">0.7</option>
+		                        <option  value="0.8">0.8</option>
+		                        <option  value="0.85">0.85</option>         
+		                        <option  value="0.95">0.95</option>   
+		                        <option  value="1">1</option>   
+		                        <option  value="1.05">1.05</option>   
+		                        <option  value="1.15">1.15</option>  						  
 							</select>
 						</div>
 					</div>
@@ -328,11 +356,13 @@
 						<div class="col">							
 							<select name="masonry" class="col-md-4 form-group">
 							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
+		                        <option  value="0.7">0.7</option>
+		                        <option  value="0.8">0.8</option>
+		                        <option  value="0.85">0.85</option>         
+		                        <option  value="0.95">0.95</option>   
+		                        <option  value="1">1</option>   
+		                        <option  value="1.05">1.05</option>   
+		                        <option  value="1.15">1.15</option>  						  
 							</select>
 						</div>
 					</div>
@@ -349,11 +379,13 @@
 						<div class="col">							
 							<select name="protection_class_1" class="col-md-4 form-group">
 							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
+		                        <option  value="0.7">0.7</option>
+		                        <option  value="0.8">0.8</option>
+		                        <option  value="0.85">0.85</option>         
+		                        <option  value="0.95">0.95</option>   
+		                        <option  value="1">1</option>   
+		                        <option  value="1.05">1.05</option>   
+		                        <option  value="1.15">1.15</option>  						  
 							</select>							
 						</div>
 					</div>
@@ -368,11 +400,13 @@
 						<div class="col">							
 							<select name="protection_class_2" class="col-md-4 form-group">
 							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
+		                        <option  value="0.7">0.7</option>
+		                        <option  value="0.8">0.8</option>
+		                        <option  value="0.85">0.85</option>         
+		                        <option  value="0.95">0.95</option>   
+		                        <option  value="1">1</option>   
+		                        <option  value="1.05">1.05</option>   
+		                        <option  value="1.15">1.15</option>  						  
 							</select>	
 						</div>
 					</div>
@@ -387,11 +421,13 @@
 						<div class="col">							
 							<select name="protection_class_3" class="col-md-4 form-group">
 							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
+		                        <option  value="0.7">0.7</option>
+		                        <option  value="0.8">0.8</option>
+		                        <option  value="0.85">0.85</option>         
+		                        <option  value="0.95">0.95</option>   
+		                        <option  value="1">1</option>   
+		                        <option  value="1.05">1.05</option>   
+		                        <option  value="1.15">1.15</option>  						  
 							</select>	
 						</div>
 					</div>
@@ -406,11 +442,13 @@
 						<div class="col">							
 							<select name="protection_class_4" class="col-md-4 form-group">
 							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
+		                        <option  value="0.7">0.7</option>
+		                        <option  value="0.8">0.8</option>
+		                        <option  value="0.85">0.85</option>         
+		                        <option  value="0.95">0.95</option>   
+		                        <option  value="1">1</option>   
+		                        <option  value="1.05">1.05</option>   
+		                        <option  value="1.15">1.15</option>  						  
 							</select>	
 						</div>
 					</div>
@@ -425,11 +463,13 @@
 						<div class="col">							
 							<select name="protection_class_5" class="col-md-4 form-group">
 							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
+		                        <option  value="0.7">0.7</option>
+		                        <option  value="0.8">0.8</option>
+		                        <option  value="0.85">0.85</option>         
+		                        <option  value="0.95">0.95</option>   
+		                        <option  value="1">1</option>   
+		                        <option  value="1.05">1.05</option>   
+		                        <option  value="1.15">1.15</option>  						  
 							</select>	
 						</div>
 					</div>
@@ -446,11 +486,13 @@
 						<div class="col">							
 							<select name="new_purchase" class="col-md-4 form-group">
 							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
+		                        <option  value="0.7">0.7</option>
+		                        <option  value="0.8">0.8</option>
+		                        <option  value="0.85">0.85</option>         
+		                        <option  value="0.95">0.95</option>   
+		                        <option  value="1">1</option>   
+		                        <option  value="1.05">1.05</option>   
+		                        <option  value="1.15">1.15</option>  						  
 							</select>								
 						</div>
 					</div>
@@ -465,11 +507,13 @@
 						<div class="col">							
 							<select name="prior_carrier" class="col-md-4 form-group">
 							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
+		                        <option  value="0.7">0.7</option>
+		                        <option  value="0.8">0.8</option>
+		                        <option  value="0.85">0.85</option>         
+		                        <option  value="0.95">0.95</option>   
+		                        <option  value="1">1</option>   
+		                        <option  value="1.05">1.05</option>   
+		                        <option  value="1.15">1.15</option>  						  
 							</select>	
 						</div>
 					</div>
@@ -484,11 +528,13 @@
 						<div class="col">							
 							<select name="zero_two_losses" class="col-md-4 form-group">
 							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
+		                        <option  value="0.7">0.7</option>
+		                        <option  value="0.8">0.8</option>
+		                        <option  value="0.85">0.85</option>         
+		                        <option  value="0.95">0.95</option>   
+		                        <option  value="1">1</option>   
+		                        <option  value="1.05">1.05</option>   
+		                        <option  value="1.15">1.15</option>  						  
 							</select>
 						</div>
 					</div>
@@ -503,11 +549,13 @@
 						<div class="col">							
 							<select name="more_than_two_losses" class="col-md-4 form-group">
 							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
+		                        <option  value="0.7">0.7</option>
+		                        <option  value="0.8">0.8</option>
+		                        <option  value="0.85">0.85</option>         
+		                        <option  value="0.95">0.95</option>   
+		                        <option  value="1">1</option>   
+		                        <option  value="1.05">1.05</option>   
+		                        <option  value="1.15">1.15</option>  						  
 							</select>
 						</div>
 					</div>
@@ -522,11 +570,13 @@
 						<div class="col">							
 							<select name="prior_carrier_name" class="col-md-4 form-group">
 							  <option  value="">-- Select --</option>								
-							  	  @if($credit)
-							  	  	@for($i = 1; $i < count($credit); $i++)		
-								 		 <option value="{{$i}}">{{$credit[$i]}}</option>
-								 	@endfor	 
-								  @endif						  
+		                        <option  value="0.7">0.7</option>
+		                        <option  value="0.8">0.8</option>
+		                        <option  value="0.85">0.85</option>         
+		                        <option  value="0.95">0.95</option>   
+		                        <option  value="1">1</option>   
+		                        <option  value="1.05">1.05</option>   
+		                        <option  value="1.15">1.15</option>  						  
 							</select>
 						</div>
 					</div>
@@ -540,7 +590,7 @@
           <div class="notification">
             <hfsr>
             <div class="delete"></div>
-              <p class="text-center">For more accurate pricing, please provide us with all information available!</p>
+              <p class="text-center">Please double check to avoid giving people insurance at lower price!</p>
           </div>
           <hr>
         </div>

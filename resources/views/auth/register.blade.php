@@ -60,16 +60,6 @@
                             <p><b>Are you:</b></p>
                             </div>
                         </div>                        
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">    
-                            <div class="position-checbkoxes">                    
-                                <input type="checkbox" name="position" value="ceo"><br><p>Senior UW</p>
-                                <input type="checkbox" name="position" value="underwriter" checked>Underwriter<br>
-                            </div>
-                            </div>
-                        </div>
-                        <br>
                         <div class="form-group row mb-0" >
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary"  id="login">

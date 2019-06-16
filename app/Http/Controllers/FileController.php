@@ -92,21 +92,15 @@ class FileController extends Controller
 
     public function show($id)
     {
+        $file = File::findOrFail($id)->first();
+
         return view('/file/index', [
-            'file' => File::findOrFail($id),
+            'file' => $file,
             'rw' => File::getRWjoinFileRatePremium($id),
             'notes' => Notes::all(),
-            'submission' => $file->submission()->first(),
+            'submission' => Submission::where('id', $file->submission_id)->first(),
             'log' => Activity::where('subject_id', $id)->first(),
         ]);
     }
 
-    public function destroy($id)
-    {
-        $file = File::find($id);
-
-        $file->delete();
-
-        return redirect('/');
-    }
 }

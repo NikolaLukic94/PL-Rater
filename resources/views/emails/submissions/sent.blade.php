@@ -1,7 +1,9 @@
 @component('mail::message')
-# Introduction
 
-Your submission has been recevied. Someone from our team will contat you shortly.
+
+Your submission has been recevied. Quote will follow shortly.
+
+Your submission number is {{ $submission->submission_number }}
 
 
 Thanks,<br>

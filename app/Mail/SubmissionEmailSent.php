@@ -9,16 +9,16 @@ use Illuminate\Queue\SerializesModels;
 class SubmissionEmailSent extends Mailable
 {
     use Queueable, SerializesModels;
-
+    
+    public $submission;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($to, $submission_number)
+    public function __construct($submission)
     {
-        $this->to = $to;
-        $this->submission_number = $submission_number;
+        $this->submission = $submission;
     }
 
     /**
@@ -30,7 +30,7 @@ class SubmissionEmailSent extends Mailable
     {
         return $this->from('subdept@inscompany.com')
                     ->subject('Your submission have been received')
-                    ->with('body', $this->submission_number)
+                    ->with('body', $this->submission)
                     ->markdown('emails.submissions.sent');
     }
 }

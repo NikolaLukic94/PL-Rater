@@ -1,33 +1,22 @@
 @extends('layouts.app')
 
-<!DOCTYPE html>
-<html lang="en">
+<div class="d-flex" id="wrapper">
 
-<head>
+@include('partials.sidebar')
 
-  <title>PLQR</title>
+<div id="page-content-wrapper">
 
-</head>
-
-<body>
-
-  <div class="d-flex" id="wrapper">
-
-    @include('partials.sidebar')
-
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-
-    @include('partials.navbar')
+@include('partials.navbar')
 
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+          <br>
             <div class="card">
                 <div class="card-header text-center">Please verify current info:</div>
                 <div class="card-body">
                    @if(isset($file))
-            <form action="/file/rate/prepare/rw" method="POST">
+            <form action="/file/rating-characteristics/update/{{$file->id}}" method="POST">
               {{ csrf_field() }}        
               <div class="field">
                 <div class="row">
@@ -284,7 +273,7 @@
 
                         <div class="col">
 
-                          <input name="inspection_fee" type="text" class="input" id="inspection_fee" required>
+                          <input name="inspection_fee" type="text" class="input" id="inspection_fee">
 
                         </div>
 
@@ -308,7 +297,7 @@
 
                         <div class="col">
 
-                          <input name="brokerage_fee" type="text" class="input" id="brokerage_fee" required>
+                          <input name="brokerage_fee" type="text" class="input" id="brokerage_fee">
 
                         </div>
 
@@ -332,7 +321,7 @@
 
                         <div class="col">
 
-                          <input name="agency_fee" type="text" class="input" id="agency_fee" required>
+                          <input name="agency_fee" type="text" class="input" id="agency_fee">
 
                         </div>
 
@@ -354,9 +343,8 @@
 
               <p class="control">
 
-                <button type="button" href="/rater/update/rating-characteristics/{{$file->id}}" class="btn btn-outline-secondary">Update</button>
-
-                <button type="button" href="/rater/create/{{$file->id}}" class="btn btn-outline-secondary">Preview</button>
+                <button type="submit" class="btn btn-outline-secondary" style="width: 100%">Update</button>
+                  </form>  
 
                 <a class="btn btn-primary" href="/rater/create/{{$file->id}}" role="button">Open</a>
 
@@ -366,7 +354,7 @@
 
               @include('errors')
 
-              </form>    
+  
                 </div>
 
             </div>

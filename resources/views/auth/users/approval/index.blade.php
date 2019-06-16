@@ -8,10 +8,8 @@
             @if (session('message'))
                 <div class="row justify-content-center">
                     <div class="col-md-10">
-                        <div class="card">
-                            <div class="alert alert-success" role="alert">
-                                {{ session('message') }}
-                            </div>
+                        <div class="alert alert-success" role="alert">
+                            {{ session('message') }}
                         </div>
                     </div>
                 </div>  
@@ -77,13 +75,7 @@
                                                 <td>    
                                                     <a class="btn btn-primary" href="/users/{{$user->id}}/disapprove" role="button"><i class="fa fa-window-close" aria-hidden="true"></i></a>
                                                 </td>
-                                                <td>    
-                                                    <form action="/manage/users/delete/{{$user->id}}" method="POST">
-                                                      {{ csrf_field() }}
-                                                      {{ method_field('DELETE') }} 
-                                                        <button type="submit" class="btn btn-primary"><i class="fa fa-trash" aria-hidden="true"></i></button>
-                                                    </form>          
-                                                </td>
+
                                             </tr>
                                         @empty
                                             <tr>
@@ -98,17 +90,5 @@
         </div><!-- container end -->                      
     </div><!-- page-content-wrapper end -->
 </div><!-- d-flex id=wrapper end -->
-
-
-<style>
-
-    tr:nth-child(even) {
-      background-color: #dddddd;
-    }
-    table td{
-      padding-bottom: 4px;
-    }
-
-</style>
 
 

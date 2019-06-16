@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Rate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
+use App\Http\Requests\StoreRate;
+
 
 /* USED FOR DEFINING, EDITING AND DELETING RATE COEFICIENTS  */
 
@@ -26,9 +29,15 @@ class RateController extends Controller
 
     public function store(Request $request)
     {
-        Rate::createFromRequest($request);
+         if (Rate::where('lob', '=', Input::get('lob'))->exists()) {
+            return redirect('/rate/index');
 
-        return redirect('/rate/index');
+        } else {
+            
+            Rate::createFromRequest($request);
+
+            return redirect('/rate/index');
+        }  
     }
 
     public function show($id)

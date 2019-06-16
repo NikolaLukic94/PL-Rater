@@ -11,6 +11,6 @@ class FileRatingCharacteristicsController extends Controller
     {
         File::updateFileRatingCharacteristics($request, $id);
 
-        return redirect('/file/index/'.$id);
+        return redirect()->back();
     }
 }

@@ -13,8 +13,6 @@
 
   <div class="d-flex" id="wrapper">
 
-    @include('partials.sidebar')
-
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
@@ -23,6 +21,7 @@
   <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+          <br>
             <div class="card">
                 <div class="card-header text-center"></div>
                 <div class="card-body">
@@ -30,7 +29,7 @@
                   <br>
                   <p>Reply will follow within 24 hours.</p>
                   <br>
-                  <p>Confirmation email with your submission number will be sent to your email.</p> 
+                  <p>Confirmation email with your submission number will be sent to your email shortly.</p> 
                 </div>
             </div>
         </div>

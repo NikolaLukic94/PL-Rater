@@ -1,13 +1,9 @@
 @component('mail::message')
 # Introduction
 
-{{$user->name}} user has just signed in. 
+{{$user->name}} user has just registered. Go approve this, please. 
 
 
-
-@component('mail::button', ['url' => ''])
-<a href="pl.dev/users/{{$user->id}}/approve">Approve Access</a>
-@endcomponent
 
 Thanks,<br>
 {{ config('app.name') }}

@@ -27,7 +27,7 @@
     </button>
     <div class="dropdown-container">
       <a href="/file/index" class="list-group-item list-group-item-action">Search</a>
-      <a href="/file/create" class="list-group-item list-group-item-action">Create</a>      
+      <!--<a href="/file/create" class="list-group-item list-group-item-action">Create</a>-->  
     </div>     
     <a href="/subs/stats/index" class="list-group-item list-group-item-action"><i class="fa fa-bars" aria-hidden="true"></i>&nbsp Stats</a>
     <button class="dropdown-btn"><i class="fa fa-archive" aria-hidden="true"></i>&nbsp Forms 

@@ -36,7 +36,7 @@ class SubmissionEmailController extends Controller
     {
         $submission = Submission::createFromRequest($request);
 
-        dispatch(new \App\Jobs\SendSubmissionSuccessfullEmail($submission->agent_email_address, $submission->submission_number));
+        dispatch(new \App\Jobs\SendSubmissionSuccessfullEmail($submission->agent_email_address, $submission));
 
         return view('/subs/success');
     }

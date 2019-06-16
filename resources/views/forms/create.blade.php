@@ -1,13 +1,6 @@
 @extends('layouts.app')
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-
-  <title>PLQR</title>
-
-</head>
 
 <body>
 
