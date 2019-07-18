@@ -1,12 +1,11 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
 <nav>
   <ul>
     <ol id="navbar-left"><a href="/subs/emails/create">Submission</a></ol>
-    <ol id="navbar-right"><a href="/login">Login</a></ol>
-    <ol id="navbar-right"><a href="/register">Register</a></ol>
+    <ol id="navbar-right"><a id="login" href="/login">Login</a></ol>
+    <ol id="navbar-right"><a id="register" href="/register">Register</a></ol>
   </ul>
 </nav>
 <main>
@@ -51,9 +50,9 @@
   <hr>
   <div id="quote">
   <p>
-    “PLRQ is better than any other platform we’ve played with, and we’ve played with them all.”
+    “PLQR is the best rating tool out there.”
     <br>
-    <p id="autor">Nikola Lukic, CEO</p>
+    <p id="autor">Pera Peric, CEO</p>
   <button id="last">Start free trial</button>
     </div>
   </p>

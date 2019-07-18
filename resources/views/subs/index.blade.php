@@ -84,7 +84,7 @@
                           <form action="/subs/emails/delete/{{ $sub->id }}" method="POST">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }} 
-                              <button type="submit" class="btn btn-primary"><i class="fa fa-trash"></i></button>
+                             <button type="submit" class="btn btn-primary"><i class="fa fa-trash"></i></button>
                           </form>                                  
                       </td>                                              
                   </tr>

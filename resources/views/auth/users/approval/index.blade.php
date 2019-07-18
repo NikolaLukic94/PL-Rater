@@ -65,6 +65,7 @@
                                             <th></th>
                                         </tr>
                                         @forelse ($users as $user)
+                                        <form method="POST" action="/users/{{$user->id}}/disapprove">
                                             {{ csrf_field() }}
                                             <tr>
                                                 <td>{{ $user->name }}</td>
@@ -73,10 +74,11 @@
                                                 <td>
                                                 </td>
                                                 <td>    
-                                                    <a class="btn btn-primary" href="/users/{{$user->id}}/disapprove" role="button"><i class="fa fa-window-close" aria-hidden="true"></i></a>
+                                                    <button type="submit" class="btn btn-primary"><i class="fa fa-window-close" aria-hidden="true"></i></button>
                                                 </td>
 
                                             </tr>
+                                        </form>    
                                         @empty
                                             <tr>
                                                 <td colspan="4">No users found.</td>

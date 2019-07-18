@@ -1,18 +1,9 @@
 @extends('layouts.app')
-
-
-
-<body>
-
   <div class="d-flex" id="wrapper">
-
     @include('partials.sidebar')
-
-    <!-- Page Content -->
     <div id="page-content-wrapper">
-
     @include('partials.navbar')
-
+    <br>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

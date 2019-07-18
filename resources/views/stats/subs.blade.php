@@ -18,7 +18,7 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-    @include('partials.navbar')
+    @include('partials.navbar')<br>
 
       <div class="container">
     <div class="row justify-content-center">

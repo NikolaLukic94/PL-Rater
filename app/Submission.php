@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Submission extends Model
 {
+    use Traits\RecordsActivity;
+  
     protected $guarded = [];
 
     public function file()

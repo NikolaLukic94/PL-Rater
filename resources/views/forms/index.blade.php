@@ -9,23 +9,32 @@
       <div class="card-body">
         @if($forms)
           @foreach($forms as $f)
+          <table>
             <tr>
               <td>
                 <div class="row">
                   <div class="col">
-                <p>{{ $f->name }} </p> 
-                <a href="/form/download/{{$f->id}}" class="btn btn-primary float-right">Attachment</a>
-                <a href="/forms/delete/{{$f->id}}" class="btn btn-primary float-right">Delete</a>
-                </div></div>
-                  <hr>
+                    <p>{{ $f->name }} </p> 
+              </td>
+              <td>
+                <a href="/form/download/{{$f->id}}" class="btn btn-primary float-right"><i class="fa fa-download" aria-hidden="true"></i></a>&nbsp;  
+              </td>               
+              <td>      
+                    
+                    <form action="/forms/delete/{{ $f->id }}" method="POST">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }} 
+                                  <button type="submit" class="btn btn-primary"><i class="fa fa-trash"></i></button>
+                    </form> 
               </td>
             </tr>
+            </table>
           @endforeach
         @else    
           <p>You currently don have any forms yet!</p>
         @endif  
       </div>
-      <button type="submit" href="/forms/create" class="btn btn-outline-secondary">Add new</button><br>
+      <button type="submit" href="/forms/create" class="btn btn-outline-secondary"><a href="/forms/create">Add new</a></button><br>
     </div>
   </div>
 </div>

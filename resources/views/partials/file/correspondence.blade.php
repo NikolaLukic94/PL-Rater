@@ -1,5 +1,5 @@
-<div id="correspondence" class="tabcontent">
-	<div class="container">
+<div class="container">
+	<div id="correspondence" class="tabcontent">
 		<div class="card">
 		  	<div class="col-md-8 offset-2">
 			    <div class="card-header text-center">General Info</div>

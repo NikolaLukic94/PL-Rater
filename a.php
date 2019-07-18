@@ -5,7 +5,6 @@
     @include('partials.navbar')
       <div class="tab">
         <div class="container">
-          <div class="row">
           <button class="tablinks" onclick="openCity(event, 'general')">General Info</button>
           <button class="tablinks" onclick="openCity(event, 'correspondence')">Correspondence</button>
           <button class="tablinks" onclick="openCity(event, 'submission')">Submission</button>
@@ -16,15 +15,14 @@
           <button class="tablinks" onclick="openCity(event, 'finance')" disabled>Finance</button>      
           <button class="tablinks" onclick="openCity(event, 'support')">Support</button>   
           <button class="tablinks" onclick="openCity(event, 'log')">Log</button>           
-          <button class="tablinks" onclick="openCity(event, 'note')">Note</button>     
-            @include('partials.file.rw')
-            @include('partials.file.submission')
-            @include('partials.file.general')
-            @include('partials.file.log')                          
-            </div>
+          <button class="tablinks" onclick="openCity(event, 'note')">Note</button>                     
         </div>
       </div>
-
+        @include('partials.file.rw')
+        @include('partials.file.submission')
+        @include('partials.file.general')
+        @include('partials.file.correspondence')
+        @include('partials.file.log')
   </div>
 </div>
 <script>

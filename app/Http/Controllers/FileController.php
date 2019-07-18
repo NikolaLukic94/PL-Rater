@@ -64,7 +64,7 @@ class FileController extends Controller
                               'search_to_date' => $search_to_date,
                               ]);
 
-            return view('/file/index', [
+            return view('/file/search', [
                 'files' => $files,
               ]);
         } else {
@@ -93,13 +93,14 @@ class FileController extends Controller
     public function show($id)
     {
         $file = File::findOrFail($id)->first();
+        $log_info = Activity::where('subject_type', "App\Submission" && 'subject_id', $file->submission_id)->orWhere('subject_type',"App\File" && 'subject_id', $file->id)->get();
 
         return view('/file/index', [
             'file' => $file,
             'rw' => File::getRWjoinFileRatePremium($id),
             'notes' => Notes::all(),
             'submission' => Submission::where('id', $file->submission_id)->first(),
-            'log' => Activity::where('subject_id', $id)->first(),
+            'log' => $log_info
         ]);
     }
 

@@ -1,7 +1,8 @@
 <div id="submission" class="tabcontent">
-  <div class="col">
-    <div class="card-header text-center">Submission Info</div>
-      <div class="card-body">
+    <div class="card">
+        <div class="col-md-8 offset-2">
+          <div class="card-header text-center">Submission Info</div>
+              <div class="card-body">
         <form method="POST" action="/file/update/general-info/{{$file->id}}">
         @if(isset($submission))
             <div class="card">
@@ -325,7 +326,10 @@
     </div>
 @endif    
         </form>
-      </div>
-    </div>
+              </form>
+              </div>
+          </div>
+        </div>
+    </div>    
   </div>
 </div>
