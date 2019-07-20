@@ -1,0 +1,1734 @@
+1563602017614	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.wDIZNfVMSXih"
+1563602020252	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563602020252	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563602020252	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563602030848	Marionette	INFO	Listening on port 65459
+1563602031372	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+[Child 6556, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1236, C[hChild rome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 123[Parent 8372, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9068, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9068, Chrome_ChildThread] WARNIN1563602088281	Marionette	INFO	Stopped listening on port 65459
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[G pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 128, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1563602065197	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+[Child 4296, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341[Child
+ 12508[Child 429,6 , CChrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 125[Child 8348, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 83481563602079719	Marionette	INFO	Stopped listening on port 65507
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 1563602381987	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.TVX6NQ2VhPlH"
+1563602383576	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563602383576	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563602383576	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563602389162	Marionette	INFO	Listening on port 49301
+1563602389660	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+[Parent 8664, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 8664, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12324, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win[Child 1452, Chrome_ChildThread] WARNING: pipe error: 109: file z:/.cc, line 341ta
+sk_15[Child 12324, C60988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1452,1563602603559	Marionette	INFO	Stopped listening on port 49301
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+9488, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9488, Chrom[Parent 4964, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1928, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1928,1563602607469	Marionette	INFO	Stopped listening on port 49405
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 1563603248351	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.ld8GfdrASlPx"
+1563603249943	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563603249944	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563603249944	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563603253606	Marionette	INFO	Listening on port 49476
+1563603253844	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://activity-stream/lib/ActivityStreamPrefs.jsm, line 23: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIPrefBranch.removeObserver]
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 595: TypeError: this.tablesData[table] is undefined
+[Parent 9104, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 9104, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9144, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.[Child 13624, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341cc, line 341
+
+[Child 136[Child 91console.log: "RemoteSettingsWorker error: UnknownError: The operation failed for reasons unrelated to the database itself and not covered by any other error code."
+
+###!!! [Parent][DispatchAsyncMessage] Error: PBackgroundIDBFactory::Msg_PBackgroundIDBFactoryRequestConstructor Value error: message was deserialized, but contained an illegal value
+
+
+###!!! [Parent][DispatchAsyncMessage] Error: PBackgroundIDBFactory::Msg_PBackgroundIDBFactoryRequestConstructor Value error: message was deserialized, but contained an illegal value
+
+1563603259984	Marionette	INFO	Stopped listening on port 49476
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 79[Parent 9104, Gecko_IOThread] WARNING: pipe error: 232: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 502
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563603289954	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.kUD6CAOp4Eoc"
+1563603290814	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563603290815	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563603290815	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563603295246	Marionette	INFO	Listening on port 49521
+1563603295418	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+[Child 8692, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8692, Chrome[Child 8156, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 81[Parent 14312, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1728, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1728,1563603303240	Marionette	INFO	Stopped listening on port 49521
+[GPU 1326
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563603307514	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.gsxUo9IqmoLw"
+1563603308173	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563603308174	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563603308174	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563603312124	Marionette	INFO	Listening on port 49563
+1563603312526	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+[Child 1324, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341[Child 8736, Chrome_
+ChildThread] W[AChildRNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8736[Parent 1412, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14164, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14164,1563603321283	Marionette	INFO	Stopped listening on port 49563
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 1563603327954	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.JmOmoKg1vNed"
+1563603330805	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563603330806	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563603330806	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563603336903	Marionette	INFO	Listening on port 49607
+1563603337402	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+1563603416271	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.FjlzSYirpcC7"
+1563603417261	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563603417261	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563603417261	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563603422236	Marionette	INFO	Listening on port 49653
+1563603422355	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+[Child 10924, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/c[Child 8412, hrome/common/ipc_Chrome_ChildThread] WARNING: pipec herror: 1a09: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341n
+nel_win.cc, l[ine 341
+[Child 10924, C[Parent 12352, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5784, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 51563603481481	Marionette	INFO	Stopped listening on port 49653
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 80
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563603616749	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.bb4ugDHvjt1g"
+1563603617734	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563603617734	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563603617734	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563603622159	Marionette	INFO	Listening on port 49712
+1563603622448	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+[Child 6976, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6976, Ch[Child 7248, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 72481563603631478	Marionette	INFO	Stopped listening on port 49712
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 9260
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563606655702	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.gfREidinYLBj"
+1563606658596	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563606658597	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563606658597	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563606675599	Marionette	INFO	Listening on port 61417
+1563606676879	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221563580805691%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+[Child 13336, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13336, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4560, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4560, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 11904, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1563607498112	Marionette	INFO	Stopped listening on port 61417
+[GPU 1321563607556835	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.1dDoS9m3npRG"
+1563607559847	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563607559863	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563607559864	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563607564469	Marionette	INFO	Listening on port 61524
+1563607564991	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 6952, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 695JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 595: TypeError: this.tablesData[table] is undefined
+[Child 14216, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14216,1563607572020	Marionette	INFO	Stopped listening on port 61524
+[GPU 13
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1563607616796	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.Xlc8QvPjy0yM"
+1563607619206	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563607619206	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563607619207	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+[Child 1372, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 137JavaScript error: , line 0: UnknownError: The operation failed for reasons unrelated to the database itself and not covered by any other error code.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563607640694	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.G5m40jvCIlPv"
+1563607641932	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563607641932	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563607641932	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563607646533	Marionette	INFO	Listening on port 61596
+1563607646597	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://activity-stream/lib/ActivityStreamPrefs.jsm, line 23: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIPrefBranch.removeObserver]
+[Child 7060, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4396, Chrome_ChildThrea[dChild] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 439[Child 11228, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11228JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
+console.error: PushService: 
+console.log: "RemoteSettingsWorker error: UnknownError: The operation failed for reasons unrelated to the database itself and not covered by any other error code."
+  clearOriginData: Error clearing origin data:
+  UnknownError
+console.error: PushService: 
+  stateChangeProcessEnqueue: Error transitioning state
+  UnknownError
+
+###!!! [Parent][DispatchAsyncMessage] Error: PBackgroundIDBFactory::Msg_PBackgroundIDBFactoryRequestConstructor Value error: message was deserialized, but contained an illegal value
+
+
+###!!! [Parent][DispatchAsyncMessage] Error: PBackgroundIDBFactory::Msg_PBackgroundIDBFactoryRequestConstructor Value error: message was deserialized, but contained an illegal value
+
+1563607650591	Marionette	INFO	Stopped listening on port 61596
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 1563607714251	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.W4cfemBOrJbE"
+1563607715351	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563607715352	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563607715352	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563607720288	Marionette	INFO	Listening on port 61627
+1563607720462	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+[Parent 10844, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1056, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1056, C[Child 3288, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 328[Parent 10844, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7396, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 73961563607746948	Marionette	INFO	Stopped listening on port 61627
+[GPU 76
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563607761953	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.rS6B0JklamwG"
+1563607763249	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563607763250	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563607763250	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563607767348	Marionette	INFO	Listening on port 61669
+1563607767726	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://activity-stream/lib/ActivityStreamPrefs.jsm, line 23: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIPrefBranch.removeObserver]
+[Child 8524, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 852[Parent 932, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 932, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
+console.error: PushService: 
+console.log: "RemoteSettingsWorker error: UnknownError: The operation failed for reasons unrelated to the database itself and not covered by any other error code."
+  clearOriginData: Error clearing origin data:
+  UnknownError
+console.error: PushService: 
+  stateChangeProcessEnqueue: Error transitioning state
+  UnknownError
+
+###!!! [Parent][DispatchAsyncMessage] Error: PBackgroundIDBFactory::Msg_PBackgroundIDBFactoryRequestConstructor Value error: message was deserialized, but contained an illegal value
+
+
+###!!! [Parent][DispatchAsyncMessage] Error: PBackgroundIDBFactory::Msg_PBackgroundIDBFactoryRequestConstructor Value error: message was deserialized, but contained an illegal value
+
+1563607771869	Marionette	INFO	Stopped listening on port 61669
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 966
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563607874214	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.kV9SSQqidPN2"
+1563607875291	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563607875292	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563607875292	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563607879258	Marionette	INFO	Listening on port 61715
+1563607879306	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221563580805691%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+[Parent 14056, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 14056, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13248, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13248, Chrome_Child[Child 13732, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Chi[Parent 14056, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10648, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10648, Chro1563608523071	Marionette	INFO	Stopped listening on port 61715
+URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+[Parent 12344, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 12344, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4528, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4528, Chrom[Child 6336, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Chil[Parent 12344, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 12344, Gecko_IOThread] WARNING: file z:/task_1560988636/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+1563608521483	Marionette	INFO	Stopped listening on port 61756
+s/records?_expected=%221563580805691%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+[Parent 13636, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 13636, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4404, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1520, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1520, Chr1563608519224	Marionette	INFO	Stopped listening on port 61812
+1563608975618	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.iNQq8rARlWzD"
+1563608977237	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563608977238	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563608977238	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563608981195	Marionette	INFO	Listening on port 61907
+1563608981681	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+[Parent 7236, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 7236, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10784, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/ch[Child 11352, Chromer_ChildThread] WARNING: pipe error: 109: file z:/task_15omium/src/chrome/common/ipc_channel_win.cc, l60988636/build/src/ipc/chroimium/src/chrome/common/ipc_channel_win.cc, line 341ne 341
+
+[Child[Chi l10[Parent 7236, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1563608992742	Marionette	INFO	Stopped listening on port 61907
+[GPU 1
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563609075952	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.mugEOjn10kfK"
+1563609078309	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563609078310	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563609078310	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563609082160	Marionette	INFO	Listening on port 61953
+1563609082346	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563609087834	Marionette	INFO	Stopped listening on port 61953
+[Parent 7060, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3216, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3216, C[Parent 7060, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7760, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7760, 
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 110281563610887928	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.fkGuuCye3My1"
+1563610891020	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563610891021	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563610891021	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563610898376	Marionette	INFO	Listening on port 62109
+1563610898623	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221563580805691%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563610921949	Marionette	INFO	Stopped listening on port 62109
+[Child 8720, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8720, Chrome_ChildThread] WARNING: pipe error: 109: file[Parent 9200, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10416, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10416,[GPU 40
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1563612862552	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.5yyPenMNO8wu"
+1563612865363	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563612865363	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563612865363	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563612874985	Marionette	INFO	Listening on port 54068
+1563612875652	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221563580805691%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563612900470	Marionette	INFO	Stopped listening on port 54068
+[Parent 3004, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 3004, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6564, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3252, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341[Parent 3004, Gecko_IOThread] WARNING: file z:/task_1560988636/build/src/ipc/
+chromium/src/b[aCse/process_util_win.cc, line 160
+[Parent 3004, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10576, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 105[Parent 3004, Gecko_IOThread] WARNING: file z:/task_1560988636/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GP1563613383575	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.7U86W7wjengN"
+1563613387765	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563613387766	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563613387766	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+[Parent 5624, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8360, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 5624, Gecko_IOThread] WARNING: file z:/task_1560988636/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+1563613402855	Marionette	INFO	Listening on port 54198
+1563613403509	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563613424807	Marionette	INFO	Stopped listening on port 54198
+[Parent 5624, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9436, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9436, [Parent 5624, Gecko_IOThread] WARNING: file z:/task_1560988636/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+[C[Parent 5624, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1200, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1200,
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[1563613588782	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.uW9CY8tYdEKL"
+1563613590599	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563613590599	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563613590599	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563613593609	Marionette	INFO	Listening on port 54287
+1563613593632	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563613599099	Marionette	INFO	Stopped listening on port 54287
+[Child 10400, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10400, Chrome[Parent 1688, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 1688, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7248, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7248,
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563613889061	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.uYDedXTWwwIG"
+1563613889660	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563613889660	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563613889660	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563613893259	Marionette	INFO	Listening on port 54421
+1563613893414	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563613898509	Marionette	INFO	Stopped listening on port 54421
+[Child 3200, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 32[Child 9912, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9912, Chrome_Chi[Parent 3452, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8180, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8180, CJavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1563613992104	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.twpvj5iE1KUc"
+1563613992725	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563613992725	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563613992725	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563613995654	Marionette	INFO	Listening on port 54463
+1563613995988	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563614001774	Marionette	INFO	Stopped listening on port 54463
+[Child 7628, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7628, Chrome_ChildThread] WARNING: pipe err[Parent 10872, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[GP1563614122528	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.hMC9vdfV2m3p"
+1563614123206	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563614123207	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563614123207	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563614126076	Marionette	INFO	Listening on port 54505
+1563614126471	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563614132234	Marionette	INFO	Stopped listening on port 54505
+[Child 6228, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6228, Chrome_Chi[Child 1768, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1768, Chrome_ChildThr[Child 232, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 232, Chrome
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[G
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563614153184	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.Kcd0NeNzarKW"
+1563614153740	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563614153741	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563614153741	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563614156817	Marionette	INFO	Listening on port 54546
+1563614157058	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563614161227	Marionette	INFO	Stopped listening on port 54546
+[Child 9956, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9956,[Parent 6948, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8012, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8012, CJavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 7
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563614208258	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.HWhA4zOfk2Yt"
+1563614208910	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563614208910	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563614208910	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563614212815	Marionette	INFO	Listening on port 54587
+1563614213316	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563614218324	Marionette	INFO	Stopped listening on port 54587
+[Parent 1092, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 2908, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 2908, Chrome_Chil[Parent 1092, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8108, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8108, JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+[GPU
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1563614257146	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.gdahY6OmGKqO"
+1563614258503	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563614258503	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563614258504	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563614261429	Marionette	INFO	Listening on port 54634
+1563614261789	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563614266063	Marionette	INFO	Stopped listening on port 54634
+[Child 3808, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3808, Chro[Parent 4344, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8144, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8144, ChromeJavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 71563614440742	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.TelikpSodfpH"
+1563614441318	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563614441318	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563614441318	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563614444834	Marionette	INFO	Listening on port 54677
+1563614445111	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563614450359	Marionette	INFO	Stopped listening on port 54677
+[Child 10880, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10880,[Child 4876, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4876, Chrome_C[Parent 3588, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10260, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10260, CJavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[[Parent 3588, Gecko_IOThread] WARNING: pipe error: 232: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 502
+1563614479403	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.Kt8iILmuPQ2n"
+1563614480027	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563614480027	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563614480027	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563614483812	Marionette	INFO	Listening on port 54740
+1563614483878	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563614488009	Marionette	INFO	Stopped listening on port 54740
+[Child 1600, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1600, Chrome_ChildThread[Parent 8256, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3668, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3668, Chrome_Chil[Parent 8256, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8560, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8560,[G
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563614521922	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.CTZRtgaPPOqZ"
+1563614522534	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563614522535	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563614522535	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563614525607	Marionette	INFO	Listening on port 54784
+1563614525775	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563614531227	Marionette	INFO	Stopped listening on port 54784
+[Parent 3904, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8584, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8584, Chrome_C[Parent 3904, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4804, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4804
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[G1563614548540	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.kW6BtHhICMYW"
+1563614549465	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563614549466	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563614549466	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563614553156	Marionette	INFO	Listening on port 54825
+1563614553268	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563614557541	Marionette	INFO	Stopped listening on port 54825
+[Parent 7792, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11152, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11152, Chrome[Parent 7792, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8852, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8852,
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563614585525	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.wsa2peWCZcAO"
+1563614586249	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563614586250	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563614586250	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563614589165	Marionette	INFO	Listening on port 54868
+1563614589478	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563614593259	Marionette	INFO	Stopped listening on port 54868
+[Parent 11260, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9928, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chrom[Parent 11260, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chroium/src/chrome/common/ipc_channel_win.cc, line 341me/common/ipc_channel_win.cc, line 341
+
+[Child 9928, [Child 4636, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4636, Chrome_Ch[Parent 11260, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11116, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11116,JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563614839606	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.en35Br5HJnb6"
+1563614840168	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563614840168	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563614840169	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563614843410	Marionette	INFO	Listening on port 54953
+1563614843471	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563614848944	Marionette	INFO	Stopped listening on port 54953
+[Child 3036, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3036, Chrome_C[Parent 1808, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 656, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 656, C[G
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563614903490	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.ImZfBUF0hcqr"
+1563614904136	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563614904136	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563614904136	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563614907139	Marionette	INFO	Listening on port 54994
+1563614907448	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563614912156	Marionette	INFO	Stopped listening on port 54994
+[Parent 768, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3832, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3832, Chrome_Chi[Parent 768, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8928, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8928,[Parent 768, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3892, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3892,[GPU 
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563614991848	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.0yEwrdEEkX7g"
+1563614992487	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563614992487	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563614992487	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563614995824	Marionette	INFO	Listening on port 55044
+1563614996246	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563615000891	Marionette	INFO	Stopped listening on port 55044
+[Child 5404, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5404, Chrome[Child 7140, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 714console.error: (new Error("Connection closed before committing the transaction.", "resource://gre/modules/Sqlite.jsm", 625))
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[1563616295203	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.CG8yMdFn8a3p"
+1563616297905	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563616297905	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563616297905	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563616306302	Marionette	INFO	Listening on port 55193
+1563616307022	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563616327197	Marionette	INFO	Stopped listening on port 55193
+[Child 1416, Chrome_ChildThread] WARNING: pipe error: 109: file [Child 3540, Chrome_ChildThread] WARNINz:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341G:
+ pipe [Chilerrord: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3540, Ch[Parent 9636, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7784, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7784,JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563616390044	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.bAmVZDhA2Upr"
+1563616390654	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563616390655	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563616390655	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563616394325	Marionette	INFO	Listening on port 55261
+1563616394396	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563616399706	Marionette	INFO	Stopped listening on port 55261
+[Child 3128, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3128, Chrome[Parent 7028, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5248, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5248,[GPU 8176
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563616433746	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.nilFKpz3vL7S"
+1563616434411	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563616434411	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563616434412	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563616437431	Marionette	INFO	Listening on port 55302
+1563616437698	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563616443091	Marionette	INFO	Stopped listening on port 55302
+[Child 1808, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1808, Chrome_ChildT[Child 10780, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10780, [Parent 11824, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9308, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9308
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[1563616536859	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.DZZwZB9W705p"
+1563616537452	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563616537483	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563616537484	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563616540894	Marionette	INFO	Listening on port 55344
+1563616541211	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563616546448	Marionette	INFO	Stopped listening on port 55344
+[Child 6884, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6884, Chrome_ChildT[Parent 2032, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10860, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10860,[Parent 2032, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563616568128	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.DMTMRwFKwF95"
+1563616568791	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563616568791	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563616568791	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563616571609	Marionette	INFO	Listening on port 55388
+1563616572002	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563616576107	Marionette	INFO	Stopped listening on port 55388
+[Child 11520, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1152[Chi[Parent 7996, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+console.error: (new Error("Connection closed before committing the transaction.", "resource://gre/modules/Sqlite.jsm", 625))
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU1563616595420	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.w4e1R0EAdld3"
+1563616596111	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563616596112	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563616596112	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563616600056	Marionette	INFO	Listening on port 55432
+1563616600535	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563616606734	Marionette	INFO	Stopped listening on port 55432
+[Child 7360, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7360, Ch[Child 10712, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10712,
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[1563616707020	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.ZKAgwfBRcdS2"
+1563616708336	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563616708337	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563616708337	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563616712478	Marionette	INFO	Listening on port 55526
+1563616712567	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563616717819	Marionette	INFO	Stopped listening on port 55526
+[Child 11996, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11996, Chrome_Child[Child 1704, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1704, C[Parent 12092, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 2056, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 2056,
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563616870587	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.KhPZZU6RrvEc"
+1563616871999	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563616871999	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563616871999	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563616875859	Marionette	INFO	Listening on port 55580
+1563616876136	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563616883166	Marionette	INFO	Stopped listening on port 55580
+[Child 11704, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11704, Chrom[Child 11252, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11252,[Parent 7764, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9024, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9024, JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+[GPU 
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1563616901411	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.2XwN8TPupEwg"
+1563616901959	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563616901960	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563616901960	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563616904879	Marionette	INFO	Listening on port 55623
+1563616905263	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563616909532	Marionette	INFO	Stopped listening on port 55623
+[Child 3832, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_15[Parent 12108, Gecko_IOThread] WARNING: pipe er6ror: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_ch0annel_win.cc, line 341988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+
+[Child 3832[Child 3448, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3448, Chrome_[Child 9076, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9076, ChromJavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563616971405	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.eWyaZi8yCAhw"
+1563616972079	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563616972079	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563616972079	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563616975928	Marionette	INFO	Listening on port 55667
+1563616975952	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563616982825	Marionette	INFO	Stopped listening on port 55667
+[Child 11692, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11692, Ch[Child 11636, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11636, C[Parent 8144, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11784, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11784,JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[G
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563617054076	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.O2KKW1Y3GMhf"
+1563617054680	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563617054681	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563617054681	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563617058072	Marionette	INFO	Listening on port 55718
+1563617058453	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563617062884	Marionette	INFO	Stopped listening on port 55718
+[Child 1704, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1704, Chrome_Chil[Parent 4892, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1036, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1036, [Parent 4892, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 11563617085470	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.4hGJnwID2pZZ"
+1563617086146	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563617086146	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563617086146	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563617089511	Marionette	INFO	Listening on port 55760
+1563617089857	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563617093879	Marionette	INFO	Stopped listening on port 55760
+[Parent 11068, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 11068, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1563618341971	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.smSE0yycCC2C"
+1563618342617	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563618342618	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563618342618	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563618347869	Marionette	INFO	Listening on port 55823
+1563618348047	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563618354824	Marionette	INFO	Stopped listening on port 55823
+[Child 7304, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7304, Chrome_[Parent 8560, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3604, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3604, C[Parent 8560, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7064, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7064
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[G
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563636064258	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.oalFiOOoEY1F"
+1563636065699	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563636065700	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563636065700	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563636069307	Marionette	INFO	Listening on port 56354
+1563636069727	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563636074985	Marionette	INFO	Stopped listening on port 56354
+[Child 8288, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8288, Chrome[Parent 13012, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13208, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13208[Parent 13012, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[G
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563636118742	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.QwGsrC545A7B"
+1563636119334	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563636119335	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563636119335	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563636123950	Marionette	INFO	Listening on port 56397
+1563636124223	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563636128498	Marionette	INFO	Stopped listening on port 56397
+[Child 5356, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5356,[Parent 12532, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 764, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 764, JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[1563636190367	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.UEWv4myXLltE"
+1563636190969	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563636190970	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563636190970	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563636194765	Marionette	INFO	Listening on port 56440
+1563636194837	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563636199300	Marionette	INFO	Stopped listening on port 56440
+[Parent 8572, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12420, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12420, Chrome_ChildT[Parent 8572, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12440, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12440, Chrome_[Parent 8572, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10540, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10540, JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+[GP
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563636437667	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.c5AOy94l2FHC"
+1563636438377	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563636438377	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563636438377	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563636441554	Marionette	INFO	Listening on port 56512
+1563636441596	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221563580805691%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+[Parent 10424, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9776, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9776, Chrom[Parent 10424, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11176, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child[Parent 10424, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 10424, Gecko_IOThread] WARNING: file z:/task_1560988636/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+1563639351507	Marionette	INFO	Stopped listening on port 56512
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+[Parent 11564, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13148, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.[Parent 11564, Gecko_IOThread] WARNINcc, line 341
+G: pipe erro[Chr: 109:i file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10696, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[C[Parent 11564, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1563639351609	Marionette	INFO	Stopped listening on port 56553
+p://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563636646485	Marionette	INFO	Stopped listening on port 56629
+[Child 12340, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 123[Child 13080, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13080, Chrome[Parent 14224, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13968, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1396
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563636678642	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.rhoDHRgsZVUy"
+1563636680018	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563636680018	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563636680018	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563636683547	Marionette	INFO	Listening on port 56681
+1563636683718	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563636689195	Marionette	INFO	Stopped listening on port 56681
+[Child 14124, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14124, Chrome[Child 13576, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13576, [Parent 13744, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13616, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13616, C
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1563636763901	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.iNukZ3z30SEn"
+1563636765367	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563636765367	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563636765367	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563636768871	Marionette	INFO	Listening on port 56724
+1563636768949	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563636773788	Marionette	INFO	Stopped listening on port 56724
+[Parent 2056, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6140, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 614[Parent 2056, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13744, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1374
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[1563637096403	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.p3XmoyeHeoUZ"
+1563637097784	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563637097784	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563637097785	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563637101567	Marionette	INFO	Listening on port 56819
+1563637101849	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563637106459	Marionette	INFO	Stopped listening on port 56819
+[Child 12840, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12840, Chr[Parent 14300, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12852, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1285[Parent 14300, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13484, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13484[GP1563637145976	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.T95dwHiTEWfP"
+1563637147489	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563637147489	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563637147489	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563637151898	Marionette	INFO	Listening on port 56874
+1563637152122	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563637162377	Marionette	INFO	Stopped listening on port 56874
+[Parent 5176, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12284, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 122[Child 6012, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6012, Chrome_Chil[Parent 5176, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6720, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 672
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1563639136352	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.XXDfhdRa1Fyz"
+1563639138420	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563639138421	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563639138421	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563639147235	Marionette	INFO	Listening on port 57614
+1563639147891	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563639181492	Marionette	INFO	Stopped listening on port 57614
+[Parent 11880, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1396, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1396,[Parent 11880, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14084, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14084
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[1563639432265	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.8Q8008puP6SO"
+1563639436533	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563639436534	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563639436534	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563639440603	Marionette	INFO	Listening on port 57693
+1563639441080	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563639451862	Marionette	INFO	Stopped listening on port 57693
+[Child 13692, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child [Child 10260, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10260, Chrom[Parent 12724, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+console.error: (new Error("Connection closed before committing the transaction.", "resource://gre/modules/Sqlite.jsm", 625))
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563639525336	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.PjbQN6IbjDL7"
+1563639525993	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563639525993	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563639525994	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563639529770	Marionette	INFO	Listening on port 57745
+1563639529842	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563639534134	Marionette	INFO	Stopped listening on port 57745
+[[Parent 12600, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1584, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child [Parent 12600, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11116, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1[GPU 11832, C
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1563639563439	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.ugZD4auErfft"
+1563639563983	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563639563983	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563639563983	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563639567455	Marionette	INFO	Listening on port 57787
+1563639567801	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563639572471	Marionette	INFO	Stopped listening on port 57787
+[Parent 11760, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10260, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10260, Ch[Parent 11760, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13024, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13024, [GP
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563639596354	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.rkwBlPTjECk2"
+1563639597024	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563639597024	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563639597024	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563639600147	Marionette	INFO	Listening on port 57830
+1563639600311	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563639605469	Marionette	INFO	Stopped listening on port 57830
+[[Parent 1320, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12256, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12256, [Parent 1320, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563639709802	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.fyAEo64ggGu5"
+1563639710474	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563639710474	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563639710474	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563639713647	Marionette	INFO	Listening on port 57871
+1563639713755	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563639718174	Marionette	INFO	Stopped listening on port 57871
+[Parent 7800, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8884, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8884, Chr[C[Parent 7800, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13552, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13552, JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1563639725527	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.llt8YyZITfRF"
+1563639726260	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563639726260	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563639726261	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563639729225	Marionette	INFO	Listening on port 57910
+1563639729572	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563639733367	Marionette	INFO	Stopped listening on port 57910
+[Parent 9188, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12512, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12512[Parent 9188, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11864, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11864, JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[1563639840442	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\pc\\AppData\\Local\\Temp\\rust_mozprofile.Az8FNLjMfflo"
+1563639841057	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563639841058	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563639841058	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563639844063	Marionette	INFO	Listening on port 57952
+1563639844333	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.pl.abc/register, line 136: SyntaxError: missing } after function body
+JavaScript note: http://www.pl.abc/register, line 128: { opened at line 128, column 4
+JavaScript error: http://www.pl.abc/register, line 153: ReferenceError: $ is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validatePassword is not defined
+JavaScript error: http://www.pl.abc/register, line 1: ReferenceError: validate is not defined
+1563639849751	Marionette	INFO	Stopped listening on port 57952
+[Child 2688, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 2688,[C[Child 8332, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8332, ChrJavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
