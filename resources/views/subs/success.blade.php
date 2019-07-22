@@ -29,7 +29,9 @@
                   <br>
                   <p>Reply will follow within 24 hours.</p>
                   <br>
-                  <p>Confirmation email with your submission number will be sent to your email shortly.</p> 
+                  <p>Confirmation email with your submission number will be sent to your email shortly.</p>
+                  <br>
+                  <p>You can go <a href="/">back</a>.</p>
                 </div>
             </div>
         </div>

@@ -102,8 +102,8 @@ Route::group(['prefix' => 'login'], function () {
 });
 
 Route::group(['prefix' => 'contactus'], function () {
-    Route::get('/create', 'ContactUsController@create');
-    Route::post('/send', 'ContactUsController@store');
+    Route::get('/create', 'ContactsController@create');
+    Route::post('/send', 'ContactsController@store');
 });
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');

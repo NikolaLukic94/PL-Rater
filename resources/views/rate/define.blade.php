@@ -1,16 +1,5 @@
 @extends('layouts.app')
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <title>PLQR</title>
-
-</head>
-
-<body>
-
   <div class="d-flex" id="wrapper">
 
     @include('partials.sidebar')
@@ -23,6 +12,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+        	<br>
             <div class="card">
                 <div class="card-header text-center">Define new rate:</div>
                 <div class="card-body">
@@ -46,7 +36,6 @@
                     </div>
                   </div>
 				<hr>
-
               <div class="field">
                 <div class="row">
                   <div class="col">         
@@ -63,7 +52,7 @@
                         <option  value="0.95">0.95</option>   
                         <option  value="1">1</option>   
                         <option  value="1.05">1.05</option>   
-                        <option  value="1.15">1.15</option>                                                                                                           
+                        <option  value="1.15">1.15</option>                                                                                                   
                      </select>
                   </div>
                 </div>
@@ -132,28 +121,27 @@
                   </div>
                 </div>
               </div> 				
-
-				<div class="field">
-					<div class="row">
-						<div class="col">
-							<label class="label" for="med_pay_2_5k">
-								Med Pay of 2.5k
-							</label>
-						</div>
-						<div class="col">							
-							<select name="med_pay_2_5k" class="col-md-4 form-group">
-							  <option  value="">-- Select --</option>								
-		                        <option  value="0.7">0.7</option>
-		                        <option  value="0.8">0.8</option>
-		                        <option  value="0.85">0.85</option>         
-		                        <option  value="0.95">0.95</option>   
-		                        <option  value="1">1</option>   
-		                        <option  value="1.05">1.05</option>   
-		                        <option  value="1.15">1.15</option>  					  
-							</select>							
-						</div>
-					</div>
-				</div>
+              <div class="field">
+                <div class="row">
+                  <div class="col">         
+                    <label class="label" for="med_pay_2_5k">
+                      MMed Pay of 2.5k
+                    </label>
+                  </div>
+                  <div class="form-group col-md-6">             
+					<select name="med_pay_2_5k" class="form-group">
+					  <option  value="">-- Select --</option>								
+	                    <option  value="0.7">0.7</option>
+	                    <option  value="0.8">0.8</option>
+	                    <option  value="0.85">0.85</option>         
+	                    <option  value="0.95">0.95</option>   
+	                    <option  value="1">1</option>   
+	                    <option  value="1.05">1.05</option>   
+	                    <option  value="1.15">1.15</option>  					  
+					</select>	
+                  </div>
+                </div>
+              </div> 	
 				<div class="field">
 					<div class="row">
 						<div class="col">
@@ -162,7 +150,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<select name="med_pay_5000" class="col-md-4 form-group">
+							<select name="med_pay_5000" class="form-group">
 							  <option  value="">-- Select --</option>								
 		                        <option  value="0.7">0.7</option>
 		                        <option  value="0.8">0.8</option>
@@ -184,7 +172,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<select name="aop_ded_1" class="col-md-4 form-group">
+							<select name="aop_ded_1" class="form-group">
 							  <option  value="">-- Select --</option>								
 		                        <option  value="0.7">0.7</option>
 		                        <option  value="0.8">0.8</option>
@@ -205,7 +193,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<select name="aop_ded_2" class="col-md-4 form-group">
+							<select name="aop_ded_2" class="form-group">
 							  <option  value="">-- Select --</option>								
 		                        <option  value="0.7">0.7</option>
 		                        <option  value="0.8">0.8</option>
@@ -226,7 +214,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<select name="aop_ded_3" class="col-md-4 form-group">
+							<select name="aop_ded_3" class="form-group">
 							  <option  value="">-- Select --</option>								
 		                        <option  value="0.7">0.7</option>
 		                        <option  value="0.8">0.8</option>
@@ -247,7 +235,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<select name="aop_ded_4" class="col-md-4 form-group">
+							<select name="aop_ded_4" class="form-group">
 							  <option  value="">-- Select --</option>								
 		                        <option  value="0.7">0.7</option>
 		                        <option  value="0.8">0.8</option>
@@ -268,7 +256,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<select name="aop_ded_5" class="col-md-4 form-group">
+							<select name="aop_ded_5" class="form-group">
 							  <option  value="">-- Select --</option>								
 		                        <option  value="0.7">0.7</option>
 		                        <option  value="0.8">0.8</option>
@@ -291,7 +279,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<select name="frame" class="col-md-4 form-group">
+							<select name="frame" class="form-group">
 							  <option  value="">-- Select --</option>								
 		                        <option  value="0.7">0.7</option>
 		                        <option  value="0.8">0.8</option>
@@ -312,7 +300,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<select name="jm" class="col-md-4 form-group">
+							<select name="jm" class="form-group">
 							  <option  value="">-- Select --</option>								
 		                        <option  value="0.7">0.7</option>
 		                        <option  value="0.8">0.8</option>
@@ -333,7 +321,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<select name="bv" class="col-md-4 form-group">
+							<select name="bv" class="form-group">
 							  <option  value="">-- Select --</option>								
 		                        <option  value="0.7">0.7</option>
 		                        <option  value="0.8">0.8</option>
@@ -354,7 +342,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<select name="masonry" class="col-md-4 form-group">
+							<select name="masonry" class="form-group">
 							  <option  value="">-- Select --</option>								
 		                        <option  value="0.7">0.7</option>
 		                        <option  value="0.8">0.8</option>
@@ -377,7 +365,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<select name="protection_class_1" class="col-md-4 form-group">
+							<select name="protection_class_1" class="form-group">
 							  <option  value="">-- Select --</option>								
 		                        <option  value="0.7">0.7</option>
 		                        <option  value="0.8">0.8</option>
@@ -398,7 +386,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<select name="protection_class_2" class="col-md-4 form-group">
+							<select name="protection_class_2" class="form-group">
 							  <option  value="">-- Select --</option>								
 		                        <option  value="0.7">0.7</option>
 		                        <option  value="0.8">0.8</option>
@@ -419,7 +407,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<select name="protection_class_3" class="col-md-4 form-group">
+							<select name="protection_class_3" class="form-group">
 							  <option  value="">-- Select --</option>								
 		                        <option  value="0.7">0.7</option>
 		                        <option  value="0.8">0.8</option>
@@ -440,7 +428,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<select name="protection_class_4" class="col-md-4 form-group">
+							<select name="protection_class_4" class="form-group">
 							  <option  value="">-- Select --</option>								
 		                        <option  value="0.7">0.7</option>
 		                        <option  value="0.8">0.8</option>
@@ -461,7 +449,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<select name="protection_class_5" class="col-md-4 form-group">
+							<select name="protection_class_5" class="form-group">
 							  <option  value="">-- Select --</option>								
 		                        <option  value="0.7">0.7</option>
 		                        <option  value="0.8">0.8</option>
@@ -484,7 +472,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<select name="new_purchase" class="col-md-4 form-group">
+							<select name="new_purchase" class="form-group">
 							  <option  value="">-- Select --</option>								
 		                        <option  value="0.7">0.7</option>
 		                        <option  value="0.8">0.8</option>
@@ -505,7 +493,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<select name="prior_carrier" class="col-md-4 form-group">
+							<select name="prior_carrier" class="form-group">
 							  <option  value="">-- Select --</option>								
 		                        <option  value="0.7">0.7</option>
 		                        <option  value="0.8">0.8</option>
@@ -526,7 +514,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<select name="zero_two_losses" class="col-md-4 form-group">
+							<select name="zero_two_losses" class="form-group">
 							  <option  value="">-- Select --</option>								
 		                        <option  value="0.7">0.7</option>
 		                        <option  value="0.8">0.8</option>
@@ -547,7 +535,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<select name="more_than_two_losses" class="col-md-4 form-group">
+							<select name="more_than_two_losses" class="form-group">
 							  <option  value="">-- Select --</option>								
 		                        <option  value="0.7">0.7</option>
 		                        <option  value="0.8">0.8</option>
@@ -568,7 +556,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<select name="prior_carrier_name" class="col-md-4 form-group">
+							<select name="prior_carrier_name" class="form-group">
 							  <option  value="">-- Select --</option>								
 		                        <option  value="0.7">0.7</option>
 		                        <option  value="0.8">0.8</option>
@@ -597,8 +585,9 @@
           <div class="columns">
            <div class="column is-half is-offset-one-quarter">
         <div class="field is-grouped is-grouped-centered">
-
+		<div class="container">
           @include('errors')
+        </div>
     </form>      
                 </div>
 

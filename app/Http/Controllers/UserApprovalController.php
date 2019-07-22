@@ -9,7 +9,7 @@ class UserApprovalController extends Controller
     public function index()
     {
         return view('auth/users/approval/index', [
-            'users' => User::whereNotNull('approved_at')->paginate(10),
+            'users' => User::where('name', '!=', 'Admin')->whereNotNull('approved_at')->paginate(10),
             'users_pending_approval' => User::whereNull('approved_at')->paginate(10),
         ]);
     }

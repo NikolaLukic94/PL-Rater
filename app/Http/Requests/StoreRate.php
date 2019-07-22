@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+
 class StoreRate extends FormRequest
 {
     /**
@@ -24,7 +25,6 @@ class StoreRate extends FormRequest
     public function rules()
     {
         return [
-            'general_rate' => 'required|max:100',
             'lob' => 'required|max:50',
             'cov_a' => 'required',
                 //insured's info

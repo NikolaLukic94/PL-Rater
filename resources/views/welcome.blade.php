@@ -18,7 +18,7 @@
   <div id="contact">
     <input type="email" placeholder="Enter your email address">
     <button type=submit>Start free trial</button>
-    <button type=submit>Contact Us</button><br><br>
+    <button type=submit><a href="/contactus/create">Contact Us</a></button><br><br>
     <p>Try PLQR free for 14 days, no credit card required. By entering your email, you agree to receive marketing emails from PLQR.</p>
   </div>  
  </div>

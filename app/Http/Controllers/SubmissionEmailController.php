@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Submission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Http\Requests\AgentSendSubmissionEmail;
+use App\Http\Requests\StoreSubmission;
 
 class SubmissionEmailController extends Controller
 {
@@ -32,7 +32,7 @@ class SubmissionEmailController extends Controller
         ]);
     }
 
-    public function store(AgentSendSubmissionEmail $request)
+    public function store(StoreSubmission $request)
     {
         $submission = Submission::createFromRequest($request);
 

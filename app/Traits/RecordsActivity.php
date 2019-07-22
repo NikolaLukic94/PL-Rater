@@ -1,31 +1,41 @@
 <?php
 
 namespace App\Traits;
+use Auth;
 
 trait RecordsActivity
 {
     protected function recordActivity($event)
     {
-        $this->activity()->create([
-            'user_id' => auth()->id(),
-            'type' => $this->getActivityType($event),
-        /*    'subject_id' => $this->id,
-            'subject_type' => get_class($this)*/
-        ]);
+        if($user = Auth::user())
+        {
+            $this->activity()->create([
+                'user_id' => auth()->id(),
+                'type' => $this->getActivityType($event),
+            ]);
+        }        
+
     }
 
     public static function bootRecordsActivity()
     {
-        foreach (static::getActivitiesToRecord() as $event) {
-            static::$event(function ($model) use ($event) {
-                $model->recordActivity($event);
-            });
-        }
+        if($user = Auth::user())
+        {
+            foreach (static::getActivitiesToRecord() as $event) {
+                static::$event(function ($model) use ($event) {
+                    $model->recordActivity($event);
+                });
+            }
+        }        
     }
 
     protected static function getActivitiesToRecord()
     {
-        return ['created', 'updated', 'deleted'];
+        if($user = Auth::user())
+        {
+            return ['created', 'updated', 'deleted'];
+        }
+        
     }
 
     public function activity()

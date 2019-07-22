@@ -27,7 +27,7 @@ class RateController extends Controller
         ]);
     }
 
-    public function store(Request $request)
+    public function store(StoreRate $request)
     {
          if (Rate::where('lob', '=', Input::get('lob'))->exists()) {
             return redirect('/rate/index');

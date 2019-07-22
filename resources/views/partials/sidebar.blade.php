@@ -2,7 +2,9 @@
 <div class="border-right" id="sidebar-wrapper">
   <div class="sidebar-heading text-center"><h2>PLQR</h2></div>
   <div class="list-group list-group-flush">
+    @if(Auth::user()->name == "Admin")
     <a href="/users" class="list-group-item list-group-item-action"><i class="fas fa-cog"></i>&nbsp Users</a>
+    @endif
     <button class="dropdown-btn"><i class="fa fa-cart-plus" aria-hidden="true"></i>&nbsp Submissions<i class="fa fa-caret-down"></i> 
     </button>
     <div class="dropdown-container">

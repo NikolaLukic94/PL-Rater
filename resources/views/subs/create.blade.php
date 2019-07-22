@@ -374,7 +374,7 @@
                       </div>
                       <div class="form-group col-md-6">             
                         <select name="prior_carrier" class="form-group">
-                            <option  value="">Construction type</option>
+                            <option  value=""></option>
                             <option  value="1">Yes</option>
                             <option  value="2">No</option>           
                          </select>
@@ -390,7 +390,7 @@
                       </div>
                       <div class="form-group col-md-6">             
                         <select name="aop_ded" class="form-group">
-                            <option  value="">AOP</option>
+                            <option  value=""></option>
                             <option  value="1000">1,000</option>
                             <option  value="2500">2,500</option>  
                             <option  value="5000">5,000</option>                                      

@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+use Auth;
 use Illuminate\Database\Eloquent\Model;
 
 class Submission extends Model
@@ -40,11 +40,11 @@ class Submission extends Model
           'mailing_address_county' => $request->mailing_address_county,
           'mailing_address_zip'=> $request->lob,
           'mailing_address_state'=> $request->mailing_address_state,
-          'location_address_street_name_and_number' => $request->location_address_street_name_and_number,
+          'location_address_street_name_and_number' => $request->street_name_and_number,
           'location_address_city' => $request->mailing_address_city,
-          'location_address_county' => $request->location_address_county,
+          'location_address_county' => $request->county,
           'location_address_zip'=> $request->location_address_zip,
-          'location_address_state'=> $request->location_address_state,
+          'location_address_state'=> $request->state,
           'phone_number' => $request->phone_number,
           'email_address' => $request->email_address,
           'cov_a' => $request->cov_a,
@@ -59,7 +59,8 @@ class Submission extends Model
           'prior_carrier_name' => $request->prior_carrier_name,
           'prior_carrier_effective_date' => $request->prior_carrier_effective_date,
           'status' => 'not_logged',
-          'submission_number' => rand(100,555555)
+          'submission_number' => rand(100,555555),
+
         ]);   
       return $submission;
     }
