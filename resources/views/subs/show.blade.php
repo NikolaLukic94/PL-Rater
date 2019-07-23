@@ -1,16 +1,4 @@
 @extends('layouts.app')
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <title>PLQR</title>
-
-</head>
-
-<body>
-
   <div class="d-flex" id="wrapper">
 
     @include('partials.sidebar')
@@ -85,18 +73,6 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="type_of_coverage" value="{{$submission->type_of_coverage}}" type="text" class="input"  id="type_of_coverage">
-						</div>
-					</div>
-				</div>	
-				<div class="field">
-					<div class="row">
-						<div class="col">					
-							<label class="label" for="type_of_coverage">
-							<p>Type of coverage</p>
-							</label>
-						</div>
-						<div class="col">							
 							<input name="lob" type="text" value="{{$submission->type_of_coverage}}" class="input" id="lob">
 						</div>
 					</div>
@@ -135,10 +111,46 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="mailing_address" value="{{$submission->mailing_address}}" type="text" class="input" id="mailing_address">
+							<input name="mailing_address" value="{{$submission->mailing_address_street_name_and_number}}" type="text" class="input" id="mailing_address">
 						</div>
 					</div>
 				</div>
+				<div class="field">
+					<div class="row">
+						<div class="col">					
+							<label class="label" for="mailing_address_city">
+							<p>Mailing address county</p>
+							</label>
+						</div>
+						<div class="col">							
+							<input name="mailing_address" value="{{$submission->mailing_address_city}}" type="text" class="input" id="mailing_address">
+						</div>
+					</div>
+				</div>	
+				<div class="field">
+					<div class="row">
+						<div class="col">					
+							<label class="label" for="mailing_address_zip">
+							<p>Mailing address ZIP</p>
+							</label>
+						</div>
+						<div class="col">							
+							<input name="mailing_address" value="{{$submission->mailing_address_zip}}" type="text" class="input" id="mailing_address">
+						</div>
+					</div>
+				</div>	
+				<div class="field">
+					<div class="row">
+						<div class="col">					
+							<label class="label" for="mailing_address_state">
+							<p>Mailing address state</p>
+							</label>
+						</div>
+						<div class="col">							
+							<input name="mailing_address" value="{{$submission->mailing_address_state}}" type="text" class="input" id="mailing_address">
+						</div>
+					</div>
+				</div>											
 				<div class="field">
 					<div class="row">
 						<div class="col">					
@@ -147,7 +159,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="street_name_and_number" value="{{$submission->street_name_and_number}}" type="text" class="input" id="street_name_and_number">
+							<input name="street_name_and_number" value="{{$submission->location_address_street_name_and_number}}" type="text" class="input" id="street_name_and_number">
 						</div>
 					</div>
 				</div>
@@ -159,7 +171,7 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="city" type="text" value="{{$submission->city}}" class="input" id="city">
+							<input name="city" type="text" value="{{$submission->location_address_city}}" class="input" id="city">
 						</div>
 					</div>
 				</div>
@@ -171,7 +183,19 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="county" type="text" value="{{$submission->county}}" class="input" id="county">
+							<input name="county" type="text" value="{{$submission->location_address_county}}" class="input" id="county">
+						</div>
+					</div>
+				</div>
+				<div class="field">
+					<div class="row">
+						<div class="col">					
+							<label class="label" for="state">
+							<p>ZIP</p>
+							</label>
+						</div>
+						<div class="col">							
+							<input name="state" type="text" value="{{$submission->location_address_zip}}" class="input"  id="state">
 						</div>
 					</div>
 				</div>
@@ -183,10 +207,10 @@
 							</label>
 						</div>
 						<div class="col">							
-							<input name="state" type="text" value="{{$submission->state}}" class="input"  id="state">
+							<input name="state" type="text" value="{{$submission->location_address_state}}" class="input"  id="state">
 						</div>
 					</div>
-				</div>
+				</div>				
 				<div class="field">
 					<div class="row">
 						<div class="col">					

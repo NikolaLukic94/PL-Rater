@@ -28,6 +28,9 @@ class CreateRatersTable extends Migration
             $table->string('more_than_two_losses', 50)->default(0)->nullable();
             $table->string('prior_carrier', 50)->nullable();
             $table->string('prior_carrier_name', 50)->nullable();
+            $table->integer('inspection_fee')->nullable();
+            $table->integer('policy_fee')->nullable();
+            $table->integer('brokerage_fee')->nullable();            
             $table->unsignedInteger('file_id')->nullable();
             $table->foreign('file_id')->references('id')->on('files');
             $table->timestamps();

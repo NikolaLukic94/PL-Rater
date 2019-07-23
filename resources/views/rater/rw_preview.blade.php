@@ -1,15 +1,5 @@
 @extends('layouts.app')
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <title>PLQR</title>
-
-</head>
-
-<body>
 
   <div class="d-flex" id="wrapper">
 
@@ -23,10 +13,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+          <br>
             <div class="card">
-                <div class="card-header text-center">Please verify current info:</div>
+                <div class="card-header text-center"></div>
                 <div class="card-body">
-@if(isset($file))
+    @if(isset($file))
         <form action="/file/rate/prepare/rw" method="POST">
               {{ csrf_field() }} 
               <div class="field">
@@ -191,7 +182,11 @@
                   </div>
                   <div class="col">             
                     <label class="label" for="type_of_coverage">
-                       {{$file->new_purchase}}
+                    @if($file->new_purchase == '1') 
+                       yes
+                    @else
+                      no
+                    @endif                       
                     </label>                    
                   </div>
                   <div class="col-2">             
@@ -210,7 +205,11 @@
                   </div>
                   <div class="col">             
                     <label class="label" for="type_of_coverage">
-                      {{$file->prior_carrier}}
+                    @if($file->prior_carrier)
+                      yes
+                    @else
+                      no
+                    @endif  
                     </label>                    
                   </div>
                   <div class="col-2">             
@@ -239,24 +238,24 @@
                   </div>                  
                 </div>
               </div>
-@endif    
+          @endif    
               <div class="block">
                 <div class="notification">
                   <hr>
-                    <div class="field">
-                      <div class="row">
-                        <div class="col">
-                          <label class="label" for="inspection_fee">
-                            Inspection Fee
-                          </label>
-                        </div>
-                        <div class="col">
-                          <label class="label" for="inspection_fee">
-                            Inspection Fee
-                          </label>                          
-                        </div>
-                      </div>
+                <div class="field">
+                  <div class="row">
+                    <div class="col">
+                      <label class="label" for="agency_fee">
+                        Inspection fee
+                      </label>
                     </div>
+                    <div class="col">
+                      <label class="label" for="inspection_fee">
+                        {{$rater->inspection_fee}}
+                      </label>
+                    </div>
+                  </div>
+                </div>
                     <div class="field">
                       <div class="row">
                         <div class="col">
@@ -266,7 +265,7 @@
                         </div>
                         <div class="col">
                           <label class="label" for="inspection_fee">
-                            Inspection Fee
+                            {{$rater->brokerage_fee}}
                           </label>
                         </div>
                       </div>
@@ -274,33 +273,20 @@
                     <div class="field">
                       <div class="row">
                         <div class="col">
-                          <label class="label" for="agency_fee">
-                            WIP
+                          <label class="label" for="policy_fee">
+                            Policy fee
                           </label>
                         </div>
                         <div class="col">
-                          <label class="label" for="inspection_fee">
-                            Inspection Fee
+                          <label class="label" for="policy_fee">
+                            {{$rater->policy_fee}}
                           </label>
                         </div>
                       </div>
                     </div>            
                 </div>
                 <hr>
-                <div class="field">
-                      <div class="row">
-                        <div class="col">
-                          <label class="label" for="agency_fee">
-                            WIP
-                          </label>
-                        </div>
-                        <div class="col">
-                          <label class="label" for="inspection_fee">
-                            Inspection Fee
-                          </label>
-                        </div>
-                      </div>
-                    </div> 
+ 
               </div>
               <br><hr><br>
           <div class="columns">

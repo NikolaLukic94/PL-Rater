@@ -8,7 +8,7 @@ class Rate extends Model
 {
     use Traits\RecordsActivity;
 
-    protected $fillable = ['lob',
+    protected $fillable = [     'lob',
                                 'cov_a',
                                 'other_structures',
                                 'loss_of_use',

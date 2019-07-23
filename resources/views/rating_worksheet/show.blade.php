@@ -1,16 +1,5 @@
 @extends('layouts.app')
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <title>PLQR</title>
-
-</head>
-
-<body>
-
   <div class="d-flex" id="wrapper">
 
     @include('partials.sidebar')
@@ -23,6 +12,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+          <br>
           @if(isset($rw))
             <div class="card">
                 <div class="card-header text-center">Please submit all info:</div>
@@ -159,8 +149,12 @@
               <p>New purchase?</p>
               </label>
             </div>
-            <div class="col">             
-              <input name="new_purchase" value="{{$rw->new_purchase_info}}" type="text" class="input" id="new_purchase">
+            <div class="col">  
+            @if($rw->new_purchase_info == 1)                        
+              <input name="new_purchase" value="yes" type="text" class="input" id="new_purchase">
+            @else
+              <input name="new_purchase" value="no" type="text" class="input" id="new_purchase">
+            @endif
             </div>
           </div>
         </div>
@@ -171,12 +165,52 @@
               <p>Prior carrier?</p>
               </label>
             </div>
-            <div class="col">             
-              <input name="prior_carrier" value="{{$rw->prior_carrier_info}}" type="text" class="input" id="prior_carrier">
+            <div class="col">          
+            @if($rw->prior_carrier_info == 1)    
+              <input name="prior_carrier" value="yes" type="text" class="input" id="prior_carrier">
+            @else
+              <input name="prior_carrier" value="no" type="text" class="input" id="prior_carrier">
+            @endif
             </div>
           </div>
         </div>
-@endif    
+        <div class="field">
+          <div class="row">
+            <div class="col">         
+              <label class="label" for="grand_premium">
+              <p>Grand premium</p>
+              </label>
+            </div>
+            <div class="col">             
+              <input name="grand_premium" value="${{substr ($rw->grand_premium, 0, 4)}}" type="text" class="input" id="grand_premium">
+            </div>
+          </div>
+        </div>    
+        <div class="field">
+          <div class="row">
+            <div class="col">         
+              <label class="label" for="sl_tax_fee">
+              <p>SL Tax</p>
+              </label>
+            </div>
+            <div class="col">             
+              <input name="sl_tax_fee" value="${{substr ($rw->sl_tax_fee, 0, 3)}}" type="text" class="input" id="sl_tax_fee">
+            </div>
+          </div>
+        </div>    
+        <div class="field">
+          <div class="row">
+            <div class="col">         
+              <label class="label" for="empa">
+              <p>Empa</p>
+              </label>
+            </div>
+            <div class="col">             
+              <input name="empa" value="${{substr ($rw->empa, 0, 3)}}" type="text" class="input" id="empa">
+            </div>
+          </div>
+        </div>                   
+        @endif    
 
           <div class="columns">
            <div class="column is-half is-offset-one-quarter">

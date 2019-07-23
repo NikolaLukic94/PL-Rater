@@ -30,9 +30,9 @@ class RaterController extends Controller
     public function create($id, Request $request) {
 
     /* FILE WE ARE CURRENTLY RATING */
-        $file = File::findOrFail($id);
+        $file = File::findOrFail($id); 
         // finding rates that should be applied, since different rates will apply to different lob
-        $rate = Rate::where('lob', $file->lob)->first();
+        $rate = Rate::where('lob', $file->lob)->first(); 
 
         if ($rate == null) {
             return view('/rater/rates_not_found'); 

@@ -46,9 +46,6 @@ class Rater extends Model
         $prior_carrier_name_rate = null;
         $zero_two_losses_rate = null;
         $more_than_two_losses = null;
-        $inspection_fee = null;
-        $brokerage_fee = null;
-        $agency_fee = null;
         $file_id = $file->id;
 
         if ($file->med_pay == '1000') {
@@ -113,24 +110,6 @@ class Rater extends Model
             $zero_two_losses_rate == $rate->more_than_two_losses;
         }
 
-        if (isset($request->inspection_fee)) {
-            $inspection_fee = $request->inspection_fee;
-        } else {
-            $inspection_fee = '0';
-        }
-
-        if (isset($request->brokerage_fee)) {
-            $brokerage_fee = $request->brokerage_fee;
-        } else {
-            $brokerage_fee = '0';
-        }
-
-        if (isset($request->agency_fee)) {
-            $agency_fee = $request->agency_fee;
-        } else {
-            $agency_fee = '0';
-        }
-
         $rater = new self;
 
         $rater->lob = $file->lob;
@@ -147,9 +126,9 @@ class Rater extends Model
         $rater->zero_two_losses = $zero_two_losses_rate;
         $rater->more_than_two_losses = $more_than_two_losses;
         $rater->protection_class = $protection_class_rate;
-        /*    $rater->inspection_fee = $inspection_fee;
-                $rater->brokerage_fee = $brokerage_fee;
-                $rater->agency_fee = $agency_fee;      */
+        $rater->inspection_fee = $request->inspection_fee;
+        $rater->brokerage_fee = $request->brokerage_fee;
+        $rater->policy_fee = $request->policy_fee;     
         $rater->save();
 
         return $rater;

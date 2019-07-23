@@ -14,6 +14,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <br>
             <div class="card">
                 <div class="card-header text-center">Please verify current info:</div>
                 <div class="card-body">
@@ -43,6 +44,23 @@
                         </div>
                     </div>
                 </div>
+                <div class="field">
+                    <div class="row">
+                      <div class="col">         
+                        <label class="label" for="lob">
+                          LOB
+                        </label>
+                      </div>
+                      <div class="form-group col-md-6">            
+                        <select name="lob" class="form-group">
+                              <option  value="">-- Select --</option>                                  
+                              <option  value="HO3">-- HO3 --</option>       
+                              <option  value="DP1">-- DP1 --</option>
+                              <option  value="DP3">-- DP3 --</option>                      
+                         </select>
+                      </div>
+                    </div>
+                  </div>  
                 <hr> 
                 <div class="field">
                     <div class="row">
@@ -154,13 +172,17 @@
                           State
                         </label>
                       </div>
-                      <div class="form-group col-md-6">             
-                        <select name="location_address_state" class="form-group">
+                      <div class="form-group col-md-6">   
+                      @if($submission->mailing_address_state)
+                        <input type="text" value="{{$submission->mailing_address_state}}" name="mailing_address_state" required>
+                      @else          
+                        <select name="mailing_address_state" class="form-group">
                             <option  value="">Select State</option>
                             <option  value="LA">LA</option>
                             <option  value="CA">CA</option>
                             <option  value="FL">FL</option>                 
                          </select>
+                         @endif
                       </div>
                     </div>
                   </div>                 
@@ -221,13 +243,17 @@
                       State
                     </label>
                   </div>
-                  <div class="form-group col-md-6">             
-                    <select name="location_address_state" class="form-group">
-                        <option  value="">Select State</option>
-                        <option  value="LA">LA</option>
-                        <option  value="CA">CA</option>
-                        <option  value="FL">FL</option>                 
-                     </select>
+                    <div class="form-group col-md-6">
+                      @if($submission->mailing_address_state)
+                        <input type="text" value="{{$submission->mailing_address_state}}" name="mailing_address_county" required>
+                      @else          
+                        <select name="location_address_state" class="form-group">
+                            <option  value="">Select State</option>
+                            <option  value="LA">LA</option>
+                            <option  value="CA">CA</option>
+                            <option  value="FL">FL</option>                 
+                         </select>
+                         @endif                  
                   </div>
                 </div>
               </div>                 
@@ -246,8 +272,4 @@
   <!-- /#wrapper -->
 
 
-
-</body>
-
-</html>
 

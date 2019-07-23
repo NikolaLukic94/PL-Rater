@@ -311,9 +311,9 @@
 
                         <div class="col">
 
-                          <label class="label" for="agency_fee">
+                          <label class="label" for="policy_fee">
 
-                            Agency Fee
+                            Policy Fee
 
                           </label>
 
@@ -321,7 +321,7 @@
 
                         <div class="col">
 
-                          <input name="agency_fee" type="text" class="input" id="agency_fee">
+                          <input name="policy_fee" type="text" class="input" id="policy_fee">
 
                         </div>
 
@@ -345,9 +345,7 @@
 
                 <button type="submit" class="btn btn-outline-secondary" style="width: 100%">Update</button>
                   </form>  
-
-                <a class="btn btn-primary" href="/rater/create/{{$file->id}}" role="button">Open</a>
-
+                <a href="/rater/create/{{$file->id}}">Proceed</a>
               </p>
 
                 @endif 

@@ -90,7 +90,6 @@
                   </tr>
                   @endif
                 @endforeach
-
               @else
                   <p>There are no new emails!</p>
               @endif

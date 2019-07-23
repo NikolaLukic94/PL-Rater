@@ -64,7 +64,7 @@ class File extends Model
               'agent_email_address' => $submission->agent_email_address, 
               'agent_phone_number' => $submission->agent_phone_number, 
               'agent_name' => $submission->agent_name, 
-              'lob' => $submission->lob,
+              'lob' => $request->lob,
               'effective_date' => $submission->effective_date,
               // need set to have either req for input or info from subs
               'expiration_date' => Input::get('expiration_date'),
@@ -171,7 +171,6 @@ class File extends Model
     public static function updateFileRatingCharacteristics($request, $id)
     {
         return tap($file = self::findOrFail($id))->update([
-              'lob' => $request->lob,
               'cov_a' => $request->cov_a,
               'other_structures' => $request->other_structures,
               'med_pay' => $request->med_pay,

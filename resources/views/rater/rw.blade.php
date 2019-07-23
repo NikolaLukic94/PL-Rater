@@ -1,15 +1,5 @@
 @extends('layouts.app')
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <title>PLQR</title>
-
-</head>
-
-<body>
 
   <div class="d-flex" id="wrapper">
 
