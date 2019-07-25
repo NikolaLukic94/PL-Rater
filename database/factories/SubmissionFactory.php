@@ -44,7 +44,7 @@ $factory->define(App\Submission::class, function (Faker $faker) {
          'mold_limit' =>  $faker->numberBetween($min = 10000, $max = 25000),
          'water_back_up' =>  $faker->numberBetween($min = 1000, $max = 5000),
          'water_back_up_limit' =>  $faker->numberBetween($min = 10000, $max = 25000),
-         'status' => 'logged',
+    //     'status' => 'new',
          'submission_number' =>  $faker->numberBetween($min = 100, $max = 55555),
     ];
 });

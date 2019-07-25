@@ -238,62 +238,14 @@
                   </div>                  
                 </div>
               </div>
-          @endif    
-              <div class="block">
-                <div class="notification">
-                  <hr>
-                <div class="field">
-                  <div class="row">
-                    <div class="col">
-                      <label class="label" for="agency_fee">
-                        Inspection fee
-                      </label>
-                    </div>
-                    <div class="col">
-                      <label class="label" for="inspection_fee">
-                        {{$rater->inspection_fee}}
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                    <div class="field">
-                      <div class="row">
-                        <div class="col">
-                          <label class="label" for="brokerage_fee">
-                            Brokerage Fee
-                          </label>
-                        </div>
-                        <div class="col">
-                          <label class="label" for="inspection_fee">
-                            {{$rater->brokerage_fee}}
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="field">
-                      <div class="row">
-                        <div class="col">
-                          <label class="label" for="policy_fee">
-                            Policy fee
-                          </label>
-                        </div>
-                        <div class="col">
-                          <label class="label" for="policy_fee">
-                            {{$rater->policy_fee}}
-                          </label>
-                        </div>
-                      </div>
-                    </div>            
-                </div>
-                <hr>
- 
+          @endif         
               </div>
-              <br><hr><br>
           <div class="columns">
            <div class="column is-half is-offset-one-quarter">
             <div class="field is-grouped is-grouped-centered">
               <p class="control">
-                <a class="btn btn-primary" href="/rater/rw/{{$file->id}}/{{$rater->id}}" role="button">Create RW</a>                 
+                <div class="col">
+                  <a class="btn btn-primary" href="/rater/rw/{{$file->id}}/{{$rater->id}}" role="button">Create RW</a>  </div>               
               </p>
               @include('errors')
               </form>       

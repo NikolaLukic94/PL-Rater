@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Rater;
 use App\Premium;
 use App\RatingWorksheet;
 
@@ -33,4 +33,5 @@ class RatingWorksheetController extends Controller
             'rw' => RatingWorksheet::getRwJoinPremiumFileRater(),
         ]);
     }
+ 
 }

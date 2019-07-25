@@ -12,7 +12,7 @@ class SubmissionEmailController extends Controller
     public function index()
     {
         return view('/subs/index', [
-            'submission' => Submission::orderBy('location_address_state', 'asc')->paginate(10),
+            'submission' => Submission::where('status','!=','logged')->orderBy('location_address_state', 'asc')->paginate(10),
             'subsEffWithinNextWeek' => DB::table('submissions')
                                     ->where('effective_date', '<', $dateInSevenDays = Submission::currentWeek())
                                     ->count(),

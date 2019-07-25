@@ -55,31 +55,7 @@
               <input name="agent_phone_number" value="{{$submission->agent_phone_number}}" type="text" class="input"  id="agent_phone_number">
             </div>
           </div>
-        </div>    
-        <div class="field">
-          <div class="row">
-            <div class="col">         
-              <label class="label" for="type_of_coverage">
-              <p>Type of coverage</p>
-              </label>
-            </div>
-            <div class="col">             
-              <input name="type_of_coverage" value="{{$submission->type_of_coverage}}" type="text" class="input"  id="type_of_coverage">
-            </div>
-          </div>
-        </div>  
-        <div class="field">
-          <div class="row">
-            <div class="col">         
-              <label class="label" for="type_of_coverage">
-              <p>Type of coverage</p>
-              </label>
-            </div>
-            <div class="col">             
-              <input name="lob" type="text" value="{{$submission->type_of_coverage}}" class="input" id="lob">
-            </div>
-          </div>
-        </div>  
+        </div>     
         <div class="field">
           <div class="row">
             <div class="col">         
@@ -105,19 +81,8 @@
               <input name="named_insured" value="{{$submission->named_insured}}" type="text" class="input" id="named_insured">
             </div>
           </div>
-        </div>  
-        <div class="field">
-          <div class="row">
-            <div class="col">         
-              <label class="label" for="mailing_address">
-              <p>Mailing address</p>
-              </label>
-            </div>
-            <div class="col">             
-              <input name="mailing_address" value="{{$submission->mailing_address}}" type="text" class="input" id="mailing_address">
-            </div>
-          </div>
-        </div>
+        </div>  <hr>
+        <p class="text-center"><b>Mailing address</b></p><hr>
         <div class="field">
           <div class="row">
             <div class="col">         
@@ -126,7 +91,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="street_name_and_number" value="{{$submission->street_name_and_number}}" type="text" class="input" id="street_name_and_number">
+              <input name="street_name_and_number" value="{{$submission->mailing_address_street_name_and_number}}" type="text" class="input" id="street_name_and_number">
             </div>
           </div>
         </div>
@@ -138,7 +103,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="city" type="text" value="{{$submission->city}}" class="input" id="city">
+              <input name="city" type="text" value="{{$submission->mailing_address_city}}" class="input" id="city">
             </div>
           </div>
         </div>
@@ -150,7 +115,7 @@
               </label>
             </div>
             <div class="col">             
-              <input name="county" type="text" value="{{$submission->county}}" class="input" id="county">
+              <input name="county" type="text" value="{{$submission->mailing_address_county}}" class="input" id="county">
             </div>
           </div>
         </div>
@@ -162,10 +127,60 @@
               </label>
             </div>
             <div class="col">             
-              <input name="state" type="text" value="{{$submission->state}}" class="input"  id="state">
+              <input name="state" type="text" value="{{$submission->mailing_address_state}}" class="input"  id="state">
+            </div>
+          </div>
+        </div><hr>
+        <p class="text-center"><b>Location address</b></p><hr>
+        <div class="field">
+          <div class="row">
+            <div class="col">         
+              <label class="label" for="street_name_and_number">
+              <p>Street name and number</p>
+              </label>
+            </div>
+            <div class="col">             
+              <input name="street_name_and_number" value="{{$submission->location_address_street_name_and_number}}" type="text" class="input" id="street_name_and_number">
             </div>
           </div>
         </div>
+        <div class="field">
+          <div class="row">
+            <div class="col">         
+              <label class="label" for="city">
+              <p>City</p>
+              </label>
+            </div>
+            <div class="col">             
+              <input name="city" type="text" value="{{$submission->location_address_city}}" class="input" id="city">
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="row">
+            <div class="col">         
+              <label class="label" for="county">
+              <p>County</p>
+              </label>
+            </div>
+            <div class="col">             
+              <input name="county" type="text" value="{{$submission->location_address_county}}" class="input" id="county">
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="row">
+            <div class="col">         
+              <label class="label" for="state">
+              <p>State</p>
+              </label>
+            </div>
+            <div class="col">             
+              <input name="state" type="text" value="{{$submission->location_address_state}}" class="input"  id="state">
+            </div>
+          </div>
+        </div>
+        <hr>
         <div class="field">
           <div class="row">
             <div class="col">         
@@ -190,6 +205,7 @@
             </div>
           </div>
         </div>
+                <p class="text-center"><b>Coverage details</b></p><hr>
         <div class="field">
           <div class="row">
             <div class="col">         
@@ -330,6 +346,6 @@
               </div>
           </div>
         </div>
-    </div>    
-  </div>
-</div>
+</div></div> 
+
+

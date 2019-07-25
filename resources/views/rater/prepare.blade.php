@@ -126,214 +126,71 @@
                 </div>
 
               </div>
-
               <hr>
-
               <div class="field">
-
                 <div class="row">
-
                   <div class="col">         
-
                     <label class="label" for="construction_type">
-
                     <p>Construction type</p>
-
                     </label>
-
                   </div>
-
                   <div class="col">             
-
                     <input name="construction_type" value="{{$file->construction_type}}" type="text" class="input" id="construction_type">
-
                   </div>
-
                 </div>
-
               </div>
-
               <div class="field">
-
                 <div class="row">
-
                   <div class="col">         
-
                     <label class="label" for="protection_class">
-
                     <p>PC</p>
-
                     </label>
-
                   </div>
-
                   <div class="col">             
-
                     <input name="protection_class" value="{{$file->protection_class}}" type="text" class="input" id="protection_class">
-
                   </div>
-
                 </div>
-
               </div>
-
               <div class="field">
-
                 <div class="row">
-
                   <div class="col">         
-
                     <label class="label" for="new_purchase">
-
                     <p>New purchase?</p>
-
                     </label>
-
                   </div>
-
                   <div class="col">             
-
-                    <input name="new_purchase" value="{{$file->new_purchase}}" type="text" class="input" id="new_purchase">
-
+                      <input name="new_purchase" type="text" class="input" id="new_purchase">
                   </div>
-
                 </div>
-
               </div>
-
               <div class="field">
-
                 <div class="row">
-
                   <div class="col">         
-
                     <label class="label" for="prior_carrier">
-
                     <p>Prior carrier?</p>
-
                     </label>
-
                   </div>
-
                   <div class="col">             
-
                     <input name="prior_carrier" value="{{$file->prior_carrier}}" type="text" class="input" id="prior_carrier">
-
                   </div>
-
                 </div>
-
               </div>
-
               <div class="field">
-
                 <div class="row">
-
                   <div class="col">         
-
                     <label class="label" for="prior_carrier_name">
-
                     <p>Prior carrier - name</p>
-
                     </label>
-
                   </div>
-
                   <div class="col">             
-
                     <input name="prior_carrier_name" value="{{$file->prior_carrier_name}}" type="text" class="input" id="prior_carrier_name">
-
                   </div>
-
                 </div>
-
               </div>
-
-                    
-
               <div class="block">
-
                 <div class="notification">
-
                   <hr>
 
-                    <div class="field">
-
-                      <div class="row">
-
-                        <div class="col">
-
-                          <label class="label" for="inspection_fee">
-
-                            Inspection Fee
-
-                          </label>
-
-                        </div>
-
-                        <div class="col">
-
-                          <input name="inspection_fee" type="text" class="input" id="inspection_fee">
-
-                        </div>
-
-                      </div>
-
-                    </div>
-
-                    <div class="field">
-
-                      <div class="row">
-
-                        <div class="col">
-
-                          <label class="label" for="brokerage_fee">
-
-                            Brokerage Fee
-
-                          </label>
-
-                        </div>
-
-                        <div class="col">
-
-                          <input name="brokerage_fee" type="text" class="input" id="brokerage_fee">
-
-                        </div>
-
-                      </div>
-
-                    </div>
-
-                    <div class="field">
-
-                      <div class="row">
-
-                        <div class="col">
-
-                          <label class="label" for="policy_fee">
-
-                            Policy Fee
-
-                          </label>
-
-                        </div>
-
-                        <div class="col">
-
-                          <input name="policy_fee" type="text" class="input" id="policy_fee">
-
-                        </div>
-
-                      </div>
-
-                    </div>            
-
-                </div>
-
-                <hr>
-
-              </div>
 
           <div class="columns">
 
@@ -345,7 +202,10 @@
 
                 <button type="submit" class="btn btn-outline-secondary" style="width: 100%">Update</button>
                   </form>  
-                <a href="/rater/create/{{$file->id}}">Proceed</a>
+              <form action="/rater/create/{{$file->id}}">
+                  <button type="submit" class="btn btn-outline-secondary" style="width: 100%">Proceed</button>
+              </form>                  
+
               </p>
 
                 @endif 

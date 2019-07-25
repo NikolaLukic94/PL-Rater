@@ -1,23 +1,17 @@
 @extends('layouts.app')
-
   <div class="d-flex" id="wrapper">
-
     @include('partials.sidebar')
-
-    <!-- Page Content -->
     <div id="page-content-wrapper">
-
     @include('partials.navbar')
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
           <br>
           @if(isset($rw))
             <div class="card">
-                <div class="card-header text-center">Please submit all info:</div>
+                <div class="card-header text-center">RW:</div>
                 <div class="card-body">
-        <form action="/subs/" method="POST">
+        <form action="/rating-worksheet/update/" method="POST">
         {{ csrf_field() }}
         <div class="field">
           <div class="row">
@@ -216,8 +210,9 @@
            <div class="column is-half is-offset-one-quarter">
         <div class="field is-grouped is-grouped-centered">
           <p class="control">
-         
-                <button type="button" class="btn btn-outline-secondary">Quote</button>
+                <hr>
+              </div>         
+                <button type="submit" class="btn btn-outline-secondary">Email to agent</button>
                 
           </p>
           @include('errors')

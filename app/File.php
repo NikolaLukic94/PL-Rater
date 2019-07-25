@@ -97,6 +97,9 @@ class File extends Model
               'water_back_up' => $submission->water_back_up, 
               'water_back_up_limit' => $submission->water_back_up_limit
         ]);   
+              $submission->status = "logged";
+              $submission->save();
+
     }    
 
     public static function getRWjoinFileRatePremium($id)

@@ -12,8 +12,7 @@
             <th></th>
             <th><abbr title="Named_insured">Named Insured</abbr></th>
             <th><abbr title="">lob</abbr></th>
-            <th><abbr title="">Effective date</abbr></th>
-            <th><abbr title="">Aging date</abbr></th>                  
+            <th><abbr title="">Effective date</abbr></th>                 
             <th><abbr title="">State</abbr></th>
             <th><abbr title="">Agency</abbr></th>
             <th><abbr title="">Agent</abbr></th>
@@ -47,9 +46,7 @@
                           {{ $sub->effective_date }}
                         @endif                           
                       </td>
-                      <td>
-                        <p> agingDate</p>
-                      </td>                        
+                       
                       <td>
                         @if(isset($sub->location_address_state))
                           {{ $sub->location_address_state }}

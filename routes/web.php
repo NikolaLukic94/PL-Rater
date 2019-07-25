@@ -49,6 +49,7 @@ Route::group(['middleware' => 'approved'], function () {
         Route::get('/store/{file_id}/{rater_id}', 'RatingWorksheetController@store');
         Route::get('/index/{id}', 'RatingWorksheetController@index');
         Route::get('/show/{id}', 'RatingWorksheetController@show');
+        Route::post('/update/{id}', 'RatingWorksheetController@update');        
     });
 
     Route::group(['prefix' => 'emails'], function () {

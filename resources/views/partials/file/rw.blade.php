@@ -1,7 +1,7 @@
 <div id="rw" class="tabcontent">
   <div class="container">
     <div class="card">
-        <div class="col-md-8 offset-2">
+        <div class="col-md-8">
           <div class="card-header text-center">RWs:</div>
               <div class="card-body">
               <form method="POST" action="/file/update/general-info/{{$file->id}}">

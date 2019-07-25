@@ -7,34 +7,26 @@ trait RecordsActivity
 {
     protected function recordActivity($event)
     {
-        if($user = Auth::user())
-        {
-            $this->activity()->create([
-                'user_id' => auth()->id(),
-                'type' => $this->getActivityType($event),
-            ]);
-        }        
+        $this->activity()->create([
+            'user_id' => auth()->id(),
+            'type' => $this->getActivityType($event),
+        ]);      
 
     }
 
     public static function bootRecordsActivity()
     {
-        if($user = Auth::user())
-        {
-            foreach (static::getActivitiesToRecord() as $event) {
-                static::$event(function ($model) use ($event) {
-                    $model->recordActivity($event);
-                });
-            }
-        }        
+        foreach (static::getActivitiesToRecord() as $event) {
+            static::$event(function ($model) use ($event) {
+                $model->recordActivity($event);
+            });
+        }       
     }
 
     protected static function getActivitiesToRecord()
     {
-        if($user = Auth::user())
-        {
-            return ['created', 'updated', 'deleted'];
-        }
+
+        return ['created', 'updated', 'deleted'];
         
     }
 
