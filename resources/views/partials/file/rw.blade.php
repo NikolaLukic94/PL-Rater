@@ -29,6 +29,7 @@
                             <a class="btn btn-primary" href="/rating-worksheet/show/{{$r->rw_id}}" role="button"><i class="fa fa-eye"></i></a> &nbsp;  
                              <a class="btn btn-primary" href="" role="button"><i class="fas fa-envelope"></i></a> &nbsp;                             
                              <a class="btn btn-primary" href="" role="button"><i class="fas fa-copy"></i></a> &nbsp; 
+                                                         
                           </td>                                                                    
                             </form>                            
                           </td>                                     

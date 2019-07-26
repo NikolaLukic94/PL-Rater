@@ -25,7 +25,7 @@
             <div class="card">
                 <div class="card-header text-center"></div>
                 <div class="card-body">
-                  <h3>Your submission is sent successfully!</h3> 
+                  <h3>Your submission has been sent successfully!</h3> 
                   <br>
                   <p>Reply will follow within 24 hours.</p>
                   <br>

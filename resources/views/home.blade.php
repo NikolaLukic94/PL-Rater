@@ -38,6 +38,7 @@
                             <th>Subject</th>
                             <th>Id</th>
                             <th>At</th>
+                            <th>See</th>
                           </tr>
                           @foreach($activities as $activity)
                           <tr>
@@ -55,11 +56,21 @@
                             </td>
                             <td>{{ $activity->subject_id }}</td>
                             <td>{{ $activity->created_at->diffForHumans() }}</td>
+                            <td>
+                              @if(strpos( $activity->type, 'deleted' ) !== false)
+                                /
+                              @elseif($activity->subject_type == 'App\Submission')
+                                <p><a href="/subs/emails/show/{{$activity->subject_id}}">see</a></p>
+                              @elseif($activity->subject_type == 'App\File')
+                                <p><a href="/file/show/{{$activity->subject_id}}">see</a></p>
+                              @endif  
+                            </td>
                           </tr>  
                           @endforeach
                         </table><br>
-                        <div class="offset-4">
-                        {{ $activities->links() }}
+                        <div class="offset-2">
+                          <div class="col">
+                        {{ $activities->links() }}</div>
                         </div>
                       </div>
                   </div> 

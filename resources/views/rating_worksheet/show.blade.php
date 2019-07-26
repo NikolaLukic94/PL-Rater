@@ -11,8 +11,6 @@
             <div class="card">
                 <div class="card-header text-center">RW:</div>
                 <div class="card-body">
-        <form action="/rating-worksheet/update/" method="POST">
-        {{ csrf_field() }}
         <div class="field">
           <div class="row">
             <div class="col">         
@@ -204,32 +202,28 @@
             </div>
           </div>
         </div>                   
-        @endif    
+          
 
           <div class="columns">
            <div class="column is-half is-offset-one-quarter">
         <div class="field is-grouped is-grouped-centered">
           <p class="control">
                 <hr>
-              </div>         
-                <button type="submit" class="btn btn-outline-secondary">Email to agent</button>
-                
+              </div> 
+          <div class="col"> 
+          <div class="row">           
+              <form action="/file/show/{{$rw->file_id}}">
+                  <button type="submit" class="btn btn-outline-secondary" style="width: 100%">Email to agent</button>
+              </form>   &nbsp;              
           </p>
           @include('errors')
-    </form>     
+     
+             
+            </div></div>
+               @endif    
                 </div>
-
             </div>
         </div>
     </div>
 </div>
-    <!-- /#page-content-wrapper -->
-
-  </div>
-  <!-- /#wrapper -->
-
-
-
-</body>
-
-</html>
+</div>

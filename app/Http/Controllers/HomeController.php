@@ -17,7 +17,7 @@ class HomeController extends Controller
     {
         return view('home', [
             'user' => $user, //user who's signed it
-            'activities' => Activity::where('user_id', Auth::user()->id)->paginate(10),
+            'activities' => Activity::where('user_id', Auth::user()->id)->orderby('created_at')->paginate(10),
         ]);
     }
 

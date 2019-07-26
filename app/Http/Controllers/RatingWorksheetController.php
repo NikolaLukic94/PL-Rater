@@ -18,13 +18,13 @@ class RatingWorksheetController extends Controller
     {
         $id = Premium::where('file_id', $file_id)->first()->id;
 
-        RatingWorksheet::create([
+        $newRw = RatingWorksheet::create([
             'file_id' => $file_id,
             'rater_id' => $rater_id,
             'premium_id' => $id,
         ]);
 
-        return redirect('/file/show/'.$file_id);
+        return redirect('/rating-worksheet/show/'. $newRw->id);
     }
 
     public function show($id)

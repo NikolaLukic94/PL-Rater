@@ -24,7 +24,6 @@
           <tr>
               @if($submission)
                 @foreach($submission as $sub)
-                   @if($sub->status = 'not_logged')
                     <tr>
                       <td>
                         <label class="checkbox">
@@ -85,7 +84,6 @@
                           </form>                                  
                       </td>                                              
                   </tr>
-                  @endif
                 @endforeach
               @else
                   <p>There are no new emails!</p>
