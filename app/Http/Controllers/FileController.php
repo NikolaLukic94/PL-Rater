@@ -51,7 +51,7 @@ class FileController extends Controller
                               return $query->where('created_at', $search_to_date);
                           })
                           ->orderBy('named_insured', 'asc')
-                          ->get();
+                          ->paginate(10);
 
             Session::flash('inputs', [
                               'search_named_insured' => $search_named_insured,
@@ -69,7 +69,7 @@ class FileController extends Controller
               ]);
         } else {
             return view('/file/search', [
-                'files' => File::all(),
+                'files' => File::paginate(10),
               ]);
         }
     }

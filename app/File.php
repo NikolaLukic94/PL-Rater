@@ -142,6 +142,7 @@ class File extends Model
                                'raters.prior_carrier as prior_carrier_rate'
                                )
                       ->orderBy('rating_worksheets.id')
+                      ->where('files.id', $id)
                       ->get();
 
         return $rw;

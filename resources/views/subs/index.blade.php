@@ -96,7 +96,6 @@
     <div class="d-flex justify-content-center">{{ $submission->links() }}</div>
   </div>
 </div>
-
 <style>
   input, select {
   width: 100%;

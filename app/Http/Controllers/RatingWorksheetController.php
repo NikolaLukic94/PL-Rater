@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Rater;
 use App\Premium;
 use App\RatingWorksheet;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class RatingWorksheetController extends Controller
 {
@@ -30,8 +32,8 @@ class RatingWorksheetController extends Controller
     public function show($id)
     {
         return view('rating_worksheet/show', [
-            'rw' => RatingWorksheet::getRwJoinPremiumFileRater(),
+            'rw' => RatingWorksheet::getRwJoinPremiumFileRater($id)
         ]);
     }
- 
+
 }

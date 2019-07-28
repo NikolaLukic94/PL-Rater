@@ -9,5 +9,7 @@ class RwEmailController extends Controller
     public function __invoke($id)
     {
         $rw = RatingWorksheet::findOrFail($id);
+
+        dispatch(new \App\Jobs\SendRwEmail($rw->named_insured, $rw));        
     }
 }

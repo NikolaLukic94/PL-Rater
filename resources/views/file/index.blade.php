@@ -1,32 +1,31 @@
 @extends('layouts.app')
-  <div class="d-flex" id="wrapper">
+  <div class="d-flex" id="wrapper"><!-- d-flex start --> 
     @include('partials.sidebar')
-    <div id="page-content-wrapper"> 
+    <div id="page-content-wrapper"><!-- page-content-wrapper start --> 
     @include('partials.navbar')
-      <div class="tab">
-        <div class="container">
-          <div class="row">
-          <button class="tablinks" onclick="openCity(event, 'general')">General Info</button>
-          <button class="tablinks" onclick="openCity(event, 'correspondence')">Correspondence</button>
-          <button class="tablinks" onclick="openCity(event, 'submission')">Submission</button>
-          <button class="tablinks" onclick="openCity(event, 'rw')">RW</button>     
-          <button class="tablinks" onclick="openCity(event, 'quote')" >Quote</button>   
-          <button class="tablinks" onclick="openCity(event, 'binder')" disabled>Binder</button>
-          <button class="tablinks" onclick="openCity(event, 'policy')" disabled>Policy</button>                              
-          <button class="tablinks" onclick="openCity(event, 'finance')" disabled>Finance</button>      
-          <button class="tablinks" onclick="openCity(event, 'support')">Support</button>   
-          <button class="tablinks" onclick="openCity(event, 'log')">Log</button>           
-          <button class="tablinks" onclick="openCity(event, 'note')">Note</button>     
+      <div class="tab"><!-- tab start -->
+        <div class="container"><!-- container start -->
+          <div class="row"><!-- row start -->
+            <button class="tablinks" onclick="openCity(event, 'general')">General Info</button>
+            <button class="tablinks" onclick="openCity(event, 'correspondence')">Correspondence</button>
+            <button class="tablinks" onclick="openCity(event, 'submission')">Submission</button>
+            <button class="tablinks" onclick="openCity(event, 'rw')">RW</button>     
+            <button class="tablinks" onclick="openCity(event, 'quote')" >Quote</button>   
+            <button class="tablinks" onclick="openCity(event, 'binder')" disabled>Binder</button>
+            <button class="tablinks" onclick="openCity(event, 'policy')" disabled>Policy</button>                  
+            <button class="tablinks" onclick="openCity(event, 'finance')" disabled>Finance</button>      
+            <button class="tablinks" onclick="openCity(event, 'support')">Support</button>   
+            <button class="tablinks" onclick="openCity(event, 'log')">Log</button>           
+            <button class="tablinks" onclick="openCity(event, 'note')">Note</button>     
+          </div><!-- row end -->
             @include('partials.file.rw')
             @include('partials.file.submission')
             @include('partials.file.general')
-            @include('partials.file.log')                          
-            </div>
-        </div>
-      </div>
-
-  </div>
-</div>
+            @include('partials.file.log')           
+        </div><!-- container end -->
+      </div><!-- tab end -->
+  </div><!-- page-content-wrapper end --> 
+</div><!-- d-flex end --> 
 <script>
 function openCity(evt, cityName) {
   // Declare all variables

@@ -20,7 +20,7 @@ class RatingWorksheet extends Model
         return $this->belongsTo(File::class, 'file_id');
     }
 
-    public static function getRwJoinPremiumFileRater()
+    public static function getRwJoinPremiumFileRater($id)
     {
         $rw = DB::table('rating_worksheets')
                 ->leftJoin('premiums', 'rating_worksheets.premium_id', '=', 'premiums.id')
@@ -56,10 +56,13 @@ class RatingWorksheet extends Model
                              'raters.new_purchase as new_purchase_rate',
                              'raters.prior_carrier as prior_carrier_rate',
                              'raters.zero_two_losses as zero_two_losses_rate',
-                             'raters.more_than_two_losses as more_than_two_losses_rate'
-                    )
-                ->first();
+                             'raters.more_than_two_losses as more_than_two_losses_rate',
+                             'raters.inspection_fee as inspection_fee',
+                             'raters.brokerage_fee as brokerage_fee',
+                             'raters.policy_fee as policy_fee',
+                             'rating_worksheets.id as rw_id'
+                    )->get();
 
-        return $rw;
+                return $rw = $rw->where('rw_id',$id)->first();
     }
 }

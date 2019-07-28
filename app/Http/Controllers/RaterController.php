@@ -61,4 +61,22 @@ class RaterController extends Controller
     	return redirect('/rating-worksheet/store/'. $file->id . '/' . $rater->id);
     }
 
+    /* Update RATING WORKESHEET 
+    public function update($file_id, $rater_id) {
+
+        $file = File::findOrFail($file_id); 
+
+        $calculation = Rater::createPremiumValues($file_id, $rater_id);
+
+        $rater = Rater::findOrFail($rater_id)->first();
+
+            $rater->agency_fee = $request->get('agency_fee');
+            $rater->inspection_fee = $request->get('inspection_fee');
+            $rater->brokerage_fee = $request->get('brokerage_fee');
+
+        $rater->save();
+
+        return redirect('/rating-worksheet/store/'. $file->id . '/' . $rater->id);
+    }
+*/
 }

@@ -1,84 +1,80 @@
 @extends('layouts.app')
-
   <div class="d-flex" id="wrapper">
-
     @include('partials.sidebar')
-
     <div id="page-content-wrapper">
-
     @include('partials.navbar')
     <br>
-<div class="container">
-  <div class="col">
-      <form class="search-form search-form-basic" action="/file/index" method="post">
-    {{ csrf_field() }}
-  <div class="form-row">
-    <div class="form-group col-md-4">
-          <input type="text" placeholder="Named Insured"  name="search_named_insured" id="search_named_insured" class="form-control-sm" @if(isset(Session::get('inputs')['search_named_insured'])) value="{{ Session::get('inputs')['search_named_insured'] }}" @endif>
-    </div>
-    <div class="form-group col-md-4">
-          <input type="text" placeholder="Additional NI/DBA:" name="search_addl_ni_dba" id="search_addl_ni_dba" class="form-control-sm" @if(isset(Session::get('inputs')['search_addl_ni_dba'])) value="{{ Session::get('inputs')['search_addl_ni_dba'] }}" @endif>
-    </div>    
-    <div class="form-group col-md-4">
-          <input type="text" placeholder="LOB" name="search_lob" id="search_lob" class="form-control-sm" placeholder="" @if(isset(Session::get('inputs')['search_lob'])) value="{{ Session::get('inputs')['search_lob'] }}" @endif>
-    </div>
-    <div class="form-group col-md-4">
-          <input type="text" placeholder="Submission number:" name="search_submission_number" id="search_submission_number" class="form-control-sm" 
-           @if(isset(Session::get('inputs')['search_submission_number'])) value="{{ Session::get('inputs')['search_submission_number'] }}" @endif>
-    </div>
-    <div class="form-group col-md-4">
-          <input type="text" placeholder="Agency" name="search_agency_name" id="search_agency_name" class="form-control-sm" 
-           @if(isset(Session::get('inputs')['search_agency_name'])) value="{{ Session::get('inputs')['search_agency_name'] }}" @endif>
-    </div>    
-    <div class="form-group col-md-4">
-          <input type="text" placeholder="Agent" name="search_agent_name" id="search_agent_name" class="form-control-sm" 
-           @if(isset(Session::get('inputs')['search_agent_name'])) value="{{ Session::get('inputs')['search_agent_name'] }}" @endif>
-    </div>
-    <div class="form-group col-md-4">
-          <label for="search_from_date">From:</label>
-          <input type="date" name="search_from_date" id="search_from_date" class="form-control-sm" 
-           @if(isset(Session::get('inputs')['search_from_date'])) value="{{ Session::get('inputs')['search_from_date'] }}" @endif>
-    </div>
-    <div class="form-group col-md-4">
-          <label for="search_to_date">To:</label>
-          <input type="date" name="search_to_date" id="search_to_date" class="form-control-sm" 
-           @if(isset(Session::get('inputs')['search_to_date'])) value="{{ Session::get('inputs')['search_to_date'] }}" @endif>
-    </div>    
-    <div class="form-group col-md-4">
-          <label for="search_effective_date">Effective:</label>      
-          <input type="date" placeholder="Effective_date:" name="search_effective_date" id="search_effective_date" class="form-control-sm" 
-           @if(isset(Session::get('inputs')['search_effective_date'])) value="{{ Session::get('inputs')['search_effective_date'] }}" @endif>
-    </div>    
-    <div class="form-group col-md-6">
-        <select class="form-control-sm" name="options" class="col-md-6 form-group">
-          <option value="">--- State ---</option>
-          <option  value="LA">LA</option>
-          <option  value="FL">FL</option>
-          <option  value="CA">CA</option>
-          <option  value="TX">TX</option>          
-          <option  value="MS">MS</option>
-        </select>
-    </div>     
-    <div class="form-group col-md-6">
-        <select class="form-control-sm" name="options" class="col-md-6 form-group">
-          <option value="">--- Status ---</option>
-          <option  value="quoted">Quoted</option>
-          <option  value="bind_request">Bind request</option>
-          <option  value="bound">Bound</option>
-          <option  value="policy_issued">Policy issued</option>          
-          <option  value="Closed">Closed</option>
-        </select>
-    </div>          
-  </div>
-      <div class="form-row">
-        <div class="col-md-12 col-lg-12">
-          <button type="submit" href="/file/index" class="btn btn-custom">
-            <i class="fa fa-search" aria-hidden="true"></i>Search</button>
-
+  <div class="container">
+    <div class="col">
+        <form class="search-form search-form-basic" action="/file/index" method="post">
+      {{ csrf_field() }}
+    <div class="form-row"><!--form-row start -->
+      <div class="form-group col-md-4"><!--form-group col-md-4 start -->
+            <input type="text" placeholder="Named Insured"  name="search_named_insured" id="search_named_insured" class="form-control-sm" @if(isset(Session::get('inputs')['search_named_insured'])) value="{{ Session::get('inputs')['search_named_insured'] }}" @endif>
+      </div><!--form-group col-md-4 end -->
+      <div class="form-group col-md-4"><!--form-group col-md-4 start -->
+            <input type="text" placeholder="Additional NI/DBA:" name="search_addl_ni_dba" id="search_addl_ni_dba" class="form-control-sm" @if(isset(Session::get('inputs')['search_addl_ni_dba'])) value="{{ Session::get('inputs')['search_addl_ni_dba'] }}" @endif>
+      </div><!--form-group col-md-4 end -->
+      <div class="form-group col-md-4"><!--form-group col-md-4 start -->
+            <input type="text" placeholder="LOB" name="search_lob" id="search_lob" class="form-control-sm" placeholder="" @if(isset(Session::get('inputs')['search_lob'])) value="{{ Session::get('inputs')['search_lob'] }}" @endif>
+      </div><!--form-group col-md-4 end -->
+      <div class="form-group col-md-4"><!--form-group col-md-4 start -->
+            <input type="text" placeholder="Submission number:" name="search_submission_number" id="search_submission_number" class="form-control-sm" 
+             @if(isset(Session::get('inputs')['search_submission_number'])) value="{{ Session::get('inputs')['search_submission_number'] }}" @endif>
+      </div><!--form-group col-md-4 end -->
+      <div class="form-group col-md-4"><!--form-group col-md-4 start -->
+            <input type="text" placeholder="Agency" name="search_agency_name" id="search_agency_name" class="form-control-sm" 
+             @if(isset(Session::get('inputs')['search_agency_name'])) value="{{ Session::get('inputs')['search_agency_name'] }}" @endif>
+      </div><!--form-group col-md-4 end -->
+      <div class="form-group col-md-4"><!--form-group col-md-4 start -->
+            <input type="text" placeholder="Agent" name="search_agent_name" id="search_agent_name" class="form-control-sm" 
+             @if(isset(Session::get('inputs')['search_agent_name'])) value="{{ Session::get('inputs')['search_agent_name'] }}" @endif>
+      </div><!--form-group col-md-4 end -->
+      <div class="form-group col-md-4"><!--form-group col-md-4 start -->
+            <label for="search_from_date">From:</label>
+            <input type="date" name="search_from_date" id="search_from_date" class="form-control-sm" 
+             @if(isset(Session::get('inputs')['search_from_date'])) value="{{ Session::get('inputs')['search_from_date'] }}" @endif>
+      </div><!--form-group col-md-4 end -->
+      <div class="form-group col-md-4"><!--form-group col-md-4 start -->
+            <label for="search_to_date">To:</label>
+            <input type="date" name="search_to_date" id="search_to_date" class="form-control-sm" 
+             @if(isset(Session::get('inputs')['search_to_date'])) value="{{ Session::get('inputs')['search_to_date'] }}" @endif>
+      </div><!--form-group col-md-4 end -->  
+      <div class="form-group col-md-4"><!--form-group col-md-4 start -->
+            <label for="search_effective_date">Effective:</label>      
+            <input type="date" placeholder="Effective_date:" name="search_effective_date" id="search_effective_date" class="form-control-sm" 
+             @if(isset(Session::get('inputs')['search_effective_date'])) value="{{ Session::get('inputs')['search_effective_date'] }}" @endif>
+      </div><!--form-group col-md-4 end -->
+      <div class="form-group col-md-6"><!--form-group col-md-6 start -->
+          <select class="form-control-sm" name="options" class="col-md-6 form-group">
+            <option value="">--- State ---</option>
+            <option  value="LA">LA</option>
+            <option  value="FL">FL</option>
+            <option  value="CA">CA</option>
+            <option  value="TX">TX</option>          
+            <option  value="MS">MS</option>
+          </select><!--form-group col-md-6 end -->
+      </div>     
+      <div class="form-group col-md-6"><!--form-group col-md-6 start -->
+          <select class="form-control-sm" name="options" class="col-md-6 form-group">
+            <option value="">--- Status ---</option>
+            <option  value="quoted">Quoted</option>
+            <option  value="bind_request">Bind request</option>
+            <option  value="bound">Bound</option>
+            <option  value="policy_issued">Policy issued</option>          
+            <option  value="Closed">Closed</option>
+          </select>
+      </div><!--form-group col-md-6 end -->         
+    </div><!--form-row start -->
+        <div class="form-row">
+          <div class="col-md-12 col-lg-12">
+            <button type="submit" href="/file/index" class="btn btn-custom">
+              <i class="fa fa-search" aria-hidden="true"></i>Search</button>
+          </div>
         </div>
-      </div>
-    </form>
-  </div>
+      </form>
+    </div>
+
 <!-- results -->  
 <div class="container">
   <div class="row justify-content-center">
@@ -148,6 +144,7 @@
                     </tr>
                   </table>
                 </form>   
+                <div class="d-flex justify-content-center">{{ $files->links() }}</div>
               </div>  
             </div>
           </div>

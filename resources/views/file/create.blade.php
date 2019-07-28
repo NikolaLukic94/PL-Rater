@@ -1,21 +1,13 @@
 @extends('layouts.app')
-
-<body>
-
-  <div class="d-flex" id="wrapper">
-
+<div class="d-flex" id="wrapper"><!-- d-flex start -->
     @include('partials.sidebar')
-
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-
+    <div id="page-content-wrapper"><!-- page-content-wrapper start -->
     @include('partials.navbar')
-
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+      <div class="container"><!-- container start -->
+    <div class="row justify-content-center"><!-- row justify-content-center start -->
+        <div class="col-md-8"><!-- col-md-8 start -->
             <br>
-            <div class="card">
+            <div class="card"><!-- card start -->
                 <div class="card-header text-center">Please verify current info:</div>
                 <div class="card-body">
         <form action="/file/create/{{$submission->id}}" method="POST">
